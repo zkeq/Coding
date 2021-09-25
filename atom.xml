@@ -6,7 +6,7 @@
   <link href="https://code.maylove.pub/atom.xml" rel="self"/>
   
   <link href="https://code.maylove.pub/"/>
-  <updated>2021-09-23T23:28:02.684Z</updated>
+  <updated>2021-09-25T13:36:12.949Z</updated>
   <id>https://code.maylove.pub/</id>
   
   <author>
@@ -15,6 +15,116 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python 字符串中返回bool类型的函数集合</title>
+    <link href="https://code.maylove.pub/74daef8d67d3/"/>
+    <id>https://code.maylove.pub/74daef8d67d3/</id>
+    <published>2021-09-25T13:33:37.000Z</published>
+    <updated>2021-09-25T13:36:12.949Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="字符串中返回bool类型的函数集合"><a href="#字符串中返回bool类型的函数集合" class="headerlink" title="字符串中返回bool类型的函数集合"></a>字符串中返回bool类型的函数集合</h3><h4 id="isspace"><a href="#isspace" class="headerlink" title="isspace"></a>isspace</h4><h5 id="功能"><a href="#功能" class="headerlink" title="功能:"></a>功能:</h5><ul><li>判断字符串是否是由一个空格组成的字符串</li></ul><h5 id="用法"><a href="#用法" class="headerlink" title="用法:"></a>用法:</h5><ul><li><code>booltype = string.isspace()</code>  -&gt; 无参数可传 ,返回一个<code>布尔类型</code></li></ul><h5 id="注意"><a href="#注意" class="headerlink" title="注意:"></a>注意:</h5><ul><li>由空格组成的字符串,不是空字符串 : “’!=‘’’</li></ul><hr><h4 id="istitile"><a href="#istitile" class="headerlink" title="istitile"></a>istitile</h4><h5 id="功能-1"><a href="#功能-1" class="headerlink" title="功能:"></a>功能:</h5><ul><li>判断字符串是否是一个标题类型</li></ul><h5 id="用法-1"><a href="#用法-1" class="headerlink" title="用法"></a>用法</h5><ul><li><code>booltype = String.istitle()</code>  -&gt; 无参数可传, 返回一个<code>布尔类型</code></li></ul><h5 id="注意-1"><a href="#注意-1" class="headerlink" title="注意:"></a>注意:</h5><ul><li><strong>该函数只能用于英文</strong></li></ul><hr><h4 id="isupper与islower"><a href="#isupper与islower" class="headerlink" title="isupper与islower"></a>isupper与islower</h4><h5 id="功能-2"><a href="#功能-2" class="headerlink" title="功能:"></a>功能:</h5><ul><li><code>isupper</code>判断字符串中的字母是否都是大写</li><li><code>islower</code>判断字符串中的字母是否都是小写</li></ul><h5 id="用法-2"><a href="#用法-2" class="headerlink" title="用法:"></a>用法:</h5><ul><li><code>booltype = string.isupper()</code>  -&gt; 无参数可传 , 返回一个<code>布尔类型</code></li><li><code>booltype = string,islower()</code>   -&gt;无参数可传 ,返回一个<code>布尔类型</code></li></ul><h5 id="注意-2"><a href="#注意-2" class="headerlink" title="注意:"></a>注意:</h5><ul><li>只检测字符串里的字母,对其他字符不做判断</li></ul><hr><h4 id="join与split-稍后见"><a href="#join与split-稍后见" class="headerlink" title="join与split 稍后见"></a>join与split 稍后见</h4><ul><li>我们数据类型转换的时候见</li></ul><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line">title = <span class="string">&#x27;Back Of China&#x27;</span></span><br><span class="line">upper_str = <span class="string">&#x27;PYTHON IS A GOOD CODE 哈哈!&#x27;</span></span><br><span class="line">upper_str_02 = <span class="string">&#x27;Python Is A Good Code&#x27;</span></span><br><span class="line">lower_str = <span class="string">&#x27; i love python 哈哈!&#x27;</span></span><br><span class="line">not_empty = <span class="string">&#x27;                  &#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(title.istitle())</span><br><span class="line"><span class="built_in">print</span>(upper_str.istitle())</span><br><span class="line"><span class="built_in">print</span>(upper_str_02.istitle())</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;isuppr&#x27;</span>, upper_str.isupper())</span><br><span class="line"><span class="built_in">print</span>(lower_str.isupper())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;islower&#x27;</span>, lower_str.islower())</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(not_empty.isspace())</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="Python" scheme="https://code.maylove.pub/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 字符串的replace函数</title>
+    <link href="https://code.maylove.pub/92a83431ef5c/"/>
+    <id>https://code.maylove.pub/92a83431ef5c/</id>
+    <published>2021-09-25T13:33:17.000Z</published>
+    <updated>2021-09-25T13:35:40.403Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="字符串的replace函数"><a href="#字符串的replace函数" class="headerlink" title="字符串的replace函数"></a>字符串的replace函数</h3><h4 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h4><ul><li>将字符串中的<code>old</code>(旧元素)替换成<code>new</code>(新元素),并能指定替换的数量</li></ul><h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><ul><li><code>newtr = string.replace(old, new, max)</code></li></ul><h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><ul><li><code>old</code> : 被替换的元素.</li><li><code>new</code> : 替代old的新元素</li><li><code>max</code> : 可选,代表替换几个,默认全部替换<strong>全部匹配</strong>的old元素</li></ul><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line">info = (<span class="string">&#x27;百：量词，指数量多，在这里指全部；科：学科，科目。&#x27;</span></span><br><span class="line">        <span class="string">&#x27;《中国大百科全书·新闻出版》卷定义为：&#x27;</span></span><br><span class="line">        <span class="string">&#x27;“概要介绍人类一切门类知识或某一门类知识的工具书。&#x27;</span></span><br><span class="line">        <span class="string">&#x27;供查检所需知识和事实资料之用。&#x27;</span></span><br><span class="line">        <span class="string">&#x27;但也具有扩大读者知识视野，帮助系统求知的作用。&#x27;</span></span><br><span class="line">        <span class="string">&#x27;它是一个国家和一个时代科学文化发展的标志。”&#x27;</span>)</span><br><span class="line"></span><br><span class="line">a = <span class="string">&#x27;百&#x27;</span></span><br><span class="line">b = <span class="string">&#x27;指&#x27;</span></span><br><span class="line">c = <span class="string">&#x27;人类&#x27;</span></span><br><span class="line">d = <span class="string">&#x27;科&#x27;</span></span><br><span class="line">e = <span class="string">&#x27;*&#x27;</span></span><br><span class="line">f = <span class="string">&#x27;0&#x27;</span></span><br><span class="line">g = <span class="string">&#x27;$&#x27;</span></span><br><span class="line">h = <span class="string">&#x27;&amp;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#test = info.replace(a, e)</span></span><br><span class="line"><span class="comment">#print(test)</span></span><br><span class="line"><span class="comment">#test = test.replace(b, f)</span></span><br><span class="line"><span class="comment">#print(test)</span></span><br><span class="line"><span class="comment">#test = test.replace(c, g)</span></span><br><span class="line"><span class="comment">#test = test.replace(d, h)</span></span><br><span class="line"><span class="comment">#print(test)</span></span><br><span class="line"></span><br><span class="line">test = info.replace(a, e).replace(b, f).replace(c, g).replace(d, h)</span><br><span class="line"><span class="built_in">print</span>(test)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="Python" scheme="https://code.maylove.pub/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 字符串的strip函数</title>
+    <link href="https://code.maylove.pub/1df67f6322b8/"/>
+    <id>https://code.maylove.pub/1df67f6322b8/</id>
+    <published>2021-09-25T13:32:57.000Z</published>
+    <updated>2021-09-25T13:35:19.323Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="字符串的strip函数"><a href="#字符串的strip函数" class="headerlink" title="字符串的strip函数"></a>字符串的strip函数</h3><h4 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h4><ul><li><code>string</code>将去掉字符串<strong>左右两边</strong>的<code>指定元素</code>,<strong>默认</strong>是<code>空格</code></li></ul><h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><ul><li><code>newstr = string.strip(item)</code></li></ul><h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><ul><li>括弧里需要传一个你<code>想去掉的元素</code>,可不填写</li></ul><h4 id="拓展知识"><a href="#拓展知识" class="headerlink" title="拓展知识"></a>拓展知识</h4><ul><li>传入的元素如果不在开头或结尾则无效</li><li><code>lstrip</code>仅去掉字符串开头的指定元素或空格</li><li><code>rstrip</code>仅去掉字符串结尾的指定元素或空格</li></ul><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line">info = <span class="string">&#x27;                             my name is dewei                      &#x27;</span></span><br><span class="line">new_info = info.strip()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;.&#x27;</span> + info + <span class="string">&#x27;.&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;.&#x27;</span> + new_info + <span class="string">&#x27;.&#x27;</span>)</span><br><span class="line"></span><br><span class="line">info_01 = <span class="string">&#x27;my name is dewei&#x27;</span></span><br><span class="line">new_info_01 = info_01.strip(info_01)</span><br><span class="line"><span class="built_in">print</span>(new_info_01)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(new_info_01))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">new_str = <span class="string">&#x27;abcde&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(new_str.lstrip(<span class="string">&#x27;a&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(new_str.rstrip(<span class="string">&#x27;e&#x27;</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="Python" scheme="https://code.maylove.pub/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 字符串的find与index函数</title>
+    <link href="https://code.maylove.pub/638ef4c39634/"/>
+    <id>https://code.maylove.pub/638ef4c39634/</id>
+    <published>2021-09-25T13:32:37.000Z</published>
+    <updated>2021-09-25T13:34:56.643Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="字符串的find与index函数"><a href="#字符串的find与index函数" class="headerlink" title="字符串的find与index函数"></a>字符串的find与index函数</h3><h4 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h4><ul><li><code>find</code>与<code>index</code>都是返回你想寻找的成员的位置</li></ul><h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><ul><li><p><code>string.find(item)</code> -&gt; <code>item</code>: 你想查询的元素,返回一个整形</p></li><li><p><code>string.index(item)</code> -&gt; <code>item</code>: 你想查询的元素,返回一个整形<code>或者报错</code></p><p><strong>Ps:字符串里的位置是从左向右,以0开始的.</strong></p></li></ul><h4 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h4><ul><li>如果<code>find</code>找不到元素,会返回<code>-1</code></li><li>如果<code>index</code>找不到元素,会导致程序<code>报错</code></li></ul><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line">info = <span class="string">&#x27;python is a good code&#x27;</span></span><br><span class="line"></span><br><span class="line">result = info.find(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line">result = info.find(<span class="string">&#x27;ok&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"></span><br><span class="line">result = info.index(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line">result = info.index(<span class="string">&#x27;o&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"></span><br><span class="line">str1 = <span class="string">&quot;tomorrow is sunny day&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(str1.find(<span class="string">&quot;is&quot;</span>, <span class="number">2</span>, <span class="number">10</span>))</span><br><span class="line"><span class="built_in">print</span>(str1.find(<span class="string">&quot;is&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(str1.find(<span class="string">&quot;is&quot;</span>, <span class="number">10</span>, <span class="number">15</span>))</span><br><span class="line"><span class="built_in">print</span>(str1.find(<span class="string">&quot;is&quot;</span>, <span class="number">9</span>))<span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line">info = <span class="string">&#x27;python is a good code&#x27;</span></span><br><span class="line"></span><br><span class="line">result = info.find(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line">result = info.find(<span class="string">&#x27;ok&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"></span><br><span class="line">result = info.index(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line">result = info.index(<span class="string">&#x27;ok&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="Python" scheme="https://code.maylove.pub/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 字符串的startswith和endswith函数</title>
+    <link href="https://code.maylove.pub/2cf50f833307/"/>
+    <id>https://code.maylove.pub/2cf50f833307/</id>
+    <published>2021-09-25T13:32:19.000Z</published>
+    <updated>2021-09-25T13:34:32.872Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="字符串的startswith和endswith函数"><a href="#字符串的startswith和endswith函数" class="headerlink" title="字符串的startswith和endswith函数"></a>字符串的startswith和endswith函数</h3><h4 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h4><ul><li><code>startswith</code>判断字符串<strong>开始位</strong>是否是某成员(元素)</li><li><code>endswith</code>判断字符串<strong>结尾</strong>是否是某成员(元素)</li></ul><h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><ul><li><code>string.startswith(item)</code> -&gt; <code>item</code> : 你想查询匹配的元素,返回一个<strong>布尔值</strong></li><li><code>string.endswith(item) </code> -&gt; <code>item</code>: 你想查询匹配的元素,返回一个<strong>布尔值</strong></li></ul><h4 id="小发现"><a href="#小发现" class="headerlink" title="小发现"></a>小发现</h4><p>当<code>item</code>赋值为<code>&#39;&#39;</code>时,始终返回为空</p><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line">info = <span class="string">&#x27;this is a string example!!&#x27;</span></span><br><span class="line"></span><br><span class="line">result = info.startswith(<span class="string">&#x27;this&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"></span><br><span class="line">result = info.startswith(<span class="string">&#x27;this is a string example!!&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(info == <span class="string">&#x27;this is a string example!!&#x27;</span>))</span><br><span class="line"></span><br><span class="line">result = info.endswith(<span class="string">&#x27;!&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;result:&#x27;</span>, result)</span><br><span class="line"></span><br><span class="line">result = info.endswith(<span class="string">&#x27;this is a string example!!&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;full?:&#x27;</span>, result)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="Python" scheme="https://code.maylove.pub/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>JAVA 标识符 和 类型转换</title>
