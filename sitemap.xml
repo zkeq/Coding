@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://code.maylove.pub/31ea9d7e4353/</loc>
+    
+    <lastmod>2021-09-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://code.maylove.pub/bb1d8975abf3/</loc>
+    
+    <lastmod>2021-09-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://code.maylove.pub/40b46745a962/</loc>
+    
+    <lastmod>2021-09-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://code.maylove.pub/dc367876ec86/</loc>
+    
+    <lastmod>2021-09-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://code.maylove.pub/58e5cf582340/</loc>
+    
+    <lastmod>2021-09-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://code.maylove.pub/66f57f325fd0/</loc>
+    
+    <lastmod>2021-09-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://code.maylove.pub/497056ce2ccc/</loc>
     
     <lastmod>2021-09-27</lastmod>
@@ -172,7 +214,7 @@
 
   <url>
     <loc>https://code.maylove.pub/</loc>
-    <lastmod>2021-09-27</lastmod>
+    <lastmod>2021-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -180,14 +222,14 @@
   
   <url>
     <loc>https://code.maylove.pub/tags/JAVA/</loc>
-    <lastmod>2021-09-27</lastmod>
+    <lastmod>2021-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://code.maylove.pub/tags/Python/</loc>
-    <lastmod>2021-09-27</lastmod>
+    <lastmod>2021-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
