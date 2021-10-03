@@ -6,7 +6,7 @@
   <link href="https://code.maylove.pub/atom.xml" rel="self"/>
   
   <link href="https://code.maylove.pub/"/>
-  <updated>2021-10-01T15:10:32.080Z</updated>
+  <updated>2021-10-02T06:58:33.281Z</updated>
   <id>https://code.maylove.pub/</id>
   
   <author>
@@ -21,12 +21,12 @@
     <link href="https://code.maylove.pub/fe406508a7f3/"/>
     <id>https://code.maylove.pub/fe406508a7f3/</id>
     <published>2021-10-01T14:43:45.000Z</published>
-    <updated>2021-10-01T15:10:32.080Z</updated>
+    <updated>2021-10-02T06:58:33.281Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="索引与切片之字符串"><a href="#索引与切片之字符串" class="headerlink" title="索引与切片之字符串"></a>索引与切片之字符串</h2><h4 id="字符串的索引-获取"><a href="#字符串的索引-获取" class="headerlink" title="字符串的索引 , 获取"></a>字符串的索引 , 获取</h4><ul><li>索引规则与列表相同</li><li>切片与索引的获取与列表相同</li><li><strong>无法</strong>通过索引修改与<strong>删除</strong></li><li>字符串<strong>不可修改</strong></li></ul><h4 id="字符串的find与index函数"><a href="#字符串的find与index函数" class="headerlink" title="字符串的find与index函数"></a>字符串的<code>find</code>与<code>index</code>函数</h4><h5 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h5><ul><li><strong>获取</strong>元素的<strong>索引位置</strong></li></ul><h5 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h5><ul><li><code>string.index(item)</code>  -&gt; <code>item</code>:查询个数的元素,返回索引位置</li><li><code>string.find(item)</code>     -&gt; <code>item</code>:查询个数的元素,返回索引位置</li><li>返回的是第一个字母的位置</li></ul><h5 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h5><ul><li><code>find</code>如果获取不到,返回<code>-1</code></li><li><code>index</code>如果获取不到,直接<code>报错</code></li></ul><h5 id="好题"><a href="#好题" class="headerlink" title="好题"></a>好题</h5><ul><li><code>list1 = [1, 2, 3, 4, 2]</code></li><li><code>print(list1.index(2))</code></li></ul><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line">name = <span class="string">&#x27;dewei&#x27;</span></span><br><span class="line"></span><br><span class="line">temp = []</span><br><span class="line">temp.extend(name)</span><br><span class="line"><span class="comment"># temp.append(name[0])</span></span><br><span class="line"><span class="comment"># temp.append(name[1])</span></span><br><span class="line"><span class="comment"># temp.append(name[2])</span></span><br><span class="line"><span class="comment"># temp.append(name[3])</span></span><br><span class="line"><span class="comment"># temp.append(name[4])</span></span><br><span class="line"><span class="built_in">print</span>(temp)</span><br><span class="line">temp.reverse()</span><br><span class="line"><span class="built_in">print</span>(temp)</span><br><span class="line"><span class="comment"># new_name = &#x27;%s%s%s%s%s&#x27; % (temp[0], temp[1], temp[2], temp[3], temp[4])</span></span><br><span class="line">new_name = name[::-<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(new_name)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(new_name)</span><br><span class="line">result = new_name.find(<span class="string">&#x27;iew&#x27;</span>)</span><br><span class="line"><span class="comment"># result = new_name.index(&#x27;iew&#x27;)</span></span><br><span class="line"><span class="built_in">print</span>(result)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
     
     
-    <summary type="html">本节课主要学习了:&lt;br&gt;索引与切片在字符串中的运用</summary>
+    <summary type="html">本节课主要学习了:&lt;br&gt;索引与切片在字符串中的运用&lt;br&gt;以及字符串的find与index函数</summary>
     
     
     
