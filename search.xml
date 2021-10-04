@@ -4,6 +4,256 @@
   
     
     <entry>
+      <title>Python 所有数据类型与布尔值的关系</title>
+      <link href="/e614b7c29c00/"/>
+      <url>/e614b7c29c00/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="所有数据类型与布尔值的关系"><a href="#所有数据类型与布尔值的关系" class="headerlink" title="所有数据类型与布尔值的关系"></a>所有数据类型与布尔值的关系</h3><ul><li>字符串, 数字, 列表, 元组, 字典, 空类型 与 布尔值 的关系总结</li></ul><h4 id="明确两点"><a href="#明确两点" class="headerlink" title="明确两点"></a>明确两点</h4><ol><li>每一种数据类型,自身的值都有表示True与False</li><li>not对于一切结果取反</li><li>非0 非空都为True 其他都为False</li></ol><p><img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-3/4.jpg" alt="4"></p><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line">a_1 = <span class="number">1</span></span><br><span class="line">a_2 = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(a_1))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(a_2))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="keyword">not</span> a_1))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="keyword">not</span> a_2))</span><br><span class="line"></span><br><span class="line">b_1 = <span class="string">&#x27;1&#x27;</span></span><br><span class="line">b_2 = <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;----------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(b_1))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(b_2))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="keyword">not</span> b_1))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(<span class="keyword">not</span> b_2))</span><br><span class="line"></span><br><span class="line">c_1 = <span class="literal">True</span></span><br><span class="line">c_2 = <span class="literal">False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;-----------&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(c_1)</span><br><span class="line"><span class="built_in">print</span>(c_2)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="keyword">not</span> c_1)</span><br><span class="line"><span class="built_in">print</span>(<span class="keyword">not</span> c_2)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字典 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python 字典中的末尾删除函数--popitem</title>
+      <link href="/ee4436b63343/"/>
+      <url>/ee4436b63343/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="字典中的末尾删除函数–popitem"><a href="#字典中的末尾删除函数–popitem" class="headerlink" title="字典中的末尾删除函数–popitem"></a>字典中的末尾删除函数–<code>popitem</code></h3><h4 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h4><ul><li>删除当前字典<code>末尾一组键值对</code>并将其返回</li></ul><h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><ul><li><code>dict.popitem()</code>  –  无需传参</li><li><code>&gt;&gt; 返回被删除的键值对,用元组包裹 0索引是key, 1索引是value</code></li></ul><h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><ul><li>如字典为空,则直接报错</li></ul><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line">students = &#123;<span class="string">&#x27;dewei&#x27;</span>: <span class="string">&#x27;到&#x27;</span>, <span class="string">&#x27;xiaomu&#x27;</span>: <span class="string">&#x27;在&#x27;</span>, <span class="string">&#x27;xiaoyun&#x27;</span>: <span class="string">&#x27;在呢&#x27;</span>, <span class="string">&#x27;xiaogao&#x27;</span>: <span class="string">&#x27;在&#x27;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;xiaogao 在吗&#x27;</span>)</span><br><span class="line">xiaogao = students.popitem()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125;喊&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(xiaogao[<span class="number">0</span>], xiaogao[<span class="number">1</span>]))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;xiaoyun 在吗&#x27;</span>)</span><br><span class="line">xiaoyun = students.popitem()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125;喊&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(xiaoyun[<span class="number">0</span>], xiaoyun[<span class="number">1</span>]))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;xiaomu 在吗&#x27;</span>)</span><br><span class="line">xiaomu = students.popitem()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125;喊&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(xiaomu[<span class="number">0</span>], xiaomu[<span class="number">1</span>]))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;dewei在吗&#x27;</span>)</span><br><span class="line">dewei = students.popitem()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125;喊&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(dewei[<span class="number">0</span>], dewei[<span class="number">1</span>]))</span><br><span class="line"><span class="built_in">print</span>(students)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字典 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python 字典中的成员判断</title>
+      <link href="/69524697f433/"/>
+      <url>/69524697f433/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="字典中的成员判断"><a href="#字典中的成员判断" class="headerlink" title="字典中的成员判断"></a>字典中的成员判断</h3><h4 id="in-与-not-in在字典中的用法"><a href="#in-与-not-in在字典中的用法" class="headerlink" title="in 与 not in在字典中的用法"></a><code>in</code> 与 <code>not in</code>在字典中的用法</h4><ul><li>只能判断<code>key</code>是否存在</li></ul><h4 id="get用于判断成员存在"><a href="#get用于判断成员存在" class="headerlink" title="get用于判断成员存在"></a><code>get</code>用于判断成员存在</h4><ul><li><code>bool(test_dict.get(&#39;name&#39;))</code></li><li>字典中的类型可能为<code>False类型</code>…<strong>有待商榷</strong></li></ul><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line">default_dict = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="literal">None</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">0</span>, <span class="string">&#x27;d&#x27;</span>: <span class="string">&#x27;&#x27;</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a&#x27;</span> <span class="keyword">in</span> default_dict)</span><br><span class="line"><span class="built_in">print</span>(default_dict[<span class="string">&#x27;a&#x27;</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(default_dict.get(<span class="string">&#x27;a&#x27;</span>)))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(default_dict.get(<span class="string">&#x27;b&#x27;</span>)))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;f&#x27;</span> <span class="keyword">in</span> default_dict)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;f&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> default_dict)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字典 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python 字典的复制--copy函数</title>
+      <link href="/87bad7ab2468/"/>
+      <url>/87bad7ab2468/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="字典的复制–copy函数"><a href="#字典的复制–copy函数" class="headerlink" title="字典的复制–copy函数"></a>字典的复制–copy函数</h3><h4 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h4><ul><li>将当前字典复制一个新的字典</li></ul><h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><ul><li><code>dict.copy()</code>  -&gt; 该函数<strong>无参数</strong>, 返回一个一模一样的<code>内存地址不同的字典</code><ul><li><input checked="" disabled="" type="checkbox"> != 可以判断两个成员是否相同</li></ul></li></ul><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line">fruits = &#123;</span><br><span class="line">    <span class="string">&#x27;apple&#x27;</span>: <span class="number">30</span>,</span><br><span class="line">    <span class="string">&#x27;banana&#x27;</span>: <span class="number">50</span>,</span><br><span class="line">    <span class="string">&#x27;pear&#x27;</span>: <span class="number">100</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">real_fruits = fruits.copy()</span><br><span class="line">fruits[<span class="string">&#x27;apple&#x27;</span>] = <span class="number">60</span></span><br><span class="line"><span class="built_in">print</span>(real_fruits)</span><br><span class="line"></span><br><span class="line">real_fruits[<span class="string">&#x27;orange&#x27;</span>] = <span class="number">50</span></span><br><span class="line">real_fruits.update(&#123;<span class="string">&#x27;cherry&#x27;</span>: <span class="number">100</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(real_fruits)</span><br><span class="line"><span class="comment"># print(fruits)</span></span><br><span class="line">real_fruits[<span class="string">&#x27;apple&#x27;</span>] = real_fruits[<span class="string">&#x27;apple&#x27;</span>] - <span class="number">5</span></span><br><span class="line"><span class="built_in">print</span>(real_fruits)</span><br><span class="line">real_fruits[<span class="string">&#x27;pear&#x27;</span>] -= <span class="number">3</span></span><br><span class="line"><span class="built_in">print</span>(real_fruits)</span><br><span class="line"></span><br><span class="line">real_fruits.clear()</span><br><span class="line"><span class="built_in">print</span>(real_fruits)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;第二天......&#x27;</span>)</span><br><span class="line">real_fruits = fruits.copy()</span><br><span class="line"><span class="built_in">print</span>(real_fruits)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字典 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python 字典的删除</title>
+      <link href="/ea97ba53d454/"/>
+      <url>/ea97ba53d454/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="字典的删除"><a href="#字典的删除" class="headerlink" title="字典的删除"></a>字典的删除</h3><h4 id="clear函数"><a href="#clear函数" class="headerlink" title="clear函数"></a>clear函数</h4><h5 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h5><ul><li>清空当前字典中所有数据</li></ul><h5 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h5><ul><li><code>dict.clear()</code>  -&gt; <strong>无参数</strong>,<strong>无返回值</strong></li></ul><h4 id="pop函数的功能与用法"><a href="#pop函数的功能与用法" class="headerlink" title="pop函数的功能与用法"></a>pop函数的功能与用法</h4><h5 id="功能-1"><a href="#功能-1" class="headerlink" title="功能"></a>功能</h5><ul><li><strong>删除</strong>字典中<code>指定的key</code>,并<strong>将其结果返回</strong>,如果<strong>key不存在则报错</strong></li></ul><h5 id="用法-1"><a href="#用法-1" class="headerlink" title="用法"></a>用法</h5><ul><li>dict.pop(key)  –  key 希望被删掉的键</li><li><code>&gt;&gt;返回这个key对应的值(value)</code></li></ul><h4 id="del-在字典中的用法"><a href="#del-在字典中的用法" class="headerlink" title="del 在字典中的用法"></a>del 在字典中的用法</h4><ul><li>```python<br>my_dict = {‘name’: ‘dewei’, ‘age’: 33}del my_dict[‘name’]<br>print(my_dict)<blockquote><blockquote><p>{‘age’: 33}</p></blockquote></blockquote>del my_dict<br>print(my_dict) -&gt; 报错 , 整个字典对象已被删除<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 代码</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line"># coding:utf-8</span><br><span class="line"></span><br><span class="line">projects = &#123;</span><br><span class="line">    &#x27;ipad&#x27;: &#123;&#x27;name&#x27;: &#x27;ipad&#x27;, &#x27;price&#x27;: 2200, &#x27;decs&#x27;: &#x27;平板电脑&#x27;&#125;,</span><br><span class="line">    &#x27;iphone&#x27;: &#123;&#x27;name&#x27;: &#x27;iphone&#x27;, &#x27;price&#x27;: 3000, &#x27;desc&#x27;: &#x27;智能手机&#x27;&#125;,</span><br><span class="line">    &#x27;pc&#x27;: &#123;&#x27;name&#x27;: &#x27;pc&#x27;, &#x27;price&#x27;: 5000, &#x27;desc&#x27;: &#x27;台式电脑&#x27;&#125;,</span><br><span class="line">    &#x27;mac&#x27;: &#123;&#x27;name&#x27;: &#x27;mac&#x27;, &#x27;price&#x27;: 8000, &#x27;desc&#x27;: &#x27;平板电脑&#x27;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">print(projects.keys())</span><br><span class="line"></span><br><span class="line">print(&#x27;一个中学生购买了&#123;&#125;,价格是&#123;&#125;&#x27;.format(projects[&#x27;pc&#x27;][&#x27;name&#x27;], projects[&#x27;pc&#x27;][&#x27;price&#x27;]))</span><br><span class="line">projects.pop(&#x27;pc&#x27;)</span><br><span class="line">print(projects.keys())</span><br><span class="line"></span><br><span class="line">result = projects.pop(&#x27;mac&#x27;)</span><br><span class="line">print(&#x27;一个程序员购买了&#123;&#125;,它的价格是&#123;&#125;&#x27;.format(result[&#x27;name&#x27;], result[&#x27;price&#x27;]))</span><br><span class="line">print(projects.keys())</span><br><span class="line"></span><br><span class="line">print(&#x27;&#123;&#125; 和 &#123;&#125; 都被卖出了, 他们一共花费了&#123;&#125;元&#x27;.format(</span><br><span class="line">    projects[&#x27;ipad&#x27;][&#x27;name&#x27;], projects[&#x27;iphone&#x27;][&#x27;name&#x27;],</span><br><span class="line">    projects[&#x27;ipad&#x27;][&#x27;price&#x27;] + projects[&#x27;iphone&#x27;][&#x27;price&#x27;]</span><br><span class="line">))</span><br><span class="line">projects.clear()</span><br><span class="line">print(projects.keys())</span><br><span class="line"></span><br><span class="line">del  projects</span><br><span class="line"># print(projects)</span><br><span class="line"></span><br></pre></td></tr></table></figure></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字典 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python 字典key的获取</title>
+      <link href="/a44f8b1037ba/"/>
+      <url>/a44f8b1037ba/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="字典key的获取"><a href="#字典key的获取" class="headerlink" title="字典key的获取"></a>字典key的获取</h3><h4 id="的获取方法"><a href="#的获取方法" class="headerlink" title="[]的获取方法"></a>[]的获取方法</h4><ul><li>字典+中括号内传key , 不进行赋值操作` 即为获取</li><li>返回key对应的value值</li></ul><h4 id="内置函数get获取方法"><a href="#内置函数get获取方法" class="headerlink" title="内置函数get获取方法"></a>内置函数get获取方法</h4><h5 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h5><ul><li>获取当前字典中指定key对应的value</li></ul><h5 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h5><ul><li><code>dict.get(key, default=None)</code></li></ul><h5 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h5><ul><li><code>key</code> : 需要获取<strong>value</strong>的<strong>key</strong></li><li><code>default</code> : key<strong>不存在</strong>则返回此默认值 ,  默认是<code>None</code> , 我们也可以自定义(可以是任意类型)</li></ul><h4 id="与get的区别"><a href="#与get的区别" class="headerlink" title="[]与get的区别"></a>[]与get的区别</h4><ul><li><code>[]</code>如果获取的<strong>key不存在</strong>, 则**<code>直接报错</code>**</li><li><code>get</code>如果获取的<strong>key不存在</strong> ,  则<strong>返回默认值</strong></li><li>所以<strong>开发中</strong> , <strong>优先使用</strong><code>get函数</code></li></ul><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line">user_info = &#123;</span><br><span class="line">    <span class="string">&#x27;id&#x27;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="string">&#x27;username&#x27;</span>: <span class="string">&#x27;dewei&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;password&#x27;</span>: <span class="string">&#x27;abcdefg&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;created_time&#x27;</span>: <span class="string">&#x27;2020-01-01 11:11:11&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;birthday&#x27;</span>: <span class="literal">None</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">values = []</span><br><span class="line">values.append(user_info[<span class="string">&#x27;id&#x27;</span>])</span><br><span class="line">values.append(user_info[<span class="string">&#x27;username&#x27;</span>])</span><br><span class="line">values.append(user_info[<span class="string">&#x27;password&#x27;</span>])</span><br><span class="line"><span class="comment"># values.append(user_info[&#x27;created_time&#x27;])</span></span><br><span class="line">values.append(user_info.get(<span class="string">&#x27;created_time&#x27;</span>, <span class="string">&#x27;2020-02-02&#x27;</span>))</span><br><span class="line"><span class="comment"># values.append(user_info[&#x27;birthday&#x27;])</span></span><br><span class="line">values.append(user_info.get(<span class="string">&#x27;birthday&#x27;</span>, <span class="string">&#x27;2020-03-03&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(values)</span><br><span class="line"><span class="comment"># values.append(user_info[&#x27;birthday&#x27;])</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># values.append(user_info.get(&#x27;birthday&#x27;, &#x27;1986-01-01&#x27;))</span></span><br><span class="line"><span class="comment"># print(values)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字典 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python 字典的values函数</title>
+      <link href="/c4a2fc9c82dd/"/>
+      <url>/c4a2fc9c82dd/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="字典的values函数"><a href="#字典的values函数" class="headerlink" title="字典的values函数"></a>字典的values函数</h3><h4 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h4><ul><li>获取<strong>当前字典</strong>中所有<code>键值对</code>中的<code>值(value)</code></li></ul><h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><ul><li><code>dict.values()</code>  -&gt; <strong>无需传参</strong>, 返回一个<code>value集合</code>的<code>伪列表</code><ul><li>依旧是伪列表,不具有列表的所有功能</li></ul></li></ul><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line">project = &#123;<span class="string">&#x27;id&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;ipad&#x27;</span>, <span class="string">&#x27;price&#x27;</span>: <span class="number">2200</span>, <span class="string">&#x27;count&#x27;</span>: <span class="number">50</span>&#125;</span><br><span class="line"></span><br><span class="line">keys = <span class="built_in">list</span>(project.keys())</span><br><span class="line">values = <span class="built_in">list</span>(project.values())</span><br><span class="line"><span class="built_in">print</span>(keys)</span><br><span class="line"><span class="built_in">print</span>(values)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125; | &#123;&#125;  | &#123;&#125; | &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(keys[<span class="number">0</span>], keys[<span class="number">1</span>], keys[<span class="number">2</span>], keys[<span class="number">3</span>]))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;&#123;&#125;  | &#123;&#125;  | &#123;&#125;  | &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(values[<span class="number">0</span>], values[<span class="number">1</span>], values[<span class="number">2</span>], values[<span class="number">3</span>]))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;2  | iphone | 3000 | 50&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字典 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python 字典的keys函数</title>
+      <link href="/3ae120011f42/"/>
+      <url>/3ae120011f42/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="字典的keys函数"><a href="#字典的keys函数" class="headerlink" title="字典的keys函数"></a>字典的keys函数</h3><h4 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h4><ul><li>获取当前字典中所有的<code>键(key)</code></li></ul><h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><ul><li><code>dict.keys()</code>  -&gt; <strong>无需传参</strong>,返回一个<strong>key</strong>集合的<code>伪列表</code><ul><li><code>伪列表</code>不具备列表的所有功能</li></ul></li></ul><h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><ul><li>使用<code>list()函数</code>可以将<code>伪列表</code>转换为<code>列表</code></li><li>转换之后的列表具有<code>无重复成员</code>的特点</li></ul><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line">project = &#123;<span class="string">&#x27;id&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;project_name&#x27;</span>: <span class="string">&#x27;ipad&#x27;</span>, <span class="string">&#x27;price&#x27;</span>: <span class="number">2200</span>, <span class="string">&#x27;count&#x27;</span>: <span class="number">30</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># project_title = project.keys()</span></span><br><span class="line">project_title = <span class="built_in">list</span>(project.keys())</span><br><span class="line"><span class="built_in">print</span>(project_title)</span><br><span class="line"><span class="comment"># print(project_title[0])</span></span><br><span class="line"><span class="comment"># project_title.append(&#x27;user&#x27;)</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(project_title))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(project_title[<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(project_title[<span class="number">3</span>])</span><br><span class="line"><span class="built_in">print</span>(project_title[<span class="number">2</span>: <span class="number">6</span>])</span><br><span class="line">project_title.append(<span class="string">&#x27;user&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(project_title)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字典 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python 总结 : 字典中添加数据的方法</title>
+      <link href="/4e361d34199b/"/>
+      <url>/4e361d34199b/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="总结-字典中添加数据的方法"><a href="#总结-字典中添加数据的方法" class="headerlink" title="总结 : 字典中添加数据的方法"></a>总结 : 字典中添加数据的方法</h3><blockquote><p>在字典中添加数据的方法有很多种，总结为以下几种</p></blockquote><h4 id="第一种：通过中括号的形式添加"><a href="#第一种：通过中括号的形式添加" class="headerlink" title="第一种：通过中括号的形式添加"></a>第一种：通过中括号的形式添加</h4><p><img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-3/1.jpg" alt="1"></p><h4 id="第二种：字典的内置函数update"><a href="#第二种：字典的内置函数update" class="headerlink" title="第二种：字典的内置函数update"></a>第二种：字典的内置函数update</h4><ul><li><p>无论是添加还是修改都属于<code>更新字典</code></p></li><li><p>在<code>update括号</code>中传入一个新的字典<code>key</code>和<code>value</code>就可以了。字典会自己去检测<code>key</code>是否存在，存在就会覆盖。</p></li></ul><p><img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-3/2.jpg" alt="2"></p><h4 id="第三种：字典的setdefault-函数"><a href="#第三种：字典的setdefault-函数" class="headerlink" title="第三种：字典的setdefault()函数"></a>第三种：字典的setdefault()函数</h4><ul><li>Python 字典 <code>setdefault() 函数</code>和 <code>get()方法</code> 类似, 如果键不存在于字典中，将会添加键并将值设为默认值，如果字典中包含有给定键，则返回该键对应的值，否则返回为该键设置的值。</li></ul><p><img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-3/3.jpg" alt="3"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字典 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python 字典添加修改数据的方法</title>
+      <link href="/93a62aa43730/"/>
+      <url>/93a62aa43730/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="字典添加修改数据的方法"><a href="#字典添加修改数据的方法" class="headerlink" title="字典添加修改数据的方法"></a>字典添加修改数据的方法</h3><h4 id="处理法"><a href="#处理法" class="headerlink" title="[]处理法"></a><code>[]</code>处理法</h4><blockquote><p>字符串,列表, <code>list[0] = 10</code></p></blockquote><ul><li>字典<strong>无</strong>索引</li><li><code>dict[ &#39;name&#39; ] =  &#39;dewei&#39;</code></li><li>添加或修改 ,  根据key是否存在所决定</li></ul><h4 id="字典的内置函数update"><a href="#字典的内置函数update" class="headerlink" title="字典的内置函数update"></a>字典的内置函数<code>update</code></h4><h5 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h5><ul><li>添加新的字典,如<strong>新字典</strong>中有和原字典相同的<code>key</code> , 则该<code>key</code>的<code>value</code>会被<strong>新字典</strong>的<code>value</code>覆盖</li></ul><h5 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h5><ul><li><code>dict.update(new_dict)</code> – 该函数无返回值</li></ul><h5 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h5><ul><li><code>new_dict</code> : 新的字典</li></ul><h4 id="字典的内置函数setdefault"><a href="#字典的内置函数setdefault" class="headerlink" title="字典的内置函数setdefault"></a>字典的内置函数<code>setdefault</code></h4><h5 id="功能-1"><a href="#功能-1" class="headerlink" title="功能"></a>功能</h5><ul><li>获取某个<code>key</code>的<code>value</code> , 如<code>key</code><strong>不存在</strong>于字典中 , 将会<code>添加key</code>并将<strong>value</strong>设为<strong>默认值</strong></li></ul><h5 id="用法-1"><a href="#用法-1" class="headerlink" title="用法"></a>用法</h5><ul><li>dict.setdefault(key, value)</li></ul><h5 id="参数-1"><a href="#参数-1" class="headerlink" title="参数"></a>参数</h5><ul><li><code>key</code> : 需要获取的<strong>key</strong></li><li><code>value</code> : 如果<strong>key</strong>不存在 , 对应这个<strong>key</strong>存入字典的默认值</li></ul><h4 id="注意事项再强调"><a href="#注意事项再强调" class="headerlink" title="注意事项再强调"></a>注意事项再强调</h4><ul><li>字典中每一个<code>key</code>一定是<strong>唯一</strong>的</li><li>字典中的数据量<strong>没有限制</strong></li><li>字典中的<code>value</code>可以是<strong>任何python的内置数据类型的对象和自定义的对象</strong></li></ul><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line">user = &#123;<span class="string">&#x27;username&#x27;</span>: <span class="string">&#x27;dewei&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">33</span>&#125;</span><br><span class="line">xiaomu = &#123;<span class="string">&#x27;username&#x27;</span>: <span class="string">&#x27;小慕&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">10</span>, <span class="string">&#x27;top&#x27;</span>: <span class="number">175</span>, <span class="string">&#x27;sex&#x27;</span>: <span class="string">&#x27;男&#x27;</span>&#125;</span><br><span class="line">user.update(xiaomu)</span><br><span class="line"><span class="built_in">print</span>(user)</span><br><span class="line"></span><br><span class="line">value = user.setdefault(<span class="string">&#x27;username&#x27;</span>, <span class="string">&#x27;xiaoyun&#x27;</span>)</span><br><span class="line">value = user.setdefault(<span class="string">&#x27;birthday&#x27;</span>, <span class="string">&#x27;2021-1-1&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(user, value)</span><br><span class="line"></span><br><span class="line"><span class="comment"># user[&#x27;top&#x27;] = 174</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># print(user)</span></span><br><span class="line"><span class="comment"># user[&#x27;username&#x27;] = &#x27;小慕&#x27;</span></span><br><span class="line"><span class="comment"># print(user)</span></span><br><span class="line"><span class="comment"># user[&#x27;top&#x27;] = 175</span></span><br><span class="line"><span class="comment"># user[&#x27;age&#x27;] = 10</span></span><br><span class="line"><span class="comment"># print(user)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 字典 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python 索引与切片之字符串</title>
       <link href="/fe406508a7f3/"/>
       <url>/fe406508a7f3/</url>
