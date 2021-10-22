@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Python 初识面向对象编程</title>
+      <link href="/2021/4b3e522b6936/"/>
+      <url>/2021/4b3e522b6936/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="初识面向对象编程"><a href="#初识面向对象编程" class="headerlink" title="初识面向对象编程"></a>初识面向对象编程</h3><h4 id="什么是面向对象编程"><a href="#什么是面向对象编程" class="headerlink" title="什么是面向对象编程"></a>什么是面向对象编程</h4><ul><li>利用(面向)对象(属性或方法)去进行编码的过程</li><li>自定义对象数据类型就是面向对象中的类(class)的概念</li></ul><h4 id="类的关键字class"><a href="#类的关键字class" class="headerlink" title="类的关键字class"></a>类的关键字class</h4><ul><li><code>class</code>来<strong>声明类</strong>,<code>类的名称</code><strong>首字母大写</strong>,多单词情况下每个单词<strong>首字母大写</strong></li></ul><h4 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Name</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">attr = something</span><br><span class="line"><span class="comment"># s</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">self</span>):</span></span><br><span class="line">    do</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 对象和异常 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python [案例]实现学生信息库</title>
       <link href="/2021/aff30b79847e/"/>
       <url>/2021/aff30b79847e/</url>

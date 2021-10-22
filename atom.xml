@@ -6,7 +6,7 @@
   <link href="https://code.maylove.pub/atom.xml" rel="self"/>
   
   <link href="https://code.maylove.pub/"/>
-  <updated>2021-10-20T15:24:19.355Z</updated>
+  <updated>2021-10-22T16:52:32.619Z</updated>
   <id>https://code.maylove.pub/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python 初识面向对象编程</title>
+    <link href="https://code.maylove.pub/2021/4b3e522b6936/"/>
+    <id>https://code.maylove.pub/2021/4b3e522b6936/</id>
+    <published>2021-10-22T16:50:05.000Z</published>
+    <updated>2021-10-22T16:52:32.619Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="初识面向对象编程"><a href="#初识面向对象编程" class="headerlink" title="初识面向对象编程"></a>初识面向对象编程</h3><h4 id="什么是面向对象编程"><a href="#什么是面向对象编程" class="headerlink" title="什么是面向对象编程"></a>什么是面向对象编程</h4><ul><li>利用(面向)对象(属性或方法)去进行编码的过程</li><li>自定义对象数据类型就是面向对象中的类(class)的概念</li></ul><h4 id="类的关键字class"><a href="#类的关键字class" class="headerlink" title="类的关键字class"></a>类的关键字class</h4><ul><li><code>class</code>来<strong>声明类</strong>,<code>类的名称</code><strong>首字母大写</strong>,多单词情况下每个单词<strong>首字母大写</strong></li></ul><h4 id="类的定义"><a href="#类的定义" class="headerlink" title="类的定义"></a>类的定义</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Name</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">attr = something</span><br><span class="line"><span class="comment"># s</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">self</span>):</span></span><br><span class="line">    do</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">本节课主要学习了&lt;br&gt;面向对象编程的基础知识</summary>
+    
+    
+    
+    <category term="Python" scheme="https://code.maylove.pub/categories/Python/"/>
+    
+    
+    <category term="对象和异常" scheme="https://code.maylove.pub/tags/%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%BC%82%E5%B8%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>Python [案例]实现学生信息库</title>
@@ -412,27 +433,6 @@
     
     
     <category term="循环" scheme="https://code.maylove.pub/tags/%E5%BE%AA%E7%8E%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python 阶段编程练习 (七)</title>
-    <link href="https://code.maylove.pub/2021/0046389a0945/"/>
-    <id>https://code.maylove.pub/2021/0046389a0945/</id>
-    <published>2021-10-16T12:02:46.000Z</published>
-    <updated>2021-10-16T12:18:14.933Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h3><blockquote><p>编写一个程序生成一个包含(i, i<em>i)的字典（i是key，i</em>i是value），该字典包含1到8之间的整数(两者都包含)。然后打印该字典。</p><p>效果如下:</p><p><img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-16/1.png" alt="1"></p></blockquote><h4 id="任务提示"><a href="#任务提示" class="headerlink" title="任务提示"></a>任务提示</h4><ol><li>定义一个整型变量，值为8</li><li>使用dict类型()</li></ol><h4 id="原始代码"><a href="#原始代码" class="headerlink" title="原始代码"></a>原始代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="comment"># 定义一个整数</span></span><br><span class="line">n = <span class="number">8</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h4 id="代码提交区"><a href="#代码提交区" class="headerlink" title="代码提交区"></a>代码提交区</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个整数</span></span><br><span class="line">n = <span class="number">8</span></span><br><span class="line">dict_eight = &#123;&#125;</span><br><span class="line"></span><br><span class="line">l = <span class="built_in">range</span>(<span class="number">8</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> l:</span><br><span class="line">    <span class="keyword">if</span> i &lt; n:</span><br><span class="line">        a = i + <span class="number">1</span></span><br><span class="line">        b = (i + <span class="number">1</span>) ** <span class="number">2</span></span><br><span class="line">        dict_eight[a] = b</span><br><span class="line"><span class="built_in">print</span>(dict_eight)</span><br><span class="line"></span><br></pre></td></tr></table></figure><h4 id="结果检验区"><a href="#结果检验区" class="headerlink" title="结果检验区"></a>结果检验区</h4><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Users</span>\<span class="title">admin</span>\<span class="title">PycharmProjects</span>\<span class="title">python_iterable</span>\<span class="title">venv</span>\<span class="title">Scripts</span>\<span class="title">python.exe</span> </span></span><br><span class="line"><span class="function"><span class="title">C</span>:/<span class="title">Users</span>/<span class="title">admin</span>/<span class="title">PycharmProjects</span>/<span class="title">python_iterable</span>/<span class="title">test_new.py</span></span></span><br><span class="line"><span class="function">&#123;1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64&#125;</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">进程已结束，退出代码为 0</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">通过运用前面所学的知识 &lt;br&gt; 完成自己的任务</summary>
-    
-    
-    
-    <category term="Python" scheme="https://code.maylove.pub/categories/Python/"/>
-    
-    
-    <category term="编程练习" scheme="https://code.maylove.pub/tags/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0/"/>
     
   </entry>
   
