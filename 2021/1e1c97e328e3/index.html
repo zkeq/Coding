@@ -1,0 +1,268 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Python 类的参数self | ZkeqのCoding日志</title><meta name="keywords" content="对象和异常"><meta name="author" content="Zkeq"><meta name="copyright" content="Zkeq"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="本节课主要学习了类的参数self">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python 类的参数self">
+<meta property="og:url" content="https://code.maylove.pub/2021/1e1c97e328e3/index.html">
+<meta property="og:site_name" content="ZkeqのCoding日志">
+<meta property="og:description" content="本节课主要学习了类的参数self">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg">
+<meta property="article:published_time" content="2021-10-28T14:23:18.000Z">
+<meta property="article:modified_time" content="2021-10-28T14:38:25.327Z">
+<meta property="article:author" content="Zkeq">
+<meta property="article:tag" content="对象和异常">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg"><link rel="shortcut icon" href="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/code.svg"><link rel="canonical" href="https://code.maylove.pub/2021/1e1c97e328e3/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":400},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":24,"languages":{"author":"作者: Zkeq","link":"链接: ","source":"来源: ZkeqのCoding日志","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Python 类的参数self',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-10-28 22:38:25'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    document.addEventListener('pjax:complete', detectApple)})(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="ZkeqのCoding日志" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/Avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">94</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.learnonly.xyz/"><i class="fa-fw fas fa-home"></i><span> Learnonly导航</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.zkeq.xyz/"><i class="fa-fw fas fa-music"></i><span> 追星计划</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ZkeqのCoding日志</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.learnonly.xyz/"><i class="fa-fw fas fa-home"></i><span> Learnonly导航</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.zkeq.xyz/"><i class="fa-fw fas fa-music"></i><span> 追星计划</span></a></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Python 类的参数self</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-10-28T14:23:18.000Z" title="发表于 2021-10-28 22:23:18">2021-10-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-10-28T14:38:25.327Z" title="更新于 2021-10-28 22:38:25">2021-10-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Python/">Python</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">213</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Python 类的参数self"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="类的参数self"><a href="#类的参数self" class="headerlink" title="类的参数self"></a>类的参数self</h3><ul>
+<li><code>self</code>是类函数中的必传参数, 且必须放在第一个参数位置</li>
+<li><code>self</code>是一个变量,他代表实例化的变量本身</li>
+<li><code>self</code>可以直接通过定义点来定义一个类变量    <code>self.name = &#39;dewei&#39;</code></li>
+<li>self中的变量与含有self参数的函数可以在类中的任何一个函数内随意调用</li>
+<li>非函数中定义的变量在定义的时候不用self</li>
+</ul>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sleep</span>(<span class="params">name</span>):</span></span><br><span class="line">   <span class="keyword">return</span> name</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    name = <span class="literal">None</span></span><br><span class="line">    age = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;self.name&#125;</span>在奔跑&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">jump</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;self.name&#125;</span>在跳跃&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">work</span>(<span class="params">self</span>):</span></span><br><span class="line">        self.run()</span><br><span class="line">        self.jump()</span><br><span class="line">        <span class="comment"># def sleep(name):</span></span><br><span class="line">        <span class="comment">#     return name</span></span><br><span class="line">        result = sleep(self.name)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;sleep result is&#x27;</span>, result)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">xiaomu = Person()</span><br><span class="line">xiaomu.name = <span class="string">&#x27;小慕&#x27;</span></span><br><span class="line">xiaomu.jump()</span><br><span class="line"></span><br><span class="line">dewei = Person()</span><br><span class="line">dewei.jump()</span><br><span class="line"></span><br><span class="line">dewei.top = <span class="number">174</span></span><br><span class="line"><span class="built_in">print</span>(dewei.top)</span><br><span class="line"><span class="comment"># print(xiaomu.top)</span></span><br><span class="line"><span class="built_in">print</span>(dewei.age)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;--------&#x27;</span>)</span><br><span class="line">xiaomu.work()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Zkeq</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://code.maylove.pub/2021/1e1c97e328e3/">https://code.maylove.pub/2021/1e1c97e328e3/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://code.maylove.pub" target="_blank">ZkeqのCoding日志</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%BC%82%E5%B8%B8/">对象和异常</a></div><div class="post_share"><div class="social-share" data-image="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/e1f702148634/"><img class="prev-cover" src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Python 类的构造函数</div></div></a></div><div class="next-post pull-right"><a href="/2021/9b363a26ba6e/"><img class="next-cover" src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Python 面向对象中常用术语</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/4b3e522b6936/" title="Python 初识面向对象编程"><img class="cover" src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-23/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-23</div><div class="title">Python 初识面向对象编程</div></div></a></div><div><a href="/2021/3f708f9e3b70/" title="Python 对象的生命周期"><img class="cover" src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-28</div><div class="title">Python 对象的生命周期</div></div></a></div><div><a href="/2021/a85b5a2e7b47/" title="Python 私有函数和私有变量"><img class="cover" src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-28</div><div class="title">Python 私有函数和私有变量</div></div></a></div><div><a href="/2021/e1f702148634/" title="Python 类的构造函数"><img class="cover" src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-28</div><div class="title">Python 类的构造函数</div></div></a></div><div><a href="/2021/8ac31b97c4f0/" title="Python 装饰器"><img class="cover" src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-28</div><div class="title">Python 装饰器</div></div></a></div><div><a href="/2021/9b363a26ba6e/" title="Python 面向对象中常用术语"><img class="cover" src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-28</div><div class="title">Python 面向对象中常用术语</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/Avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Zkeq</div><div class="author-info__description">Coding Blog</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">94</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zkeq"><i class="fab fa-github"></i><span>Find Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://code.maylove.pub" style="color:#49b1f5" one-link-mark="yes">主站</a>&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://coding.maylove.pub" style="color:#49b1f5" one-link-mark="yes">镜像</a>&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://zkeq.gitee.io/code" style="color:#49b1f5" one-link-mark="yes">国内镜像</a><br>联系我：<a target="_blank" rel="noopener external nofollow noreferrer" href="mailto:learnonly@learnonly.xyz" style="color:#49b1f5" one-link-mark="yes">learnonly@learnonly.xyz</a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E7%9A%84%E5%8F%82%E6%95%B0self"><span class="toc-text">类的参数self</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/8ac31b97c4f0/" title="Python 装饰器"><img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python 装饰器"/></a><div class="content"><a class="title" href="/2021/8ac31b97c4f0/" title="Python 装饰器">Python 装饰器</a><time datetime="2021-10-28T14:25:10.000Z" title="发表于 2021-10-28 22:25:10">2021-10-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/3ef525f29f3e/" title="Python中的封装"><img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python中的封装"/></a><div class="content"><a class="title" href="/2021/3ef525f29f3e/" title="Python中的封装">Python中的封装</a><time datetime="2021-10-28T14:24:58.000Z" title="发表于 2021-10-28 22:24:58">2021-10-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/65df7f3fb793/" title="Python 阶段编程练习(十四)"><img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python 阶段编程练习(十四)"/></a><div class="content"><a class="title" href="/2021/65df7f3fb793/" title="Python 阶段编程练习(十四)">Python 阶段编程练习(十四)</a><time datetime="2021-10-28T14:24:36.000Z" title="发表于 2021-10-28 22:24:36">2021-10-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/a85b5a2e7b47/" title="Python 私有函数和私有变量"><img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python 私有函数和私有变量"/></a><div class="content"><a class="title" href="/2021/a85b5a2e7b47/" title="Python 私有函数和私有变量">Python 私有函数和私有变量</a><time datetime="2021-10-28T14:23:54.000Z" title="发表于 2021-10-28 22:23:54">2021-10-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/3f708f9e3b70/" title="Python 对象的生命周期"><img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python 对象的生命周期"/></a><div class="content"><a class="title" href="/2021/3f708f9e3b70/" title="Python 对象的生命周期">Python 对象的生命周期</a><time datetime="2021-10-28T14:23:43.000Z" title="发表于 2021-10-28 22:23:43">2021-10-28</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://maylove.oss-cn-beijing.aliyuncs.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/p2671062609.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Zkeq</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="1050282" data-server="netease" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="Python,Java,Html,PS,PR,AE,C4D" data-fontsize="15px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.removeEventListener('scroll', window.tocScrollFn)
+  window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start -->
+  <script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script>
+  <script data-pjax>
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://python-github-calendar-api.vercel.app/api?Zkeq";
+            var git_color =['#e5e3ee', '#c7dcfb', '#87cfff', '#97b3ff', '#a59cff', '#b67dff', '#c85eff', '#d845ff', '#e52eff', '#f316ff', '#6a46e6'];
+            var git_user ="Zkeq";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/'){
+                console.log('已挂载github calendar')
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style></style><!-- hexo injector body_end end --></body></html>
