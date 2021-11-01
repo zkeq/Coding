@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>Python 类的多态</title>
+      <link href="/2021/95f82be06496/"/>
+      <url>/2021/95f82be06496/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="类的多态"><a href="#类的多态" class="headerlink" title="类的多态"></a>类的多态</h3><h4 id="什么是类的多态"><a href="#什么是类的多态" class="headerlink" title="什么是类的多态"></a>什么是类的多态</h4><ul><li>同一个功能的多状变化</li></ul><h4 id="多态的用法"><a href="#多态的用法" class="headerlink" title="多态的用法"></a>多态的用法</h4><ul><li><code>子类中重写父类的方法</code></li></ul><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1 书写一个父类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">XiaomuFather</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">talk</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;小慕的爸爸说了一句话&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">jump</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;大家都可以跳&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2 书写一个子类,并且继承一个父类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">XiaomuBrother</span>(<span class="params">XiaomuFather</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;小慕哥哥在奔跑着&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">talk</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;小慕哥哥在说话&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 为什么要去多态</span></span><br><span class="line"><span class="comment"># 为什么要去继承父类</span></span><br><span class="line"><span class="comment"># 答案: 为了已经写好的类中的函数</span></span><br><span class="line"><span class="comment"># 为了保留子类中某个和父类名称一样的函数的功能, 这时候, 我们就用到了类的多态</span></span><br><span class="line"><span class="comment"># 可以帮助我们保留子类中的函数功能</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Xiaomu</span>(<span class="params">XiaomuFather</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">talk</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;haha 小慕也可以说自己的观点&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    xiaomu_brother = XiaomuBrother()</span><br><span class="line">    xiaomu_brother.run()</span><br><span class="line">    xiaomu_brother.talk()</span><br><span class="line">    xiaomu_brother.jump()</span><br><span class="line">    father = XiaomuFather()</span><br><span class="line">    father.talk()</span><br><span class="line">    xiaomu = Xiaomu()</span><br><span class="line">    xiaomu.talk()</span><br><span class="line">    xiaomu.jump()</span><br><span class="line">    </span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 对象和异常 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python 类的super函数</title>
+      <link href="/2021/c806169e5392/"/>
+      <url>/2021/c806169e5392/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="类的super函数"><a href="#类的super函数" class="headerlink" title="类的super函数"></a>类的super函数</h3><h4 id="super函数的作用"><a href="#super函数的作用" class="headerlink" title="super函数的作用"></a>super函数的作用</h4><ul><li><code>python</code>子类<code>继承父类</code>的<code>方法</code>而使用的<code>关键字</code>.<ul><li>当<strong>子类继承父类</strong>后 ,就可以<code>使用</code><strong>父类的方法</strong></li></ul></li></ul><h4 id="super函数的用法"><a href="#super函数的用法" class="headerlink" title="super函数的用法"></a>super函数的用法</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello i am parent&#x27;</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span>(<span class="params">Parent</span>):</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello i am child&#x27;</span>)</span><br><span class="line">        <span class="built_in">super</span>(Child, self).__init__()  <span class="comment">#python3 括弧内的参数可以省略</span></span><br><span class="line">        <span class="comment">#      当前类  类的实例</span></span><br></pre></td></tr></table></figure><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, p</span>):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;hello i am parent %s &#x27;</span> % p)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Child</span>(<span class="params">Parent</span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, c, p</span>):</span></span><br><span class="line">        <span class="comment"># super(Child, self).__init__(p)</span></span><br><span class="line">        <span class="built_in">super</span>().__init__(p)</span><br><span class="line">        <span class="comment"># super(Child, self).__init__(&#x27;parent&#x27;) 也可以</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;hello i am child %s &#x27;</span> % c)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    c = Child(c=<span class="string">&#x27;Child&#x27;</span>, p=<span class="string">&#x27;Parent&#x27;</span>)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 对象和异常 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python 类的继承</title>
       <link href="/2021/9c6f24dde47e/"/>
       <url>/2021/9c6f24dde47e/</url>
