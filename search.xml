@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>Python 线程</title>
+      <link href="/2021/fcde66a536a1/"/>
+      <url>/2021/fcde66a536a1/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h3><blockquote><p>Python学累了,想学Java html js vue Tailwindcss 小程序  c4d ae pr 了.</p></blockquote><h4 id="什么是线程"><a href="#什么是线程" class="headerlink" title="什么是线程"></a>什么是线程</h4><ul><li>进程吸收资源</li><li>传递给线程执行业务逻辑</li></ul><h4 id="线程与进程的关系"><a href="#线程与进程的关系" class="headerlink" title="线程与进程的关系"></a>线程与进程的关系</h4><ul><li>吃饭获得能量和营养(进程), 之后大脑执行逻辑(线程)</li><li>进程提供线程执行程序的前置要求,线程在重组的资源配备下,去执行程序</li></ul><h4 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h4><ul><li>开启一个浏览器后,从浏览器(主进程)中创建出多个线程来开启多个页面</li></ul><h4 id="多线程的执行方式"><a href="#多线程的执行方式" class="headerlink" title="多线程的执行方式"></a>多线程的执行方式</h4><p><img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-13/1.jpg" alt="1"></p><blockquote><h5 id="一、什么是线程"><a href="#一、什么是线程" class="headerlink" title="一、什么是线程"></a>一、什么是线程</h5><p>线程（Thread）是操作系统最小的执行单元，进程至少由一个线程组成。如何调度进程和线程，完全由操作系统决定，程序自己不能决定什么时候执行，执行多长时间。有些进程还不止同时干一件事，比如微信，它可以同时进行语音、发文字、浏览信息等事情。</p><p>简单理解：在一个进程内部，要同时干多件事，就需要同时运行多个“子任务”，我们把进程内的这些“子任务”称为线程。</p><h5 id="二、怎样的任务算一个线程"><a href="#二、怎样的任务算一个线程" class="headerlink" title="二、怎样的任务算一个线程"></a>二、怎样的任务算一个线程</h5><p>进程被运行后算是一个线程，进程是不运行的，线程才会运行，而一个进程有多个线程就涉及到进程有多少可以被cpu单独调用的模块，这个调用的模块可以通过手动创建线程来建立。</p><h5 id="三、在python中如何创建线程"><a href="#三、在python中如何创建线程" class="headerlink" title="三、在python中如何创建线程"></a>三、在python中如何创建线程</h5><ul><li><p>使用的模块：<code>threading</code></p></li><li><p>创建的方法：<code>threading.Thread(…)</code></p></li></ul><p>代码如下：</p><p><img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-13/2.jpg" alt="2"></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 进程与线程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python 进程</title>
+      <link href="/2021/eab0079965df/"/>
+      <url>/2021/eab0079965df/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><h4 id="什么是进程"><a href="#什么是进程" class="headerlink" title="什么是进程"></a>什么是进程</h4><ul><li>进程就是程序执行的载体</li></ul><h4 id="进程在生活中的应用"><a href="#进程在生活中的应用" class="headerlink" title="进程在生活中的应用"></a>进程在生活中的应用</h4><ul><li>我们打开的每个<code>软件 游戏,</code>执行的<code>每一个python脚本</code>都是<strong>启动一个进程</strong></li><li>软件(游戏, 脚本) == 进程</li></ul><h4 id="进程的口粮"><a href="#进程的口粮" class="headerlink" title="进程的口粮"></a>进程的口粮</h4><ul><li>每一个进程像人一样需要吃饭,他的粮食就是:内存和cpu</li></ul><h4 id="多进程"><a href="#多进程" class="headerlink" title="多进程"></a>多进程</h4><ul><li>主进程创建子进程</li><li>父进程创建子进程</li></ul><h4 id="多进程的执行方式"><a href="#多进程的执行方式" class="headerlink" title="多进程的执行方式"></a>多进程的执行方式</h4><ul><li>cpu分配空余核心给进程</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 进程与线程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python 阶段编程练习(二十三)</title>
       <link href="/2021/66e0909bf3d4/"/>
       <url>/2021/66e0909bf3d4/</url>
