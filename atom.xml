@@ -6,7 +6,7 @@
   <link href="https://code.maylove.pub/atom.xml" rel="self"/>
   
   <link href="https://code.maylove.pub/"/>
-  <updated>2021-11-13T14:54:38.649Z</updated>
+  <updated>2021-11-16T16:26:11.209Z</updated>
   <id>https://code.maylove.pub/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java 创建学习知识库</title>
+    <link href="https://code.maylove.pub/2021/f4e13f654cb7/"/>
+    <id>https://code.maylove.pub/2021/f4e13f654cb7/</id>
+    <published>2021-11-16T16:20:44.000Z</published>
+    <updated>2021-11-16T16:26:11.209Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="文档地址"><a href="#文档地址" class="headerlink" title="文档地址"></a>文档地址</h3><ul><li><a href="https://javadocs.zkeq.xyz/">https://javadocs.zkeq.xyz</a></li></ul><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><ul><li>方便自己日后学习</li><li>本页面仅记录自己写的代码, 知识库中存在的不再重复…</li></ul><blockquote><p><strong>还是要多把精力放在文化课上哈…</strong></p></blockquote>]]></content>
+    
+    
+    <summary type="html">为了方便自己的学习,创建了一个</summary>
+    
+    
+    
+    <category term="Java" scheme="https://code.maylove.pub/categories/Java/"/>
+    
+    
+    <category term="知识库" scheme="https://code.maylove.pub/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    
+  </entry>
   
   <entry>
     <title>Python 线程</title>
@@ -427,27 +448,6 @@
     
     
     <summary type="html">本节课主要学习了&lt;br&gt;Python的os包</summary>
-    
-    
-    
-    <category term="Python" scheme="https://code.maylove.pub/categories/Python/"/>
-    
-    
-    <category term="模块和包" scheme="https://code.maylove.pub/tags/%E6%A8%A1%E5%9D%97%E5%92%8C%E5%8C%85/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python Python中的时间包2  time模块</title>
-    <link href="https://code.maylove.pub/2021/564442f53b07/"/>
-    <id>https://code.maylove.pub/2021/564442f53b07/</id>
-    <published>2021-11-07T16:33:03.000Z</published>
-    <updated>2021-11-08T03:15:56.424Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Python中的时间包2time模块"><a href="#Python中的时间包2time模块" class="headerlink" title="Python中的时间包2time模块"></a>Python中的时间包2<code>time模块</code></h3><ul><li>认识时间戳</li><li>认识python的<code>time模块</code>与常用方法</li><li><code>datetime</code>包生成的时间戳与时间戳转时间类型的方法</li></ul><h4 id="认识时间戳"><a href="#认识时间戳" class="headerlink" title="认识时间戳"></a>认识时间戳</h4><ul><li>1970年1月1日00时00分00秒至今的总毫秒（秒）数</li><li><code>timestamp</code></li><li><code>float</code></li></ul><h4 id="time模块与它的函数们"><a href="#time模块与它的函数们" class="headerlink" title="time模块与它的函数们"></a>time模块与它的函数们</h4><ul><li>时间处理，转换时间格式</li><li>生成时间戳函数<code>time</code></li><li>获取本地时间函数<code>localtime</code></li><li><code>localtime</code>对应字段介绍</li><li>暂停函数<code>sleep</code></li><li><code>time</code>中的<code>strftime</code>与<code>strptime</code></li></ul><h4 id="生成时间戳函数time"><a href="#生成时间戳函数time" class="headerlink" title="生成时间戳函数time"></a>生成时间戳函数<code>time</code></h4><h5 id="导入包"><a href="#导入包" class="headerlink" title="导入包"></a>导入包</h5><ul><li><code>import time</code></li></ul><h5 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h5><ul><li><code>time.time()</code></li></ul><h5 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h5><ul><li><strong>秒级别</strong>的<code>浮点类型</code></li></ul><h5 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h5><ul><li><code>1580878485.4009378</code></li></ul><h4 id="获取本地时间函数-localtime"><a href="#获取本地时间函数-localtime" class="headerlink" title="获取本地时间函数 localtime"></a>获取本地时间函数 <code>localtime</code></h4><h5 id="导入包-1"><a href="#导入包-1" class="headerlink" title="导入包"></a>导入包</h5><ul><li><code>import time</code></li></ul><h5 id="使用方法-1"><a href="#使用方法-1" class="headerlink" title="使用方法"></a>使用方法</h5><ul><li><code>time.localtime(timestamp)</code></li></ul><h5 id="参数介绍"><a href="#参数介绍" class="headerlink" title="参数介绍"></a>参数介绍</h5><ul><li><code>timestamp</code> :  时间戳（可不传）</li></ul><h4 id="localtime对应字段介绍"><a href="#localtime对应字段介绍" class="headerlink" title="localtime对应字段介绍"></a>localtime对应字段介绍</h4><table><thead><tr><th>属性名</th><th align="left">介绍</th><th>取值范围</th></tr></thead><tbody><tr><td><code>tm_year</code></td><td align="left">四位数年</td><td>示例：2021</td></tr><tr><td><code>tm_mom</code></td><td align="left">月</td><td>1~12</td></tr><tr><td><code>tm_mday</code></td><td align="left">日</td><td>1~31</td></tr><tr><td><code>tm_hour</code></td><td align="left">小时</td><td>0~23</td></tr><tr><td><code>tm_min</code></td><td align="left">分钟</td><td>0~59</td></tr><tr><td><code>tm_sec</code></td><td align="left">秒</td><td>0~61（依然是闰月问题）</td></tr><tr><td><code>tm_wday</code></td><td align="left">一周的第一天</td><td>0~6（0是周一）</td></tr><tr><td><code>tm_yday</code></td><td align="left">一年的第几日</td><td>1~366（儒略历）</td></tr><tr><td><code>tm_isdat</code></td><td align="left">夏令时</td><td>-1, 0, 1是否是夏令时</td></tr></tbody></table><h4 id="暂停函数sleep"><a href="#暂停函数sleep" class="headerlink" title="暂停函数sleep"></a>暂停函数<code>sleep</code></h4><h5 id="导入包-2"><a href="#导入包-2" class="headerlink" title="导入包"></a>导入包</h5><ul><li><code>import time</code></li></ul><h5 id="使用方法-2"><a href="#使用方法-2" class="headerlink" title="使用方法"></a>使用方法</h5><ul><li><code>time.sleep(second)</code></li></ul><h5 id="参数介绍-1"><a href="#参数介绍-1" class="headerlink" title="参数介绍"></a>参数介绍</h5><ul><li><code>second</code> :  希望程序被暂停的秒数</li></ul><h4 id="time中的strftime"><a href="#time中的strftime" class="headerlink" title="time中的strftime"></a><code>time</code>中的<code>strftime</code></h4><h5 id="导入包-3"><a href="#导入包-3" class="headerlink" title="导入包"></a>导入包</h5><ul><li><code>import time</code></li></ul><h5 id="使用方法-3"><a href="#使用方法-3" class="headerlink" title="使用方法"></a>使用方法</h5><ul><li><code>time.strftime(format, t)</code></li></ul><h5 id="参数介绍-2"><a href="#参数介绍-2" class="headerlink" title="参数介绍"></a>参数介绍</h5><ul><li><code>format</code>： 格式化规范</li><li><code>t</code>：<code>time.localtime</code>对应的时间类型</li></ul><h4 id="time中的strptime"><a href="#time中的strptime" class="headerlink" title="time中的strptime"></a><code>time</code>中的<code>strptime</code></h4><h5 id="导入包-4"><a href="#导入包-4" class="headerlink" title="导入包"></a>导入包</h5><ul><li><code>import time</code></li></ul><h5 id="使用方法-4"><a href="#使用方法-4" class="headerlink" title="使用方法"></a>使用方法</h5><ul><li><code>time.strptime(time_str, format)</code></li></ul><h5 id="参数介绍-3"><a href="#参数介绍-3" class="headerlink" title="参数介绍"></a>参数介绍</h5><ul><li><code>time_str</code>:  符合时间格式的字符串</li><li><code>format</code>：确保与<code>time_str</code>一致的格式化标准</li></ul><h4 id="datetime中生成时间戳函数"><a href="#datetime中生成时间戳函数" class="headerlink" title="datetime中生成时间戳函数"></a>datetime中生成时间戳函数</h4><h5 id="导入包-5"><a href="#导入包-5" class="headerlink" title="导入包"></a>导入包</h5><ul><li><code>import datetime</code></li></ul><h5 id="使用方法-5"><a href="#使用方法-5" class="headerlink" title="使用方法"></a>使用方法</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">now = datetime.datetime.now()</span><br><span class="line">datetime.datetime.timestamp(now)</span><br></pre></td></tr></table></figure><h5 id="参数介绍-4"><a href="#参数介绍-4" class="headerlink" title="参数介绍"></a>参数介绍</h5><ul><li><code>now</code> ： datetime时间对象</li><li>秒级时间戳，浮点类型</li></ul><h4 id="datetime中时间戳转时间对象"><a href="#datetime中时间戳转时间对象" class="headerlink" title="datetime中时间戳转时间对象"></a>datetime中时间戳转时间对象</h4><h5 id="导入包-6"><a href="#导入包-6" class="headerlink" title="导入包"></a>导入包</h5><ul><li><code>import datetime</code></li></ul><h5 id="使用方法-6"><a href="#使用方法-6" class="headerlink" title="使用方法"></a>使用方法</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">datetime.datetime.fromtimestamp(timestamp)</span><br></pre></td></tr></table></figure><h5 id="参数介绍-5"><a href="#参数介绍-5" class="headerlink" title="参数介绍"></a>参数介绍</h5><ul><li><code>timestamp</code> ： <strong>时间戳</strong></li></ul><h5 id="返回值-1"><a href="#返回值-1" class="headerlink" title="返回值"></a>返回值</h5><ul><li><code>datetime</code>的<strong>日期对象</strong></li></ul><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line">now = time.time()</span><br><span class="line"><span class="built_in">print</span>(now, <span class="built_in">type</span>(now))</span><br><span class="line"></span><br><span class="line">time_obj = time.localtime(now)</span><br><span class="line"><span class="comment"># time.sleep(5)</span></span><br><span class="line"><span class="built_in">print</span>(time_obj, <span class="built_in">type</span>(time_obj))</span><br><span class="line"></span><br><span class="line">current_time_obj = time.localtime()</span><br><span class="line"><span class="built_in">print</span>(current_time_obj)</span><br><span class="line"></span><br><span class="line">before = now - <span class="number">100000</span></span><br><span class="line">before_time_obj = time.localtime(before)</span><br><span class="line"><span class="built_in">print</span>(before_time_obj)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(time.time() * <span class="number">1000</span>)</span><br><span class="line"><span class="built_in">print</span>(time.time())</span><br><span class="line"></span><br><span class="line"><span class="comment"># for i in range(10):</span></span><br><span class="line"><span class="comment">#     print(i)</span></span><br><span class="line"><span class="comment">#     time.sleep(1)</span></span><br><span class="line"></span><br><span class="line">datetime_now = datetime.datetime.now()</span><br><span class="line">datetime_timestamp = datetime.datetime.timestamp(datetime_now)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;datetime 生成的时间戳 %s&#x27;</span> % datetime_timestamp)</span><br><span class="line"></span><br><span class="line">datetime_obj = datetime.datetime.fromtimestamp(datetime_timestamp)</span><br><span class="line"><span class="built_in">print</span>(datetime_obj)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">本节课主要学习了&lt;br&gt;time模块的使用（什么是时间戳）以及datetime的补充</summary>
     
     
     
