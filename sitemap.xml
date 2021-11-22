@@ -1026,20 +1026,6 @@
   </url>
   
   <url>
-    <loc>https://code.maylove.pub/tags/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0/</loc>
-    <lastmod>2021-11-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://code.maylove.pub/tags/%E6%A8%A1%E5%9D%97%E5%92%8C%E5%8C%85/</loc>
-    <lastmod>2021-11-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://code.maylove.pub/tags/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/</loc>
     <lastmod>2021-11-22</lastmod>
     <changefreq>daily</changefreq>
@@ -1048,6 +1034,20 @@
   
   <url>
     <loc>https://code.maylove.pub/tags/%E9%AB%98%E7%BA%A7%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2021-11-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://code.maylove.pub/tags/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0/</loc>
+    <lastmod>2021-11-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://code.maylove.pub/tags/%E6%A8%A1%E5%9D%97%E5%92%8C%E5%8C%85/</loc>
     <lastmod>2021-11-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
