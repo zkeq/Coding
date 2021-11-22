@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Java HelloWorld 案例</title>
+      <link href="/2021/747651b2c4dd/"/>
+      <url>/2021/747651b2c4dd/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="编写程序"><a href="#编写程序" class="headerlink" title="编写程序"></a>编写程序</h3><p>创建并打开<code>HelloWorld.java</code>并书写以下内容</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">System.out.println(<span class="string">&quot;Hello World&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="编译并运行程序"><a href="#编译并运行程序" class="headerlink" title="编译并运行程序"></a>编译并运行程序</h4><ol><li><strong>进入文件根目录</strong></li><li> <code>javac HelloWorld.java</code></li><li><code>java HelloWorld</code></li></ol><h4 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello World</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 编程练习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python 实战爬虫分析案例(自用)</title>
       <link href="/2021/e0cd99104e32/"/>
       <url>/2021/e0cd99104e32/</url>
@@ -2023,9 +2048,9 @@
       
         <tags>
             
-            <tag> 条件语句 </tag>
-            
             <tag> 逻辑 </tag>
+            
+            <tag> 条件语句 </tag>
             
         </tags>
       
@@ -3197,7 +3222,7 @@
       
       <categories>
           
-          <category> JAVA </category>
+          <category> Java </category>
           
       </categories>
       
@@ -3224,7 +3249,7 @@
       
       <categories>
           
-          <category> JAVA </category>
+          <category> Java </category>
           
       </categories>
       
@@ -3249,7 +3274,7 @@
       
       <categories>
           
-          <category> JAVA </category>
+          <category> Java </category>
           
       </categories>
       
@@ -3274,7 +3299,7 @@
       
       <categories>
           
-          <category> JAVA </category>
+          <category> Java </category>
           
       </categories>
       
@@ -3299,7 +3324,7 @@
       
       <categories>
           
-          <category> JAVA </category>
+          <category> Java </category>
           
       </categories>
       
@@ -3326,7 +3351,7 @@
       
       <categories>
           
-          <category> JAVA </category>
+          <category> Java </category>
           
       </categories>
       
