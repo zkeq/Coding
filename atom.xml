@@ -6,7 +6,7 @@
   <link href="https://coding.maylove.pub/atom.xml" rel="self"/>
   
   <link href="https://coding.maylove.pub/"/>
-  <updated>2021-11-22T08:50:58.288Z</updated>
+  <updated>2021-11-26T15:14:17.790Z</updated>
   <id>https://coding.maylove.pub/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>笔记|使用WSL安装Linux系统并搭建本地局域网网盘</title>
+    <link href="https://coding.maylove.pub/2021/861b10ea3685/"/>
+    <id>https://coding.maylove.pub/2021/861b10ea3685/</id>
+    <published>2021-11-26T14:56:25.000Z</published>
+    <updated>2021-11-26T15:14:17.790Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="事情起因"><a href="#事情起因" class="headerlink" title="事情起因"></a>事情起因</h4><ul><li>发现自己的win11已经安装了一个wsl,就想折腾一下..</li><li>但是明明zfile有win版的,为啥还要多此一举呢?<ul><li><code>害, 就是瞎折腾呗....</code></li></ul></li></ul><h4 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h4><ol><li>应用商店搜索WSL选择安装的系统</li><li>安装zfile: <a href="https://docs.zfile.vip/">https://docs.zfile.vip</a></li><li>安装之后发现只能通过虚拟机ip在本机访问</li><li>但是想要实现其他设备访问网盘的需求,于是需要 <code>端口转发</code></li></ol><h4 id="端口转发"><a href="#端口转发" class="headerlink" title="端口转发"></a>端口转发</h4><h5 id="查看ip"><a href="#查看ip" class="headerlink" title="查看ip"></a>查看ip</h5><p><code>ip a</code></p><h5 id="设置端口转发"><a href="#设置端口转发" class="headerlink" title="设置端口转发"></a>设置端口转发</h5><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy add v4tov4 listenport=【宿主机windows平台监听端口】 listenaddress=<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span> connectport=【wsl2平台监听端口】 connectaddress=【wsl2平台ip】protocol=tcp</span><br></pre></td></tr></table></figure><h5 id="查看转发状态"><a href="#查看转发状态" class="headerlink" title="查看转发状态"></a>查看转发状态</h5><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy show all</span><br></pre></td></tr></table></figure><h5 id="删除端口转发"><a href="#删除端口转发" class="headerlink" title="删除端口转发"></a>删除端口转发</h5><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy delete v4tov4 listenport=【宿主机windows平台监听端口】 listenaddress=<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure><p>可以了.</p>]]></content>
+    
+    
+    <summary type="html">使用win11的wsl功能安装了linux系统ubuntn.&lt;br&gt;实现在win11下使用linux系统搭建的本地网盘来访问Windows的文件看电影的需求。</summary>
+    
+    
+    
+    <category term="CMD" scheme="https://coding.maylove.pub/categories/CMD/"/>
+    
+    
+    <category term="笔记" scheme="https://coding.maylove.pub/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Java HelloWorld 案例</title>
@@ -427,27 +448,6 @@
     
     
     <summary type="html">本节课主要学习了&lt;br&gt;文件的读取</summary>
-    
-    
-    
-    <category term="Python" scheme="https://coding.maylove.pub/categories/Python/"/>
-    
-    
-    <category term="文件操作（IO）" scheme="https://coding.maylove.pub/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%EF%BC%88IO%EF%BC%89/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python 文件的创建和写入</title>
-    <link href="https://coding.maylove.pub/2021/d82afbbe5880/"/>
-    <id>https://coding.maylove.pub/2021/d82afbbe5880/</id>
-    <published>2021-11-09T17:20:38.000Z</published>
-    <updated>2021-11-09T17:28:04.577Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="文件的创建和写入"><a href="#文件的创建和写入" class="headerlink" title="文件的创建和写入"></a>文件的创建和写入</h3><h4 id="利用内置函数open获取文件对象"><a href="#利用内置函数open获取文件对象" class="headerlink" title="利用内置函数open获取文件对象"></a>利用内置函数open获取文件对象</h4><h5 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h5><ul><li>生成文件对象，进行创建，读写操作</li></ul><h5 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h5><ul><li><code>open(path, mode)</code></li></ul><h5 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h5><ul><li><code>path</code>：文件路径</li><li><code>mode</code>：操作模式</li></ul><h5 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h5><ul><li><strong>文件对象</strong></li></ul><h5 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h5><ul><li><code>f = open(&#39;d://a.txt&#39;, &#39;w&#39;)</code></li></ul><h4 id="文件操作的模式之写入"><a href="#文件操作的模式之写入" class="headerlink" title="文件操作的模式之写入"></a>文件操作的模式之写入</h4><table><thead><tr><th>模式</th><th>介绍</th></tr></thead><tbody><tr><td><code>w</code></td><td>创建文件</td></tr><tr><td><code>w+</code></td><td>创建文件并读取文件</td></tr><tr><td><code>wb</code></td><td>二进制形式创建文件</td></tr><tr><td><code>wb+</code></td><td>二进制形式创建或追加内容</td></tr><tr><td><code>a</code></td><td>追加内容</td></tr><tr><td><code>a+</code></td><td>读写模式的追加</td></tr><tr><td><code>ab+</code></td><td>二进制形式读写追加</td></tr></tbody></table><h4 id="文件对象的操作方式之写入保存"><a href="#文件对象的操作方式之写入保存" class="headerlink" title="文件对象的操作方式之写入保存"></a>文件对象的操作方式之写入保存</h4><table><thead><tr><th>方法名</th><th>参数</th><th>介绍</th><th>举例</th></tr></thead><tbody><tr><td>write</td><td>Message</td><td>写入信息</td><td>f.write(‘hello\n’)</td></tr><tr><td>writelines</td><td>Message_list</td><td>批量写入</td><td>f.writelines([‘hello\n’, ‘world\n’])</td></tr><tr><td>close</td><td>无</td><td>关闭并保存文件</td><td>f.close()</td></tr></tbody></table><ul><li>操作完成后，必须使用close方法！</li></ul><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_package</span>(<span class="params">path</span>):</span></span><br><span class="line">    <span class="keyword">if</span> os.path.exists(path):</span><br><span class="line">        <span class="keyword">raise</span> Exception(<span class="string">&#x27;%s 已经存在不可创建&#x27;</span> % path)</span><br><span class="line">    os.makedirs(path)</span><br><span class="line">    init_path = os.path.join(path, <span class="string">&#x27;__init__.py&#x27;</span>)</span><br><span class="line">    f = <span class="built_in">open</span>(init_path, <span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">    f.write(<span class="string">&quot;# coding:utf-8\n&quot;</span>)</span><br><span class="line">    f.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Open</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, path, mode=<span class="string">&#x27;w&#x27;</span>, is_retern=<span class="literal">True</span></span>):</span></span><br><span class="line">        self.path = path</span><br><span class="line">        self.mode = mode</span><br><span class="line">        self.is_retern = is_retern</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">write</span>(<span class="params">self, message</span>):</span></span><br><span class="line">        f = <span class="built_in">open</span>(self.path, mode=self.mode)</span><br><span class="line">        <span class="keyword">if</span> self.is_retern:</span><br><span class="line">            message = <span class="string">&#x27;%s\n&#x27;</span> % message</span><br><span class="line">        f.write(message)</span><br><span class="line">        f.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    current_path = os.getcwd()</span><br><span class="line">    <span class="comment"># path = os.path.join(current_path, &#x27;test1&#x27;)</span></span><br><span class="line">    <span class="comment"># create_package(path)</span></span><br><span class="line">    open_path = os.path.join(current_path, <span class="string">&#x27;b.txt&#x27;</span>)</span><br><span class="line">    o = Open(open_path)</span><br><span class="line">    o.write(<span class="string">&#x27;你好 小慕&#x27;</span>)</span><br><span class="line">    </span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">本节课主要学习了&lt;br&gt;文件的创建和写入</summary>
     
     
     

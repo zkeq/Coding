@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>笔记|使用WSL安装Linux系统并搭建本地局域网网盘</title>
+      <link href="/2021/861b10ea3685/"/>
+      <url>/2021/861b10ea3685/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="事情起因"><a href="#事情起因" class="headerlink" title="事情起因"></a>事情起因</h4><ul><li>发现自己的win11已经安装了一个wsl,就想折腾一下..</li><li>但是明明zfile有win版的,为啥还要多此一举呢?<ul><li><code>害, 就是瞎折腾呗....</code></li></ul></li></ul><h4 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h4><ol><li>应用商店搜索WSL选择安装的系统</li><li>安装zfile: <a href="https://docs.zfile.vip/">https://docs.zfile.vip</a></li><li>安装之后发现只能通过虚拟机ip在本机访问</li><li>但是想要实现其他设备访问网盘的需求,于是需要 <code>端口转发</code></li></ol><h4 id="端口转发"><a href="#端口转发" class="headerlink" title="端口转发"></a>端口转发</h4><h5 id="查看ip"><a href="#查看ip" class="headerlink" title="查看ip"></a>查看ip</h5><p><code>ip a</code></p><h5 id="设置端口转发"><a href="#设置端口转发" class="headerlink" title="设置端口转发"></a>设置端口转发</h5><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy add v4tov4 listenport=【宿主机windows平台监听端口】 listenaddress=<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span> connectport=【wsl2平台监听端口】 connectaddress=【wsl2平台ip】protocol=tcp</span><br></pre></td></tr></table></figure><h5 id="查看转发状态"><a href="#查看转发状态" class="headerlink" title="查看转发状态"></a>查看转发状态</h5><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy show all</span><br></pre></td></tr></table></figure><h5 id="删除端口转发"><a href="#删除端口转发" class="headerlink" title="删除端口转发"></a>删除端口转发</h5><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface portproxy delete v4tov4 listenport=【宿主机windows平台监听端口】 listenaddress=<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure><p>可以了.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CMD </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java HelloWorld 案例</title>
       <link href="/2021/747651b2c4dd/"/>
       <url>/2021/747651b2c4dd/</url>
