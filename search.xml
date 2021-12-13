@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>Hexo 完美嵌入Typora导出的html文件</title>
+      <link href="/2021/96ff12669990/"/>
+      <url>/2021/96ff12669990/</url>
+      
+        <content type="html"><![CDATA[<h3 id="步骤如下"><a href="#步骤如下" class="headerlink" title="步骤如下"></a>步骤如下</h3><ol><li>首先新建一个<code>.md</code>文件</li><li>像平时一样填写标头</li><li>内容填入如下</li></ol><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span></span></span><br><span class="line"><span class="tag"><span class="attr">name</span>=<span class="string">&quot;web&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">width</span>=<span class="string">&quot;100%&quot;</span> </span></span><br><span class="line"><span class="tag"><span class="attr">frameborder</span>=<span class="string">0height</span>=<span class="string">&quot;100%&quot;</span> </span></span><br><span class="line"><span class="tag"><span class="attr">src</span>=<span class="string">&quot;\html\Hexo-搭建博客保姆式教程.html&quot;</span> </span></span><br><span class="line"><span class="tag"><span class="attr">id</span>=<span class="string">&quot;web&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">onload</span>=<span class="string">&quot;this.height=web.document.body.scrollHeight+20&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span></span></span><br><span class="line"><span class="tag"><span class="attr">language</span>=<span class="string">&quot;javascript&quot;</span>&gt;</span><span class="javascript"><span class="keyword">if</span>(<span class="built_in">window</span>.parent.length&gt;<span class="number">0</span>)&#123;<span class="built_in">window</span>.parent.document.all.newtest.style.height=<span class="built_in">document</span>.body.scrollHeight;&#125;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><ol start="3"><li><p>将html文件放在<code>/source/html</code>文件夹中</p></li><li><p>并<code>填写Html文件的标头</code></p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">layout:</span> <span class="literal">false</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure></li><li><p>预览或部署即可.</p></li></ol><h3 id="其他笔记"><a href="#其他笔记" class="headerlink" title="其他笔记"></a>其他笔记</h3><ol><li>使用手机开启热点的时候,此手机的局域网ip可以在连接此热点的设备上查看 DNS 服务器.其地址即为宿主机局域网ip地址</li><li>在写笔记的时候,记得要在敏感标签前加 转义字符<code>\</code></li><li>可以在md文件正文添加css引入标签…会被渲染出来..但是不推荐..感觉好乱,不过在某个页面需要黑白的时候,可以试下哦</li><li>记得尽快完成<code>docsify</code>笔记!!</li><li>永远保持理性.</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> CMD </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用 Hexo 搭建博客 保姆式教程</title>
       <link href="/2021/e1513f10aa48/"/>
       <url>/2021/e1513f10aa48/</url>
       
-        <content type="html"><![CDATA[<iframename="web"width="100%" frameborder=0height="100%" src="\html\Hexo-搭建博客保姆式教程.html" id="web"onload="this.height=web.document.body.scrollHeight+20"></iframe><scriptlanguage="javascript">if(window.parent.length>0){window.parent.document.all.newtest.style.height=document.body.scrollHeight;}</script>]]></content>
+        <content type="html"><![CDATA[<h3 id="查看纯享版-Hexo建站保姆式教程-maylove-pub"><a href="#查看纯享版-Hexo建站保姆式教程-maylove-pub" class="headerlink" title="查看纯享版:Hexo建站保姆式教程 (maylove.pub)"></a>查看纯享版:<a href="https://coding.maylove.pub/html/Hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%BF%9D%E5%A7%86%E5%BC%8F%E6%95%99%E7%A8%8B.html">Hexo建站保姆式教程 (maylove.pub)</a></h3><iframename="web"width="100%" frameborder=0height="100%" src="\html\Hexo-搭建博客保姆式教程.html" id="web"onload="this.height=web.document.body.scrollHeight+20"></iframe><scriptlanguage="javascript">if(window.parent.length>0){window.parent.document.all.newtest.style.height=document.body.scrollHeight;}</script>]]></content>
       
       
       <categories>
