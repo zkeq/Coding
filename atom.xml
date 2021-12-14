@@ -42,9 +42,9 @@
     <link href="https://coding.maylove.pub/2021/e1513f10aa48/"/>
     <id>https://coding.maylove.pub/2021/e1513f10aa48/</id>
     <published>2021-12-13T14:32:34.000Z</published>
-    <updated>2021-12-14T00:38:32.609Z</updated>
+    <updated>2021-12-14T01:08:19.157Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="查看纯享版-Hexo建站保姆式教程-maylove-pub"><a href="#查看纯享版-Hexo建站保姆式教程-maylove-pub" class="headerlink" title="查看纯享版: Hexo建站保姆式教程 (maylove.pub)"></a>查看纯享版: <a href="https://coding.maylove.pub/html/Hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%BF%9D%E5%A7%86%E5%BC%8F%E6%95%99%E7%A8%8B.html">Hexo建站保姆式教程 (maylove.pub)</a></h3><p><strong>Win电脑的环境配置问题请查看此视频!(搞明白之后就不难了):</strong><a href="https://www.bilibili.com/video/BV1Q3411s7mY/">一个视频 搞懂Windows电脑 环境变量 的知识点 [B站]</a></p><p>其实就两点</p><ol><li><p> 环境变量其实相当于一个自动补全 例如将 <code>&#39;javac&#39;</code>补全成<code>&#39;c:/java/bin/javac&#39;</code></p></li><li><p> <code>% %</code> 其实是父子集的关系 例如 右边的其实是索引到左边那个变量</p></li></ol><p>   (这里<code>&#39;Java_Home&#39;</code>应该全大写(<code>&#39;JAVA_HOME&#39;</code>),截图中写法不规范见谅..)</p><p>   <img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-13/5.png" alt="5"></p><iframename="web"width="100%" frameborder=0height="100%" src="\html\Hexo-搭建博客保姆式教程.html" id="web"onload="this.height=web.document.body.scrollHeight+20"></iframe><scriptlanguage="javascript">if(window.parent.length>0){window.parent.document.all.newtest.style.height=document.body.scrollHeight;}</script>]]></content>
+    <content type="html"><![CDATA[<h3 id="查看纯享版-Hexo建站保姆式教程-maylove-pub"><a href="#查看纯享版-Hexo建站保姆式教程-maylove-pub" class="headerlink" title="查看纯享版: Hexo建站保姆式教程 (maylove.pub)"></a>查看纯享版: <a href="https://coding.maylove.pub/html/Hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%BF%9D%E5%A7%86%E5%BC%8F%E6%95%99%E7%A8%8B.html">Hexo建站保姆式教程 (maylove.pub)</a></h3><iframename="web"width="100%" frameborder=0height="100%" src="\html\Hexo-搭建博客保姆式教程.html" id="web"onload="this.height=web.document.body.scrollHeight+20"></iframe><scriptlanguage="javascript">if(window.parent.length>0){window.parent.document.all.newtest.style.height=document.body.scrollHeight;}</script>]]></content>
     
     
     <summary type="html">这篇文章是自己使用Hexo这几个月自己总结出来的教程</summary>
