@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://coding.maylove.pub/2021/e1513f10aa48/</loc>
+    <loc>https://coding.maylove.pub/html/Hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%BF%9D%E5%A7%86%E5%BC%8F%E6%95%99%E7%A8%8B.html</loc>
     
     <lastmod>2021-12-14</lastmod>
     
   </url>
   
   <url>
-    <loc>https://coding.maylove.pub/html/Hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%BF%9D%E5%A7%86%E5%BC%8F%E6%95%99%E7%A8%8B.html</loc>
+    <loc>https://coding.maylove.pub/2021/e1513f10aa48/</loc>
     
-    <lastmod>2021-12-13</lastmod>
+    <lastmod>2021-12-14</lastmod>
     
   </url>
   
@@ -1082,6 +1082,13 @@
   </url>
   
   <url>
+    <loc>https://coding.maylove.pub/tags/%E6%A8%A1%E5%9D%97%E5%92%8C%E5%8C%85/</loc>
+    <lastmod>2021-12-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://coding.maylove.pub/tags/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/</loc>
     <lastmod>2021-12-14</lastmod>
     <changefreq>daily</changefreq>
@@ -1090,13 +1097,6 @@
   
   <url>
     <loc>https://coding.maylove.pub/tags/%E9%AB%98%E7%BA%A7%E5%87%BD%E6%95%B0/</loc>
-    <lastmod>2021-12-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://coding.maylove.pub/tags/%E6%A8%A1%E5%9D%97%E5%92%8C%E5%8C%85/</loc>
     <lastmod>2021-12-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
