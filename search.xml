@@ -4,6 +4,156 @@
   
     
     <entry>
+      <title>杂类笔记存放地址</title>
+      <link href="/2021/8ecda819e940/"/>
+      <url>/2021/8ecda819e940/</url>
+      
+        <content type="html"><![CDATA[<h3 id="算法每日一题地址"><a href="#算法每日一题地址" class="headerlink" title="算法每日一题地址:"></a>算法每日一题地址:</h3><p>2021.12.18 : <a href="https://www.yuque.com/zkeq/gcxmsm/qggr8l">2021.12.18 419. 甲板上的战舰 · 语雀 (yuque.com)</a></p><p>2021.12.19 : <a href="https://www.yuque.com/zkeq/gcxmsm/ufscwo">2021.12.19 997. 找到小镇的法官 · 语雀 (yuque.com)</a></p><h3 id="算法正序做题笔记地址"><a href="#算法正序做题笔记地址" class="headerlink" title="算法正序做题笔记地址:"></a>算法正序做题笔记地址:</h3><p><a href="https://www.yuque.com/zkeq/gcxmsm/xv2xyz">正向做题笔记 · 语雀 (yuque.com)</a></p><h3 id="C语言基础讲义地址"><a href="#C语言基础讲义地址" class="headerlink" title="C语言基础讲义地址:"></a>C语言基础讲义地址:</h3><p><a href="https://pdf.zkeq.xyz/?file=https://public-zkeq.oss-cn-beijing.aliyuncs.com/cpp.pdf">cpp.pdf (zkeq.xyz)</a></p><h3 id="Java基础知识库地址"><a href="#Java基础知识库地址" class="headerlink" title="Java基础知识库地址:"></a>Java基础知识库地址:</h3><p><a href="https://javadocs.zkeq.xyz/#/">Java基础知识库 (zkeq.xyz)</a></p><h3 id="C-基础知识库地址-简陋"><a href="#C-基础知识库地址-简陋" class="headerlink" title="C++基础知识库地址:(简陋)"></a>C++基础知识库地址:(简陋)</h3><p><a href="https://cpp.zkeq.xyz/#/">C++ 基础知识库 (zkeq.xyz)</a></p><h3 id="提问的智慧"><a href="#提问的智慧" class="headerlink" title="提问的智慧:"></a>提问的智慧:</h3><p><a href="https://questions-zh.vercel.app/#/">提问的智慧(中文版) (questions-zh.vercel.app)</a></p><p><a href="https://questions.zkeq.xyz/#/">提问的智慧(中文版) (zkeq.xyz)</a></p><p><a href="https://questions.learnonly.xyz/#/">提问的智慧(中文版) (learnonly.xyz)</a></p><p><a href="https://questions.maylove.pub/#/">提问的智慧(中文版) (maylove.pub)</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>c++ vs中C语言嵌套汇编</title>
+      <link href="/2021/40f63595d656/"/>
+      <url>/2021/40f63595d656/</url>
+      
+        <content type="html"><![CDATA[<p>vs 中c语言嵌套汇编</p><p><code>本节代码自己没有执行过...2022vs编辑器好像不允许64位汇编. :(</code></p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">//定义整型变量a, b, c</span></span><br><span class="line"><span class="keyword">int</span> a=<span class="number">3</span>;</span><br><span class="line"><span class="keyword">int</span> b=<span class="number">4</span>;</span><br><span class="line"><span class="keyword">int</span> c=;</span><br><span class="line"><span class="comment">// 调试时设置断点,断点的意义在于使程序运行至断点时停止,使其可以人为停止</span></span><br><span class="line">__asm</span><br><span class="line">&#123;</span><br><span class="line">mov a, <span class="number">3</span><span class="comment">//3的值放在a对应内存的位置</span></span><br><span class="line">mov b, <span class="number">4</span><span class="comment">//4的值放在b对应内存的位置</span></span><br><span class="line">mov eax, a<span class="comment">//把a内存的值放在eax寄存器</span></span><br><span class="line">add eax, b<span class="comment">//eax和b相加，结果放在eax</span></span><br><span class="line">mov c, eax<span class="comment">//eax的值放在c中</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, c);<span class="comment">//把c的值输出</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;<span class="comment">//成功完成</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> cpp </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础语法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>c++ 寄存器 缓存 cpu 内存之间的关系</title>
+      <link href="/2021/48b65b917532/"/>
+      <url>/2021/48b65b917532/</url>
+      
+        <content type="html"><![CDATA[<h3 id="CPU内部结构与寄存器-了解"><a href="#CPU内部结构与寄存器-了解" class="headerlink" title="CPU内部结构与寄存器(了解)"></a>CPU内部结构与寄存器(了解)</h3><p>cpu  &gt;  寄存器  &gt;  缓存  &gt;  内存</p><p><img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-19/3.png" alt="1"></p><h4 id="64位和32位系统区别"><a href="#64位和32位系统区别" class="headerlink" title="64位和32位系统区别"></a>64位和32位系统区别</h4><ul><li><p>寄存器是CPU内部最基本的存储单元</p></li><li><p>CPU对外是通过总线(地址、控制、数据)来和外部设备交互的，总线的宽度是8位，同时CPU的寄存器也是8位，那么这个CPU就叫8位CPU</p></li><li><p>如果总线是32位，寄存器也是32位的，那么这个CPU就是32位CPU</p></li><li><p>有一种CPU内部的寄存器是32位的，但总线是16位，准32为CPU</p></li><li><p>所有的64位CPU兼容32位的指令，32位要兼容16位的指令，所以在64位的CPU上是可以识别32位的指令</p></li><li><p>在64位的CPU构架上运行了64位的软件操作系统，那么这个系统是64位</p></li><li><p>在64位的CPU构架上，运行了32位的软件操作系统，那么这个系统就是32位</p></li><li><p>64位的软件不能运行在32位的CPU之上</p></li></ul><h4 id="寄存器名字-了解"><a href="#寄存器名字-了解" class="headerlink" title="寄存器名字(了解)"></a>寄存器名字(了解)</h4><table><thead><tr><th><strong>8****位</strong></th><th><strong>16****位</strong></th><th><strong>32****位</strong></th><th><strong>64****位</strong></th></tr></thead><tbody><tr><td>A</td><td>AX</td><td>EAX</td><td>RAX</td></tr><tr><td>B</td><td>BX</td><td>EBX</td><td>RBX</td></tr><tr><td>C</td><td>CX</td><td>ECX</td><td>RCX</td></tr><tr><td>D</td><td>DX</td><td>EDX</td><td>RDX</td></tr></tbody></table><h4 id="寄存器、缓存、内存三者关系"><a href="#寄存器、缓存、内存三者关系" class="headerlink" title="寄存器、缓存、内存三者关系"></a>寄存器、缓存、内存三者关系</h4><p>按与CPU远近来分，离得最近的是寄存器，然后缓存(CPU缓存)，最后内存。</p><p>CPU计算时，先预先把要用的数据从硬盘读到内存，然后再把即将要用的数据读到寄存器。于是 CPU&lt;—&gt;寄存器&lt;—&gt;内存，这就是它们之间的信息交换。</p><p>那为什么有缓存呢？因为如果经常操作内存中的同一址地的数据，就会影响速度。于是就在寄存器与内存之间设置一个缓存。</p><p>因为从缓存提取的速度远高于内存。当然缓存的价格肯定远远高于内存，不然的话，机器里就没有内存的存在。</p><p>由此可以看出，从远近来看：CPU〈—〉寄存器〈—&gt; 缓存 &lt;—&gt; 内存。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> cpp </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础语法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>c++ system库函数</title>
+      <link href="/2021/4d7d0f316eef/"/>
+      <url>/2021/4d7d0f316eef/</url>
+      
+        <content type="html"><![CDATA[<h3 id="system-库函数"><a href="#system-库函数" class="headerlink" title="system 库函数"></a>system 库函数</h3><h5 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h5><ul><li>在程序中启动另一个程序</li><li><code>参数</code>：要的是待启动程序的路径名</li><li>win平台写路径的时候 用 <code>//</code> 或者 <code>\</code></li></ul><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">c<span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">        <span class="comment">//syetem启动程序，如果这个程序系统可以找到，不用加路径，</span></span><br><span class="line">        <span class="comment">//如果环境变量找不到，需要加路径</span></span><br><span class="line">        <span class="comment">//windows路径以\\  或 /</span></span><br><span class="line">        <span class="comment">//system(&quot;mspaint&quot;);//启动画图板</span></span><br><span class="line">        <span class="comment">//system(&quot;C:\\Users\\Administrator\\Desktop\\c++13\\hello.exe&quot;);</span></span><br><span class="line">        <span class="built_in">system</span>(<span class="string">&quot;C:/Users/Administrator/Desktop/c++13/hello.exe&quot;</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;hello worldfbahfoahfoooooooooooooooooooooo\n&quot;</span>);<span class="comment">//打印到终端</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">system</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *command)</span></span>;</span><br><span class="line">功能：在已经运行的程序中执行另外一个外部程序</span><br><span class="line">参数：外部可执行程序名字</span><br><span class="line">返回值：</span><br><span class="line">成功：<span class="number">0</span></span><br><span class="line">失败：任意数字</span><br></pre></td></tr></table></figure><h4 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">//system(&quot;calc&quot;); //windows平台 (注意/是转义字符)</span></span><br><span class="line"><span class="built_in">system</span>(<span class="string">&quot;ls&quot;</span>); <span class="comment">//Linux平台, 需要头文件#include &lt;stdlib.h&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="自己尝试代码"><a href="#自己尝试代码" class="headerlink" title="自己尝试代码"></a>自己尝试代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdint.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="built_in">system</span>(<span class="string">&quot;d://cpp//hello.exe&quot;</span>); <span class="comment">//启动上一个编译的程序</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;hello world\n&quot;</span>); <span class="comment">//打印到终端</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> cpp </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础语法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>c++ hello world程序的解释</title>
+      <link href="/2021/83b0b2b0e559/"/>
+      <url>/2021/83b0b2b0e559/</url>
+      
+        <content type="html"><![CDATA[<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//# 预处理指令，在预编译时处理</span></span><br><span class="line"><span class="comment">//#include &lt;stdio.h&gt; 包含stdio.h文件  stdio.h类似于菜单</span></span><br><span class="line"><span class="comment">// 两个斜杠是注释</span></span><br><span class="line"><span class="comment">//符号与（）结和 代表这个是一个函数</span></span><br><span class="line"><span class="comment">//main() main函数也叫主函数 整个程序中仅且只有一个main函数，程序从main函数</span></span><br><span class="line"><span class="comment">//开始执行</span></span><br><span class="line"><span class="comment">//int  代表main函数结束之后的返回值类型</span></span><br><span class="line"><span class="comment">//return  结束这个函数，然后返回值，返回值的类型和函数定义时返回值类型一致</span></span><br><span class="line"><span class="comment">//&#123;&#125;里面的是函数体，所有需要执行的代码必须写在&#123;&#125;中</span></span><br><span class="line"><span class="comment">//每一条代码必须以分号；结尾</span></span><br><span class="line"><span class="comment">//printf是一个库函数，printf +（）就是函数调用,括号里面是传入的参数</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>   # C语言可以不写<span class="keyword">int</span>,但c++一定要写</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;hello world\n&quot;</span>); <span class="comment">//打印到终端</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h3><ol><li>include头文件包含<ul><li> #include的意思是头文件包含，#include &lt;stdio.h&gt;代表包含stdio.h这个头文件</li><li> 使用C语言库函数需要提前包含库函数对应的头文件，如这里使用了printf()函数，需要包含stdio.h头文件</li><li>可以通过man 3 printf查看printf所需的头文件<h4 id="include-lt-gt-与-include-“”的区别："><a href="#include-lt-gt-与-include-“”的区别：" class="headerlink" title="#include&lt; &gt; 与 #include “”的区别："></a>#include&lt; &gt; 与 #include “”的区别：</h4><ul><li> &lt; &gt; 表示系统直接按系统指定的目录检索</li><li> “” 表示系统先在 “” 指定的路径(没写路径代表当前路径)查找头文件，如果找不到，再按系统指定的目录检索<br>stdio.h是在操作系统的系统目录下：<br><img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-19/1.png" alt="1"></li></ul></li></ul></li><li>main函数<ul><li>一个完整的C语言程序，是由一个、且只能有一个main()函数(又称主函数，必须有)和若干个其他函数结合而成（可选）。</li><li> main函数是C语言程序的入口，程序是从main函数开始执行。</li></ul></li><li>{} 括号，程序体和代码块<ul><li> {}叫代码块，一个代码块内部可以有一条或者多条语句</li><li> C语言每句可执行代码都是”<strong>;</strong>“分号结尾</li><li> 所有的#开头的行，都代表预编译指令，预编译指令行结尾是没有分号的</li><li> 所有的可执行语句必须是在代码块里面</li></ul></li><li>注释<ul><li><code>//</code>叫行注释，注释的内容编译器是忽略的，注释主要的作用是在代码中加一些说明和解释，这样有利于代码的阅读</li><li> <code>/**/</code>叫块注释</li><li> 块注释是C语言标准的注释方法</li><li> 行注释是从C++语言借鉴过来的</li></ul></li><li>printf函数<ul><li>printf是C语言库函数，功能是向标准输出设备输出一个字符串</li><li>printf(“hello world\n”);//\n的意思是回车换行</li></ul></li><li>return语句<ul><li>return代表函数执行完毕，返回return代表函数的终止</li><li>如果main定义的时候前面是int，那么return后面就需要写一个整数；如果main定义的时候前面是void，那么return后面什么也不需要写</li><li>在main函数中return 0代表程序执行成功，return -1代表程序执行失败</li><li>int main()和void main()在C语言中是一样的，但C++只接受int main这种定义方式</li></ul></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> cpp </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础语法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>c++ hello world</title>
+      <link href="/2021/b045900428db/"/>
+      <url>/2021/b045900428db/</url>
+      
+        <content type="html"><![CDATA[<h3 id="c语言的编译步骤"><a href="#c语言的编译步骤" class="headerlink" title="c语言的编译步骤"></a>c语言的编译步骤</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc 编译  hello.c -o 生成的目标(可执行文件)名字为 world</span><br></pre></td></tr></table></figure><h4 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a><code>预处理</code></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -E hello.c -o hello.i</span><br></pre></td></tr></table></figure><p><code>带#的语句就是预处理指令，预处理指令在预处理的时候处理了</code></p><ul><li><p>头文件展开： <code>#include &lt;stdio.h&gt;</code> 包含文件<code>stdio.h</code>（<strong>预处理时将stdio.h 文件拷贝至预处理文件中</strong>）</p></li><li><p>删除注释： 注释有两种方法： <code>//</code>  <code>/* */</code></p></li><li><p>宏替换： <code>#define</code> 代表是声明一个宏，在预处理时会将宏给<code>替代</code> (预处理的时候就会替换)</p></li><li><p>预处理时  <strong>不会检查语法错误</strong></p></li><li><p>条件编译： 条件不成立： <code>#if 0 -&gt; #endif</code>   条件成立 <code>#if 1 -&gt; #endif</code> </p><ul><li>c语言中 <code>0表示不成立</code> <code>1表示成立</code></li></ul></li><li><p>宏定义展开、头文件展开、条件编译等，同时将代码中的注释删除，这里并不会检查语法</p></li></ul><h4 id="编译"><a href="#编译" class="headerlink" title="编译"></a><code>编译</code></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -S hello.i -o hello.s</span><br></pre></td></tr></table></figure><ul><li>将<strong>预处理文件</strong>编译生成<strong>汇编文件</strong>     <strong>检查语法错误</strong></li><li>检查语法，将预处理后文件编译生成汇编文件</li></ul><h4 id="汇编"><a href="#汇编" class="headerlink" title="汇编"></a><code>汇编</code></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -c hello.s -o hello.o</span><br></pre></td></tr></table></figure><ul><li><h4 id="汇编文件编译生成二进制文件-o"><a href="#汇编文件编译生成二进制文件-o" class="headerlink" title="汇编文件编译生成二进制文件.o"></a>汇编文件编译生成二进制文件.o</h4></li><li><p>将汇编文件生成目标文件(二进制文件)</p></li></ul><h4 id="链接"><a href="#链接" class="headerlink" title="链接"></a><code>链接</code></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc    hello.o -o hello</span><br></pre></td></tr></table></figure><ul><li>设置<strong>运行环境</strong>，<strong>堆栈</strong>等，<strong>链接其他库</strong></li><li>C语言写的程序是需要依赖各种库的，所以编译之后还需要把库链接到最终的可执行程序中去</li></ul><p><img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-19/2.png" alt="1"></p><table><thead><tr><th><strong>选项</strong></th><th><strong>含义</strong></th></tr></thead><tbody><tr><td>-E</td><td>只进行预处理</td></tr><tr><td>-S(大写)</td><td>只进行预处理和编译</td></tr><tr><td>-c(小写)</td><td>只进行预处理、编译和汇编</td></tr><tr><td>-o file</td><td>指定生成的输出文件名为 file</td></tr></tbody></table><table><thead><tr><th><strong>文件后缀</strong></th><th><strong>含义</strong></th></tr></thead><tbody><tr><td>.c</td><td>C 语言文件</td></tr><tr><td>.i</td><td>预处理后的 C 语言文件</td></tr><tr><td>.s</td><td>编译后的汇编文件</td></tr><tr><td>.o</td><td>编译后的目标文件</td></tr></tbody></table><h4 id="一步编译"><a href="#一步编译" class="headerlink" title="一步编译"></a>一步编译</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc hello.c -o demo（还是经过：预处理、编译、汇编、链接的过程）：</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> cpp </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础语法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo 完美嵌入Typora导出的html文件</title>
       <link href="/2021/96ff12669990/"/>
       <url>/2021/96ff12669990/</url>
