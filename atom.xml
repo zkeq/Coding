@@ -6,7 +6,7 @@
   <link href="https://coding.maylove.pub/atom.xml" rel="self"/>
   
   <link href="https://coding.maylove.pub/"/>
-  <updated>2021-12-25T08:24:59.661Z</updated>
+  <updated>2022-01-08T09:45:23.501Z</updated>
   <id>https://coding.maylove.pub/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杂记| 高考励志库[正在更新]</title>
+    <link href="https://coding.maylove.pub/2022/f6843bfafade/"/>
+    <id>https://coding.maylove.pub/2022/f6843bfafade/</id>
+    <published>2022-01-08T09:37:12.000Z</published>
+    <updated>2022-01-08T09:45:23.501Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>怎么说呢  我感觉现在我们的时间已经不属于我们了.</p><h3 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h3><p><a href="https://belief.zkeq.xyz/">追梦计划引导页 (zkeq.xyz)</a></p><h4 id="其他说明"><a href="#其他说明" class="headerlink" title="其他说明"></a>其他说明</h4><p><code>封面</code>由@<a href="https://space.bilibili.com/36184593">TUO图欧君(bilibili.com)</a> <strong>制作</strong></p><p><img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-01-08/2.png" alt="2"></p>]]></content>
+    
+    
+    <summary type="html">随便搭建的一个励志库,内容全部转载自有道.</summary>
+    
+    
+    
+    <category term="其他" scheme="https://coding.maylove.pub/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+    <category term="知识库" scheme="https://coding.maylove.pub/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>励志集</title>
+    <link href="https://coding.maylove.pub/2022/b46570b96509/"/>
+    <id>https://coding.maylove.pub/2022/b46570b96509/</id>
+    <published>2022-01-03T07:56:40.000Z</published>
+    <updated>2022-01-03T08:00:19.961Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="No-001-那些杀不死你的终将使你更强大"><a href="#No-001-那些杀不死你的终将使你更强大" class="headerlink" title="No.001 那些杀不死你的终将使你更强大!"></a>No.001 那些杀不死你的终将使你更强大!</h2><p><video controls="controls" src="https://ydlunacommon-cdn.nosdn.127.net/c549bfdaefdff3c58eac065fac340a24.mp4">  </video></p><h4 id="【佳句解读】"><a href="#【佳句解读】" class="headerlink" title="【佳句解读】"></a>【佳句解读】</h4><ol><li>The eagle does not respond or <code>fight with</code> the crow, it simply <code>opens up</code> its wings and begins to rise higher and higher in the sky.</li></ol><p>老鹰没有回应也没有与乌鸦缠斗，它只是张开翅膀在天空飞得越来越高。</p><ol start="2"><li><code>The higher</code> the eagle flies, <code>the harder</code> it is for the crow to breathe.</li></ol><p>老鹰飞得越高，乌鸦就越难呼吸。</p><ol start="3"><li>When the “crow of life” appear, they won’t stay around for long because they will not <code>be able to</code> breathe <code>at your level</code>.</li></ol><p>当”生活的乌鸦”出现时，它们不会在你身边停留很久，因为在你的高度上它们无法呼吸。</p><h4 id="【单词速记】"><a href="#【单词速记】" class="headerlink" title="【单词速记】"></a>【单词速记】</h4><ol><li><code>moral</code> /ˈmɒrəl/</li></ol><p>adj. 道德的；精神上的；品性端正的</p><p>n. 道德；寓意</p><p>n. (Moral)人名；(德、法、西、葡、土)莫拉尔</p><ol start="2"><li><code>pod</code> /pɒd/</li></ol><p>n. 蚕茧；豆荚</p><p>vi. 结豆荚</p><p>vt. 从豆荚中剥出</p><p>n. (Pod)人名；(罗)波德</p><ol start="3"><li><code>soar</code> /sɔːr/</li></ol><p>vi. 急升，激增；高飞；升空；翱翔；（树木、建筑物等）高耸；（情绪）高涨</p><p>n. 高飞；高涨</p><p>n. （Soar）（英、葡）索尔（人名）</p><ol start="4"><li><code>come across</code></li></ol><p>v. 偶遇；无意中发现；讲得清楚明白；给人…印象</p><hr><hr><hr>]]></content>
+    
+    
+    <summary type="html">本节课主要学习了&lt;br&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>杂类笔记存放地址</title>
@@ -395,52 +433,6 @@
     
     
     <category term="编程练习" scheme="https://coding.maylove.pub/tags/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0/"/>
-    
-    <category term="高级函数" scheme="https://coding.maylove.pub/tags/%E9%AB%98%E7%BA%A7%E5%87%BD%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python 阶段编程练习(二十)</title>
-    <link href="https://coding.maylove.pub/2021/6f44a47c4b51/"/>
-    <id>https://coding.maylove.pub/2021/6f44a47c4b51/</id>
-    <published>2021-11-11T18:09:27.000Z</published>
-    <updated>2021-11-11T18:48:20.517Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="编程练习"><a href="#编程练习" class="headerlink" title="编程练习"></a>编程练习</h3><blockquote><p>使用filter函数，求0-50以内（包括50）的偶数<br>[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44,46, 48, 50]</p></blockquote><h4 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h4><ol><li>定义use_filter函数</li><li>函数体内：实现过滤偶数值的功能</li></ol><h4 id="任务提示"><a href="#任务提示" class="headerlink" title="任务提示"></a>任务提示</h4><ul><li>使用变量data接收0-50（包含50）的数字，即list(range(51))</li></ul><h4 id="原始代码"><a href="#原始代码" class="headerlink" title="原始代码"></a>原始代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">use_filter</span>(<span class="params">data</span>):</span></span><br><span class="line">    <span class="comment"># 使用result接收filter过滤偶数值的功能</span></span><br><span class="line">    result =</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># 使用data接收0-50的数值</span></span><br><span class="line">    data =</span><br><span class="line">    <span class="comment"># 调用use_filter函数传入data,使用result变量接收</span></span><br><span class="line">    result =</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">list</span>(result))</span><br></pre></td></tr></table></figure><h4 id="代码提交区"><a href="#代码提交区" class="headerlink" title="代码提交区"></a>代码提交区</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">use_filter</span>(<span class="params">data</span>):</span></span><br><span class="line">    <span class="comment"># 使用result接收filter过滤偶数值的功能</span></span><br><span class="line">    result = <span class="built_in">filter</span>(<span class="keyword">lambda</span> n:n%<span class="number">2</span> == <span class="number">0</span>,data)</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># 使用data接收0-50的数值</span></span><br><span class="line">    data = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">51</span>))</span><br><span class="line">    <span class="comment"># 调用use_filter函数传入data,使用result变量接收</span></span><br><span class="line">    result = use_filter(data)</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">list</span>(result))</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">利用前面所学知识&lt;br&gt;完成自己的任务。</summary>
-    
-    
-    
-    <category term="Python" scheme="https://coding.maylove.pub/categories/Python/"/>
-    
-    
-    <category term="编程练习" scheme="https://coding.maylove.pub/tags/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0/"/>
-    
-    <category term="高级函数" scheme="https://coding.maylove.pub/tags/%E9%AB%98%E7%BA%A7%E5%87%BD%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python Python中的高级函数(魔法函数)</title>
-    <link href="https://coding.maylove.pub/2021/ef7d290da2cb/"/>
-    <id>https://coding.maylove.pub/2021/ef7d290da2cb/</id>
-    <published>2021-11-11T18:08:36.000Z</published>
-    <updated>2021-11-11T18:16:34.368Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Python中的高级函数-魔法函数"><a href="#Python中的高级函数-魔法函数" class="headerlink" title="Python中的高级函数(魔法函数)"></a>Python中的高级函数(魔法函数)</h3><ul><li>filter(内置函数)</li><li>map(内置函数)</li><li>reduce(曾经是内置函数)</li></ul><h4 id="filter"><a href="#filter" class="headerlink" title="filter"></a><code>filter</code></h4><h5 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h5><ul><li>对循环根据过滤条件进行过滤</li></ul><h5 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h5><ul><li><code>filter(func, list)</code></li></ul><h5 id="参数介绍"><a href="#参数介绍" class="headerlink" title="参数介绍"></a>参数介绍</h5><ul><li><code>func</code>: 对list每个item进行条件过滤的定义</li><li><code>list</code> : 需要过滤的列表</li></ul><h5 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h5><ul><li><code>res = filter(lambda x:x &gt; 1, [0,1,2])</code></li></ul><h5 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h5><ul><li><code>&lt;filter at 0x4f3af70&gt; -&gt; [1,2]</code></li></ul><hr><h4 id="map"><a href="#map" class="headerlink" title="map"></a><code>map</code></h4><h5 id="功能-1"><a href="#功能-1" class="headerlink" title="功能"></a>功能</h5><ul><li>对列表中的每个成员<code>是否满足条件</code>返回对应的<strong>True</strong>与<strong>False</strong></li></ul><h5 id="用法-1"><a href="#用法-1" class="headerlink" title="用法"></a>用法</h5><ul><li><code>map(func, list)</code></li></ul><h5 id="参数介绍-1"><a href="#参数介绍-1" class="headerlink" title="参数介绍"></a>参数介绍</h5><ul><li><code>func</code>: 对List每个item进行条件满足的判断</li><li><code>list</code>: 需要过滤的列表</li></ul><h5 id="举例-1"><a href="#举例-1" class="headerlink" title="举例"></a>举例</h5><ul><li><code>res = map(lambda x:x &gt; 1, [0,1,2])</code></li></ul><h5 id="返回值-1"><a href="#返回值-1" class="headerlink" title="返回值"></a>返回值</h5><ul><li><code>&lt;map at 0x4f3af70&gt; -&gt; [False, False, True]</code></li></ul><hr><h4 id="reduce"><a href="#reduce" class="headerlink" title="reduce"></a><code>reduce</code></h4><h5 id="功能-2"><a href="#功能-2" class="headerlink" title="功能"></a>功能</h5><ul><li>对循环前后两个数据进行累加</li></ul><h5 id="用法-2"><a href="#用法-2" class="headerlink" title="用法"></a>用法</h5><ul><li><code>reduce(func, list)</code></li></ul><h5 id="参数介绍-2"><a href="#参数介绍-2" class="headerlink" title="参数介绍"></a>参数介绍</h5><ul><li><code>func</code> : 对 数据累加的函数</li><li><code>list</code> : 需要处理的列表</li></ul><h5 id="举例-2"><a href="#举例-2" class="headerlink" title="举例"></a>举例</h5><ul><li><code>res = reduce(lambda x,y: x + y, [0,1,2])</code></li></ul><h5 id="返回值-2"><a href="#返回值-2" class="headerlink" title="返回值"></a>返回值</h5><ul><li>数字  <code>-&gt;</code> 3</li></ul><h5 id="reduce的导入"><a href="#reduce的导入" class="headerlink" title="reduce的导入"></a>reduce的导入</h5><ul><li><code>from functools import reduce</code></li></ul><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding:utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"></span><br><span class="line">frunts = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>]</span><br><span class="line"></span><br><span class="line">result = <span class="built_in">filter</span>(<span class="keyword">lambda</span> x: <span class="string">&#x27;e&#x27;</span> <span class="keyword">in</span> x, frunts)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(result))</span><br><span class="line"><span class="built_in">print</span>(frunts)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">filter_func</span>(<span class="params">item</span>):</span></span><br><span class="line">    <span class="keyword">if</span> <span class="string">&#x27;e&#x27;</span> <span class="keyword">in</span> item:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;--------&#x27;</span>)</span><br><span class="line">filter_result = <span class="built_in">filter</span>(filter_func, frunts)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(filter_result))</span><br><span class="line"></span><br><span class="line">map_result = <span class="built_in">map</span>(filter_func, frunts)  <span class="comment"># &gt; all</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(map_result))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">reduce_result = reduce(<span class="keyword">lambda</span> x, y: x + y, [<span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">100</span>])</span><br><span class="line"><span class="built_in">print</span>(reduce_result)</span><br><span class="line"></span><br><span class="line">reduce_result_str = reduce(<span class="keyword">lambda</span> x, y: x + y, frunts)</span><br><span class="line"><span class="built_in">print</span>(reduce_result_str)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">本节课主要学习了&lt;br&gt;3个 Python中的高级函数(魔法函数) 分别是 filter,map,reduce</summary>
-    
-    
-    
-    <category term="Python" scheme="https://coding.maylove.pub/categories/Python/"/>
-    
-    
-    <category term="常用函数" scheme="https://coding.maylove.pub/tags/%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/"/>
     
     <category term="高级函数" scheme="https://coding.maylove.pub/tags/%E9%AB%98%E7%BA%A7%E5%87%BD%E6%95%B0/"/>
     
