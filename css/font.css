@@ -1,7 +1,7 @@
 @font-face{
     font-family: 'HarmonyOS';
     src: local('HarmonyOS'),
-    url('https://s-bj-2220-zkeq.oss.dogecdn.com/HarmonyOS.ttf') format('truetype');
+    url('https://unpkg.zhimg.com/zkeq-font@1.0.0/HarmonyOS.ttf') format('truetype');
     font-display: swap;
     font-weight: bold;
     font-style: normal;
