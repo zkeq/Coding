@@ -1096,6 +1096,13 @@
 
   
   <url>
+    <loc>https://coding.maylove.pub/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2022-01-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://coding.maylove.pub/tags/%E5%B8%B8%E9%87%8F%E5%8F%98%E9%87%8F/</loc>
     <lastmod>2022-01-14</lastmod>
     <changefreq>daily</changefreq>
@@ -1104,13 +1111,6 @@
   
   <url>
     <loc>https://coding.maylove.pub/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
-    <lastmod>2022-01-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://coding.maylove.pub/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-01-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1159,13 +1159,6 @@
   </url>
   
   <url>
-    <loc>https://coding.maylove.pub/tags/%E5%BE%AA%E7%8E%AF/</loc>
-    <lastmod>2022-01-14</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://coding.maylove.pub/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C%EF%BC%88IO%EF%BC%89/</loc>
     <lastmod>2022-01-14</lastmod>
     <changefreq>daily</changefreq>
@@ -1173,7 +1166,7 @@
   </url>
   
   <url>
-    <loc>https://coding.maylove.pub/tags/%E5%87%BD%E6%95%B0/</loc>
+    <loc>https://coding.maylove.pub/tags/%E5%BE%AA%E7%8E%AF/</loc>
     <lastmod>2022-01-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1181,6 +1174,13 @@
   
   <url>
     <loc>https://coding.maylove.pub/tags/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</loc>
+    <lastmod>2022-01-14</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://coding.maylove.pub/tags/%E5%87%BD%E6%95%B0/</loc>
     <lastmod>2022-01-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1266,14 +1266,14 @@
 
   
   <url>
-    <loc>https://coding.maylove.pub/categories/Java/</loc>
+    <loc>https://coding.maylove.pub/categories/CMD/</loc>
     <lastmod>2022-01-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://coding.maylove.pub/categories/CMD/</loc>
+    <loc>https://coding.maylove.pub/categories/Java/</loc>
     <lastmod>2022-01-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
