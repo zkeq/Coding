@@ -1110,13 +1110,6 @@
 
   
   <url>
-    <loc>https://icodeq.com/tags/%E5%BD%92%E6%A1%A3/</loc>
-    <lastmod>2022-02-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://icodeq.com/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
@@ -1138,6 +1131,20 @@
   </url>
   
   <url>
+    <loc>https://icodeq.com/tags/%E5%BD%92%E6%A1%A3/</loc>
+    <lastmod>2022-02-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://icodeq.com/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/</loc>
+    <lastmod>2022-02-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://icodeq.com/tags/%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0/</loc>
     <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
@@ -1146,13 +1153,6 @@
   
   <url>
     <loc>https://icodeq.com/tags/%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%BC%82%E5%B8%B8/</loc>
-    <lastmod>2022-02-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://icodeq.com/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/</loc>
     <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1287,13 +1287,6 @@
 
   
   <url>
-    <loc>https://icodeq.com/categories/%E5%85%B6%E4%BB%96/</loc>
-    <lastmod>2022-02-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://icodeq.com/categories/CMD/</loc>
     <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
@@ -1302,6 +1295,13 @@
   
   <url>
     <loc>https://icodeq.com/categories/Java/</loc>
+    <lastmod>2022-02-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://icodeq.com/categories/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
