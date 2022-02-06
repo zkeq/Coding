@@ -61,8 +61,8 @@ hexo.extend.filter.register('before_generate', () => {
 
     lazyload: 'https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js',
     instantpage: 'https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js',
-    typed: 'https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js',
-    pangu: 'https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js',
+    typed: 'https://cdnjs.loli.net/ajax/libs/typed.js/2.0.12/typed.min.js',
+    pangu: 'https://cdnjs.loli.net/ajax/libs/pangu/4.0.7/pangu.min.js',
 
     // photo
     fancybox_css_v4: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css',
@@ -80,7 +80,7 @@ hexo.extend.filter.register('before_generate', () => {
     ClickShowText: 'https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js',
 
     // fontawesome
-    fontawesome: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css',
+    fontawesome: 'https://cdnjs.loli.net/ajax/libs/font-awesome/5.15.4/css/all.min.css',
 
     // Conversion between Traditional and Simplified Chinese
     translate: '/js/tw_cn.js',
