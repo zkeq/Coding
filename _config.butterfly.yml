@@ -174,13 +174,20 @@ index_post_content:
   method: 2
   length: 214 # if you set method to 2 or 3, the length need to config
 
+# anchor
+# when you scroll in post, the URL will update according to header id.
+# anchor: false
+
 # Post
 # --------------------------------------
 
 # toc (目錄)
 toc:
+  post: true
+  page: false
   enable: true
   number: false
+  expand: false
   style_simple: false
 
 post_copyright:
@@ -264,8 +271,7 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo
-  use:
-    - Gitalk
+  use: Gitalk
   # - Valine
   # - Disqus
   text: false # Display the comment name next to the button
@@ -743,6 +749,14 @@ darkmode:
   # autoChangeMode: false
   autoChangeMode: false
 
+# Don't modify the following settings unless you know how they work (非必要請不要修改 )
+# Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
+# Don't repeat 不要重複
+rightside_item_order:
+  enable: false
+  hide: # readmode,translate,darkmode,hideAside
+  show: # toc,chat,comment
+
 # Lightbox (圖片大圖查看模式)
 # --------------------------------------
 # You can only choose one, or neither (只能選擇一個 或者 兩個都不選)
@@ -762,7 +776,9 @@ fancybox: true
 mermaid:
   enable: false
   # built-in themes: default/forest/dark/neutral
-  theme: default
+  theme:
+    light: default
+    dark: dark
 
 # Note (Bootstrap Callout)
 note:
