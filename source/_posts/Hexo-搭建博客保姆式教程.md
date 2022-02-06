@@ -5,9 +5,11 @@ description: 这篇文章是自己使用Hexo这几个月自己总结出来的教
 date: 2021-12-13 22:32:34
 categories: CMD
 cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-13/3.png
-sticky: 7
 toc: false
 ---
+
+> 随着我技术的提升 发现本文所用方法已存在较大偏差
+> 将在未来更新...
 
 ### 查看纯享版: [Hexo建站保姆式教程 (maylove.pub)](https://coding.maylove.pub/html/Hexo-搭建博客保姆式教程.html)
 
