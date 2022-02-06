@@ -59,8 +59,8 @@ hexo.extend.filter.register('before_generate', () => {
     canvas_fluttering_ribbon: 'https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js',
     canvas_nest: 'https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js',
 
-    lazyload: 'https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js',
-    instantpage: 'https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js',
+    lazyload: 'https://unpkg.zhimg.com/vanilla-lazyload@17.5.0/dist/lazyload.iife.min.js',
+    instantpage: 'https://cdnjs.loli.net/ajax/libs/instant.page/5.1.0/instantpage.min.js',
     typed: 'https://cdnjs.loli.net/ajax/libs/typed.js/2.0.12/typed.min.js',
     pangu: 'https://cdnjs.loli.net/ajax/libs/pangu/4.0.7/pangu.min.js',
 
@@ -89,15 +89,15 @@ hexo.extend.filter.register('before_generate', () => {
     flickr_justified_gallery_js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
     flickr_justified_gallery_css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css',
 
-    // aplayer
+    // aplayer (不晓得这里用的是哪个版本...换了好几个都会报错)
     aplayer_css: 'https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css',
     aplayer_js: 'https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js',
     meting_js: 'https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js',
 
     // Prism.js
     prismjs_js: 'https://cdn.jsdelivr.net/npm/prismjs/prism.min.js',
-    prismjs_lineNumber_js: 'https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js',
-    prismjs_autoloader: 'https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js'
+    prismjs_lineNumber_js: 'https://cdnjs.loli.net/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js',
+    prismjs_autoloader: 'https://cdnjs.loli.net/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js'
   }
 
   // delete null value
