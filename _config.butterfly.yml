@@ -140,7 +140,7 @@ error_img:
 
 # A simple 404 page
 error_404:
-  enable: false
+  enable: true
   subtitle: 'Page Not Found'
   background: https://edu-image.nosdn.127.net/3B3E219B36564EB4FCA0E2556E996A52.png
 
