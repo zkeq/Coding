@@ -125,7 +125,7 @@ douban:
     quote: '只是自己看完之后的感受,想一直沉溺在这些世界..'
     meta: true
     comments: false
-    top_img: https://gitee.com/dulily/cdn/raw/master/img/me.jpg
+    top_img: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/me.jpg
     aside: true
   # game:
   #   title: 'This is my game title'
@@ -152,8 +152,8 @@ githubcalendar:
   pc_minheight: 280px
   mobile_minheight: 0px
   color: "['#e5e3ee', '#c7dcfb', '#87cfff', '#97b3ff', '#a59cff', '#b67dff', '#c85eff', '#d845ff', '#e52eff', '#f316ff', '#6a46e6']" #IU紫色
-  api: https://python-github-calendar-api.vercel.app/api
-  calendar_js: https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js
+  api: https://api.icodeq.com/api
+  calendar_js: https://s-gz-2220-icodeq.oss.dogecdn.com/hexo_githubcalendar.js
   plus_style: ""
 
 aplayer:
