@@ -19,85 +19,85 @@ hexo.extend.filter.register('before_generate', () => {
     utils: '/js/utils.js',
 
     // pjax
-    pjax: 'https://s-gz-2220-icodeq.oss.dogecdn.com/pjax.min.js',
+    pjax: 'https://cdn.jsdelivr.net/npm/pjax/pjax.min.js',
 
     // comments
-    gitalk: 'https://s-gz-2220-icodeq.oss.dogecdn.com/gitalk.min.js',
-    gitalk_css: 'https://s-gz-2220-icodeq.oss.dogecdn.com/gitalk.min.css',
-    blueimp_md5: 'https://s-gz-2220-icodeq.oss.dogecdn.com/md5.min.js',
-    valine: 'https://s-gz-2220-icodeq.oss.dogecdn.com/Valine.min.js',
-    disqusjs: 'https://s-gz-2220-icodeq.oss.dogecdn.com/disqus.js',
-    disqusjs_css: 'https://s-gz-2220-icodeq.oss.dogecdn.com/disqusjs.css',
-    utterances: 'https://s-gz-2220-icodeq.oss.dogecdn.com/utteranc_client.js',
-    twikoo: 'https://s-gz-2220-icodeq.oss.dogecdn.com/twikoo.all.min.js',
-    waline: 'https://s-gz-2220-icodeq.oss.dogecdn.com/Waline.min.js',
-    giscus: 'https://s-gz-2220-icodeq.oss.dogecdn.com/giscus_client.js',
+    gitalk: 'https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js',
+    gitalk_css: 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css',
+    blueimp_md5: 'https://cdn.jsdelivr.net/npm/blueimp-md5/js/md5.min.js',
+    valine: 'https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js',
+    disqusjs: 'https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js',
+    disqusjs_css: 'https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css',
+    utterances: 'https://utteranc.es/client.js',
+    twikoo: 'https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js',
+    waline: 'https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js',
+    giscus: 'https://giscus.app/client.js',
 
     // share
-    addtoany: 'https://s-gz-2220-icodeq.oss.dogecdn.com/page.js',
-    sharejs: 'https://s-gz-2220-icodeq.oss.dogecdn.com/social-share.min.js',
-    sharejs_css: 'https://s-gz-2220-icodeq.oss.dogecdn.com/share.min.css',
+    addtoany: 'https://static.addtoany.com/menu/page.js',
+    sharejs: 'https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js',
+    sharejs_css: 'https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css',
 
     // search
     local_search: '/js/search/local-search.js',
     algolia_js: '/js/search/algolia.js',
-    algolia_search_v4: 'https://s-gz-2220-icodeq.oss.dogecdn.com/algoliasearch-lite.umd.js',
-    instantsearch_v4: 'https://s-gz-2220-icodeq.oss.dogecdn.com/instantsearch.production.min.js',
+    algolia_search_v4: 'https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js',
+    instantsearch_v4: 'https://cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js',
 
     // math
-    mathjax: 'https://s-gz-2220-icodeq.oss.dogecdn.com/tex-mml-chtml.js',
-    katex: 'https://s-gz-2220-icodeq.oss.dogecdn.com/katex.min.css',
-    katex_copytex: 'https://s-gz-2220-icodeq.oss.dogecdn.com/copy-tex.min.js',
-    katex_copytex_css: 'https://s-gz-2220-icodeq.oss.dogecdn.com/copy-tex.css',
-    mermaid: 'https://s-gz-2220-icodeq.oss.dogecdn.com/mermaid.min.js',
+    mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+    katex: 'https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css',
+    katex_copytex: 'https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.js',
+    katex_copytex_css: 'https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.css',
+    mermaid: 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js',
 
     // count
-    busuanzi: 'https://s-gz-2220-icodeq.oss.dogecdn.com/busuanzi.pure.mini.js',
+    busuanzi: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js',
 
     // background effect
-    canvas_ribbon: 'https://s-gz-2220-icodeq.oss.dogecdn.com/canvas-ribbon.min.js',
-    canvas_fluttering_ribbon: 'https://s-gz-2220-icodeq.oss.dogecdn.com/canvas-fluttering-ribbon.min.js',
-    canvas_nest: 'https://s-gz-2220-icodeq.oss.dogecdn.com/canvas-nest.min.js',
+    canvas_ribbon: 'https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js',
+    canvas_fluttering_ribbon: 'https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js',
+    canvas_nest: 'https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js',
 
-    lazyload: 'https://s-gz-2220-icodeq.oss.dogecdn.com/lazyload.iife.min.js',
-    instantpage: 'https://s-gz-2220-icodeq.oss.dogecdn.com/instantpage.min.js',
-    typed: 'https://s-gz-2220-icodeq.oss.dogecdn.com/typed.min.js',
-    pangu: 'https://s-gz-2220-icodeq.oss.dogecdn.com/pangu.min.js',
+    lazyload: 'https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js',
+    instantpage: 'https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js',
+    typed: 'https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js',
+    pangu: 'https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js',
 
     // photo
-    fancybox_css_v4: 'https://s-gz-2220-icodeq.oss.dogecdn.com/fancybox.css',
-    fancybox_v4: 'https://s-gz-2220-icodeq.oss.dogecdn.com/fancybox.umd.js',
-    medium_zoom: 'https://s-gz-2220-icodeq.oss.dogecdn.com/medium-zoom.min.js',
+    fancybox_css_v4: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css',
+    fancybox_v4: 'https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js',
+    medium_zoom: 'https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js',
 
     // snackbar
-    snackbar_css: 'https://s-gz-2220-icodeq.oss.dogecdn.com/snackbar.min.css',
-    snackbar: 'https://s-gz-2220-icodeq.oss.dogecdn.com/snackbar.min.js',
+    snackbar_css: 'https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css',
+    snackbar: 'https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js',
 
     // effect
-    activate_power_mode: 'https://s-gz-2220-icodeq.oss.dogecdn.com/activate-power-mode.min.js',
-    fireworks: 'https://s-gz-2220-icodeq.oss.dogecdn.com/fireworks.min.js',
-    click_heart: 'https://s-gz-2220-icodeq.oss.dogecdn.com/click-heart.min.js',
-    ClickShowText: 'https://s-gz-2220-icodeq.oss.dogecdn.com/click-show-text.min.js',
+    activate_power_mode: 'https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js',
+    fireworks: 'https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js',
+    click_heart: 'https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js',
+    ClickShowText: 'https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js',
 
     // fontawesome
-    fontawesome: 'https://s-gz-2220-icodeq.oss.dogecdn.com/all.min.css',
+    fontawesomeV6: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css',
 
     // Conversion between Traditional and Simplified Chinese
     translate: '/js/tw_cn.js',
 
     // flickr-justified-gallery
-    flickr_justified_gallery_js: 'https://s-gz-2220-icodeq.oss.dogecdn.com/fjGallery.min.js',
-    flickr_justified_gallery_css: 'https://s-gz-2220-icodeq.oss.dogecdn.com/fjGallery.min.css',
+    flickr_justified_gallery_js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+    flickr_justified_gallery_css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css',
 
-    // aplayer (不晓得这里用的是哪个版本...换了好几个都会报错)
-    aplayer_css: 'https://s-gz-2220-icodeq.oss.dogecdn.com/APlayer.min.css',
-    aplayer_js: 'https://s-gz-2220-icodeq.oss.dogecdn.com/APlayer.min.js',
-    meting_js: 'https://s-gz-2220-icodeq.oss.dogecdn.com/Meting.min.js',
+    // aplayer
+    aplayer_css: 'https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css',
+    aplayer_js: 'https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js',
+    meting_js: 'https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js',
 
     // Prism.js
-    prismjs_js: 'https://s-gz-2220-icodeq.oss.dogecdn.com/prism.min.js',
-    prismjs_lineNumber_js: 'https://s-gz-2220-icodeq.oss.dogecdn.com/prism-line-numbers.min.js',
-    prismjs_autoloader: 'https://s-gz-2220-icodeq.oss.dogecdn.com/prism-autoloader.min.js'
+    prismjs_js: 'https://cdn.jsdelivr.net/npm/prismjs/prism.min.js',
+    prismjs_lineNumber_js: 'https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js',
+    prismjs_autoloader: 'https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js'
   }
 
   // delete null value
@@ -122,7 +122,7 @@ hexo.extend.filter.register('before_generate', () => {
     use = use.split(',')
   }
 
-  const newArray = use.map(item => item.toLowerCase().replace(/^\S/, s => s.toUpperCase()))
+  const newArray = use.map(item => item.toLowerCase().replace(/\b[a-z]/g, s => s.toUpperCase()))
 
   themeConfig.comments.use = newArray
 })
