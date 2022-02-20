@@ -80,7 +80,7 @@ hexo.extend.filter.register('before_generate', () => {
     ClickShowText: 'https://s-gz-2220-icodeq.oss.dogecdn.com/click-show-text.min.js',
 
     // fontawesome
-    fontawesomeV6: 'https://s-gz-2220-icodeq.oss.dogecdn.com/css/all.min.css',
+    fontawesomeV6: 'https://s-gz-2220-icodeq.oss.dogecdn.com/all.min.css',
 
     // Conversion between Traditional and Simplified Chinese
     translate: '/js/tw_cn.js',
