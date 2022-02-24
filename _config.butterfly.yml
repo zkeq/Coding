@@ -54,13 +54,13 @@ social:
 
 # Algolia search
 algolia_search:
-  enable: false
+  enable: true
   hits:
-    per_page: 6
+    per_page: 12
 
 # Local search
 local_search:
-  enable: true
+  enable: false
 
 # Math (數學)
 # --------------------------------------
