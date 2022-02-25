@@ -27,11 +27,9 @@ cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-02-12/1.png
 
 > （本视频即为使用此接口解析）
 
-<div style="position: relative; padding: 30% 45%;">
-<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://jx.parwix.com:4433/player/?url=https://www.bilibili.com/video/BV1G5411o7yX" frameborder="no" scrolling="no"></iframe>
-</div>
-
-
+<video width="100%" height="100%" controls="">
+    <source src="https://icodeq-bpi.vercel.app/api/parwix" type="video/mp4" />
+</video>
 
 ![1](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-02-12/2.png)
 
