@@ -168,10 +168,8 @@ algolia:
   indexName: ""
   fields:
     - content:strip:truncate,0,500
-    - excerpt:strip
     - gallery
     - permalink
-    - photos
     - slug
     - tags
     - title
