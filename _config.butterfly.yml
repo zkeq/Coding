@@ -27,7 +27,7 @@ menu:
 # Code Blocks (代碼相關)
 # --------------------------------------
 
-highlight_theme: pale night #  darker / pale night / light / ocean / mac / mac light / false
+highlight_theme: false #  darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
@@ -863,6 +863,7 @@ css_prefix: true
 inject:
   head:
       - <link rel="stylesheet" href="/css/font.css">
+      - <link rel="stylesheet" href="/css/code.css">
       # - <link rel="stylesheet" href="/css/black-white.css">
   bottom:
       - <div class=" aplayer no-destroy " data-id="1050282" data-server="netease" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div>
