@@ -210,4 +210,4 @@ class handler(BaseHTTPRequestHandler):
 
 > 相信大家用以上这些模板可以做出来很多有意思的东西。
 >
-> 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+> 🚀 x 10086 
