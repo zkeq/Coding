@@ -9,7 +9,7 @@ cover: https://ufile.22li.cn/22TC/2022/02/27/8d4a557bbf7b1.png
 
 > 在日常使用中，我们可能经常有一些需求会用到 `Selenium` 这个 `Python` 库
 >
-> 经过一番探索，算是找到了一直解决方案（百度看的几篇文章好像报错....)
+> 经过一番探索，算是找到了一种解决方案（百度看的几篇文章好像报错....)
 
 先看效果图：
 
@@ -203,7 +203,7 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-    	- name: Checkout
+    	  - name: Checkout
           uses: actions/checkout@v2
         - name: 'Set up Python'
           with:
@@ -331,9 +331,9 @@ browser = webdriver.Chrome('/usr/bin/chromedriver', options=chrome_options)
 
 按照以上步骤配置完成之后，应该是可以正常运行的。
 
-需要注意的是 Github 的定时功能可能存在 20 分钟左右的延迟，不大适合需求高精度时间的项目
+需要注意的是 `Github` 的定时功能可能存在 `20` 分钟左右的延迟，不大适合需求高精度时间的项目
 
-但是每次上传代码的时候，都会触发 Github Action，或许可以在本地写定时任务，自动提交代码，从而触发 Action 执行？
+但是每次上传代码的时候，都会触发 `Github Action` ，或许可以在本地写定时任务，自动提交代码，从而触发 `Action` 执行？
 
 没尝试过，理论上来说应该可以.....
 
