@@ -7,6 +7,15 @@
     font-style: normal;
   }
 
+@font-face{
+  font-family: 'Hack';
+  src: local('Hack'),
+  url('https://s-gz-2220-icodeq.oss.dogecdn.com/hack-regular-webfont.woff2') format('truetype');
+  font-display: swap;
+  font-weight: bold;
+  font-style: normal;
+}
+
   .search-result {
     margin: 0 0 8px;
   }

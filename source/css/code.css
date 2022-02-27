@@ -46,8 +46,16 @@
     color: #7ed9c9;
   }
   
+  #article-container code {
+    font-family: 'Hack' !important;
+  }
+
+
+  .hljs-number{
+    color: #f78c6c;
+  }
   /* Kimbie Orange */
-  .hljs-number,
+
   .hljs-built_in,
   .hljs-builtin-name,
   .hljs-literal,
