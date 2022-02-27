@@ -211,7 +211,7 @@ jobs:
         - name: 'Set up Python'
           with:
           python-version: 3.7
-          name: Install ChromeDriver
+        - name: Install ChromeDriver
           env:
             PASSWORD: ${{ secrets.PASSWORD }}
           run: 
