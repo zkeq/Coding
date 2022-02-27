@@ -116,7 +116,7 @@ env_dist = os.environ
 PASSWORD = env_dist.get('PASSWORD')
 ```
 
-环境变量的问题解决了，我们只需要再解决 配置 `Selenium` 的问题就好啦
+### 环境变量的问题解决了，我们只需要再解决 配置 `Selenium` 的问题就好啦
 
 想要运行 `Action` 的话，入口在这里
 
@@ -233,7 +233,7 @@ jobs:
             && chromedriver --version
 ```
 
-对的没错，安装 `ChromeDriver` ，这部分代码是我偶然从这个仓库翻到的
+### 对的没错，安装 `ChromeDriver` ，这部分代码是我偶然从这个仓库翻到的
 
 - [Microactive/AutoAction](https://github.com/Microactive/AutoAction)
 
@@ -337,7 +337,7 @@ browser = webdriver.Chrome('/usr/bin/chromedriver', options=chrome_options)
 
 没尝试过，理论上来说应该可以.....
 
-这里提供一个 `Python` 最小化实践案例来结束本文。
+### 提供一个 `Python` 最小化实践案例来结束本文。
 
 `./test.py`
 
