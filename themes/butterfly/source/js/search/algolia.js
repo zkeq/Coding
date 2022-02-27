@@ -76,7 +76,7 @@ window.addEventListener('load', () => {
           <b>${data.hierarchy.lvl1 || "no-title"}</b>
           <p class="search-result">
           ${data._highlightResult.content.value}
-          }</p>
+          </p>
           </a>`
         },
         empty: function (data) {
