@@ -32,7 +32,7 @@ categories: Python
 
 #### del 在字典中的用法
 
-- ```python
+```python
   my_dict = {'name': 'dewei', 'age': 33}
   
   del my_dict['name']
@@ -40,8 +40,8 @@ categories: Python
   >> {'age': 33}
   
   del my_dict
-  print(my_dict) -> 报错 , 整个字典对象已被删除
-  ```
+print(my_dict) -> 报错 , 整个字典对象已被删除
+```
 
 #### 代码
 
