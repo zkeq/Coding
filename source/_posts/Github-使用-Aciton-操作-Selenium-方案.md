@@ -203,16 +203,16 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-    	  - name: Checkout
-          uses: actions/checkout@v2
-        - name: 'Set up Python'
-          with:
-            python-version: 3.7
-        - name: Install ChromeDriver
-          env:
-            PASSWORD: ${{ secrets.PASSWORD }}
-          run: 
-            python ./api/get_163_mv/Action-fresh.py
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: 'Set up Python'
+        with:
+        python-version: 3.7
+        name: Install ChromeDriver
+        env:
+          PASSWORD: ${{ secrets.PASSWORD }}
+        run: 
+          python ./api/get_163_mv/Action-fresh.py
 ```
 
 这几部分也比较容易理解，就是分别告诉 `Github` 前期要准备什么
