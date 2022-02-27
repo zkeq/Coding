@@ -367,7 +367,7 @@ print(driver.title)
 driver.quit()
 ```
 
-`requirements.txt`
+`./requirements.txt`
 
 ```txt
 requests==2.23.0
