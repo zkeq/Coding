@@ -1,10 +1,10 @@
 ---
-title: Github | 使用 Aciton 操作 Selenium 方案
+title: Github | 使用 Action 操作 Selenium 方案
 tags: [归档]
-description: 本文主要讲了了<br> 使用 Aciton 操作 Selenium 的一种可行方案
+description: 本文主要讲了了<br> 使用 Action 操作 Selenium 的一种可行方案
 date: 2022-02-27 19:22:46
 categories: 笔记
-cover: https://ufile.22li.cn/22TC/2022/02/27/415ce612c4a2c.png
+cover: https://ufile.22li.cn/22TC/2022/02/27/8d4a557bbf7b1.png
 ---
 
 > 在日常使用中，我们可能经常有一些需求会用到 `Selenium` 这个 `Python` 库
@@ -97,7 +97,9 @@ if __name__ == '__main__':
 
 我们在本地的话，设置环境变量可以看这个视频 ( `Windows` )
 
-<video src='https://video-direct-link.vercel.app/bili.mp4?aid=422368479&bvid=BV1Q3411s7mY&cid=460616824'></video>
+<video width="100%" height="100%" controls="">
+    <source src="https://video-direct-link.vercel.app/bili.mp4?aid=422368479&bvid=BV1Q3411s7mY&cid=460616824" type="video/mp4" />
+</video>
 
 在本地配置好了之后，我们就可以上云了（上面的 `Redis` 是一个缓存功能，测试的话不用也行）
 
