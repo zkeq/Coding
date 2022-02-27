@@ -6,3 +6,7 @@
     font-weight: bold;
     font-style: normal;
   }
+
+  .search-result {
+    margin: 0 0 8px;
+  }
