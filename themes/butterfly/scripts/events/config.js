@@ -40,8 +40,8 @@ hexo.extend.filter.register('before_generate', () => {
 
     // search
     local_search: '/js/search/local-search.js',
-    algolia_js: '/js/search/algolia.js',
-    algolia_search_v4: 'https://s-gz-2220-icodeq.oss.dogecdn.com/algoliasearch-lite.umd.js',
+    algolia_js: 'https://ccknbc.vercel.app/js/search/algolia.js',
+    algolia_search_v4: 'https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js',
     instantsearch_v4: 'https://s-gz-2220-icodeq.oss.dogecdn.com/instantsearch.production.min.js',
 
     // math
