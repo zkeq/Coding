@@ -70,17 +70,18 @@ window.addEventListener('load', () => {
       container: '#algolia-hits',
       templates: {
         item: function (data) {
-          const link = data.permalink ? data.permalink : (GLOBAL_CONFIG.root + data.path)
+          const link = data.url
           return `
-            <a href="${link}" class="algolia-hit-item-link">
-            ${data._highlightResult.title.value || 'no-title'}
-            </a>`
+          <a href="${link}" class="algolia-hit-item-link">
+          <b>${data.hierarchy.lvl1 || "no-title"}</b>
+          <li><element class="result">
+          ${data._highlightResult.content.value}
+          }</element></li>
+          </a>`
         },
         empty: function (data) {
           return (
-            '<div id="algolia-hits-empty">' +
-            GLOBAL_CONFIG.algolia.languages.hits_empty.replace(/\$\{query}/, data.query) +
-            '</div>'
+            `<div class="algolia-hit-item-link">`
           )
         }
       }

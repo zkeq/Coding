@@ -161,15 +161,6 @@ aplayer:
   asset_inject: false
 
 algolia:
-  appId: ""
-  apiKey: ""
-  adminApiKey: ""
-  chunkSize: 5000
-  indexName: ""
-  fields:
-    - content:strip:truncate,0,500
-    - gallery
-    - permalink
-    - slug
-    - tags
-    - title
+  applicationID: 'KI6VRR8JEE'
+  apiKey: 'f524869081b6d2a8c47bb149a43b0999'
+  indexName: 'icodeq'
