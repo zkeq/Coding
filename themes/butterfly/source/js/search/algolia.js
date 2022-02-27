@@ -74,9 +74,9 @@ window.addEventListener('load', () => {
           return `
           <a href="${link}" class="algolia-hit-item-link">
           <b>${data.hierarchy.lvl1 || "no-title"}</b>
-          <li><element class="result">
+          <p class="search-result">
           ${data._highlightResult.content.value}
-          }</element></li>
+          }</p>
           </a>`
         },
         empty: function (data) {
