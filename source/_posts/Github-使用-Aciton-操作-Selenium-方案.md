@@ -238,7 +238,7 @@ jobs:
 
 ### 对的没错，安装 `ChromeDriver` ，这部分代码是我偶然从这个仓库翻到的
 
-- [Microactive/AutoAction](https://github.com/Microactive/AutoAction)
+- [Saujyun/AutoAction](https://github.com/Saujyun/AutoAction)
 
 虽然里面的 Action 已经久置且很久没人维护了，但是里面的思路很好，省去了自己配置 `ChromeDriver`  的时间。
 
