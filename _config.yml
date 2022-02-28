@@ -159,8 +159,3 @@ githubcalendar:
 aplayer:
   meting: true
   asset_inject: false
-
-algolia:
-  applicationID: 'KI6VRR8JEE'
-  apiKey: 'f524869081b6d2a8c47bb149a43b0999'
-  indexName: 'icodeq'
