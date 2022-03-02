@@ -142,7 +142,7 @@ error_img:
 error_404:
   enable: true
   subtitle: 'Page Not Found'
-  background: https://edu-image.nosdn.127.net/3B3E219B36564EB4FCA0E2556E996A52.png
+  background: https://p16.qhimg.com/t01c68043192e217c93.png
 
 post_meta:
   page: # Home Page
