@@ -4,7 +4,7 @@ date: 2021-09-29 22:54:20
 tags: [编程练习]
 categories: Python
 description: 通过运用前面所学的知识 <br> 完成自己的任务
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-29/4.png
+cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-29/4.png
 ---
 
 ### 编程练习(三)
@@ -14,7 +14,7 @@ cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-29/4.png
 > 学校组织学员买资料。班长把买资料的同学登记在一个表里。全班总共16人。根据任务描述、效果图及代码中的注释完成该习题
 > 效果图：
 >
-> ![3](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-29/3.png)
+> ![3](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-29/3.png)
 
 #### 任务
 

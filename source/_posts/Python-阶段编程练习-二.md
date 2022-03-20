@@ -3,7 +3,7 @@ title: Python 阶段编程练习(二)
 date: 2021-09-27 19:37:07
 tags: [编程练习]
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-27/4.jpg
+cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-27/4.jpg
 description: 通过运用前面所学的知识 <br> 完成自己的任务
 ---
 
@@ -13,7 +13,7 @@ description: 通过运用前面所学的知识 <br> 完成自己的任务
 
 > 定义一个变量 string= "When your mindis simple, your world is simple" 将变量对应效果图中的方法print输出，实现效果图：
 >
-> ![3](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-27/3.jpg)
+> ![3](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-27/3.jpg)
 
 #### 任务
 

@@ -4,7 +4,7 @@ tags: [进程与线程]
 description: 本节课主要学习了<br>线程的基础知识
 date: 2021-11-13 22:53:13
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-13/3.png
+cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-13/3.png
 ---
 
 ### 线程
@@ -27,7 +27,7 @@ cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-13/3.png
 
 #### 多线程的执行方式
 
-![1](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-13/1.jpg)
+![1](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-13/1.jpg)
 
 > ##### 一、什么是线程
 >
@@ -47,4 +47,4 @@ cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-13/3.png
 >
 > 代码如下：
 >
-> ![2](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-13/2.jpg)
+> ![2](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-13/2.jpg)

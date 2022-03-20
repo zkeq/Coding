@@ -3,7 +3,7 @@ title: Python字符串的编码格式
 date: 2021-09-27 19:34:43
 tags: [字符串]
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-27/4.jpg
+cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-27/4.jpg
 description: 本节课主要认识了字符串的编码格式
 ---
 

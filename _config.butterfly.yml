@@ -85,28 +85,28 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/code.svg
+favicon: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/code.svg
 
 # Avatar (頭像)
 avatar:
-  img: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/Avatar.jpg
+  img: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/Avatar.jpg
   effect: false
 
 # Disable all banner image
 disable_top_img: false
 
 # The banner image of home page
-index_img: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/like.jpg
+index_img: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/like.jpg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-31/3.jpg
+default_top_img: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-31/3.jpg
 
 # The banner image of archive page
-archive_img: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/top2.jpg
+archive_img: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/top2.jpg
 
 # If the banner of tag page not setting, it will show the top_img
 # note: tag page, not tags page (子標籤頁面的 top_img)
-tag_img: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/top4.jpg
+tag_img: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/top4.jpg
 
 # The banner image of tag page
 # format:
@@ -143,7 +143,7 @@ error_img:
 error_404:
   enable: true
   subtitle: 'Page Not Found'
-  background: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/404.png
+  background: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/404.png
 
 post_meta:
   page: # Home Page
@@ -518,7 +518,7 @@ tag_ui: # 留空或 index
 background:
 
 # Footer Background
-footer_bg: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/p2671062609.jpg
+footer_bg: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/p2671062609.jpg
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
 rightside-bottom:

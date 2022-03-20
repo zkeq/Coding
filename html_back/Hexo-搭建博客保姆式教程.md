@@ -4,7 +4,7 @@ tags: [笔记]
 description: 这篇文章是自己使用Hexo这几个月自己总结出来的教程
 date: 2021-12-13 22:32:07
 categories: CMD
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-13/3.png
+cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-13/3.png
 sticky: 7
 ---
 
@@ -55,7 +55,7 @@ sticky: 7
 
 2. 点击下图所示位置
 
-   <img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-13/1.png" alt="1" style="zoom:50%;">
+   <img src="https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-13/1.png" alt="1" style="zoom:50%;">
 
 3. 点击下载好的文件进行安装 `node.js`
 
@@ -67,7 +67,7 @@ sticky: 7
 
 2. 滑到底部点击最后一个(可能因为时间原因,看到本文时已经出现新版本,请选择最新版本)
 
-   <img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-13/2.png" alt="2" style="zoom:80%;" >
+   <img src="https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-13/2.png" alt="2" style="zoom:80%;" >
 
 3. 打开下载好的文件进行`安装`
 
