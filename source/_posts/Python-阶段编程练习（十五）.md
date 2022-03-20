@@ -4,7 +4,7 @@ date: 2021-11-03 23:16:10
 tags: [编程练习]
 categories: Python
 description: 通过运用前面所学的知识 <br> 完成自己的任务
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg
+cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg
 ---
 
 ### 代码练习
@@ -13,7 +13,7 @@ cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg
 >
 > 效果图如下：
 >
-> ![1](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-3/1.jpg)
+> ![1](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-3/1.jpg)
 
 #### 任务
 

@@ -3,7 +3,7 @@ title: JAVA 数据类型
 date: 2021-09-23 21:46:17
 tags: [数据类型]
 categories: Java
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-23/1.jpg
+cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-23/1.jpg
 ---
 
 ### 数据类型
