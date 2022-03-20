@@ -4,7 +4,7 @@ date: 2021-10-05 18:23:53
 tags: [类型转换]
 description: 本节课主要学习了:<br>字符串与数字类型的转换<br>其中包含的原理和要求
 categories: Python
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-5/1.png
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-5/1.png
 ---
 
 ### 字符串与数字类型的转换

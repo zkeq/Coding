@@ -4,7 +4,7 @@ tags: [笔记]
 description: 这篇文章是自己使用Hexo这几个月自己总结出来的教程
 date: 2021-12-13 22:32:34
 categories: CMD
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-13/3.png
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-13/3.png
 toc: false
 sticky: 7
 ---

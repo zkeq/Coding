@@ -4,7 +4,7 @@ tags: [笔记]
 description: 使用win11的wsl功能安装了linux系统ubuntn.<br>实现在win11下使用linux系统搭建的本地网盘来访问Windows的文件看电影的需求。
 date: 2021-11-26 22:56:25
 categories: [CMD]
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-26/1.png
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-26/1.png
 ---
 #### 事情起因
 
