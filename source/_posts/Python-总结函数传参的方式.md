@@ -4,7 +4,7 @@ date: 2021-10-20 23:13:55
 tags: [函数]
 categories: Python
 description: 本节课主要总结了<br>函数的传参的方式
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-20/4.png
+cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-20/4.png
 ---
 
 ### 总结函数传参的方式
@@ -27,7 +27,7 @@ cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-20/4.png
 
     例如：
 
-    ![1](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-20/1.jpg)
+    ![1](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-20/1.jpg)
 
 - 第二种默认参数：
 
@@ -37,7 +37,7 @@ cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-20/4.png
 
     例如：
 
-    ![2](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-20/2.jpg)
+    ![2](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-20/2.jpg)
 
 - 第三种关键参数：
 

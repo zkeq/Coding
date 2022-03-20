@@ -4,12 +4,12 @@ date: 2021-10-20 23:15:16
 tags: [编程练习]
 categories: Python
 description: 通过运用前面所学的知识 <br> 完成学生信息库的案例
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-20/4.png
+cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-20/4.png
 ---
 
 ### [案例]实现学生信息库
 
-![3](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-20/3.png)
+![3](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-20/3.png)
 
 ```python
 # coding:utf-8

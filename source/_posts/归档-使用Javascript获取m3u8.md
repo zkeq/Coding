@@ -4,7 +4,7 @@ tags: [笔记]
 description: 本节课主要讲了了<br>如何使用javascrit快速获取到m3u8地址并下载.
 date: 2022-01-23 19:40:27
 categories: 笔记
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-1-23/1.png
+cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-1-23/1.png
 ---
 
 > 本页将提供一些JS代码，在您的浏览器运行这些代码有助于更快的获取到m3u8链接用以下载。
@@ -64,7 +64,7 @@ cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-1-23/1.png
 
 
 
-![运行截图](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-01-27/1.gif)  
+![运行截图](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-01-27/1.gif)  
 
 
 ## 腾讯视频

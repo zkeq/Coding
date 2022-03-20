@@ -4,7 +4,7 @@ date: 2021-10-04 20:51:06
 tags: [集合]
 description: 本节课主要学习了:<br>集合的add,update,remove,clear函数<br>和del的注意事项
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-4/2.jpg
+cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-4/2.jpg
 ---
 
 ### 集合的增删改

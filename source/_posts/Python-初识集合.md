@@ -4,7 +4,7 @@ date: 2021-10-04 20:46:30
 tags: [集合]
 description: 本节课主要学习了:<br>集合的定义以及与列表的区别<br>和创建方法的注意事项
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-4/2.jpg
+cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-4/2.jpg
 ---
 
 ### 初识集合
