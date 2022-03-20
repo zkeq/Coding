@@ -4,7 +4,7 @@ tags: [归档]
 description: 本节课主要记录了<br> 使用 vercel 实现 API 的几种模板。
 date: 2022-02-27 21:50:17
 categories: 笔记
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/28/c1e42547c69c5.png
+cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/28/c1e42547c69c5.png
 ---
 
 平时的话我们总会遇到一些简单的 `API` 需求，但是现在的话呢，我又没有服务器..
@@ -21,13 +21,13 @@ cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/2
 
 于是......这个仓库就装满了 `12` 个 `API`  [zkeq/icodeq-api: 自用 API 地址 (github.com)](https://github.com/zkeq/icodeq-api)
 
-![1](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/28/a6ac00437a464.png)
+![1](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/28/a6ac00437a464.png)
 
 `12` 个对于我来说还是少了些
 
 于是...... [zkeq/icodeq-bpi: API 的第二个仓库 (github.com)](https://github.com/zkeq/icodeq-bpi)
 
-![2](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/28/f167ecc65d64d.png)
+![2](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/28/f167ecc65d64d.png)
 
 这不就好起来了嘛。
 
@@ -206,7 +206,7 @@ class handler(BaseHTTPRequestHandler):
 
 - `vercel` 的云函数 没有 `Node.js` 环境，但是 `Github Action` 有..
 - `腾讯云函数的编码问题很麻烦`（这问题好像不给跟进了）
-- ![3](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/28/188e79d4ba942.png)
+- ![3](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/28/188e79d4ba942.png)
 
 > 相信大家用以上这些模板可以做出来很多有意思的东西。
 >

@@ -4,7 +4,7 @@ date: 2021-10-04 20:51:28
 tags: [集合]
 description: 本节课主要学习了:<br>difference函数<br>差集的使用方法
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-4/2.jpg
+cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-4/2.jpg
 ---
 
 ### 集合的差集--`difference函数`
@@ -12,7 +12,7 @@ cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-4/2.jpg
 #### 什么是差集
 
 - a, b两个集合 , 由所有属于a且不属于b的元素组成的集合叫做a与b的差集
-- ![1](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-4/1.png)
+- ![1](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-4/1.png)
 
 #### 功能
 

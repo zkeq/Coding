@@ -4,10 +4,10 @@ tags: [Python]
 description: 本节课主要学习了<br>如何发送请求获取网页响应以及解析网页.
 date: 2021-11-30 15:28:19
 categories: 编程练习
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-30/1.png
+cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-30/1.png
 ---
 
-![1](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-30/2.png)
+![1](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-30/2.png)
 
 ```python
 # coding:utf-8

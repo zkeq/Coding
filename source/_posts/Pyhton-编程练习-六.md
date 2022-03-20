@@ -4,7 +4,7 @@ date: 2021-10-14 21:47:37
 tags: [编程练习]
 categories: Python
 description: 通过运用前面所学的知识 <br> 完成自己的任务
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-14/1.png
+cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-14/1.png
 ---
 
 ### 编程练习

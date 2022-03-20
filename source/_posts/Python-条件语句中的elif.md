@@ -4,7 +4,7 @@ date: 2021-10-06 18:05:07
 tags: [条件语句]
 description: 本节课主要学习了:<br>条件语句中的elif
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-6/5.jpg
+cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-6/5.jpg
 ---
 
 ### 条件语句中的`elif`
@@ -30,9 +30,9 @@ else:
 	elsedo
 ```
 
-![2](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-6/2.jpg)
+![2](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-6/2.jpg)
 
-![3](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-6/3.png)
+![3](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-6/3.png)
 
 #### 参数
 
