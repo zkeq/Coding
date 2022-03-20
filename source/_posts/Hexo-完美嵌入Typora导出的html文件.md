@@ -4,7 +4,7 @@ tags: [笔记]
 description: 在编写文档的时候摸索出来的技巧
 date: 2021-12-14 01:00:50
 categories: CMD
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-13/4.png
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-13/4.png
 ---
 
 ### 步骤如下

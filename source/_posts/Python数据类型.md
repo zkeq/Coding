@@ -5,7 +5,7 @@ tags: [数据类型]
 categories: Python
 toc: false
 toc_number: true
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-18/1.png
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-18/1.png
 description: 初步认识pythond的数据类型 ： <br> 整形 浮点型 内置函数 <br>type字符串类型 内置函数id 内置函数len
 ---
 

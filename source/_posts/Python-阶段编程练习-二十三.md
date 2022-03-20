@@ -4,12 +4,12 @@ tags: [高级函数,编程练习]
 description: 利用前面所学知识<br>完成自己的任务。
 date: 2021-11-12 02:10:13
 categories: Python
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-11/6.png
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-11/6.png
 ---
 
 作业案例1
 
-![1](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-11/1.png)
+![1](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-11/1.png)
 
 ```python
 # coding:utf-8
@@ -324,19 +324,19 @@ if __name__ == '__main__':
 
 1. 成功运行效果图：
 
-   ![2](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-11/2.jpg)
+   ![2](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-11/2.jpg)
 
 2. 输入区间起始值和区间终止值相等效果图：
 
-   ![3](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-11/3.jpg)
+   ![3](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-11/3.jpg)
 
 3. 输入区间起始值大于区间终止值效果图：
 
-   ![4](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-11/4.jpg)
+   ![4](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-11/4.jpg)
 
 4. 输入区间起始值和终止值为非数字字符效果图：
 
-   ![5](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-11/5.jpg)
+   ![5](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-11/5.jpg)
 
 ##### 代码(不想写了,包括上面那个..都不是我写的, 好累 好困 去睡了  回头再看) 
 

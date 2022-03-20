@@ -4,7 +4,7 @@ tags: [高级函数,编程练习]
 description: 利用前面所学知识<br>完成自己的任务。
 date: 2021-11-12 02:09:42
 categories: Python
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-11/6.png
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-11/6.png
 ---
 
 ### 编程练习

@@ -4,7 +4,7 @@ date: 2021-10-06 18:04:50
 tags: [条件语句]
 description: 本节课主要学习了:<br>条件语句中的else
 categories: Python
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-6/5.jpg
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-6/5.jpg
 ---
 
 ### 条件语句中的`else`
@@ -12,7 +12,7 @@ cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cach
 #### 什么是else
 
 - `else` 就是对于`if条件不满足的时候`执行`另一个代码块`的`入口`
-- ![1](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-6/1.jpg)
+- ![1](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-6/1.jpg)
 
 #### 功能
 
