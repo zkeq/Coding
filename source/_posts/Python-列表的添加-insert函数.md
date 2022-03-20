@@ -4,7 +4,7 @@ date: 2021-09-29 22:52:58
 tags: [列表]
 categories: Python
 description: insert函数
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-29/4.png
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-29/4.png
 ---
 
 ### 列表的添加-insert函数

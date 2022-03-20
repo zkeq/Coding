@@ -4,7 +4,7 @@ date: 2021-10-04 20:52:03
 tags: [集合]
 description: 本节课主要学习了:<br>union函数<br>并集的使用方法
 categories: Python
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-4/2.jpg
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-4/2.jpg
 ---
 
 ### 集合的并集--`union函数`
@@ -12,7 +12,7 @@ cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cach
 #### 什么是并集
 
 - `a , b 两个集合`中所有的**元素**(去除重复)即为a与b的`并集`
-- ![1](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-4/1.png)
+- ![1](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-4/1.png)
 
 #### 功能
 

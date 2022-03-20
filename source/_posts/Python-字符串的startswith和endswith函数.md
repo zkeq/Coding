@@ -3,7 +3,7 @@ title: Python 字符串的startswith和endswith函数
 date: 2021-09-25 21:32:19
 tags: [字符串]
 categories: Python
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-25/1.jpg
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-25/1.jpg
 ---
 
 ### 字符串的startswith和endswith函数

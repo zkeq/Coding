@@ -3,19 +3,19 @@
   link_list:
     - name: ThereHello
       link: https://www.therehello.top/
-      avatar: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/f1.jpg
+      avatar: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/f1.jpg
       descr: 通过答题脚本 遇到的大佬.
     - name: 云淡风轻
       link: https://blog.gocos.cn
-      avatar: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/f2.ico
+      avatar: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/f2.ico
       descr: Wk-Helper 大佬的博客.
     - name: 探姬
       link: https://blog.probius.xyz
-      avatar: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/f3.jpg
+      avatar: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/f3.jpg
       descr: 又一个大佬的博客.
     - name: icodel's Blog
       link: https://www.icodel.cn
-      avatar: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/f4.jpg
+      avatar: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/f4.jpg
       descr: icodel's Blog
     - name: An Wen
       link: https://blog.zytllt.cn
@@ -31,43 +31,43 @@
   link_list:
     - name: 前端图文教程
       link: https://web.qianguyihao.com
-      avatar: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/t1.ico
+      avatar: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/t1.ico
       descr: 大佬的前端教程.
     - name: Qwerty Learner
       link: https://qwerty.kaiyi.cool
-      avatar: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/t2.png
+      avatar: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/t2.png
       descr: 练习Qwerty键位的网站.
     - name: DevDocs
       link: https://devdocs.io
-      avatar: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/t3.png
+      avatar: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/t3.png
       descr: 编程手册速查
     - name: MyFreeMusic
       link: http://tool.liumingye.cn/music
-      avatar: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/t4.ico
+      avatar: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/t4.ico
       descr: 看名字就知道,听歌的
     - name: 数字图书馆
       link: https://31sanyi.neocities.org
-      avatar: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/t5.ico
+      avatar: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/t5.ico
       descr: 查论文的.
     - name: MDN Web Docs
       link: https://developer.mozilla.org/zh-CN/docs/Learn
-      avatar: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/t6.png
+      avatar: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/t6.png
       descr: MDN 权威前端手册
     - name: Java基础知识库
       link: https://javadocs.zkeq.xyz
-      avatar: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/code.png
+      avatar: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/code.png
       descr: 自己建的Java基础知识库.
     - name: 映画图床
       link: https://pic.onji.cn
-      avatar: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/t7.ico
+      avatar: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/t7.ico
       descr: 聚合图床
     - name: 探姬的知识库
       link: https://www.yuque.com/probius
-      avatar: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/f3.jpg
+      avatar: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/f3.jpg
       descr: 大佬的知识库,去逛逛?
     - name: HYPERBEAM
       link: https://hyperbeam.com
-      avatar: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/t8.png
+      avatar: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/friends/t8.png
       descr: 多人在线一起看电影网站..[宝藏]
     - name: 22TC
       link: https://tc.22li.cn

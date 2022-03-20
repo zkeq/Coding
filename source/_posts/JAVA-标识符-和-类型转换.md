@@ -3,7 +3,7 @@ title: JAVA 标识符 和 类型转换
 date: 2021-09-23 21:47:02
 tags: [常量变量,数据类型]
 categories: Java
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-23/1.jpg
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-23/1.jpg
 ---
 
 #### 6.1 标识符（记忆、理解）
@@ -60,7 +60,7 @@ int num2 = (int) num1; // 将double类型的num1强制转换为int类型
 System.out.println(num2); // 输出5（小数位直接舍弃）
 ```
 
-![1543196882672](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-23/2.png)
+![1543196882672](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-23/2.png)
 
 ###### 说明：
 
