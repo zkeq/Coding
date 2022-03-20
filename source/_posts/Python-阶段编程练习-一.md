@@ -3,7 +3,7 @@ title: Python 阶段编程练习(一)
 date: 2021-09-27 19:36:43
 tags: [编程练习]
 categories: Python
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-27/4.jpg
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-27/4.jpg
 description: 通过运用前面所学的知识 <br> 完成自己的任务
 ---
 
@@ -13,7 +13,7 @@ description: 通过运用前面所学的知识 <br> 完成自己的任务
 
 > 在脚本开始写上国际通用编码。定义六个变量分别表示‘周一’，‘周二’，‘周三’，‘周四’，‘周五’，‘饭店活动介绍’每个变量加上相应的注释。‘周一’到‘周五’中把菜名与价格作为格式化。在‘饭店活动介绍’中把饭店名称以及所有奖品的价格用{}格式化。在‘凭结账小票可进行抽奖’后加入换行符，每等奖介绍完后都要进行换行，所有‘：’后面加入空格符。再定义五个变量作为‘周一’到‘周五’格式化输出的结果（比如菜名‘麻辣小龙虾’13，9.8）。最后将这11个变量对应输出，实现效果图：
 >
-> ![](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-27/2.jpg)
+> ![](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-27/2.jpg)
 
 #### 任务
 

@@ -1,7 +1,7 @@
 ---
 title: 关于本博客的一些说明
 date: 2021-12-31 20:19:09
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/like.jpg
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/like.jpg
 ---
 
 ## 关于壁纸
@@ -15,8 +15,8 @@ cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cach
 再放几张like 真的好爱!
 
 {% gallery %}
-![](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-31/1.jpg)
-![](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-31/2.jpg)
-![](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-31/3.jpg)
-![](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-31/4.jpg)
+![](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-31/1.jpg)
+![](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-31/2.jpg)
+![](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-31/3.jpg)
+![](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-31/4.jpg)
 {% endgallery %}

@@ -4,7 +4,7 @@ date: 2021-11-05 23:57:07
 tags: [对象和异常]
 categories: Python
 description: 本节课主要学习了<br>Python中如何使用assert函数下断言
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg
 ---
 
 ### 断言

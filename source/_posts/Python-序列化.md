@@ -4,7 +4,7 @@ tags: [文件操作（IO）]
 description: 本节课主要学习了<br>序列化是什么已经 Json pickle
 date: 2021-11-10 01:21:10
 categories: Python
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-10/1.png
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-10/1.png
 ---
 
 ### 序列化

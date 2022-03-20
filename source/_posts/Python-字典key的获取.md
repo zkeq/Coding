@@ -2,7 +2,7 @@
 title: Python 字典key的获取
 date: 2021-10-04 08:44:34
 tags: [字典]
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-3/5.png
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-3/5.png
 description: 本节课主要学习了:<br>内置函数get获取方法<br>[]的获取方法以及他们的区别
 categories: Python
 ---

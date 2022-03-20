@@ -3,7 +3,7 @@ title: JAVA 注释
 date: 2021-09-23 21:44:59
 tags: [常量变量,数据类型]
 categories: Java
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-23/1.jpg
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-23/1.jpg
 ---
 
 ### 注释

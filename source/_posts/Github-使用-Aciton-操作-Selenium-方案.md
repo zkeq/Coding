@@ -4,7 +4,7 @@ tags: [归档]
 description: 本文主要讲了了<br> 使用 Action 操作 Selenium 的一种可行方案
 date: 2022-02-27 19:22:46
 categories: 笔记
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/27/8d4a557bbf7b1.png
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/27/8d4a557bbf7b1.png
 ---
 
 > 在日常使用中，我们可能经常有一些需求会用到 `Selenium` 这个 `Python` 库
@@ -13,7 +13,7 @@ cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cach
 
 先看效果图：
 
-![1.png](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/27/cf6b046747f80.png)
+![1.png](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/27/cf6b046747f80.png)
 
 示例地址：
 
@@ -107,7 +107,7 @@ if __name__ == '__main__':
 
 `Github Action` 的 `环境变量` 在这里配置 
 
-![2](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/27/4d4816d1e5cae.png)
+![2](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/27/4d4816d1e5cae.png)
 
 我们在这里设置了环境变量之后，就可以在 `Aciton` 中这样读取环境变量
 
@@ -122,7 +122,7 @@ PASSWORD = env_dist.get('PASSWORD')
 
 想要运行 `Action` 的话，入口在这里
 
-![3](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/27/cd05425dfd5d7.png)
+![3](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/27/cd05425dfd5d7.png)
 
 点击之后，我们可以看到一个 `yml` 后缀的文件，这个文件负责控制 `Action` 的工作流程
 
@@ -250,11 +250,11 @@ jobs:
 
 好在 `Github` 有自动提示功能，当你输入之后，会有浮窗告诉你下次运行是什么时间
 
-![3](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/27/df3fcd26868de.png)
+![3](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/27/df3fcd26868de.png)
 
 这个的意思是 在每小时的 `:02` 运行，而不是每两分钟运行（下图才是每两分钟运行一次 👀）
 
-![](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/27/500adf24bc3fa.png)
+![](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/27/500adf24bc3fa.png)
 
 上面提供的代码块可以当做一个模板用。我感觉很好用....
 
@@ -429,4 +429,4 @@ jobs:
 
 测试成功
 
-![7](https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/27/4ae9a17928d7d.png)
+![7](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/27/4ae9a17928d7d.png)

@@ -4,7 +4,7 @@ tags: [常用函数,高级函数]
 description: 本节课主要学习了<br>3个 Python中的高级函数(魔法函数) 分别是 filter,map,reduce
 date: 2021-11-12 02:08:36
 categories: Python
-cover: https://cdn.read.html5.qq.com/image?src=circle&q=0&r=0&imgflag=0&cdn_cache=1800&w=0&h=0&imageUrl=https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-11/6.png
+cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-11/6.png
 ---
 
 ### Python中的高级函数(魔法函数)
