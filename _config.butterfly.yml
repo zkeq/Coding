@@ -272,7 +272,7 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo
-  use: Gitalk
+  use: giscus,Gitalk
   # - Valine
   # - Disqus
   text: false # Display the comment name next to the button
@@ -281,6 +281,17 @@ comments:
   lazyload: false
   count: false # Display comment count in post's top_img
   card_post_count: false # Display comment count in Home Page
+
+
+giscus:
+  repo: "zkeq/Coding"
+  repo_id: "MDEwOlJlcG9zaXRvcnk0MDc4MDg2MTE="
+  category_id: "Announcements"
+  theme:
+    light: light
+    dark: dark
+  option:
+
 
 # disqus
 # https://disqus.com/

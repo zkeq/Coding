@@ -31,7 +31,7 @@ hexo.extend.filter.register('before_generate', () => {
     utterances: 'https://s-gz-2220-icodeq.oss.dogecdn.com/utteranc_client.js',
     twikoo: 'https://s-gz-2220-icodeq.oss.dogecdn.com/twikoo.all.min.js',
     waline: 'https://s-gz-2220-icodeq.oss.dogecdn.com/Waline.min.js',
-    giscus: 'https://s-gz-2220-icodeq.oss.dogecdn.com/giscus_client.js',
+    giscus: 'https://giscus.app/client.js',
 
     // share
     addtoany: 'https://s-gz-2220-icodeq.oss.dogecdn.com/page.js',
