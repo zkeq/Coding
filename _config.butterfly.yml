@@ -320,7 +320,7 @@ livere:
 # https://github.com/gitalk/gitalk
 gitalk:
   client_id: 'b5a28a4e5251e3fb7ff7'
-  client_secret: '37c78f0d291a1c6bfa4ec86abf745ab7665d7657'
+  client_secret: '9c77b1ab5cd631ff4ed8ee82672a5025dd995133'
   repo: Coding
   owner: Zkeq
   admin: Zkeq
