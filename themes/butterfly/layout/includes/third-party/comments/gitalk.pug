@@ -8,10 +8,9 @@ script.
 
   function loadGitalk () {
     function initGitalk () {
-      var git_talk_sk = process.env.git_talk
       var gitalk = new Gitalk(Object.assign({
         clientID: '!{theme.gitalk.client_id}',
-        clientSecret: git_talk_sk,
+        clientSecret: '!{theme.gitalk.client_secret}',
         repo: '!{theme.gitalk.repo}',
         owner: '!{theme.gitalk.owner}',
         admin: ['!{theme.gitalk.admin}'],
