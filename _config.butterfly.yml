@@ -14,6 +14,7 @@ menu:
     监控云台: https://stats.uptimerobot.com/om182uDKYG || fas fa-link
     友情链接: /link/ || fas fa-heart
     开往: https://travellings.link || fas fa-subway
+    说说: /talk/ || fas fa-comment-alt
     CopyRight: /about/ || fas fa-archive
   # Home: / || fas fa-home
   # Archives: /archives/ || fas fa-archive
@@ -330,6 +331,36 @@ gitalk:
   pagerDirection: last # Comment sorting direction, available values are last and first.
   createIssueManually: true # Gitalk will create a corresponding github issue for your every single page automatically
   option:
+
+
+
+# Artitalk
+# see https://artitalk.js.org/
+artitalk:
+  enable: false
+  appId: vgvkPazGBTz0qjjG6HjILwus-MdYXbMMI
+  appKey: pbE8jnQgk1LnStk4NS8l1VAD
+  path: talk
+  js: https://s-gz-2220-icodeq.oss.dogecdn.com/artitalk
+  option:
+  front_matter:
+
+
+# HexoPlusPlus Talk
+# see https://hexoplusplus.js.org
+hpptalk:
+  enable: true 
+  domain: icodeq.learnonly.workers.dev
+  path: talk
+  limit: 12
+  start: 0
+  js: https://s-gz-2220-icodeq.oss.dogecdn.com/talk_user.js
+  css: https://s-gz-2220-icodeq.oss.dogecdn.com/talk.css
+  option:
+  front_matter:
+    title: 说说
+    top_img: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-30/1.png
+
 
 # valine
 # https://valine.js.org
