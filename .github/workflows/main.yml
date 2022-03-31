@@ -23,9 +23,6 @@ jobs:
         run: | 
           npm install -g hexo-cli
           npm i
-          # Restore last modified time
-          git ls-files -z | while read -d '' path; do touch -d "$(git log -1
-          --format="@%ct" "$path")" "$path"; done
           hexo g
       - name: Build
         uses: peaceiris/actions-gh-pages@v3
