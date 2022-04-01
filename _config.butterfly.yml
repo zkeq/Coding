@@ -708,7 +708,7 @@ aside:
       link: https://github.com/zkeq
   card_announcement:
     enable: true
-    content: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://icodeq.com" style="color:#49b1f5" one-link-mark="yes">主站</a>&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://code.maylove.pub" style="color:#49b1f5" one-link-mark="yes">镜像</a>&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://zkeq.gitee.io/code" style="color:#49b1f5" one-link-mark="yes">国内镜像</a><br>联系我：<a target="_blank" rel="noopener external nofollow noreferrer" href="mailto:admin@icodeq.com" style="color:#49b1f5" one-link-mark="yes">admin@icodeq.com</a><script src="/Coding/js/search-button.js"></script>
+    content: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://icodeq.com" style="color:#49b1f5" one-link-mark="yes">主站</a>&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://code.maylove.pub" style="color:#49b1f5" one-link-mark="yes">镜像</a>&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://zkeq.gitee.io/code" style="color:#49b1f5" one-link-mark="yes">国内镜像</a><br>联系我：<a target="_blank" rel="noopener external nofollow noreferrer" href="mailto:admin@icodeq.com" style="color:#49b1f5" one-link-mark="yes">admin@icodeq.com</a><script src="/js/search-button.js"></script>
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -905,8 +905,8 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-      - <link rel="stylesheet" href="/Coding/css/font.css">
-      - <link rel="stylesheet" href="/Coding/css/code.css">
+      - <link rel="stylesheet" href="/css/font.css">
+      - <link rel="stylesheet" href="/css/code.css">
       - <link rel="stylesheet" href="https://s-gz-2220-icodeq.oss.dogecdn.com/docsearch.css"/></pre></li>
       - <link rel="preconnect" href="https://KI6VRR8JEE-dsn.algolia.net" crossorigin />
       - <script src="https://s-gz-2220-icodeq.oss.dogecdn.com/docsearch.js"></script>
