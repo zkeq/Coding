@@ -19,6 +19,8 @@ cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2022-03-17/22TC/2022/02/2
 
 - [Actions · zkeq/icodeq-api (github.com)](https://github.com/zkeq/icodeq-api/actions)
 
+![运行状态](https://img.shields.io/github/workflow/status/zkeq/icodeq-api/Github%20163%20mv%202h?label=%E5%BD%93%E5%89%8DAPI%20%E8%BF%90%E8%A1%8C%E7%8A%B6%E6%80%81&logo=github&style=for-the-badge)
+
 上面的地址如果运行正常的话，就说明本篇教程的内容还适用~
 
 话不多说，开始教程
