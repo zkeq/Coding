@@ -4,7 +4,7 @@ date: 2021-09-29 22:52:30
 tags: [列表]
 categories: Python
 description: append函数
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-29/4.png
+cover: https://ik.imagekit.io/zkeq/2021-9-29/4.png
 ---
 
 ### 列表的添加-append函数

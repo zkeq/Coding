@@ -4,7 +4,7 @@ date: 2021-10-28 22:23:18
 tags: [对象和异常]
 categories: Python
 description: 本节课主要学习了<br>类的参数self
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg
+cover: https://ik.imagekit.io/zkeq/2021-10-28/2.jpg
 ---
 
 ### 类的参数self

@@ -2,7 +2,7 @@
 title: Python 字典的keys函数
 date: 2021-10-04 08:43:53
 tags: [字典]
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-3/5.png
+cover: https://ik.imagekit.io/zkeq/2021-10-3/5.png
 description: 本节课主要学习了:<br>字典的keys函数<br>以及相关的注意事项
 categories: Python
 ---

@@ -4,7 +4,7 @@ date: 2021-11-05 23:56:16
 tags: [对象和异常]
 categories: Python
 description: 本节课总结了<br>Python中常见的异常类型
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg
+cover: https://ik.imagekit.io/zkeq/2021-10-28/2.jpg
 ---
 
 ### Python中的异常类型

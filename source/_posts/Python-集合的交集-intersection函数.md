@@ -4,7 +4,7 @@ date: 2021-10-04 20:51:48
 tags: [集合]
 description: 本节课主要学习了:<br>intersection函数<br>交集的使用方法
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-4/2.jpg
+cover: https://ik.imagekit.io/zkeq/2021-10-4/2.jpg
 ---
 
 ### 集合的交集--`intersection函数`
@@ -12,7 +12,7 @@ cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-4/2.jpg
 #### 什么是交集
 
 - a , b两个集合分别拥有的`相同`的元素集 , 称为a与b的交集
-- ![1](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-4/1.png)
+- ![1](https://ik.imagekit.io/zkeq/2021-10-4/1.png)
 
 #### 功能
 

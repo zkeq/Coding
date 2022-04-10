@@ -4,7 +4,7 @@ tags: [常用函数,高级函数]
 description: 本节课主要学习了<br>Python中的虚拟环境
 date: 2021-11-12 02:07:29
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-11/6.png
+cover: https://ik.imagekit.io/zkeq/2021-11-11/6.png
 ---
 
 ### Python中的虚拟环境

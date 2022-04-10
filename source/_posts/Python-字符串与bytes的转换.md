@@ -4,7 +4,7 @@ date: 2021-10-05 18:24:34
 tags: [类型转换]
 description: 本节课主要学习了:<br>字符串与bytes的转换<br>bytes比特类型和 encode与decode函数
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-5/1.png
+cover: https://ik.imagekit.io/zkeq/2021-10-5/1.png
 ---
 
 ### 字符串与bytes的转换

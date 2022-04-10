@@ -4,13 +4,13 @@ tags: [基础语法]
 description: 本节课主要学习了<br>寄存器 缓存 cpu 内存之间的关系
 date: 2021-12-20 00:24:10
 categories: cpp
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-19/4.png
+cover: https://ik.imagekit.io/zkeq/2021-12-19/4.png
 ---
 ### CPU内部结构与寄存器(了解)
 
 `cpu`  >  `寄存器`  >  `缓存`  >  `内存`
 
-![1](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-19/3.png)
+![1](https://ik.imagekit.io/zkeq/2021-12-19/3.png)
 
 #### `64位`和`32位`系统`区别`
 

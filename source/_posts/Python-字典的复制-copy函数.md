@@ -2,7 +2,7 @@
 title: Python 字典的复制--copy函数
 date: 2021-10-04 08:45:10
 tags: [字典]
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-3/5.png
+cover: https://ik.imagekit.io/zkeq/2021-10-3/5.png
 description: 本节课主要学习了:<br>copy函数的功能和用法
 categories: Python
 ---

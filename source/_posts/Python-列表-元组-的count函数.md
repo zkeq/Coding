@@ -3,7 +3,7 @@ title: Python 列表(元组)的count函数
 date: 2021-09-29 22:53:21
 tags: [列表,元组]
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-29/4.png
+cover: https://ik.imagekit.io/zkeq/2021-9-29/4.png
 description: count函数
 ---
 

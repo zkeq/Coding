@@ -4,7 +4,7 @@ date: 2021-10-01 22:41:06
 tags: [列表]
 categories: Python
 description: 本节课主要学习了:<br>列表的reverse函数以及相关的注意事项
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-1/4.png
+cover: https://ik.imagekit.io/zkeq/2021-10-1/4.png
 ---
 
 ### 列表的reverse函数

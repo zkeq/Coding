@@ -2,7 +2,7 @@
 title: Python 字典中的末尾删除函数--popitem
 date: 2021-10-04 08:45:46
 tags: [字典]
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-3/5.png
+cover: https://ik.imagekit.io/zkeq/2021-10-3/5.png
 description: 本节课主要学习了:<br>popitem的用法和注意事项
 categories: Python
 ---

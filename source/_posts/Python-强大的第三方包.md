@@ -4,7 +4,7 @@ tags: [模块和包]
 description: 本节课主要学习了<br>如何安装和使用第三方包
 date: 2021-11-08 00:31:16
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-8/1.png
+cover: https://ik.imagekit.io/zkeq/2021-11-8/1.png
 ---
 
 ### 强大的第三方包

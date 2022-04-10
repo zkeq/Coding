@@ -4,7 +4,7 @@ date: 2021-10-06 18:05:32
 tags: [编程练习]
 categories: Python
 description: 通过运用前面所学的知识 <br> 完成自己的任务
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-6/5.jpg
+cover: https://ik.imagekit.io/zkeq/2021-10-6/5.jpg
 ---
 
 ### 编程练习(五)
@@ -20,7 +20,7 @@ cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-6/5.jpg
 >   - 如果大于28并且小于等于32，打印“肥胖”
 >   - 否则，打印“严重肥胖”
 >
-> ![4](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-6/4.jpg)
+> ![4](https://ik.imagekit.io/zkeq/2021-10-6/4.jpg)
 
 ##### 初始代码
 

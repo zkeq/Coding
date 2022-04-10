@@ -4,7 +4,7 @@ date: 2021-10-04 20:52:13
 tags: [集合]
 description: 本节课主要学习了:<br>isdisjoint函数<br>判断两个元素是否包含相同元素
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-4/2.jpg
+cover: https://ik.imagekit.io/zkeq/2021-10-4/2.jpg
 ---
 
 ### 集合的isdisjoint函数

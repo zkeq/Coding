@@ -4,7 +4,7 @@ tags: [知识库]
 description: 为了方便自己的学习,创建了一个
 date: 2021-11-17 00:20:44
 categories: Java
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-17/1.png
+cover: https://ik.imagekit.io/zkeq/2021-11-17/1.png
 ---
 
 ### 文档地址

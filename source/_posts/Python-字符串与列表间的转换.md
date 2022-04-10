@@ -4,7 +4,7 @@ date: 2021-10-05 18:24:17
 tags: [类型转换]
 description: 本节课主要学习了:<br>字符串与列表间的转换<br>split函数和join函数
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-5/1.png
+cover: https://ik.imagekit.io/zkeq/2021-10-5/1.png
 ---
 
 ### 字符串与列表间的转换

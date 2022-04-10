@@ -4,7 +4,7 @@ tags: [文件操作（IO）]
 description: 本节课主要学习了<br>文件的读取
 date: 2021-11-10 01:20:53
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-10/1.png
+cover: https://ik.imagekit.io/zkeq/2021-11-10/1.png
 ---
 
 ### 文件的读取

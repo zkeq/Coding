@@ -4,7 +4,7 @@ date: 2021-10-05 18:24:50
 tags: [类型转换]
 description: 本节课主要学习了:<br>元组 ,列表, 集合间的转换<br>其中涉及到的相关函数
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-5/1.png
+cover: https://ik.imagekit.io/zkeq/2021-10-5/1.png
 ---
 
 ### 元组 ,列表, 集合间的转换

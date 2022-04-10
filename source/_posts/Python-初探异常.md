@@ -4,7 +4,7 @@ date: 2021-11-05 23:55:57
 tags: [对象和异常]
 categories: Python
 description: 本节课主要学习了<br>什么是异常以及相关的基础知识
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-28/2.jpg
+cover: https://ik.imagekit.io/zkeq/2021-10-28/2.jpg
 ---
 
 ### 初探异常
