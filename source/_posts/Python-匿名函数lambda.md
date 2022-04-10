@@ -4,7 +4,7 @@ date: 2021-10-20 23:15:00
 tags: [函数]
 categories: Python
 description: 本节课主要学习了<br>匿名函数lambda
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-20/4.png
+cover: https://ik.imagekit.io/zkeq/2021-10-20/4.png
 ---
 
 ### 匿名函数lambda

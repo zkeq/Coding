@@ -1,7 +1,7 @@
 ---
 title: 关于本博客的一些说明
 date: 2021-12-31 20:19:09
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/like.jpg
+cover: https://ik.imagekit.io/zkeq/like.jpg
 ---
 
 ## 关于壁纸
@@ -15,8 +15,8 @@ cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/like.jpg
 再放几张like 真的好爱!
 
 {% gallery %}
-![](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-31/1.jpg)
-![](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-31/2.jpg)
-![](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-31/3.jpg)
-![](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-31/4.jpg)
+![](https://ik.imagekit.io/zkeq/2021-12-31/1.jpg)
+![](https://ik.imagekit.io/zkeq/2021-12-31/2.jpg)
+![](https://ik.imagekit.io/zkeq/2021-12-31/3.jpg)
+![](https://ik.imagekit.io/zkeq/2021-12-31/4.jpg)
 {% endgallery %}

@@ -4,7 +4,7 @@ tags: [文件操作（IO）]
 description: 本节课主要学习了<br>Yaml文件的基本用法
 date: 2021-11-10 01:21:26
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-10/1.png
+cover: https://ik.imagekit.io/zkeq/2021-11-10/1.png
 ---
 
 ### Yaml文件的读取

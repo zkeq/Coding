@@ -4,7 +4,7 @@ tags: [模块和包]
 description: 本节课主要学习了<br>Python的os包
 date: 2021-11-10 01:20:14
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-8/1.png
+cover: https://ik.imagekit.io/zkeq/2021-11-8/1.png
 ---
 
 ### Python的os包

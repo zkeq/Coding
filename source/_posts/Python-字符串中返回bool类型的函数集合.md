@@ -3,7 +3,7 @@ title: Python 字符串中返回bool类型的函数集合
 date: 2021-09-25 21:33:37
 tags: [字符串]
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-25/1.jpg
+cover: https://ik.imagekit.io/zkeq/2021-9-25/1.jpg
 ---
 
 ### 字符串中返回bool类型的函数集合

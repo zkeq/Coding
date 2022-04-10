@@ -4,7 +4,7 @@ tags: [编程练习]
 description: 本节课主要学习了<br>Java HelloWorld 案例的书写和运行
 date: 2021-11-22 16:46:44
 categories: Java
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-23/1.jpg
+cover: https://ik.imagekit.io/zkeq/2021-9-23/1.jpg
 ---
 ### 编写程序
 

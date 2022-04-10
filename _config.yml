@@ -141,7 +141,7 @@ douban:
     quote: '只是自己看完之后的感受,想一直沉溺在这些世界..'
     meta: true
     comments: false
-    top_img: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/me.jpg
+    top_img: https://ik.imagekit.io/zkeq/me.jpg
     aside: true
   # game:
   #   title: 'This is my game title'

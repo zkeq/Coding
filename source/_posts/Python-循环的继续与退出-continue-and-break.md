@@ -4,7 +4,7 @@ date: 2021-10-16 20:04:07
 tags: [循环]
 categories: Python
 description: 本节课主要学习了<br>Python 循环的继续与退出<br> continue and break
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-10-16/3.jpg
+cover: https://ik.imagekit.io/zkeq/2021-10-16/3.jpg
 ---
 
 ### 循环的继续与退出 `continue and break`

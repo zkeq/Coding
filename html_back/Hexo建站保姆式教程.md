@@ -47,7 +47,7 @@
 
 2. 点击下图所示位置
 
-   <img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-13/1.png" alt="1" style="zoom:50%;" />
+   <img src="https://ik.imagekit.io/zkeq/2021-12-13/1.png" alt="1" style="zoom:50%;" />
 
 3. 点击下载好的文件进行安装 `node.js`
 
@@ -59,7 +59,7 @@
 
 2. 滑到底部点击最后一个(可能因为时间原因,看到本文时已经出现新版本,请选择最新版本)
 
-   <img src="https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-13/2.png" alt="2" style="zoom:80%;" />
+   <img src="https://ik.imagekit.io/zkeq/2021-12-13/2.png" alt="2" style="zoom:80%;" />
 
 3. 打开下载好的文件进行`安装`
 
@@ -442,7 +442,7 @@
 
 2.  `% %` 其实是父子集的关系 例如 右边的其实是索引到左边那个变量
 
-   ![5](https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-12-13/5.png)
+   ![5](https://ik.imagekit.io/zkeq/2021-12-13/5.png)
 
 ## No.02 部署环境(服务器环境)
 

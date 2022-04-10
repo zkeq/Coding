@@ -3,7 +3,7 @@ title: Python 字符串的大小写(一)
 date: 2021-09-18 19:37:59
 tags: [字符串]
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-9-18/3.png
+cover: https://ik.imagekit.io/zkeq/2021-9-18/3.png
 description: 本节课主要学习了 capitalize lower  casefold 的用法
 ---
 

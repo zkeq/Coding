@@ -4,7 +4,7 @@ tags: [模块和包]
 description: 本节课主要学习了<br>如何使用时间包datetime
 date: 2021-11-08 00:31:34
 categories: Python
-cover: https://learnonly-7.oss-cn-qingdao.aliyuncs.com/2021-11-8/1.png
+cover: https://ik.imagekit.io/zkeq/2021-11-8/1.png
 ---
 
 ### Python中的时间包 `detetime`
