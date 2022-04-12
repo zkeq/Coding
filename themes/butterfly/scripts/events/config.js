@@ -52,7 +52,7 @@ hexo.extend.filter.register('before_generate', () => {
     mermaid: 'https://s-gz-2220-icodeq.oss.dogecdn.com/mermaid.min.js',
 
     // count
-    busuanzi: 'https://s-gz-2220-icodeq.oss.dogecdn.com/busuanzi.pure.mini.js',
+    busuanzi: 'https://busuanzi.icodeq.com/busuanzi.pure.mini.js',
 
     // background effect
     canvas_ribbon: 'https://s-gz-2220-icodeq.oss.dogecdn.com/canvas-ribbon.min.js',
