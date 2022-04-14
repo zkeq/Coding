@@ -7,6 +7,8 @@ categories: [归档]
 cover: https://ik.imagekit.io/zkeq/2022-04-12/1.png
 ---
 
+![1](https://ik.imagekit.io/zkeq/2022-04-12/2.png)
+
 ## 直接用版本
 
 https://busuanzi.icodeq.com/
