@@ -5,6 +5,7 @@ description: 使用win11的wsl功能安装了linux系统ubuntn.<br>实现在win1
 date: 2021-11-26 22:56:25
 categories: [CMD]
 cover: https://ik.imagekit.io/zkeq/2021-11-26/1.png
+sticky: 1
 ---
 #### 事情起因
 
