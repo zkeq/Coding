@@ -5,6 +5,7 @@ description: 本篇文章讲了自建的不蒜子计数平台<br>以及搭建方
 date: 2022-04-12 19:13:11
 categories: [归档] 
 cover: https://ik.imagekit.io/zkeq/2022-04-12/1.png
+sticky: 3
 ---
 
 ![1](https://ik.imagekit.io/zkeq/2022-04-12/2.png)

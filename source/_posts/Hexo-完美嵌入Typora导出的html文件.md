@@ -5,6 +5,7 @@ description: 在编写文档的时候摸索出来的技巧
 date: 2021-12-14 01:00:50
 categories: CMD
 cover: https://ik.imagekit.io/zkeq/2021-12-13/4.png
+sticky: 1
 ---
 
 ### 步骤如下

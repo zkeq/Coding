@@ -5,6 +5,7 @@ description: 本节课主要讲了了<br>如何使用javascrit快速获取到m3u
 date: 2022-01-23 19:40:27
 categories: 笔记
 cover: https://ik.imagekit.io/zkeq/2022-1-23/1.png
+sticky: 2
 ---
 
 > 本页将提供一些JS代码，在您的浏览器运行这些代码有助于更快的获取到m3u8链接用以下载。
