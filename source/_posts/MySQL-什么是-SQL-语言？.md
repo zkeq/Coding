@@ -47,7 +47,7 @@ cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
 
 ![07](https://ik.imagekit.io/zkeq/2022-04-19/07.png)
 
-```mysql
+```SQL
 USE test;
 CREATE TABLE student(
 	id INT UNSIGNED PRIMARY KEY,
@@ -65,7 +65,7 @@ INSERT INTO student VALUES(1, "李强", "男", "1995-05-15", "13312345678", NULL
 
 ![08](https://ik.imagekit.io/zkeq/2022-04-19/08.png)
 
-```mysql
+```SQL
 SHOW TABLES;
 DESC student;
 SHOW CREATE TABLE student;

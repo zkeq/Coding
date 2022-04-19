@@ -16,7 +16,7 @@ cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
 
 ![20](https://ik.imagekit.io/zkeq/2022-04-19/20.png)
 
-```mysql
+```SQL
 CREATE TABLE t_message(
 	id INT UNSIGNED PRIMARY KEY,
 	content VARCHAR(200) NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE t_message(
 
 ![21](https://ik.imagekit.io/zkeq/2022-04-19/21.png)
 
-```mysql
+```SQL
 DROP INDEX idx_type ON t_message;
 CREATE INDEX idx_type ON t_message(type);
 SHOW INDEX FROM t_message;

@@ -30,7 +30,7 @@ cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
 
 ![09](https://ik.imagekit.io/zkeq/2022-04-19/09.png)
 
-```mysql
+```SQL
 CREATE TABLE temp(
 	id INT UNSIGNED PRIMARY KEY,
 	num FLOAT(20,10)
@@ -38,7 +38,7 @@ CREATE TABLE temp(
 0.2 ----> 0.2000000030
 ```
 
-```mysql
+```SQL
 DROP TABLE temp
 CREATE TABLE temp(
 	id INT UNSIGNED PRIMARY KEY,
