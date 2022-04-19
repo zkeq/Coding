@@ -44,3 +44,18 @@ ALTER TABLE t_message ADD INDEX idx_type(type);
 - 数据库很大，而且经常被查询的数据表可以设置索引
 - 索引只添加在经常被用作索引条件的字段上面
 - 不要在大字段上创建索引
+
+```SQL
+CREATE TABLE t_message(
+	id INT UNSIGNED PRIMARY KEY,
+	content VARCHAR(200) NOT NULL,
+	type ENUM("公告", "通报", "个人通知") NOT NULL,
+	create_time TIMESTAMP NOT NULL,
+	INDEX idx_type (type)
+);
+
+DROP INDEX idx_type ON t_message;
+CREATE INDEX idx_type ON t_message(type);
+SHOW INDEX FROM t_message;
+ALTER TABLE t_message ADD INDEX idx_type(type);
+```
