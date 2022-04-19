@@ -56,7 +56,7 @@ cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
 - 建议主键一定要使用数据类型，因为数字的检索速度会非常快
 - 如果主键是数字类型，还可以设置自动增长
 
-```mysql
+```SQL
 CREATE TABLE t_teacher(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	... ...
@@ -68,7 +68,7 @@ CREATE TABLE t_teacher(
 - 非空约束要求字段的值不能为 `NULL` 值
 - `NULL` 值为没有值，而不是  `""` 空字符串
 
-```mysql
+```SQL
 CREATE TABLE t_teacher(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	name VARCHAR(200) NOT NULL,
@@ -82,7 +82,7 @@ CREATE TABLE t_teacher(
 
 - 唯一约束要求字段值如果不为 `NULL`，那么在全表必须唯一
 
-```mysql
+```SQL
 CREATE TABLE t_teacher(
 	......
 	tel CHAR(11) NOT NULL UNIQUE
@@ -91,7 +91,7 @@ CREATE TABLE t_teacher(
 
 ##### 以上三种的练习
 
-```mysql
+```SQL
 CREATE TABLE t_teacher(
 	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 	name VARCHAR(20) NOT NULL,
@@ -110,7 +110,7 @@ CREATE TABLE t_teacher(
 
 创建父表
 
-```mysql
+```SQL
 CREATE TABLE t_dept(
 	deptno INT UNSIGNED PRIMARY KEY,
 	dname VARCHAR(20) NOT NULL UNIQUE,
@@ -120,7 +120,7 @@ CREATE TABLE t_dept(
 
 创建子表
 
-```mysql
+```SQL
 CREATE TABLE t_emp(
 	empno INT UNSIGNED PRIMARY KEY,
 	ename VARCHAR(20) NOT NULL,
@@ -133,7 +133,7 @@ CREATE TABLE t_emp(
 
 可执行代码
 
-```mysql
+```SQL
 CREATE TABLE t_dept(
 	deptno INT UNSIGNED PRIMARY KEY,
 	dname VARCHAR(20) NOT NULL UNIQUE,
