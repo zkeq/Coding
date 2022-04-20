@@ -8,7 +8,7 @@ cover: https://ik.imagekit.io/zkeq/2022-04-20/02.png
 sticky: 2
 ---
 
-> 使用 Replit 白嫖各种语言项目
+> 使用 Replit 白嫖各种语言项目[^1]
 >
 > 本文转载于：https://pighog.vercel.app/p/aa4a.html
 >
@@ -174,7 +174,11 @@ Replit的应用在一段时间不访问后会自动休眠减少资源消耗，�
 
 ---------------
 
------------------
+> 使用 Replit 白嫖各种语言项目[^2]
+>
+> 本文转载于：https://pighog.vercel.app/p/aa4a.html
+>
+> 已经过原作者授权，转载时有部分内容变动！
 
 ## 在Replit中配置Nix环境
 
@@ -256,3 +260,8 @@ onedrive-vercel-index 还需要用到 Redis 缓存以及 pnpm包管理器。
 有部分网路类型的包，例如 ngrok，zerotier-one 需要用别的方式安装，这里暂时不讲。以及rclone，可以使用，但是不能挂载到本地。后面有空会写，如何使用AriaNg，白嫖replit的服务器网络下载。速度也是肥肠可观的。
 
 ![image-20220420133548528](https://ik.imagekit.io/zkeq/2022-04-20/image-20220420133548528.png)
+
+
+[^1]: https://pighog.vercel.app/p/aa4a.html
+
+[^2]: https://pighog.vercel.app/p/1849.html
