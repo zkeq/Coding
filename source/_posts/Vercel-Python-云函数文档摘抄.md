@@ -6,6 +6,7 @@ description: 本节课主要学习了<br> Python 云函数文档摘抄
 date: 2022-04-20 10:45:51
 categories: 其他
 cover: https://ik.imagekit.io/zkeq/2022-04-20/01.png
+sticky: 1
 ---
 ## [Python](https://vercel.com/docs/runtimes#official-runtimes/python)
 
