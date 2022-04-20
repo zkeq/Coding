@@ -907,6 +907,10 @@ inject:
   head:
       - <link rel="stylesheet" href="/css/font.css">
       - <link rel="stylesheet" href="/css/code.css">
+      - <link rel="stylesheet" type="text/css" href="/css/heoMainColor.css">
+      - <link rel="stylesheet" href="/css/rightmenu.css">
+      - <script src="https://lib.baomitu.com/jquery/3.6.0/jquery.js"></script>
+      - <script async data-pjax src="/js/rightmenu.js"></script>
       - <link rel="stylesheet" href="https://s-gz-2220-icodeq.oss.dogecdn.com/docsearch.css"/></pre></li>
       - <link rel="preconnect" href="https://KI6VRR8JEE-dsn.algolia.net" crossorigin />
       - <script src="https://s-gz-2220-icodeq.oss.dogecdn.com/docsearch.js"></script>
