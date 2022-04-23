@@ -511,7 +511,7 @@ ignoredPackages = ["unit_tests"]
 
 OK，跑起来之后，就实现了自动刷新缓存 token 推送微信的功能
 
-### 试一下 Post 发送请求至你部署的地址
+### Try Post 发送请求至部署的地址
 
 ```json
 POST Method
@@ -653,13 +653,13 @@ ok，这样部署好了，但是我们还缺少一个参数
 
 ### 顺便提一嘴
 
-#### 方糖的 `PushDeer` 也对接成功了
+##### 方糖的 `PushDeer` 也对接成功了
 
 还是那个文件
 
 `.\server\notification-providers\pushbullet.js`
 
-```python
+```js
 const NotificationProvider = require("./notification-provider");
 const axios = require("axios");
 var qs = require('qs');
