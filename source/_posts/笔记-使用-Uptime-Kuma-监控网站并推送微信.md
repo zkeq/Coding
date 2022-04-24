@@ -48,6 +48,47 @@ sticky: 3
 
 直接跟教程搭建即可，重点讲一下怎么把推送发到 【正常微信】。
 
+>
+> 推荐部署仓库：https://github.com/valetzx/uptimekumaonreplit
+> 
+
+摘抄安装方法：
+
+```shell
+Rplit个人版：
+
+- 一键安装脚本：
+- https://repl.it/github/valetzx/uptimekumaonreplit
+
+Rplit教育版：
+
+将以下代码粘贴至Replit Shell后回车
+
+git clone https://github.com/valetzx/uptimekumaonreplit && mv -b uptimekumaonreplit/* ./ && mv -b uptimekumaonreplit/.[^.]* ./ && rm -rf *~ && rm -rf uptimekumaonreplit
+
+当加载完 Loading Nix environment... 后点击绿色 ▶ Run
+
+或使用以下 sh
+
+-------------
+git clone https://github.com/louislam/uptime-kuma.git
+cd uptime-kuma
+npm run setup
+
+# Option 1. Try it
+node server/server.js
+
+# (Recommended)
+# Option 2. Run in background using PM2
+# Install PM2 if you don't have: npm install pm2 -g
+pm2 start server/server.js --name uptime-kuma
+
+#请在成功部署后注释掉第一行的 git clone
+#示例：#git clone https://github.com/louislam/uptime-kuma.git
+-------------
+
+```
+
 内置一个企业微信通道，但是正常人谁用那玩意啊））））
 
 这里用到的一个项目是方糖的开源版（因为我穷，学生嘛，理解一下））
