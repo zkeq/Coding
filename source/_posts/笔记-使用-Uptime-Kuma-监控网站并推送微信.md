@@ -68,7 +68,9 @@ git clone https://github.com/valetzx/uptimekumaonreplit && mv -b uptimekumaonrep
 
 当加载完 Loading Nix environment... 后点击绿色 ▶ Run
 
-或使用以下 sh
+或使用以下 sh (需创建 node.js 16.x 环境)
+
+```shell
 
 -------------
 git clone https://github.com/louislam/uptime-kuma.git
