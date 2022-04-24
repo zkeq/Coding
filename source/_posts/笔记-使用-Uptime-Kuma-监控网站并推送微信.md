@@ -141,6 +141,14 @@ start_redis = "redis-server redis.conf"
 
 r = redis.Redis(host='localhost', port=6379, db=0)
 
+
+# 如果你用的个人版，请将以下填入环境变量中
+# 并取消注释以下代码
+# import os
+# my_secret = os.environ['wecom_cid']
+# wecom_aid = os.environ['wecom_aid']
+# wecom_secret = os.environ['wecom_secret']
+
 wecom_cid = "wwXXXXXXXXXXXXXXX"
 wecom_aid = "1000XXX"
 wecom_secret = "XXXXXXXXXXXX-XXXXXXXXXXX-XXXXXXXXXXXXXXXX"
@@ -251,6 +259,14 @@ def main(type: str = Form(...), title: str = Form(...), body: str = Form(...), w
     else:
         data = send_to_wecom(title + '\n' + body, wecom_touid)
     return data
+
+@app.get("/")
+def get():
+    return {"msg": "好耶，部署成功了！但是值得注意的是请不要将此地址告诉别人（（防止微信消息被刷爆"}
+
+@app.head("/")
+def head():
+    return {"msg": "好耶，部署成功了！但是值得注意的是请不要将此地址告诉别人（（防止微信消息被刷爆"}
 
 
 if __name__ == "__main__":
