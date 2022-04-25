@@ -4,7 +4,7 @@ tags: [MySQL]
 description: 本节课主要学习了<br>如何去除结果集中的重复记录
 date: 2022-04-25 21:59:56
 categories: MySQL
-cover: https://ik.imagekit.io/zkeq/2022-04-19/02.pngS
+cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
 ---
 
 #### 数据操作语言：去除重复记录
