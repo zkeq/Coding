@@ -11,12 +11,12 @@ cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
 
 #### 逻辑运算符
 
-|                             序号                             | 表达式 |   意义   |             例子              |
-| :----------------------------------------------------------: | :----: | :------: | :---------------------------: |
-|                              1                               |  AND   |  与关系  |   `age > 18 AND sex = "男"`   |
-|                              2                               |   OR   |  或关系  | `empno = 8000 OR deptno = 20` |
-| xxxxxxxxxx CREATE TABLE t_message(    id INT UNSIGNED PRIMARY KEY,    content VARCHAR(200) NOT NULL,    type ENUM("公告", "通报", "个人通知") NOT NULL,    create_time TIMESTAMP NOT NULL,    INDEX idx_type (type));​DROP INDEX idx_type ON t_message;CREATE INDEX idx_type ON t_message(type);SHOW INDEX FROM t_message;ALTER TABLE t_message ADD INDEX idx_type(type);SQL |  NOT   |  非关系  |       `NOT deptno =20`        |
-|                              4                               |  XOR   | 异或关系 |   `age > 18 XOR sex = "男"`   |
+| 序号 | 表达式 |   意义   |             例子              |
+| :--: | :----: | :------: | :---------------------------: |
+|  1   |  AND   |  与关系  |   `age > 18 AND sex = "男"`   |
+|  2   |   OR   |  或关系  | `empno = 8000 OR deptno = 20` |
+|  3   |  NOT   |  非关系  |       `NOT deptno =20`        |
+|  4   |  XOR   | 异或关系 |   `age > 18 XOR sex = "男"`   |
 
 ```SQL
 SELECT
