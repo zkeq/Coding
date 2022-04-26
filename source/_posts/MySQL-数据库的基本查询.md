@@ -1,6 +1,6 @@
 ---
 title: MySQL | 数据库的基本查询
-tags: [MySQL ]
+tags: [MySQL]
 description: 本节课主要学习了<br> 数据库的基本查询
 date: 2022-04-25 19:56:54
 categories: MySQL 
