@@ -1,9 +1,9 @@
 ---
-title: Mysql | 聚合函数的使用
-tags: [Mysql]
+title: MySQL | 聚合函数的使用
+tags: [MySQL]
 description: 本节课主要学习了<br>聚合函数的使用
 date: 2022-04-26 22:48:06
-categories: Mysql
+categories: MySQL
 cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
 ---
 

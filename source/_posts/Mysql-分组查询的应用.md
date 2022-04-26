@@ -1,9 +1,9 @@
 ---
-title: Mysql | 分组查询的应用
-tags: [Mysql]
+title: MySQL | 分组查询的应用
+tags: [MySQL]
 description: 本节课主要学习了<br>分组查询的应用
 date: 2022-04-27 01:07:45
-categories: Mysql
+categories: MySQL
 cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: MySQL | 条件查询的语句（二）
-tags: [MySQL ]
+tags: [MySQL]
 description: 本节课主要学习了<br> 数据操作语言：条件查询（二）
 date: 2022-04-25 23:34:58
 categories: MySQL 
