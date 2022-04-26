@@ -13,6 +13,8 @@ sticky: 3
 
 ## 自建 [不蒜子](https://busuanzi.ibruce.info/) API
 
+- https://busuanzi.icodeq.com
+
 ### 前言：
 
 1. [不蒜子](https://busuanzi.ibruce.info/)是一款很好用的前端计数工具，但是因为流量日渐变多，经常会出现 `502` 的情况
