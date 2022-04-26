@@ -3,6 +3,7 @@ title: 归档 | 自建 不蒜子 API
 tags: [归档]
 description: 本篇文章讲了自建的不蒜子计数平台<br>以及搭建方法，项目由 Replit 驱动。
 date: 2022-04-12 19:13:11
+updated: 2022-04-26 11:09:00
 categories: [归档] 
 cover: https://ik.imagekit.io/zkeq/2022-04-12/1.png
 sticky: 3
