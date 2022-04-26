@@ -9,7 +9,7 @@ cover: https://ik.imagekit.io/zkeq/2022-04-12/1.png
 sticky: 3
 ---
 
-![2])https://ik.imagekit.io/zkeq/2022-04-26/01.png)
+![2](https://ik.imagekit.io/zkeq/2022-04-26/01.png)
 
 ## 自建 [不蒜子](https://busuanzi.ibruce.info/) API
 
@@ -40,15 +40,9 @@ sticky: 3
 本站总访客数 <span id="busuanzi_value_site_uv"></span> 人
 ```
 
- > <center>Powered by: 🚀 FastAPI + Redis ✨</center>
-
 ## 不蒜子自建后端 API 🗺️
 
->  Powered by: 🚀 FastAPI + Redis ✨ [ ~5ms 处理一次请求 ]
-
-> 项目官网以及详情介绍 ：https://busuanzi.icodeq.com
-> 
-> 官网归档地址：https://github.com/zkeq/Busuanzi
+- https://github.com/zkeq/Busuanzi_backend_self
 
 ### 安装
 
@@ -62,7 +56,7 @@ sticky: 3
 
 ##### 教育版 or 专业版
 
-> 【资源额度更高，但好像无法一键导入】
+【资源额度更高，但好像无法一键导入】
 
 1. 创建新项目
 
