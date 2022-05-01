@@ -19,19 +19,19 @@
       descr: icodel's Blog
     - name: An Wen
       link: https://blog.zytllt.cn
-      avatar: https://cdn.jsdelivr.net/gh/anwen-anyi/imgAnwen/blog/anwen-200x200.png
+      avatar: https://ik.imagekit.io/zkeq/friends/f5.png
       descr: 三生三世安安稳稳,婷婷玉立花落花开,与世无争做好自己.        
     - name: Pandolar
       link: https://blog.pandolar.top
-      avatar: http://q1.qlogo.cn/g?b=qq&nk=3096317&s=640
+      avatar: https://ik.imagekit.io/zkeq/friends/f6.jpg
       descr: 我有旨酒，以燕乐嘉宾之心   
     - name: 纳兰戏梦
       link: https://derm.top
-      avatar: https://z3.ax1x.com/2021/03/08/6lz4Dx.jpg
+      avatar: https://ik.imagekit.io/zkeq/friends/f7.jpg
       descr: 从未落时开始，于伊洛时结束。
     - name: xcsoft
       link: https://blog.xsot.cn
-      avatar: https://cdn.iirose.cn/blog/img/logo.png
+      avatar: https://ik.imagekit.io/zkeq/friends/f8.jpg
       descr: 原諒我這一生不放縱愛自由
 
 - class_name: 网站
@@ -44,7 +44,7 @@
     - name: Qwerty Learner
       link: https://qwerty.kaiyi.cool
       avatar: https://ik.imagekit.io/zkeq/friends/t2.png
-      descr: 练习Qwerty键位的网站.
+      descr: 练习 Qwerty 键位的网站.
     - name: DevDocs
       link: https://devdocs.io
       avatar: https://ik.imagekit.io/zkeq/friends/t3.png
@@ -77,11 +77,7 @@
       link: https://hyperbeam.com
       avatar: https://ik.imagekit.io/zkeq/friends/t8.png
       descr: 多人在线一起看电影网站..[宝藏]
-    - name: 22TC
-      link: https://tc.22li.cn
-      avatar: https://tc.22li.cn/favicon.ico
-      descr: 大佬的图床。
-    - name: Lsp
-      link: https://pan.22li.cn/
-      avatar: https://pan.22li.cn/static/img/logo192.png
-      descr: 大佬的网盘。
+    - name: YesPlayMusic
+      link: https://music.icodeq.com
+      avatar: https://ik.imagekit.io/zkeq/friends/t9.png
+      descr: 颜值没话说的音乐播放器
