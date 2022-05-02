@@ -85,3 +85,15 @@
       link: https://listen.icodeq.com
       avatar: https://ik.imagekit.io/zkeq/friends/t10.ico
       descr: 另一款音乐播放器
+    - name: 多功能图片处理
+      link: https://pic.icodeq.com
+      avatar: https://ik.imagekit.io/zkeq/friends/t10.png
+      descr: 无需上传文件的多功能图片批量处理程序 v3.0
+    - name: 公共静态播放器
+      link: https://player.icodeq.com
+      avatar: https://ik.imagekit.io/zkeq/friends/t11.ico
+      descr: 提供一个尽可能全面的播放器来用开发者测试和日常使用。
+    - name: JSON 管理面板（开发中）
+      link: https://json.icodeq.com
+      avatar: https://ik.imagekit.io/zkeq/friends/t12.svg
+      descr: 提供一个方便管理的 JSON 管理后台供日常使用。
