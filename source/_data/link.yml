@@ -80,7 +80,7 @@
     - name: YesPlayMusic
       link: https://music.icodeq.com
       avatar: https://ik.imagekit.io/zkeq/friends/t9.png
-      descr: 颜值没话说的音乐播放器
+      descr: 高颜值的第三方网易云播放器
     - name: vplayer
       link: https://listen.icodeq.com
       avatar: https://ik.imagekit.io/zkeq/friends/t10.ico
