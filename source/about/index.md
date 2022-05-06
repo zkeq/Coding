@@ -1,7 +1,7 @@
 ---
 title: 关于本博客的一些说明
 date: 2021-12-31 20:19:09
-cover: https://ik.imagekit.io/zkeq/like.jpg
+top_img: https://ik.imagekit.io/zkeq/like.jpg
 ---
 
 ## 关于壁纸
