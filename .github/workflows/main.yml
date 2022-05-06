@@ -23,10 +23,15 @@ jobs:
         with:
            python-version: 3.7
 
+      - name: 'Install requirements'
+        run: |
+          pip install -r ./tools/requirements.txt
+
       - name: 'GET BING'
         env:
           PASSWORD: ${{ secrets.PASSWORD }}
-        run: python ./tools/bing.py
+        run: |
+          python ./tools/bing.py
 
       - name: Commit ALL IN ONE files
         run: |
