@@ -7,14 +7,17 @@
 #   name: link || iconp2671062609
 
 menu:
-    Learnonly导航 : https://www.learnonly.xyz/ || fas fa-home
-    追星计划 : https://www.zkeq.xyz/ || fas fa-music
-    追梦计划 : https://dream-plan.cn || fas fa-school
-    电影: /movies/ || fas fa-video
-    监控云台: https://uptime.icodeq.com || fas fa-link
+    Tools || fas fa-screwdriver-wrench:
+      Learnonly导航 : https://www.learnonly.xyz/ || fas fa-home
+      说说: /talk/ || fas fa-comment-alt
+      电影: /movies/ || fas fa-video
+      监控云台: https://uptime.icodeq.com || fas fa-link
+      BING: /bing/ || fa-image-polaroid
+    Ideal Plan || fas fa-paper-plane:
+      追星计划 : https://www.zkeq.xyz || fas fa-music
+      追梦计划 : https://dream-plan.cn || fas fa-school
     友情链接: /link/ || fas fa-heart
     开往: https://travellings.link || fas fa-subway
-    说说: /talk/ || fas fa-comment-alt
     CopyRight: /about/ || fas fa-archive
   # Home: / || fas fa-home
   # Archives: /archives/ || fas fa-archive
