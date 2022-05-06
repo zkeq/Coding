@@ -8,14 +8,15 @@ zh_time = requests.get("https://raw.githubusercontent.com/zkeq/Bing-Wallpaper-Ac
 
 time = zh_time["LastUpdate"]
 last_pic = "https://www.bing.com" + zh_time["data"][0]["url"]
+print(last_pic)
+print(time)
 
 # 打开 source/bing/index.md
 f = open(os.path.join("source", "bing", "index.md"), "w")
 f.write("""---
 title: Bing 壁纸 每日更新
-date: {0}
-cover: {1}
+cover: {}
 ---
 
-""".format(time, last_pic))
+""".format(last_pic))
 f.write(data.text)
