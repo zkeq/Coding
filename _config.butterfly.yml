@@ -12,10 +12,10 @@ menu:
       说说: /talk/ || fas fa-comment-alt
       电影: /movies/ || fas fa-video
       监控云台: https://uptime.icodeq.com || fas fa-link
-      BING: /bing/ || fa-image-polaroid
+      BING Wallpaper: /bing/ || fas fa-image-polaroid
     Ideal Plan || fas fa-paper-plane:
-      追星计划 : https://www.zkeq.xyz || fas fa-music
       追梦计划 : https://dream-plan.cn || fas fa-school
+      追星计划 : https://www.zkeq.xyz || fas fa-music
     友情链接: /link/ || fas fa-heart
     开往: https://travellings.link || fas fa-subway
     CopyRight: /about/ || fas fa-archive
