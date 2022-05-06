@@ -103,7 +103,7 @@ disable_top_img: false
 index_img: https://ik.imagekit.io/zkeq/like.jpg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: https://ik.imagekit.io/zkeq/2021-12-31/3.jpg
+default_top_img: http://bing.icodeq.com
 
 # The banner image of archive page
 archive_img: https://ik.imagekit.io/zkeq/top2.jpg
