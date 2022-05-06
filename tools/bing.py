@@ -7,16 +7,17 @@ data = requests.get("https://raw.githubusercontent.com/zkeq/Bing-Wallpaper-Actio
 zh_time = requests.get("https://raw.githubusercontent.com/zkeq/Bing-Wallpaper-Action/main/data/zh-CN_all.json").json()
 
 time = zh_time["LastUpdate"]
-last_pic = "https://www.bing.com" + zh_time["data"][0]["url"]
-print(last_pic)
 print(time)
 
 # 打开 source/bing/index.md
 f = open(os.path.join("source", "bing", "index.md"), "w")
 f.write("""---
 title: Bing 壁纸 每日更新
-cover: {}
+top_img: https://bing.icodeq.com
+aside: false
+date: {}
 ---
 
-""".format(last_pic))
+""".format(time))
 f.write(data.text)
+f.close()
