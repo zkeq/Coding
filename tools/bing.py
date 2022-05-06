@@ -11,11 +11,11 @@ last_pic = "https://www.bing.com" + zh_time["data"][0]["url"]
 
 # 打开 source/bing/index.md
 f = open(os.path.join("source", "bing", "index.md"), "w")
-f.write("""
----
+f.write("""---
 title: Bing 壁纸 每日更新
 date: {0}
 cover: {1}
 ---
+
 """.format(time, last_pic))
 f.write(data.text)
