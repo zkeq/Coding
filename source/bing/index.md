@@ -1,9 +1,8 @@
-
 ---
 title: Bing 壁纸 每日更新
-date: 2022-05-06 02:20:19
 cover: https://www.bing.com/th?id=OHR.HertfordshireBluebells_ZH-CN1027832085_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp
 ---
+
 # Bing Wallpaper
 <!--2022-05-06 02:20:22-->
 ![是否有胆量穿过这片蓝铃花丛？](https://www.bing.com/th?id=OHR.HertfordshireBluebells_ZH-CN1027832085_UHD.jpg&w=1000) Today: [是否有胆量穿过这片蓝铃花丛？](https://www.bing.com/th?id=OHR.HertfordshireBluebells_ZH-CN1027832085_UHD.jpg)
