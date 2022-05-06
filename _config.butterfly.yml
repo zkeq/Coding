@@ -103,7 +103,7 @@ disable_top_img: false
 index_img: https://ik.imagekit.io/zkeq/like.jpg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: http://bing.icodeq.com
+default_top_img: https://bing.icodeq.com
 
 # The banner image of archive page
 archive_img: https://ik.imagekit.io/zkeq/top2.jpg
@@ -119,7 +119,7 @@ tag_per_img:
 
 # If the banner of category page not setting, it will show the top_img
 # note: category page, not categories page (子分類頁面的 top_img)
-category_img:
+category_img: https://ik.imagekit.io/zkeq/2021-12-31/3.jpg
 
 # The banner image of category page
 # format:
