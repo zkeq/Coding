@@ -1,6 +1,8 @@
 ---
 title: Bing 壁纸 每日更新
-cover: https://www.bing.com/th?id=OHR.HertfordshireBluebells_ZH-CN1027832085_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp
+top_img: https://bing.icodeq.com
+aside: false
+date: 2022-05-06 02:20:19
 ---
 
 # Bing Wallpaper
