@@ -5,6 +5,8 @@ aside: false
 date: 2022-05-08 02:30:47
 ---
 
+> If the date you see is 2 days ago, press `Ctrl + F5` to force a refresh, Maybe because I have `workbox` enabled.
+
 # Bing Wallpaper
 <!--2022-05-08 02:31:21-->
 ![母亲节，我们向这些有袋动物妈妈致敬](https://www.bing.com/th?id=OHR.MomJoey_ZH-CN1642006600_UHD.jpg&w=1920) Today: [母亲节，我们向这些有袋动物妈妈致敬](https://www.bing.com/th?id=OHR.MomJoey_ZH-CN1642006600_UHD.jpg)
