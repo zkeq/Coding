@@ -18,7 +18,8 @@ module.exports = {
       {
         urlPattern: /^https:\/\/cdn\.plyr\.io\/.*/,
         handler: "CacheFirst"
-      },      {
+      },      
+      {
         urlPattern: /^https:\/\/ik\.imagekit\.io\/.*/,
         handler: "CacheFirst"
       }
