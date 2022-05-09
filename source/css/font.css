@@ -16,6 +16,16 @@
   font-style: normal;
 }
 
-  .search-result {
-    margin: 0 0 8px;
-  }
+.search-result {
+  margin: 0 0 8px;
+}
+
+/* 鼠标样式 */
+body {
+  cursor: url("https://s-gz-2220-icodeq.oss.dogecdn.com/cursor/normal.cur"), default;
+}
+a,
+img,
+button {
+  cursor: url("https://s-gz-2220-icodeq.oss.dogecdn.com/cursor/link.cur"), default !important;
+}
