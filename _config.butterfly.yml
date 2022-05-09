@@ -16,7 +16,9 @@ menu:
     Ideal Plan || fas fa-paper-plane:
       追梦计划 : https://dream-plan.cn || fas fa-school
       追星计划 : https://www.zkeq.xyz || fas fa-music
-    友情链接: /link/ || fas fa-heart
+    Friends || fas fa-users:
+      友情链接: /link/ || fas fa-heart
+      朋友圈: /fcircle/ || fas fa-user-group
     开往: https://travellings.link || fas fa-subway
     CopyRight: /about/ || fas fa-archive
   # Home: / || fas fa-home
