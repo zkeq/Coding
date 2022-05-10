@@ -24,5 +24,5 @@ module.exports = {
         handler: "CacheFirst"
       }
     ]
-    // directoryIndex: null
+    directoryIndex: null
   }
