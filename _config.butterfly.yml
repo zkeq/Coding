@@ -7,6 +7,7 @@
 #   name: link || iconp2671062609
 
 menu:
+    Evolution Host: https://evolution-host.com || fas fa-rocket-launch
     Tools || fas fa-screwdriver-wrench:
       Learnonly导航 : https://www.learnonly.xyz/ || fas fa-home
       说说: /talk/ || fas fa-comment-alt
@@ -469,7 +470,7 @@ footer:
   owner:
     enable: true
     since: 2021
-  custom_text:   <a href="https://icp.gov.moe/?keyword=20202121" target="_blank">萌ICP备 20202121号</a><br><a href="https://travellings.link/" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://travellings.link/assets/logo.gif" alt="开往-友链接力" width="120"></a>
+  custom_text:   <a href="https://icp.gov.moe/?keyword=20202121" target="_blank">萌ICP备 20202121号</a><br><a href="https://travellings.link/" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://travellings.link/assets/logo.gif" alt="开往-友链接力" width="120"></a> <a href="https://evolution-host.com" target="_blank" rel="noopener" title="hosted by evolution-host"><img src="https://ik.imagekit.io/zkeq/host.png" alt="Hosted by evolution-host" width="120"></a> .
   copyright: true # Copyright of theme and framework
 
 # Analysis
@@ -713,7 +714,7 @@ aside:
       link: https://github.com/zkeq
   card_announcement:
     enable: true
-    content: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://icodeq.com" style="color:#49b1f5" one-link-mark="yes">主站</a>&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://code.maylove.pub" style="color:#49b1f5" one-link-mark="yes">镜像</a>&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://zkeq.gitee.io/code" style="color:#49b1f5" one-link-mark="yes">国内镜像</a>&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://ncm.icodeq.com" style="color:#49b1f5" one-link-mark="yes">NCM API</a><br>联系我：<a target="_blank" rel="noopener external nofollow noreferrer" href="mailto:admin@icodeq.com" style="color:#49b1f5" one-link-mark="yes">admin@icodeq.com</a><script src="/js/search-button.js"></script>
+    content: <a target="_blank" rel="noopener external nofollow noreferrer" href="https://icodeq.com" style="color:#49b1f5" one-link-mark="yes">主站</a>&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://code.maylove.pub" style="color:#49b1f5" one-link-mark="yes">镜像</a>&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://zkeq.gitee.io/code" style="color:#49b1f5" one-link-mark="yes">国内镜像</a>&nbsp;&nbsp;&nbsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://ncm.icodeq.com" style="color:#49b1f5" one-link-mark="yes">NCM API</a><br>联系我：<a target="_blank" rel="noopener external nofollow noreferrer" href="mailto:admin@icodeq.com" style="color:#49b1f5" one-link-mark="yes">admin@icodeq.com</a><br>Hosted By <a target="_blank" rel="noopener external nofollow noreferrer" href="https://evolution-host.com" style="color:#49b1f5" one-link-mark="yes">evolution-host</a> .</br><script src="/js/search-button.js"></script>
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
