@@ -7,7 +7,7 @@
 #   name: link || iconp2671062609
 
 menu:
-    # Evolution Host: https://evolution-host.com || fas fa-rocket-launch
+    Evolution Host: https://evolution-host.com || fas fa-rocket-launch
     Tools || fas fa-screwdriver-wrench:
       Learnonly导航 : https://www.learnonly.xyz/ || fas fa-home
       说说: /talk/ || fas fa-comment-alt
