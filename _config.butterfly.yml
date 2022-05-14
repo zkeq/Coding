@@ -482,7 +482,7 @@ baidu_analytics:
 
 # Google Analytics
 # https://analytics.google.com/analytics/web/
-google_analytics: G-PQXBK060ZD
+google_analytics:
 
 # Tencent Analytics ID
 # https://mta.qq.com
@@ -908,6 +908,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+      - <script defer data-domain="icodeq.com" src="https://site.icodeq.com/js/plausible.js"></script>
       - <link rel="stylesheet" href="/css/font.css">
       - <link rel="stylesheet" href="/css/code.css">
       - <link rel="stylesheet" type="text/css" href="/css/heoMainColor.css">
