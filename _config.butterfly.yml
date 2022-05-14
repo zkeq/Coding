@@ -908,7 +908,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-      - <script defer data-domain="icodeq.com" src="https://site.icodeq.com/js/plausible.js"></script>
+      - <script defer data-domain="icodeq.com" src="httpS://vercel.site.icodeq.com/js/script.js"></script>
       - <link rel="stylesheet" href="/css/font.css">
       - <link rel="stylesheet" href="/css/code.css">
       - <link rel="stylesheet" type="text/css" href="/css/heoMainColor.css">
