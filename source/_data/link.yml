@@ -41,6 +41,10 @@
 - class_name: 网站
   class_desc: 一些很有用处的网站.
   link_list:
+    - name: 图欧学习资源库
+      link: https://tuostudy.com
+      avatar: https://tuostudy.com/favicon.ico
+      descr: 一个网盘资源分享网站，主要是学习资源、考证考级资源等
     - name: 前端图文教程
       link: https://web.qianguyihao.com
       avatar: https://ik.imagekit.io/zkeq/friends/t1.ico
@@ -85,10 +89,6 @@
       link: https://music.icodeq.com
       avatar: https://ik.imagekit.io/zkeq/friends/t9.png
       descr: 高颜值的第三方网易云播放器
-    - name: vplayer
-      link: https://listen.icodeq.com
-      avatar: https://ik.imagekit.io/zkeq/friends/t10.ico
-      descr: 另一款音乐播放器
     - name: 多功能图片处理
       link: https://pic.icodeq.com
       avatar: https://ik.imagekit.io/zkeq/friends/t10.png
