@@ -908,7 +908,6 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-      - <script async src="https://dev.busuanzi.icodeq.com/busuanzi.min.js"></script>
       - <script src="https://s-gz-2220-icodeq.oss.dogecdn.com/notiflix-notify-aio-3.2.5.min.js"></script>
       - <link rel="stylesheet" href="https://s-gz-2220-icodeq.oss.dogecdn.com/notiflix-3.2.5.min.css">
       - <script defer data-website-id="b7a4b657-7cec-426e-b4b3-79b756e19e5e" src="https://umm.site.icodeq.com/script.js"></script>
