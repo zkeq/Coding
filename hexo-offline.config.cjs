@@ -23,6 +23,5 @@ module.exports = {
         urlPattern: /^https:\/\/ik\.imagekit\.io\/.*/,
         handler: "CacheFirst"
       }
-    ],
-    directoryIndex: null
+    ]
   }
