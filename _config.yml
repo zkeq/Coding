@@ -129,7 +129,7 @@ search:
 
 douban:
   user: zkeq
-  builtin: true
+  builtin: false
   # book:
   #   title: 'This is my book title'
   #   quote: 'This is my book quote'
