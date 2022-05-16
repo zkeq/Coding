@@ -910,6 +910,7 @@ inject:
   head:
       - <script src="https://s-gz-2220-icodeq.oss.dogecdn.com/notiflix-notify-aio-3.2.5.min.js"></script>
       - <link rel="stylesheet" href="https://s-gz-2220-icodeq.oss.dogecdn.com/notiflix-3.2.5.min.css">
+      - <script defer src="https://dev.busuanzi.icodeq.com/busuanzi.min.js"></script>
       - <script defer data-website-id="b7a4b657-7cec-426e-b4b3-79b756e19e5e" src="https://umm.site.icodeq.com/script.js"></script>
       - <script defer data-domain="icodeq.com" src="https://vercel.site.icodeq.com/js/script.js"></script>
       - <link rel="stylesheet" href="/css/font.css">
