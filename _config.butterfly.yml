@@ -908,6 +908,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+      - <script async data-pjax src="https://dev.busuanzi.icodeq.com/busuanzi.min.js"></script>
       - <script src="https://s-gz-2220-icodeq.oss.dogecdn.com/notiflix-notify-aio-3.2.5.min.js"></script>
       - <link rel="stylesheet" href="https://s-gz-2220-icodeq.oss.dogecdn.com/notiflix-3.2.5.min.css">
       - <script src="https://s-gz-2220-icodeq.oss.dogecdn.com/APlayer.min.js"></script>
