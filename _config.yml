@@ -159,7 +159,7 @@ douban:
 # Modify: Lete乐特
 githubcalendar:
   enable: true
-  enable_page: /
+  enable_page: "/' | location.pathname == '/index.html"
   user: Zkeq
   layout:
     type: id
