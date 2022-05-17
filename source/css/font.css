@@ -29,3 +29,7 @@ img,
 button {
   cursor: url("https://s-gz-2220-icodeq.oss.dogecdn.com/cursor/link.cur"), default !important;
 }
+
+#page-header {
+  background-color: #fff !important;
+}
