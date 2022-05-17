@@ -33,3 +33,8 @@ button {
 #page-header {
   background-color: #fff !important;
 }
+
+blockquote {
+  background-color: rgba(73,177,245,0.05) !important;
+  color: #666 !important;
+}
