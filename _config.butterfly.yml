@@ -532,9 +532,9 @@ site_verification:
 # Theme color for customize
 # Notice: color value must in double quotes like "#000" or may cause error!
 
-theme_color:
-  enable: true
-  main: "#3742fa"
+# theme_color:
+#   enable: true
+#   main: "#3742fa"
 #   paginator: "#00c4b6"
 #   button_hover: "#FF7242"
 #   text_selection: "#00c4b6"
