@@ -921,7 +921,7 @@ inject:
       - <script async data-pjax src="/js/rightmenu.js"></script>
       - <link rel="stylesheet" href="https://s-gz-2220-icodeq.oss.dogecdn.com/docsearch.css"/></pre></li>
       - <link rel="preconnect" href="https://KI6VRR8JEE-dsn.algolia.net" crossorigin />
-      - <script async src="https://s-gz-2220-icodeq.oss.dogecdn.com/docsearch.js"></script>
+      - <script src="https://s-gz-2220-icodeq.oss.dogecdn.com/docsearch.js"></script>
       - <script async src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
       - <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
       - <script src="https://s-gz-2220-icodeq.oss.dogecdn.com/spacing.js" defer></script>
