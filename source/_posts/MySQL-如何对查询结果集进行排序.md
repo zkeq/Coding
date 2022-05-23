@@ -41,8 +41,6 @@ SELECT empno,ename,hiredate,deptno FROM t_emp ORDER BY hiredate DESC;
 
 - 默认情况下，如果两条数据排序字段内容相同，那么排序会是什么样子？
 
-#### xxxxxxxxxx CREATE TABLE t_message(    id INT UNSIGNED PRIMARY KEY,    content VARCHAR(200) NOT NULL,    type ENUM("公告", "通报", "个人通知") NOT NULL,    create_time TIMESTAMP NOT NULL,    INDEX idx_type (type));​DROP INDEX idx_type ON t_message;CREATE INDEX idx_type ON t_message(type);SHOW INDEX FROM t_message;ALTER TABLE t_message ADD INDEX idx_type(type);SQL
-
 - 我们可以使用 `ORDER BY` 规定首要排序条件和次要排序条件。
 
   数据库会先按照首要排序条件排序，如果遇到首要排序内容相同的记录，那么就会启用次要排序条件接着排序。
