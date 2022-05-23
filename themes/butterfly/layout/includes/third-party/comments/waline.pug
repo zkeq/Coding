@@ -8,7 +8,14 @@ script.
         serverURL: '!{serverURL}',
         path: location.pathname,
         visitor: !{visitor},
-        dark: 'html[data-theme="dark"]'
+        dark: 'html[data-theme="dark"]',
+        emoji: [
+          "https://npm.elemecdn.com/@waline/emojis@1.0.1/alus",
+          "https://npm.elemecdn.com/@waline/emojis@1.0.1/bilibili",
+          "https://npm.elemecdn.com/@waline/emojis@1.0.1/weibo",
+          "https://npm.elemecdn.com/@waline/emojis@1.0.1/qq",
+          "https://npm.elemecdn.com/@waline/emojis@1.0.1/tieba"
+        ]
       }, !{JSON.stringify(option)}))
     }
 
