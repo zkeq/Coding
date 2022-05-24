@@ -19,65 +19,65 @@ hexo.extend.filter.register('before_generate', () => {
     utils: '/js/utils.js',
 
     // pjax
-    pjax: 'https://s-gz-2220-icodeq.oss.dogecdn.com/pjax.min.js',
+    pjax: 'https://cdn.timeletters.cn/zkeq/pjax.min.js',
 
     // comments
-    gitalk: 'https://s-gz-2220-icodeq.oss.dogecdn.com/gitalk.min.js',
-    gitalk_css: 'https://s-gz-2220-icodeq.oss.dogecdn.com/gitalk.min.css',
-    blueimp_md5: 'https://s-gz-2220-icodeq.oss.dogecdn.com/md5.min.js',
-    valine: 'https://s-gz-2220-icodeq.oss.dogecdn.com/Valine.min.js',
-    disqusjs: 'https://s-gz-2220-icodeq.oss.dogecdn.com/disqus.js',
-    disqusjs_css: 'https://s-gz-2220-icodeq.oss.dogecdn.com/disqusjs.css',
-    utterances: 'https://s-gz-2220-icodeq.oss.dogecdn.com/utteranc_client.js',
-    twikoo: 'https://s-gz-2220-icodeq.oss.dogecdn.com/twikoo.all.min.js',
-    waline: 'https://s-gz-2220-icodeq.oss.dogecdn.com/Waline.min.js',
+    gitalk: 'https://cdn.timeletters.cn/zkeq/gitalk.min.js',
+    gitalk_css: 'https://cdn.timeletters.cn/zkeq/gitalk.min.css',
+    blueimp_md5: 'https://cdn.timeletters.cn/zkeq/md5.min.js',
+    valine: 'https://cdn.timeletters.cn/zkeq/Valine.min.js',
+    disqusjs: 'https://cdn.timeletters.cn/zkeq/disqus.js',
+    disqusjs_css: 'https://cdn.timeletters.cn/zkeq/disqusjs.css',
+    utterances: 'https://cdn.timeletters.cn/zkeq/utteranc_client.js',
+    twikoo: 'https://cdn.timeletters.cn/zkeq/twikoo.all.min.js',
+    waline: 'https://cdn.timeletters.cn/zkeq/Waline.min.js',
     giscus: 'https://giscus.app/client.js',
 
     // share
-    addtoany: 'https://s-gz-2220-icodeq.oss.dogecdn.com/page.js',
-    sharejs: 'https://s-gz-2220-icodeq.oss.dogecdn.com/social-share.min.js',
-    sharejs_css: 'https://s-gz-2220-icodeq.oss.dogecdn.com/share.min.css',
+    addtoany: 'https://cdn.timeletters.cn/zkeq/page.js',
+    sharejs: 'https://cdn.timeletters.cn/zkeq/social-share.min.js',
+    sharejs_css: 'https://cdn.timeletters.cn/zkeq/share.min.css',
 
     // search
     local_search: '/js/search/local-search.js',
     algolia_js: '/js/search/algolia.js',
-    algolia_search_v4: 'https://s-gz-2220-icodeq.oss.dogecdn.com/algoliasearch-lite.umd.js',
-    instantsearch_v4: 'https://s-gz-2220-icodeq.oss.dogecdn.com/instantsearch.production.min.js',
+    algolia_search_v4: 'https://cdn.timeletters.cn/zkeq/algoliasearch-lite.umd.js',
+    instantsearch_v4: 'https://cdn.timeletters.cn/zkeq/instantsearch.production.min.js',
 
     // math
-    mathjax: 'https://s-gz-2220-icodeq.oss.dogecdn.com/tex-mml-chtml.js',
-    katex: 'https://s-gz-2220-icodeq.oss.dogecdn.com/katex.min.css',
-    katex_copytex: 'https://s-gz-2220-icodeq.oss.dogecdn.com/copy-tex.min.js',
-    katex_copytex_css: 'https://s-gz-2220-icodeq.oss.dogecdn.com/copy-tex.css',
-    mermaid: 'https://s-gz-2220-icodeq.oss.dogecdn.com/mermaid.min.js',
+    mathjax: 'https://cdn.timeletters.cn/zkeq/tex-mml-chtml.js',
+    katex: 'https://cdn.timeletters.cn/zkeq/katex.min.css',
+    katex_copytex: 'https://cdn.timeletters.cn/zkeq/copy-tex.min.js',
+    katex_copytex_css: 'https://cdn.timeletters.cn/zkeq/copy-tex.css',
+    mermaid: 'https://cdn.timeletters.cn/zkeq/mermaid.min.js',
 
     // count
     busuanzi: 'https://busuanzi.icodeq.com/busuanzi.pure.mini.js',
 
     // background effect
-    canvas_ribbon: 'https://s-gz-2220-icodeq.oss.dogecdn.com/canvas-ribbon.min.js',
-    canvas_fluttering_ribbon: 'https://s-gz-2220-icodeq.oss.dogecdn.com/canvas-fluttering-ribbon.min.js',
-    canvas_nest: 'https://s-gz-2220-icodeq.oss.dogecdn.com/canvas-nest.min.js',
+    canvas_ribbon: 'https://cdn.timeletters.cn/zkeq/canvas-ribbon.min.js',
+    canvas_fluttering_ribbon: 'https://cdn.timeletters.cn/zkeq/canvas-fluttering-ribbon.min.js',
+    canvas_nest: 'https://cdn.timeletters.cn/zkeq/canvas-nest.min.js',
 
-    lazyload: 'https://s-gz-2220-icodeq.oss.dogecdn.com/lazyload.iife.min.js',
-    instantpage: 'https://s-gz-2220-icodeq.oss.dogecdn.com/instantpage.min.js',
-    typed: 'https://s-gz-2220-icodeq.oss.dogecdn.com/typed.min.js',
-    pangu: 'https://s-gz-2220-icodeq.oss.dogecdn.com/pangu.min.js',
+    lazyload: 'https://cdn.timeletters.cn/zkeq/lazyload.iife.min.js',
+    instantpage: 'https://cdn.timeletters.cn/zkeq/instantpage.min.js',
+    typed: 'https://cdn.timeletters.cn/zkeq/typed.min.js',
+    pangu: 'https://cdn.timeletters.cn/zkeq/pangu.min.js',
 
     // photo
-    fancybox_css_v4: 'https://s-gz-2220-icodeq.oss.dogecdn.com/fancybox.css',
-    fancybox_v4: 'https://s-gz-2220-icodeq.oss.dogecdn.com/fancybox.umd.js',
-    medium_zoom: 'https://s-gz-2220-icodeq.oss.dogecdn.com/medium-zoom.min.js',
+    fancybox_css_v4: 'https://cdn.timeletters.cn/zkeq/fancybox.css',
+    fancybox_v4: 'https://cdn.timeletters.cn/zkeq/fancybox.umd.js',
+    medium_zoom: 'https://cdn.timeletters.cn/zkeq/medium-zoom.min.js',
 
     // snackbar
-    snackbar_css: 'https://s-gz-2220-icodeq.oss.dogecdn.com/snackbar.min.css',
-    snackbar: 'https://s-gz-2220-icodeq.oss.dogecdn.com/snackbar.min.js',
+    snackbar_css: 'https://cdn.timeletters.cn/zkeq/snackbar.min.css',
+    snackbar: 'https://cdn.timeletters.cn/zkeq/snackbar.min.js',
 
     // effect
-    activate_power_mode: 'https://s-gz-2220-icodeq.oss.dogecdn.com/activate-power-mode.min.js',
-    fireworks: 'https://s-gz-2220-icodeq.oss.dogecdn.com/fireworks.min.js',
-    click_heart: 'https://s-gz-2220-icodeq.oss.dogecdn.com/click-heart.min.js',
-    ClickShowText: 'https://s-gz-2220-icodeq.oss.dogecdn.com/click-show-text.min.js',
+    activate_power_mode: 'https://cdn.timeletters.cn/zkeq/activate-power-mode.min.js',
+    fireworks: 'https://cdn.timeletters.cn/zkeq/fireworks.min.js',
+    click_heart: 'https://cdn.timeletters.cn/zkeq/click-heart.min.js',
+    ClickShowText: 'https://cdn.timeletters.cn/zkeq/click-show-text.min.js',
 
     // fontawesome
     fontawesomeV6: 'https://npm.elemecdn.com/font6pro@6.0.1/css/all.min.css',
@@ -86,18 +86,18 @@ hexo.extend.filter.register('before_generate', () => {
     translate: '/js/tw_cn.js',
 
     // flickr-justified-gallery
-    flickr_justified_gallery_js: 'https://s-gz-2220-icodeq.oss.dogecdn.com/fjGallery.min.js',
-    flickr_justified_gallery_css: 'https://s-gz-2220-icodeq.oss.dogecdn.com/fjGallery.min.css',
+    flickr_justified_gallery_js: 'https://cdn.timeletters.cn/zkeq/fjGallery.min.js',
+    flickr_justified_gallery_css: 'https://cdn.timeletters.cn/zkeq/fjGallery.min.css',
 
     // aplayer (不晓得这里用的是哪个版本...换了好几个都会报错)
-    aplayer_css: 'https://s-gz-2220-icodeq.oss.dogecdn.com/APlayer.min.css',
-    aplayer_js: 'https://s-gz-2220-icodeq.oss.dogecdn.com/APlayer.min.js',
-    meting_js: 'https://s-gz-2220-icodeq.oss.dogecdn.com/Meting.min.js',
+    aplayer_css: 'https://cdn.timeletters.cn/zkeq/APlayer.min.css',
+    aplayer_js: 'https://cdn.timeletters.cn/zkeq/APlayer.min.js',
+    meting_js: 'https://cdn.timeletters.cn/zkeq/Meting.min.js',
 
     // Prism.js
-    prismjs_js: 'https://s-gz-2220-icodeq.oss.dogecdn.com/prism.min.js',
-    prismjs_lineNumber_js: 'https://s-gz-2220-icodeq.oss.dogecdn.com/prism-line-numbers.min.js',
-    prismjs_autoloader: 'https://s-gz-2220-icodeq.oss.dogecdn.com/prism-autoloader.min.js'
+    prismjs_js: 'https://cdn.timeletters.cn/zkeq/prism.min.js',
+    prismjs_lineNumber_js: 'https://cdn.timeletters.cn/zkeq/prism-line-numbers.min.js',
+    prismjs_autoloader: 'https://cdn.timeletters.cn/zkeq/prism-autoloader.min.js'
   }
 
   // delete null value

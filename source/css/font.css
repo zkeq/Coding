@@ -10,7 +10,7 @@
 @font-face{
   font-family: 'Hack';
   src: local('Hack'),
-  url('https://s-gz-2220-icodeq.oss.dogecdn.com/hack-regular-webfont.woff2') format('truetype');
+  url('https://cdn.timeletters.cn/zkeq/hack-regular-webfont.woff2') format('truetype');
   font-display: swap;
   font-weight: bold;
   font-style: normal;
@@ -22,12 +22,12 @@
 
 /* 鼠标样式 */
 body {
-  cursor: url("https://s-gz-2220-icodeq.oss.dogecdn.com/cursor/normal.cur"), default;
+  cursor: url("https://cdn.timeletters.cn/zkeq/cursor/normal.cur"), default;
 }
 a,
 img,
 button {
-  cursor: url("https://s-gz-2220-icodeq.oss.dogecdn.com/cursor/link.cur"), default !important;
+  cursor: url("https://cdn.timeletters.cn/zkeq/cursor/link.cur"), default !important;
 }
 
 #page-header {
