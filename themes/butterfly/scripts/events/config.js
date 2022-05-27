@@ -86,8 +86,8 @@ hexo.extend.filter.register('before_generate', () => {
     translate: '/js/tw_cn.js',
 
     // flickr-justified-gallery
-    flickr_justified_gallery_js: 'https://cdn.timeletters.cn/zkeq/fjGallery.min.js',
-    flickr_justified_gallery_css: 'https://cdn.timeletters.cn/zkeq/fjGallery.min.css',
+    flickr_justified_gallery_js: 'https://s-gz-2220-icodeq.oss.dogecdn.com/fjGallery.min.js',
+    flickr_justified_gallery_css: 'https://s-gz-2220-icodeq.oss.dogecdn.com/fjGallery.min.css',
 
     // aplayer (不晓得这里用的是哪个版本...换了好几个都会报错)
     aplayer_css: 'https://cdn.timeletters.cn/zkeq/APlayer.min.css',
