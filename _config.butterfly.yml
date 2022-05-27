@@ -148,7 +148,7 @@ error_img:
 
 # A simple 404 page
 error_404:
-  enable: true
+  enable: false
   subtitle: 'Page Not Found'
   background: https://ik.imagekit.io/zkeq/404.png
 
