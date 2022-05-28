@@ -38,3 +38,7 @@ blockquote {
   background-color: rgba(73,177,245,0.05) !important;
   color: #666 !important;
 }
+
+.vactions label {
+  display: none !important
+}
