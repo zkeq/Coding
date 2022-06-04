@@ -4,7 +4,7 @@ tags: [常用函数,高级函数]
 description: 本节课主要学习了<br>Python中迭代器的用法 
 date: 2021-11-12 02:08:16
 categories: Python
-cover: https://ik.imagekit.io/zkeq/2021-11-11/6.png
+cover: https://img.onmicrosoft.cn/2021-11-11/6.png
 ---
 
 ### Python中的迭代器

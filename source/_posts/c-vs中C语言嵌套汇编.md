@@ -4,7 +4,7 @@ tags: [基础语法]
 description: 本节课主要学习了<br>vs中C语言嵌套汇编(无实操)
 date: 2021-12-20 00:24:19
 categories: cpp
-cover: https://ik.imagekit.io/zkeq/2021-12-19/4.png
+cover: https://img.onmicrosoft.cn/2021-12-19/4.png
 ---
 vs 中c语言嵌套汇编
 

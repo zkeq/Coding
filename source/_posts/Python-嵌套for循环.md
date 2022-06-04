@@ -4,7 +4,7 @@ date: 2021-10-14 21:47:56
 tags: [循环]
 categories: Python
 description: 本节课主要学习了<br>循环与for循环,即在for循环中再写一个for循环
-cover: https://ik.imagekit.io/zkeq/2021-10-14/1.png
+cover: https://img.onmicrosoft.cn/2021-10-14/1.png
 ---
 
 #### 嵌套for循环

@@ -4,7 +4,7 @@ tags: [笔记 ]
 description: 本文主要记录实现<br>使用 Uptime Kuma 监控网站并推送微信
 date: 2022-04-24 00:30:31
 categories: 笔记 
-cover: https://ik.imagekit.io/zkeq/2022-04-24/9.png
+cover: https://img.onmicrosoft.cn/2022-04-24/9.png
 sticky: 3
 ---
 
@@ -24,19 +24,19 @@ sticky: 3
 
 见图 👀
 
-![1](https://ik.imagekit.io/zkeq/2022-04-24/1.png)
+![1](https://img.onmicrosoft.cn/2022-04-24/1.png)
 
 ### 后台也十分好看 ~
 
-![2](https://ik.imagekit.io/zkeq/2022-04-24/2.png)
+![2](https://img.onmicrosoft.cn/2022-04-24/2.png)
 
 ### 详情页面
 
-![3](https://ik.imagekit.io/zkeq/2022-04-24/3.png)
+![3](https://img.onmicrosoft.cn/2022-04-24/3.png)
 
 ### 并且还实现了微信推送的功能
 
-![4](https://ik.imagekit.io/zkeq/2022-04-24/4.jpg)
+![4](https://img.onmicrosoft.cn/2022-04-24/4.jpg)
 
 ## 实现步骤
 
@@ -655,11 +655,11 @@ ok，这样部署好了，但是我们还缺少一个参数
 
 - [Server酱·Turbo版 (ftqq.com)](https://sct.ftqq.com/forward)
 
-![5](https://ik.imagekit.io/zkeq/2022-04-24/5.png)
+![5](https://img.onmicrosoft.cn/2022-04-24/5.png)
 
 里面的 
 
-![6](https://ik.imagekit.io/zkeq/2022-04-24/6.png)
+![6](https://img.onmicrosoft.cn/2022-04-24/6.png)
 
 这个就是 用户 ID ，成功将监控项目跑起来之后
 

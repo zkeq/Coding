@@ -4,7 +4,7 @@ date: 2021-10-18 23:58:05
 tags: [函数]
 categories: Python
 description: 本节课主要总结了<br>函数的定义
-cover: https://ik.imagekit.io/zkeq/2021-10-18/2.png
+cover: https://img.onmicrosoft.cn/2021-10-18/2.png
 ---
 
 ### 函数的定义

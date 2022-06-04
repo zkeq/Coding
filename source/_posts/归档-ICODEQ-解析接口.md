@@ -4,7 +4,7 @@ tags: [归档]
 description: 花了一下午做成的解析接口<br>后台为纯 python 实现
 date: 2022-02-12 01:16:00
 categories: 其他
-cover: https://ik.imagekit.io/zkeq/2022-02-12/1.png
+cover: https://img.onmicrosoft.cn/2022-02-12/1.png
 sticky: 1
 ---
 
@@ -32,10 +32,10 @@ sticky: 1
     <source src="https://icodeq-bpi.vercel.app/api/parwix" type="video/mp4" />
 </video>
 
-![1](https://ik.imagekit.io/zkeq/2022-02-12/2.png)
+![1](https://img.onmicrosoft.cn/2022-02-12/2.png)
 
-![2](https://ik.imagekit.io/zkeq/2022-02-12/3.png)
+![2](https://img.onmicrosoft.cn/2022-02-12/3.png)
 
-![3](https://ik.imagekit.io/zkeq/2022-02-12/4.png)
+![3](https://img.onmicrosoft.cn/2022-02-12/4.png)
 
-![4](https://ik.imagekit.io/zkeq/2022-02-12/5.jpg)
+![4](https://img.onmicrosoft.cn/2022-02-12/5.jpg)

@@ -4,7 +4,7 @@ tags: [基础语法]
 description: 本节课主要学习了<br>C语言的基础入门
 date: 2021-12-20 00:23:42
 categories: cpp
-cover: https://ik.imagekit.io/zkeq/2021-12-19/4.png
+cover: https://img.onmicrosoft.cn/2021-12-19/4.png
 ---
 ### c语言的编译步骤
 
@@ -60,7 +60,7 @@ gcc    hello.o -o hello
 - 设置**运行环境**，**堆栈**等，**链接其他库**
 - C语言写的程序是需要依赖各种库的，所以编译之后还需要把库链接到最终的可执行程序中去
 
-![1](https://ik.imagekit.io/zkeq/2021-12-19/2.png)
+![1](https://img.onmicrosoft.cn/2021-12-19/2.png)
 
 | **选项** | **含义**                    |
 | -------- | --------------------------- |

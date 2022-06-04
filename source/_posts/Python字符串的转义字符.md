@@ -3,7 +3,7 @@ title: Python字符串的转义字符
 date: 2021-09-27 19:36:05
 tags: [字符串]
 categories: Python
-cover: https://ik.imagekit.io/zkeq/2021-9-27/4.jpg
+cover: https://img.onmicrosoft.cn/2021-9-27/4.jpg
 description: 本节课主要学习了python字符串的转义字符的用法和意义.<br>并进行了相关练习.
 ---
 

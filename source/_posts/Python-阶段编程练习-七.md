@@ -4,7 +4,7 @@ date: 2021-10-16 20:02:46
 tags: [编程练习]
 categories: Python
 description: 通过运用前面所学的知识 <br> 完成自己的任务
-cover: https://ik.imagekit.io/zkeq/2021-10-16/3.jpg
+cover: https://img.onmicrosoft.cn/2021-10-16/3.jpg
 ---
 
 ### 编程练习
@@ -13,7 +13,7 @@ cover: https://ik.imagekit.io/zkeq/2021-10-16/3.jpg
 >
 > 效果如下:
 >
-> ![1](https://ik.imagekit.io/zkeq/2021-10-16/1.png)
+> ![1](https://img.onmicrosoft.cn/2021-10-16/1.png)
 >
 > 
 

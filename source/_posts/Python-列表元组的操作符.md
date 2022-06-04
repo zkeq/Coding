@@ -3,7 +3,7 @@ title: Python 列表元组的操作符
 date: 2021-09-29 22:52:02
 tags: [列表,元组]
 categories: Python
-cover: https://ik.imagekit.io/zkeq/2021-9-29/4.png
+cover: https://img.onmicrosoft.cn/2021-9-29/4.png
 description: len函数<br>列表(元组)之间的累加与乘法<br>in 和 not in 在列表(元组)中的用法
 ---
 
@@ -71,10 +71,10 @@ print('dewei' not in names_list)
 
 1. len函数可以计算出除了数字类型以外，其他所有数据类型的长度。
 
-   ![1](https://ik.imagekit.io/zkeq/2021-9-29/1.jpg)
+   ![1](https://img.onmicrosoft.cn/2021-9-29/1.jpg)
 
 2. in判断某个元素是否在列表（元组中）
 
 3. not in判断某个元素u是否不在列表（元组中）两者返回结果是bool值即True或False。
 
-   ![2](https://ik.imagekit.io/zkeq/2021-9-29/2.jpg)
+   ![2](https://img.onmicrosoft.cn/2021-9-29/2.jpg)

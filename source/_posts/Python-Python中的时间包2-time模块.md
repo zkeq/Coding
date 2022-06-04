@@ -4,7 +4,7 @@ tags: [模块和包]
 description: 本节课主要学习了<br>time模块的使用（什么是时间戳）以及datetime的补充
 date: 2021-11-08 00:33:03
 categories: Python
-cover: https://ik.imagekit.io/zkeq/2021-11-8/1.png
+cover: https://img.onmicrosoft.cn/2021-11-8/1.png
 ---
 
 ### Python中的时间包2`time模块`

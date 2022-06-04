@@ -4,7 +4,7 @@ tags: [MySQL]
 description: 本节课主要学习了<br>数据库的索引机制（好处与用法）
 date: 2022-04-20 01:00:33
 categories: MySQL
-cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
+cover: https://img.onmicrosoft.cn/2022-04-19/02.png
 
 ---
 
@@ -14,7 +14,7 @@ cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
 
 #### 如何创建索引
 
-![20](https://ik.imagekit.io/zkeq/2022-04-19/20.png)
+![20](https://img.onmicrosoft.cn/2022-04-19/20.png)
 
 ```SQL
 CREATE TABLE t_message(
@@ -28,7 +28,7 @@ CREATE TABLE t_message(
 
 #### 如何添加与删除索引
 
-![21](https://ik.imagekit.io/zkeq/2022-04-19/21.png)
+![21](https://img.onmicrosoft.cn/2022-04-19/21.png)
 
 ```SQL
 DROP INDEX idx_type ON t_message;
@@ -37,7 +37,7 @@ SHOW INDEX FROM t_message;
 ALTER TABLE t_message ADD INDEX idx_type(type);
 ```
 
-![22](https://ik.imagekit.io/zkeq/2022-04-19/22.png)
+![22](https://img.onmicrosoft.cn/2022-04-19/22.png)
 
 #### 索引的使用原则
 

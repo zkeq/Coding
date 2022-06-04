@@ -4,7 +4,7 @@ date: 2021-10-28 22:23:05
 tags: [对象和异常]
 categories: Python
 description: 本节课主要学习了<br>面向对象编程中的常用术语
-cover: https://ik.imagekit.io/zkeq/2021-10-28/2.jpg
+cover: https://img.onmicrosoft.cn/2021-10-28/2.jpg
 ---
 
 ### 面向对象中常用术语
@@ -15,7 +15,7 @@ cover: https://ik.imagekit.io/zkeq/2021-10-28/2.jpg
 
 比如，定义一个Cat类，通过它可以创建出无数个实例来代表各种不同特征的猫。
 
-![1](https://ik.imagekit.io/zkeq/2021-10-24/1.jpg)
+![1](https://img.onmicrosoft.cn/2021-10-24/1.jpg)
 
 **2、对象：** 类并不能直接使用，通过类创建出的实例（又称对象）才能使用，比如以上案例创建类
 对象cat。

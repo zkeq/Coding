@@ -4,7 +4,7 @@ date: 2021-10-06 18:04:31
 tags: [条件语句]
 description: 本节课主要学习了:<br>逻辑判断的应用与总结
 categories: Python
-cover: https://ik.imagekit.io/zkeq/2021-10-6/5.jpg
+cover: https://img.onmicrosoft.cn/2021-10-6/5.jpg
 ---
 
 ### 1-3 逻辑判断的应用与总结
@@ -22,7 +22,7 @@ cover: https://ik.imagekit.io/zkeq/2021-10-6/5.jpg
 在**Python语言**中对应的是`1`和`0`。
 请看以下例子：
 
-![1](https://ik.imagekit.io/zkeq/2021-10-6/1.jpg)
+![1](https://img.onmicrosoft.cn/2021-10-6/1.jpg)
 
 在程序中， 如果name等于“小司”
 

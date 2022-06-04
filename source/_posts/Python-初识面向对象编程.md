@@ -4,7 +4,7 @@ date: 2021-10-23 00:50:05
 tags: [对象和异常]
 categories: Python
 description: 本节课主要学习了<br>面向对象编程的基础知识
-cover: https://ik.imagekit.io/zkeq/2021-10-23/1.png
+cover: https://img.onmicrosoft.cn/2021-10-23/1.png
 ---
 
 ### 初识面向对象编程

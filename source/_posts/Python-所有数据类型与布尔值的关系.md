@@ -2,7 +2,7 @@
 title: Python 所有数据类型与布尔值的关系
 date: 2021-10-04 08:46:07
 tags: [字典]
-cover: https://ik.imagekit.io/zkeq/2021-10-3/5.png
+cover: https://img.onmicrosoft.cn/2021-10-3/5.png
 description: 本节课主要学习了:<br>所有数据类型与布尔值的关系
 categories: Python
 ---
@@ -17,7 +17,7 @@ categories: Python
 2. not对于一切结果取反
 3. 非0 非空都为True 其他都为False
 
-![4](https://ik.imagekit.io/zkeq/2021-10-3/4.jpg)
+![4](https://img.onmicrosoft.cn/2021-10-3/4.jpg)
 
 #### 代码
 

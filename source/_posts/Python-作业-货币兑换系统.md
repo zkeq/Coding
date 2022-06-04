@@ -4,7 +4,7 @@ date: 2021-10-16 20:05:29
 tags: [编程练习]
 categories: Python
 description: 通过运用前面所学的知识 <br> 完成自己的作业
-cover: https://ik.imagekit.io/zkeq/2021-10-16/3.jpg
+cover: https://img.onmicrosoft.cn/2021-10-16/3.jpg
 ---
 
 ### 作业
@@ -20,7 +20,7 @@ cover: https://ik.imagekit.io/zkeq/2021-10-16/3.jpg
 > 6、在输入要选择服务后有波浪线分隔；本次兑换服务结束后有等号线进行分隔。
 > 运行效果图:
 >
-> ![2](https://ik.imagekit.io/zkeq/2021-10-16/2.jpg)
+> ![2](https://img.onmicrosoft.cn/2021-10-16/2.jpg)
 
 #### 任务描述
 
@@ -46,7 +46,7 @@ cover: https://ik.imagekit.io/zkeq/2021-10-16/3.jpg
 
    效果：例
 
-   ![img](https://ik.imagekit.io/zkeq/2021-10-16/4.webp)	
+   ![img](https://img.onmicrosoft.cn/2021-10-16/4.webp)	
 
 3. 定义变量your_money，用于存储小明的100元钱
 

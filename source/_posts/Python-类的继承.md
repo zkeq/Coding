@@ -4,7 +4,7 @@ date: 2021-10-30 23:57:43
 tags: [对象和异常]
 categories: Python
 description: 本节课主要学习了<br>Python中类的继承
-cover: https://ik.imagekit.io/zkeq/2021-10-28/2.jpg
+cover: https://img.onmicrosoft.cn/2021-10-28/2.jpg
 ---
 
 ### 类的继承

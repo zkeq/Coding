@@ -4,7 +4,7 @@ tags: [MySQL]
 description: 本节课主要学习了<br>数据操作语言：表连接查询（二）
 date: 2022-05-16 01:33:28
 categories: MySQL
-cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
+cover: https://img.onmicrosoft.cn/2022-04-19/02.png
 ---
 
 数据操作语言：表连接查询（二）

@@ -1,7 +1,7 @@
 ---
 title: 关于本博客的一些说明
 date: 2021-12-31 20:19:09
-top_img: https://ik.imagekit.io/zkeq/2021-12-31/3.jpg
+top_img: https://img.onmicrosoft.cn/2021-12-31/3.jpg
 ---
 
 ## 关于壁纸
@@ -15,8 +15,8 @@ top_img: https://ik.imagekit.io/zkeq/2021-12-31/3.jpg
 再放几张like 真的好爱!
 
 {% gallery %}
-![](https://ik.imagekit.io/zkeq/2021-12-31/1.jpg)
-![](https://ik.imagekit.io/zkeq/2021-12-31/2.jpg)
-![](https://ik.imagekit.io/zkeq/2021-12-31/3.jpg)
-![](https://ik.imagekit.io/zkeq/2021-12-31/4.jpg)
+![](https://img.onmicrosoft.cn/2021-12-31/1.jpg)
+![](https://img.onmicrosoft.cn/2021-12-31/2.jpg)
+![](https://img.onmicrosoft.cn/2021-12-31/3.jpg)
+![](https://img.onmicrosoft.cn/2021-12-31/4.jpg)
 {% endgallery %}

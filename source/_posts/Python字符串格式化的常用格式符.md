@@ -3,7 +3,7 @@ title: Python字符串格式化的常用格式符
 date: 2021-09-27 19:35:44
 tags: [字符串]
 categories: Python
-cover: https://ik.imagekit.io/zkeq/2021-9-27/4.jpg
+cover: https://img.onmicrosoft.cn/2021-9-27/4.jpg
 description: 本节课主要学习了各种常用的格式符<br>以及不大常用的格式符.
 ---
 

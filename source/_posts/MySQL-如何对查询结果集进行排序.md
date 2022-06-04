@@ -4,7 +4,7 @@ tags: [MySQL]
 description: 本节课主要学习了<br> 如何对查询结果集进行排序
 date: 2022-04-25 21:19:43
 categories: MySQL
-cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
+cover: https://img.onmicrosoft.cn/2022-04-19/02.png
 ---
 
 #### 数据操作语言：结果集排序
@@ -45,7 +45,7 @@ SELECT empno,ename,hiredate,deptno FROM t_emp ORDER BY hiredate DESC;
 
   数据库会先按照首要排序条件排序，如果遇到首要排序内容相同的记录，那么就会启用次要排序条件接着排序。
 
-![2](https://ik.imagekit.io/zkeq/2022-04-25/02.png)
+![2](https://img.onmicrosoft.cn/2022-04-25/02.png)
 
 ```SQL
 SELECT empno,ename,sal,hiredate FROM t_emp ORDER BY sal DESC,hiredate ASC;

@@ -4,14 +4,14 @@ tags: [基础语法]
 description: 本节课主要学习了<br>Vue 的基本语法
 date: 2022-02-04 17:17:45
 categories: Vue
-cover: https://ik.imagekit.io/zkeq/2022-02-04/7.png
+cover: https://img.onmicrosoft.cn/2022-02-04/7.png
 ---
 
 > 点击标题超链接可跳转到对应的html界面
 
 ## [01_Vue3的引入-CDN](https://icodeq.com/html/Vue/01_Vue3初体验/01_Vue3的引入-CDN.html)
 
-![1](https://ik.imagekit.io/zkeq/2022-02-04/1.png)
+![1](https://img.onmicrosoft.cn/2022-02-04/1.png)
 
 
 
@@ -45,7 +45,7 @@ cover: https://ik.imagekit.io/zkeq/2022-02-04/7.png
 
 ## [02_Vue3的引入-local](https://icodeq.com/html/Vue/01_Vue3初体验/02_Vue3的引入-local.html)
 
-![2](https://ik.imagekit.io/zkeq/2022-02-04/2.png)
+![2](https://img.onmicrosoft.cn/2022-02-04/2.png)
 
 ```html
 <!DOCTYPE html>
@@ -73,7 +73,7 @@ cover: https://ik.imagekit.io/zkeq/2022-02-04/7.png
 
 ## [03_计数器案例-原生](https://icodeq.com/html/Vue/01_Vue3初体验/03_计数器案例-原生.html)
 
-![3](https://ik.imagekit.io/zkeq/2022-02-04/3.png)
+![3](https://img.onmicrosoft.cn/2022-02-04/3.png)
 
 ```html
 <!DOCTYPE html>
@@ -118,7 +118,7 @@ cover: https://ik.imagekit.io/zkeq/2022-02-04/7.png
 
 ## [04_计数器案例-Vue](https://icodeq.com/html/Vue/01_Vue3初体验/04_计数器案例-Vue.html)
 
-![4](https://ik.imagekit.io/zkeq/2022-02-04/4.png)
+![4](https://img.onmicrosoft.cn/2022-02-04/4.png)
 
 ```html
 <!DOCTYPE html>
@@ -170,7 +170,7 @@ cover: https://ik.imagekit.io/zkeq/2022-02-04/7.png
 
 ## [05_template写法一](https://icodeq.com/html/Vue/01_Vue3初体验/05_template写法一.html)
 
-![5](https://ik.imagekit.io/zkeq/2022-02-04/5.png)
+![5](https://img.onmicrosoft.cn/2022-02-04/5.png)
 
 ```html
 <!DOCTYPE html>
@@ -224,7 +224,7 @@ cover: https://ik.imagekit.io/zkeq/2022-02-04/7.png
 
 ## [06_template写法二](https://icodeq.com/html/Vue/01_Vue3初体验/06_template写法二.html)
 
-![6](https://ik.imagekit.io/zkeq/2022-02-04/6.png)
+![6](https://img.onmicrosoft.cn/2022-02-04/6.png)
 
 ```html
 <!DOCTYPE html>

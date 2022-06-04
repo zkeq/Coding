@@ -4,7 +4,7 @@ date: 2021-11-03 23:16:19
 tags: [编程练习]
 categories: Python
 description: 通过运用前面所学的知识 <br> 完成自己的任务
-cover: https://ik.imagekit.io/zkeq/2021-10-28/2.jpg
+cover: https://img.onmicrosoft.cn/2021-10-28/2.jpg
 ---
 
 #### 编程练习
@@ -12,7 +12,7 @@ cover: https://ik.imagekit.io/zkeq/2021-10-28/2.jpg
 > 圆形、长方形除了是几何学科中的基本图形之外，也还是我们日常生活中最常见的平面图形。请根据面向对象的相关知识，将上述两种平面图形用Python语言进行表示，使得我们的程序可以正常对其使用。
 > 效果图如下：
 >
-> ![2](https://ik.imagekit.io/zkeq/2021-11-3/2.png)
+> ![2](https://img.onmicrosoft.cn/2021-11-3/2.png)
 
 ##### 任务
 

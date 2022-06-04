@@ -2,7 +2,7 @@
 title: Python 字典中的成员判断
 date: 2021-10-04 08:45:25
 tags: [字典]
-cover: https://ik.imagekit.io/zkeq/2021-10-3/5.png
+cover: https://img.onmicrosoft.cn/2021-10-3/5.png
 description: 本节课主要学习了:<br>in 与 not in<br>[]以及get的用法
 categories: Python
 ---

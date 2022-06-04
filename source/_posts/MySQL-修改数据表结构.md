@@ -4,14 +4,14 @@ tags: [MySQL]
 description: 本节课主要学习了<br>如何 修改数据表结构 增删改数据表字段
 date: 2022-04-19 23:11:26
 categories: MySQL
-cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
+cover: https://img.onmicrosoft.cn/2022-04-19/02.png
 ---
 
 ## 数据定义语言：字段约束
 
 ### 添加字段
 
-![10](https://ik.imagekit.io/zkeq/2022-04-19/10.png)
+![10](https://img.onmicrosoft.cn/2022-04-19/10.png)
 
 ```SQL
 ALTER TABLE student
@@ -21,7 +21,7 @@ ADD home_tel char(11) NOT NULL;
 
 ### 修改字段类型和约束
 
-![11](https://ik.imagekit.io/zkeq/2022-04-19/11.png)
+![11](https://img.onmicrosoft.cn/2022-04-19/11.png)
 
 ```SQL
 ALTER TABLE student
@@ -32,7 +32,7 @@ DESC student;
 
 ### 修改字段名称
 
-![12](https://ik.imagekit.io/zkeq/2022-04-19/12.png)
+![12](https://img.onmicrosoft.cn/2022-04-19/12.png)
 
 ```SQL
 DESC student;
@@ -43,7 +43,7 @@ CHANGE address home_address VARCHAR(200) NOT NULL;
 
 ### 删除字段
 
-![13](https://ik.imagekit.io/zkeq/2022-04-19/13.png)
+![13](https://img.onmicrosoft.cn/2022-04-19/13.png)
 
 ```SQL
 DESC student;

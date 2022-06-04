@@ -4,7 +4,7 @@ date: 2021-10-16 20:03:12
 tags: [循环]
 categories: Python
 description: 本节课主要学习了<br>while循环
-cover: https://ik.imagekit.io/zkeq/2021-10-16/3.jpg
+cover: https://img.onmicrosoft.cn/2021-10-16/3.jpg
 ---
 
 ### while循环

@@ -4,7 +4,7 @@ tags: [笔记]
 description: 本节课主要讲了了<br>如何使用javascrit快速获取到m3u8地址并下载.
 date: 2022-01-23 19:40:27
 categories: 笔记
-cover: https://ik.imagekit.io/zkeq/2022-1-23/1.png
+cover: https://img.onmicrosoft.cn/2022-1-23/1.png
 sticky: 2
 ---
 
@@ -65,7 +65,7 @@ sticky: 2
 
 
 
-![运行截图](https://ik.imagekit.io/zkeq/2022-01-27/1.gif)  
+![运行截图](https://img.onmicrosoft.cn/2022-01-27/1.gif)  
 
 
 ## 腾讯视频
