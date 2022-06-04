@@ -4,7 +4,7 @@ tags: [进程与线程]
 description: 本节课主要学习了<br>进程的基础知识
 date: 2021-11-13 22:53:04
 categories: Python
-cover: https://ik.imagekit.io/zkeq/2021-11-13/3.png
+cover: https://img.onmicrosoft.cn/2021-11-13/3.png
 ---
 
 ### 进程

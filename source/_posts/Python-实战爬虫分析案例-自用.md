@@ -5,11 +5,11 @@ description: 河南宗教脚本爬虫分析自动化脚本.
 date: 2021-11-21 12:04:09
 update: 2021-12-12 00:37:15
 categories: Python
-cover: https://ik.imagekit.io/zkeq/2021-11-21/2.jpg
+cover: https://img.onmicrosoft.cn/2021-11-21/2.jpg
 ---
 
 
-![1](https://ik.imagekit.io/zkeq/2021-11-21/carbon_night_owl.png)
+![1](https://img.onmicrosoft.cn/2021-11-21/carbon_night_owl.png)
 
 ```python
 # coding:utf-8

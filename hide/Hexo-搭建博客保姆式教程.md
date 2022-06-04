@@ -4,7 +4,7 @@ tags: [笔记]
 description: 这篇文章是自己使用Hexo这几个月自己总结出来的教程
 date: 2021-12-13 22:32:34
 categories: CMD
-cover: https://ik.imagekit.io/zkeq/2021-12-13/3.png
+cover: https://img.onmicrosoft.cn/2021-12-13/3.png
 toc: false
 sticky: 7
 ---

@@ -3,43 +3,43 @@
   link_list:
     - name: ThereHello
       link: https://www.therehello.top/
-      avatar: https://ik.imagekit.io/zkeq/friends/f1.jpg
+      avatar: https://img.onmicrosoft.cn/friends/f1.jpg
       descr: 通过答题脚本 遇到的大佬.
     - name: 云淡风轻
       link: https://blog.gocos.cn
-      avatar: https://ik.imagekit.io/zkeq/friends/f2.ico
+      avatar: https://img.onmicrosoft.cn/friends/f2.ico
       descr: Wk-Helper 大佬的博客.
     - name: 探姬
       link: https://blog.probius.xyz
-      avatar: https://ik.imagekit.io/zkeq/friends/f3.jpg
+      avatar: https://img.onmicrosoft.cn/friends/f3.jpg
       descr: 又一个大佬的博客.
     - name: icodel's Blog
       link: https://www.icodel.cn
-      avatar: https://ik.imagekit.io/zkeq/friends/f4.jpg
+      avatar: https://img.onmicrosoft.cn/friends/f4.jpg
       descr: icodel's Blog
     - name: An Wen
       link: https://blog.zytllt.cn
-      avatar: https://ik.imagekit.io/zkeq/friends/f5.png
+      avatar: https://img.onmicrosoft.cn/friends/f5.png
       descr: 三生三世安安稳稳,婷婷玉立花落花开,与世无争做好自己.        
     - name: Pandolar
       link: https://blog.pandolar.top
-      avatar: https://ik.imagekit.io/zkeq/friends/f6.jpg
+      avatar: https://img.onmicrosoft.cn/friends/f6.jpg
       descr: 我有旨酒，以燕乐嘉宾之心   
     - name: 纳兰戏梦
       link: https://derm.top
-      avatar: https://ik.imagekit.io/zkeq/friends/f7.jpg
+      avatar: https://img.onmicrosoft.cn/friends/f7.jpg
       descr: 从未落时开始，于伊洛时结束。
     - name: xcsoft
       link: https://blog.xsot.cn
-      avatar: https://ik.imagekit.io/zkeq/friends/f8.jpg
+      avatar: https://img.onmicrosoft.cn/friends/f8.jpg
       descr: 原諒我這一生不放縱愛自由
     - name: 金桔猪
       link: https://blog.learnonly.xyz
-      avatar: https://ik.imagekit.io/zkeq/friends/f9.jpg
+      avatar: https://img.onmicrosoft.cn/friends/f9.jpg
       descr: 猪猪的作品集
     - name: kifuan
       link: https://kifuan.top
-      avatar: https://ik.imagekit.io/zkeq/friends/f10.png
+      avatar: https://img.onmicrosoft.cn/friends/f10.png
       descr: 又一个 B 站的 UP 主
 
 - class_name: 网站
@@ -51,57 +51,57 @@
       descr: 一个网盘资源分享网站，主要是学习资源、考证考级资源等
     - name: 前端图文教程
       link: https://web.qianguyihao.com
-      avatar: https://ik.imagekit.io/zkeq/friends/t1.ico
+      avatar: https://img.onmicrosoft.cn/friends/t1.ico
       descr: 大佬的前端教程.
     - name: Qwerty Learner
       link: https://qwerty.kaiyi.cool
-      avatar: https://ik.imagekit.io/zkeq/friends/t2.png
+      avatar: https://img.onmicrosoft.cn/friends/t2.png
       descr: 练习 Qwerty 键位的网站.
     - name: DevDocs
       link: https://devdocs.io
-      avatar: https://ik.imagekit.io/zkeq/friends/t3.png
+      avatar: https://img.onmicrosoft.cn/friends/t3.png
       descr: 编程手册速查
     - name: MyFreeMusic
       link: http://tool.liumingye.cn/music
-      avatar: https://ik.imagekit.io/zkeq/friends/t4.ico
+      avatar: https://img.onmicrosoft.cn/friends/t4.ico
       descr: 看名字就知道,听歌的
     - name: 数字图书馆
       link: https://31sanyi.neocities.org
-      avatar: https://ik.imagekit.io/zkeq/friends/t5.ico
+      avatar: https://img.onmicrosoft.cn/friends/t5.ico
       descr: 查论文的.
     - name: MDN Web Docs
       link: https://developer.mozilla.org/zh-CN/docs/Learn
-      avatar: https://ik.imagekit.io/zkeq/friends/t6.png
+      avatar: https://img.onmicrosoft.cn/friends/t6.png
       descr: MDN 权威前端手册
     - name: Java基础知识库
       link: https://javadocs.zkeq.xyz
-      avatar: https://ik.imagekit.io/zkeq/code.png
+      avatar: https://img.onmicrosoft.cn/code.png
       descr: 自己建的Java基础知识库.
     - name: 映画图床
       link: https://pic.onji.cn
-      avatar: https://ik.imagekit.io/zkeq/friends/t7.ico
+      avatar: https://img.onmicrosoft.cn/friends/t7.ico
       descr: 聚合图床
     - name: 探姬的知识库
       link: https://www.yuque.com/probius
-      avatar: https://ik.imagekit.io/zkeq/friends/f3.jpg
+      avatar: https://img.onmicrosoft.cn/friends/f3.jpg
       descr: 大佬的知识库,去逛逛?
     - name: HYPERBEAM
       link: https://hyperbeam.com
-      avatar: https://ik.imagekit.io/zkeq/friends/t8.png
+      avatar: https://img.onmicrosoft.cn/friends/t8.png
       descr: 多人在线一起看电影网站..[宝藏]
     - name: YesPlayMusic
       link: https://music.icodeq.com
-      avatar: https://ik.imagekit.io/zkeq/friends/t9.png
+      avatar: https://img.onmicrosoft.cn/friends/t9.png
       descr: 高颜值的第三方网易云播放器
     - name: 多功能图片处理
       link: https://pic.icodeq.com
-      avatar: https://ik.imagekit.io/zkeq/friends/t10.png
+      avatar: https://img.onmicrosoft.cn/friends/t10.png
       descr: 无需上传文件的多功能图片批量处理程序 v3.0
     - name: 公共静态播放器
       link: https://player.icodeq.com
-      avatar: https://ik.imagekit.io/zkeq/friends/t11.ico
+      avatar: https://img.onmicrosoft.cn/friends/t11.ico
       descr: 提供一个尽可能全面的播放器来用开发者测试和日常使用。
     - name: JSON 管理面板（开发中）
       link: https://json.icodeq.com
-      avatar: https://ik.imagekit.io/zkeq/friends/t12.svg
+      avatar: https://img.onmicrosoft.cn/friends/t12.svg
       descr: 提供一个方便管理的 JSON 管理后台供日常使用。

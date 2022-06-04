@@ -4,7 +4,7 @@ tags: [模块和包]
 description: 本节课主要学习了<br>包和模块的基础知识
 date: 2021-11-08 00:31:05
 categories: Python
-cover: https://ik.imagekit.io/zkeq/2021-11-8/1.png
+cover: https://img.onmicrosoft.cn/2021-11-8/1.png
 ---
 
 ### Python中的包

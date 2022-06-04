@@ -3,7 +3,7 @@ title: Python字符串的格式化
 date: 2021-09-27 19:35:19
 tags: [字符串]
 categories: Python
-cover: https://ik.imagekit.io/zkeq/2021-9-27/4.jpg
+cover: https://img.onmicrosoft.cn/2021-9-27/4.jpg
 description: 本节课初步认识了格式化<br>以及相关的使用方法.
 ---
 
@@ -24,7 +24,7 @@ description: 本节课初步认识了格式化<br>以及相关的使用方法.
 
 - 字符串格式化使用操作符 `%` 来实现
 
-  ![图片1](https://ik.imagekit.io/zkeq/2021-9-27/1.jpg)
+  ![图片1](https://img.onmicrosoft.cn/2021-9-27/1.jpg)
 
 - 字符串格式化函数 - `format`(官方比较推荐)
   - `string.format`函数用来格式化字符串

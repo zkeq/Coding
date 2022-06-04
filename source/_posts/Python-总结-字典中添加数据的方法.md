@@ -2,7 +2,7 @@
 title: 'Python 总结 : 字典中添加数据的方法'
 date: 2021-10-04 08:43:34
 tags: [字典]
-cover: https://ik.imagekit.io/zkeq/2021-10-3/5.png
+cover: https://img.onmicrosoft.cn/2021-10-3/5.png
 description: 本节课主要总结了:<br>字典中添加数据的方法<br>是上节课的总结记录......
 categories: Python
 ---
@@ -13,7 +13,7 @@ categories: Python
 
 #### 第一种：通过中括号的形式添加
 
-![1](https://ik.imagekit.io/zkeq/2021-10-3/1.jpg)
+![1](https://img.onmicrosoft.cn/2021-10-3/1.jpg)
 
 #### 第二种：字典的内置函数update
 
@@ -21,10 +21,10 @@ categories: Python
 
 - 在`update括号`中传入一个新的字典`key`和`value`就可以了。字典会自己去检测`key`是否存在，存在就会覆盖。
 
-![2](https://ik.imagekit.io/zkeq/2021-10-3/2.jpg)
+![2](https://img.onmicrosoft.cn/2021-10-3/2.jpg)
 
 #### 第三种：字典的setdefault()函数
 
 - Python 字典 `setdefault() 函数`和 `get()方法` 类似, 如果键不存在于字典中，将会添加键并将值设为默认值，如果字典中包含有给定键，则返回该键对应的值，否则返回为该键设置的值。
 
-![3](https://ik.imagekit.io/zkeq/2021-10-3/3.jpg)
+![3](https://img.onmicrosoft.cn/2021-10-3/3.jpg)

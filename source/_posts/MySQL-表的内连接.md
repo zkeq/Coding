@@ -4,7 +4,7 @@ tags: [MySQL]
 description: 本节课主要学习了<br> 数据操作语言：表连接查询（一）
 date: 2022-05-16 00:46:20
 categories: MySQL
-cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
+cover: https://img.onmicrosoft.cn/2022-04-19/02.png
 ---
 
 数据操作语言：表连接查询（一）
@@ -13,11 +13,11 @@ cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
 
 - 从多张表提取数据，必须指定关联的条件。如果不定义关联条件就会出现无条件连接，两张表的数据会交叉连接，产生 `笛卡尔积`。
 
-  ![1](https://ik.imagekit.io/zkeq/2022-05-16/1.png)
+  ![1](https://img.onmicrosoft.cn/2022-05-16/1.png)
 
 - 规定了连接条件的表连接语句，就不会出现笛卡尔积。
 
-  ![2](https://ik.imagekit.io/zkeq/2022-05-16/2.png)
+  ![2](https://img.onmicrosoft.cn/2022-05-16/2.png)
 
 ```SQL
 # 查询每名员工的部门信息
@@ -35,7 +35,7 @@ FROM t_emp e JOIN t_dept d ON e.deptno=d.deptno;
 
 - 内连接是最常见的一种表连接，用于查询多张关系表符合连接条件的记录。
 
-  ![3](https://ik.imagekit.io/zkeq/2022-05-16/3.png)
+  ![3](https://img.onmicrosoft.cn/2022-05-16/3.png)
 
 ### 内连接的多种语法形式
 
@@ -51,7 +51,7 @@ SELECT ...... FROM 表1 JOIN 表2 WHERE 连接条件;
 SELECT ...... FROM 表1, 表2 WHERE 连接条件;
 ```
 
-![4](https://ik.imagekit.io/zkeq/2022-05-16/4.png)
+![4](https://img.onmicrosoft.cn/2022-05-16/4.png)
 
 ```SQL
 # 查询每名员工的部门信息

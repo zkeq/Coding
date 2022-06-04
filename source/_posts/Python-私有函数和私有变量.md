@@ -4,7 +4,7 @@ date: 2021-10-28 22:23:54
 tags: [对象和异常]
 categories: Python
 description: 本节课主要学习了<br>私有函数和私有变量的基础知识
-cover: https://ik.imagekit.io/zkeq/2021-10-28/2.jpg
+cover: https://img.onmicrosoft.cn/2021-10-28/2.jpg
 ---
 
 ### 私有函数和私有变量

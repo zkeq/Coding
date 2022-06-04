@@ -4,7 +4,7 @@ tags: [MySQL]
 description: 本节课主要学习了<br>分组查询的应用
 date: 2022-04-27 01:07:45
 categories: MySQL
-cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
+cover: https://img.onmicrosoft.cn/2022-04-19/02.png
 ---
 
 数据操作语言：分组查询
@@ -75,7 +75,7 @@ FROM t_emp GROUP BY deptno WITH ROLLUP
 -- WITH ROLLUP 汇总
 ```
 
-![01](https://ik.imagekit.io/zkeq/2022-04-27/01.png)
+![01](https://img.onmicrosoft.cn/2022-04-27/01.png)
 
 ```SQL
 SELECT deptno,AVG(sal),SUM(sal),MAX(sal),MIN(sal),count(*)

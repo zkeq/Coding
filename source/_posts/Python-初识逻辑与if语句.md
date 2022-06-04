@@ -4,7 +4,7 @@ date: 2021-10-06 18:04:17
 tags: [逻辑,条件语句]
 description: 本节课主要学习了:<br>逻辑的概念与if语句<br>
 categories: Python
-cover: https://ik.imagekit.io/zkeq/2021-10-6/5.jpg
+cover: https://img.onmicrosoft.cn/2021-10-6/5.jpg
 ---
 
 ### 初识逻辑与`if`语句

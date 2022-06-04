@@ -4,12 +4,12 @@ date: 2021-10-20 23:15:16
 tags: [编程练习]
 categories: Python
 description: 通过运用前面所学的知识 <br> 完成学生信息库的案例
-cover: https://ik.imagekit.io/zkeq/2021-10-20/4.png
+cover: https://img.onmicrosoft.cn/2021-10-20/4.png
 ---
 
 ### [案例]实现学生信息库
 
-![3](https://ik.imagekit.io/zkeq/2021-10-20/3.png)
+![3](https://img.onmicrosoft.cn/2021-10-20/3.png)
 
 ```python
 # coding:utf-8

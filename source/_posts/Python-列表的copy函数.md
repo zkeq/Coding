@@ -4,7 +4,7 @@ date: 2021-10-01 22:41:45
 tags: [列表]
 categories: Python
 description: 本节课主要学习了:<br>列表的copy函数<br>以及浅拷贝与深拷贝的的定义
-cover: https://ik.imagekit.io/zkeq/2021-10-1/4.png
+cover: https://img.onmicrosoft.cn/2021-10-1/4.png
 ---
 
 ### 列表的copy函数
@@ -42,9 +42,9 @@ a  ->  [1,2,3]
 - 深拷贝内存空间不同，不共享数据；
 - 浅拷贝是对最外层的数据创建一个新的间来存储，而对内层的内存地址进行引用;
 
-![1](https://ik.imagekit.io/zkeq/2021-10-1/1.jpg)
+![1](https://img.onmicrosoft.cn/2021-10-1/1.jpg)
 
-![2](https://ik.imagekit.io/zkeq/2021-10-1/2.jpg)
+![2](https://img.onmicrosoft.cn/2021-10-1/2.jpg)
 
 #### 代码
 

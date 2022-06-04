@@ -4,7 +4,7 @@ tags: [MySQL]
 description: 本节课主要学习了<br> 数据库的基本查询
 date: 2022-04-25 19:56:54
 categories: MySQL 
-cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
+cover: https://img.onmicrosoft.cn/2022-04-19/02.png
 ---
 
 ### 数据操作语言：普通查询
@@ -66,7 +66,7 @@ FROM t_emp;
  SELECT ...... FROM ... LIMIT 起始位置, 偏移量;
 ```
 
-![1](https://ik.imagekit.io/zkeq/2022-04-25/01.png)
+![1](https://img.onmicrosoft.cn/2022-04-25/01.png)
 
 ```sql
 SELECT empno, ename FROM t_emp LIMIT 10, 5;

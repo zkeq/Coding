@@ -4,7 +4,7 @@ tags: [MySQL]
 description: 本节课主要学习了<br> 什么是 Mysql 语言 以及入门的知识。
 date: 2022-04-19 20:22:21
 categories: MySQL
-cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
+cover: https://img.onmicrosoft.cn/2022-04-19/02.png
 ---
 
 #### 什么是 `SQL` 语言？
@@ -35,17 +35,17 @@ cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
 
 #### 创建逻辑库
 
-![03](https://ik.imagekit.io/zkeq/2022-04-19/03.png)
+![03](https://img.onmicrosoft.cn/2022-04-19/03.png)
 
 #### 创建数据表
 
-![04](https://ik.imagekit.io/zkeq/2022-04-19/04.png)
+![04](https://img.onmicrosoft.cn/2022-04-19/04.png)
 
-![05](https://ik.imagekit.io/zkeq/2022-04-19/05.png)
+![05](https://img.onmicrosoft.cn/2022-04-19/05.png)
 
-![06](https://ik.imagekit.io/zkeq/2022-04-19/06.png)
+![06](https://img.onmicrosoft.cn/2022-04-19/06.png)
 
-![07](https://ik.imagekit.io/zkeq/2022-04-19/07.png)
+![07](https://img.onmicrosoft.cn/2022-04-19/07.png)
 
 ```SQL
 USE test;
@@ -63,7 +63,7 @@ INSERT INTO student VALUES(1, "李强", "男", "1995-05-15", "13312345678", NULL
 
 #### 数据库的其他操作
 
-![08](https://ik.imagekit.io/zkeq/2022-04-19/08.png)
+![08](https://img.onmicrosoft.cn/2022-04-19/08.png)
 
 ```SQL
 SHOW TABLES;

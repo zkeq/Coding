@@ -4,7 +4,7 @@ tags: [MySQL]
 description: 本节课主要学习了<br>数据库的 范式 和 字段约束
 date: 2022-04-19 23:44:45
 categories: MySQL
-cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
+cover: https://img.onmicrosoft.cn/2022-04-19/02.png
 ---
 
 ## 数据定义语言：字段约束
@@ -19,23 +19,23 @@ cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
 - 第一范式是数据库的基本要求，不满足这一点就不是关系数据库
 - 数据表的每一列都是不可分割的基本数据项，同一列中不能有多个值，也不能存在重复的属性。
 
-![14](https://ik.imagekit.io/zkeq/2022-04-19/14.png)
+![14](https://img.onmicrosoft.cn/2022-04-19/14.png)
 
 #### 第二范式：唯一性
 
 - 数据表中的每条记录必须是唯一的。为了实现区分，通常要为表上加一个列用来存储唯一标识，这个唯一属性列被称作主键列
 
-![15](https://ik.imagekit.io/zkeq/2022-04-19/15.png)
+![15](https://img.onmicrosoft.cn/2022-04-19/15.png)
 
 #### 第三范式：关联性
 
 - 每列都与主键有直接关系，不存在传递依赖
 
-![16](https://ik.imagekit.io/zkeq/2022-04-19/16.png)
+![16](https://img.onmicrosoft.cn/2022-04-19/16.png)
 
 - 依照第三范式，数据可以拆分保存到不同的数据表，依次保持关联
 
-![17](https://ik.imagekit.io/zkeq/2022-04-19/17.png)
+![17](https://img.onmicrosoft.cn/2022-04-19/17.png)
 
 ### 字段约束
 
@@ -104,7 +104,7 @@ CREATE TABLE t_teacher(
 
 - 外键约束用来保证关联数据的逻辑关系
 
-![18](https://ik.imagekit.io/zkeq/2022-04-19/18.png)
+![18](https://img.onmicrosoft.cn/2022-04-19/18.png)
 
 - 外键约束的定义是写在字表上的
 
@@ -154,5 +154,5 @@ CREATE TABLE t_emp(
 
 - 如果形成外键闭环，我们将无法删除任何一张表的记录
 
-![19](https://ik.imagekit.io/zkeq/2022-04-19/19.png)
+![19](https://img.onmicrosoft.cn/2022-04-19/19.png)
 

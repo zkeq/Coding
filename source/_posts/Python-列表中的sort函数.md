@@ -4,7 +4,7 @@ date: 2021-10-01 22:41:23
 tags: [列表]
 categories: Python
 description: 本节课主要学习了:<br>列表中的sort函数以及相关的注意事项
-cover: https://ik.imagekit.io/zkeq/2021-10-1/4.png
+cover: https://img.onmicrosoft.cn/2021-10-1/4.png
 ---
 
 ### 列表中的sort函数

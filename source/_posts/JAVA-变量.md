@@ -3,7 +3,7 @@ title: JAVA 变量
 date: 2021-09-23 21:46:31
 tags: [常量变量]
 categories: Java
-cover: https://ik.imagekit.io/zkeq/2021-9-23/1.jpg
+cover: https://img.onmicrosoft.cn/2021-9-23/1.jpg
 ---
 
 ### 变量

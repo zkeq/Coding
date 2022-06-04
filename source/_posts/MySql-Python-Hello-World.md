@@ -4,12 +4,12 @@ tags: [MySQL]
 description: 本节课主要学习了<br>如何通过 `Pymysql` 来完成 `Hello World` 操作。
 date: 2022-04-19 00:48:12
 categories: MySQL
-cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
+cover: https://img.onmicrosoft.cn/2022-04-19/02.png
 ---
 
 感谢 [@xcsoft](https://github.com/soxft) 大佬带小白入门.....
 
-![1](https://ik.imagekit.io/zkeq/2022-04-19/01.png)
+![1](https://img.onmicrosoft.cn/2022-04-19/01.png)
 
 ## 代码
 

@@ -4,7 +4,7 @@ date: 2021-09-29 22:54:20
 tags: [编程练习]
 categories: Python
 description: 通过运用前面所学的知识 <br> 完成自己的任务
-cover: https://ik.imagekit.io/zkeq/2021-9-29/4.png
+cover: https://img.onmicrosoft.cn/2021-9-29/4.png
 ---
 
 ### 编程练习(三)
@@ -14,7 +14,7 @@ cover: https://ik.imagekit.io/zkeq/2021-9-29/4.png
 > 学校组织学员买资料。班长把买资料的同学登记在一个表里。全班总共16人。根据任务描述、效果图及代码中的注释完成该习题
 > 效果图：
 >
-> ![3](https://ik.imagekit.io/zkeq/2021-9-29/3.png)
+> ![3](https://img.onmicrosoft.cn/2021-9-29/3.png)
 
 #### 任务
 

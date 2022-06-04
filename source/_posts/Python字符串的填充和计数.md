@@ -3,7 +3,7 @@ title: Python字符串的填充和计数
 date: 2021-09-20 14:41:58
 tags: [字符串]
 categories: Python
-cover: https://ik.imagekit.io/zkeq/2021-9-20/2.png
+cover: https://img.onmicrosoft.cn/2021-9-20/2.png
 description: 本节课主要学习了 <br> Zfill函数(补全函数) <br> Count函数(计数函数) 的用法
 ---
 

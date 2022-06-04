@@ -4,7 +4,7 @@ tags: [MySQL]
 description: 本节课主要学习了<br> 不同的数据类型（数字、字符串、日期类型）
 date: 2022-04-19 22:15:43
 categories: MySQL
-cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
+cover: https://img.onmicrosoft.cn/2022-04-19/02.png
 ---
 
 ### 数据定义语言：数据类型
@@ -28,7 +28,7 @@ cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
 
 - 十进制的浮点数无法在计算机中用二进制精确表达
 
-![09](https://ik.imagekit.io/zkeq/2022-04-19/09.png)
+![09](https://img.onmicrosoft.cn/2022-04-19/09.png)
 
 ```SQL
 CREATE TABLE temp(

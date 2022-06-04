@@ -92,11 +92,11 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: https://ik.imagekit.io/zkeq/code.svg
+favicon: https://img.onmicrosoft.cn/code.svg
 
 # Avatar (頭像)
 avatar:
-  img: https://ik.imagekit.io/zkeq/Avatar.jpg
+  img: https://img.onmicrosoft.cn/Avatar.jpg
   effect: false
 
 # Disable all banner image
@@ -109,11 +109,11 @@ index_img: https://bpi.icodeq.com/icodeq-INDEX-pic
 default_top_img: https://bing.icodeq.com
 
 # The banner image of archive page
-archive_img: https://ik.imagekit.io/zkeq/top2.jpg
+archive_img: https://img.onmicrosoft.cn/top2.jpg
 
 # If the banner of tag page not setting, it will show the top_img
 # note: tag page, not tags page (子標籤頁面的 top_img)
-tag_img: https://ik.imagekit.io/zkeq/top4.jpg
+tag_img: https://img.onmicrosoft.cn/top4.jpg
 
 # The banner image of tag page
 # format:
@@ -122,7 +122,7 @@ tag_per_img:
 
 # If the banner of category page not setting, it will show the top_img
 # note: category page, not categories page (子分類頁面的 top_img)
-category_img: https://ik.imagekit.io/zkeq/2021-12-31/3.jpg
+category_img: https://img.onmicrosoft.cn/2021-12-31/3.jpg
 
 # The banner image of category page
 # format:
@@ -150,7 +150,7 @@ error_img:
 error_404:
   enable: false
   subtitle: 'Page Not Found'
-  background: https://ik.imagekit.io/zkeq/404.png
+  background: https://img.onmicrosoft.cn/404.png
 
 post_meta:
   page: # Home Page
@@ -365,7 +365,7 @@ hpptalk:
   option:
   front_matter:
     title: 说说
-    top_img: https://ik.imagekit.io/zkeq/2022-03-30/1.png
+    top_img: https://img.onmicrosoft.cn/2022-03-30/1.png
 
 
 # valine
@@ -468,7 +468,7 @@ footer:
   owner:
     enable: true
     since: 2021
-  custom_text:   <a href="https://icp.gov.moe/?keyword=20202121" target="_blank">萌ICP备 20202121号</a><br><a href="https://travellings.link/" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://travellings.link/assets/logo.gif" alt="开往-友链接力" width="120"></a> <a href="https://evolution-host.com" target="_blank" rel="noopener" title="hosted by evolution-host"><img src="https://ik.imagekit.io/zkeq/host.png" alt="Hosted by evolution-host" width="120"></a> .
+  custom_text:   <a href="https://icp.gov.moe/?keyword=20202121" target="_blank">萌ICP备 20202121号</a><br><a href="https://travellings.link/" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://travellings.link/assets/logo.gif" alt="开往-友链接力" width="120"></a> <a href="https://evolution-host.com" target="_blank" rel="noopener" title="hosted by evolution-host"><img src="https://img.onmicrosoft.cn/host.png" alt="Hosted by evolution-host" width="120"></a> .
   copyright: true # Copyright of theme and framework
 
 # Analysis
@@ -564,7 +564,7 @@ tag_ui: # 留空或 index
 background:
 
 # Footer Background
-footer_bg: https://ik.imagekit.io/zkeq/p2671062609.jpg
+footer_bg: https://img.onmicrosoft.cn/p2671062609.jpg
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
 rightside-bottom:

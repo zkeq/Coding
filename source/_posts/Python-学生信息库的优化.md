@@ -4,12 +4,12 @@ description: 本节课主要利用所学知识<br>对前面所写的项目进行
 date: 2021-11-03 23:17:06
 tags: [对象和异常]
 categories: Python
-cover: https://ik.imagekit.io/zkeq/2021-10-28/2.jpg
+cover: https://img.onmicrosoft.cn/2021-10-28/2.jpg
 ---
 
 ### 学生信息库的优化
 
-![3](https://ik.imagekit.io/zkeq/2021-11-3/3.png)
+![3](https://img.onmicrosoft.cn/2021-11-3/3.png)
 
 ```python
 # coding:utf-8

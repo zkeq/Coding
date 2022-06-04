@@ -4,14 +4,14 @@ date: 2021-10-05 18:25:42
 tags: [编程练习]
 description: 通过运用前面所学的知识 <br> 完成一个乘法口诀表
 categories: Python
-cover: https://ik.imagekit.io/zkeq/2021-10-5/1.png
+cover: https://img.onmicrosoft.cn/2021-10-5/1.png
 ---
 
 ### 综合案例:九九乘法表
 
 ##### 图片版代码
 
-![1](https://ik.imagekit.io/zkeq/2021-10-5/carbon.png)
+![1](https://img.onmicrosoft.cn/2021-10-5/carbon.png)
 
 ##### 代码
 

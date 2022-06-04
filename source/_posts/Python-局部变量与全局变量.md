@@ -4,7 +4,7 @@ date: 2021-10-20 23:14:34
 tags: [函数]
 categories: Python
 description: 本节课主要学习了<br>局部变量与全局变量
-cover: https://ik.imagekit.io/zkeq/2021-10-20/4.png
+cover: https://img.onmicrosoft.cn/2021-10-20/4.png
 ---
 
 ### 局部变量与全局变量

@@ -4,7 +4,7 @@ tags: [MySQL]
 description: 本节课主要学习了<br>数据操作语言：条件查询（一）
 date: 2022-04-25 22:13:52
 categories: MySQL 
-cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
+cover: https://img.onmicrosoft.cn/2022-04-19/02.png
 ---
 
 #### 数据操作语言：条件查询（一）
@@ -19,7 +19,7 @@ cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
 SELECT ...... FROM ..... WHERE 条件 [AND | OR] 条件 ...... ; 
 ```
 
-![07](https://ik.imagekit.io/zkeq/2022-04-25/07.png)
+![07](https://img.onmicrosoft.cn/2022-04-25/07.png)
 
 ```SQL
 SELECT empno,ename,sal

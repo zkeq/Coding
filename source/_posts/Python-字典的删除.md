@@ -2,7 +2,7 @@
 title: Python 字典的删除
 date: 2021-10-04 08:44:49
 tags: [字典]
-cover: https://ik.imagekit.io/zkeq/2021-10-3/5.png
+cover: https://img.onmicrosoft.cn/2021-10-3/5.png
 description: 本节课主要学习了:<br>clear函数和pop函数<br>[]以及del在字典中的用法
 categories: Python
 ---

@@ -4,7 +4,7 @@ tags: [模块和包]
 description: 本节课主要学习了<br>Python中的sys模块
 date: 2021-11-10 01:20:24
 categories: Python
-cover: https://ik.imagekit.io/zkeq/2021-11-8/1.png
+cover: https://img.onmicrosoft.cn/2021-11-8/1.png
 ---
 
 ### Python中的sys模块

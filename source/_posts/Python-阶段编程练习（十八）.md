@@ -4,7 +4,7 @@ tags: [模块和包,编程练习]
 description: 利用前面所学知识<br>完成自己的任务。
 date: 2021-11-08 00:32:27
 categories: Python
-cover: https://ik.imagekit.io/zkeq/2021-11-8/1.png
+cover: https://img.onmicrosoft.cn/2021-11-8/1.png
 ---
 
 ### 编程练习

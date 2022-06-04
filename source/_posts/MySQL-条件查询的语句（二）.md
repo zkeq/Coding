@@ -4,7 +4,7 @@ tags: [MySQL]
 description: 本节课主要学习了<br> 数据操作语言：条件查询（二）
 date: 2022-04-25 23:34:58
 categories: MySQL 
-cover: https://ik.imagekit.io/zkeq/2022-04-19/02.png
+cover: https://img.onmicrosoft.cn/2022-04-19/02.png
 ---
 
 数据操作语言：条件查询（二）
@@ -34,7 +34,7 @@ WHERE NOT deptno IN(10,20) XOR sal>=2000;
 SELECT 3 & 7;
 ```
 
-![08](https://ik.imagekit.io/zkeq/2022-04-25/08.png)
+![08](https://img.onmicrosoft.cn/2022-04-25/08.png)
 
 ##### 按位运算符
 
@@ -51,7 +51,7 @@ WHERE 子句的注意事项
 
 - WHERE 子句中，条件执行的顺序是从左到右的。所以我们应该把索引条件，或者筛选掉记录最多的条件写在最左侧
 
-![10](https://ik.imagekit.io/zkeq/2022-04-25/10.png)
+![10](https://img.onmicrosoft.cn/2022-04-25/10.png)
 
 - 子句优先级
   - 索引条件最左边，再是筛选最多的，最后是普通条件

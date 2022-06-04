@@ -4,7 +4,7 @@ tags: [基础语法]
 description: 本节课主要学习了<br>hello world程序的解释
 date: 2021-12-20 00:23:53
 categories: cpp
-cover: https://ik.imagekit.io/zkeq/2021-12-19/4.png
+cover: https://img.onmicrosoft.cn/2021-12-19/4.png
 ---
 ### 代码
 
@@ -39,7 +39,7 @@ int main()   # C语言可以不写int,但c++一定要写
     -  `< >` 表示系统直接按系统指定的目录检索
     -  `""` 表示系统先在 `""` 指定的路径(没写路径代表当前路径)查找头文件，如果找不到，再按系统指定的目录检索
         `stdio.h`是在操作系统的系统目录下：
-        ![1](https://ik.imagekit.io/zkeq/2021-12-19/1.png)
+        ![1](https://img.onmicrosoft.cn/2021-12-19/1.png)
 3.  `main`函数
     - 一个完整的C语言程序，是由一个、且只能有一个main()函数(又称主函数，必须有)和若干个其他函数结合而成（可选）。
     -  main函数是C语言程序的入口，程序是从main函数开始执行。
