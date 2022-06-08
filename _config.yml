@@ -170,7 +170,7 @@ githubcalendar:
   mobile_minheight: 0px
   color: "['#e5e3ee', '#c7dcfb', '#87cfff', '#97b3ff', '#a59cff', '#b67dff', '#c85eff', '#d845ff', '#e52eff', '#f316ff', '#6a46e6']" #IU紫色
   api: https://api.icodeq.com/api/github
-  calendar_js: https://cdn.timeletters.cn/zkeq/hexo_githubcalendar.js
+  calendar_js: https://static.onmicrosoft.cn/zkeq/hexo_githubcalendar.js
   plus_style: ""
 
 aplayer:

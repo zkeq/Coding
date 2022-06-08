@@ -5,14 +5,13 @@ script.
     let nowTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? '!{themes.dark}' : '!{themes.light}'
 
     const config = Object.assign({
-      src: '!{theme.CDN.giscus}',
+      src: 'https://giscus.app/client.js',
       'data-repo': '!{repo}',
       'data-repo-id': '!{repo_id}',
       'data-category-id': '!{category_id}',
-      'data-mapping': 'og:title',
+      'data-mapping': 'pathname',
       'data-theme': nowTheme,
       'data-reactions-enabled': '1',
-      //- 'data-input-position': 'top',
       crossorigin: 'anonymous',
       async: true
     },!{JSON.stringify(option)})
