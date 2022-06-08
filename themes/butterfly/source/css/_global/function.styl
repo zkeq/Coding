@@ -131,7 +131,7 @@ if hexo-config('enter_transitions')
     &.open
       for i in 1 2 3 4
         > :nth-child({i})
-          animation: sidebarItem (i / 5) s
+          animation: sidebarItem (i / 5)s
 
 .scroll-down-effects
   animation: scroll-down-effect 1.5s infinite
@@ -156,21 +156,21 @@ if hexo-config('avatar.effect') == true
     top: 0
     opacity: .4
 
-// @keyframes header-effect
-//   0%
-//     opacity: 0
-//     transform: translateY(-50px)
-// 
-//   100%
-//     opacity: 1
-//     transform: translateY(0)
+@keyframes header-effect
+  0%
+    opacity: 0
+    transform: translateY(-50px)
 
-// @keyframes headerNoOpacity
-//   0%
-//     transform: translateY(-50px)
+  100%
+    opacity: 1
+    transform: translateY(0)
 
-//   100%
-//     transform: translateY(0)
+@keyframes headerNoOpacity
+  0%
+    transform: translateY(-50px)
+
+  100%
+    transform: translateY(0)
 
 @keyframes bottom-top
   0%
