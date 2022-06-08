@@ -11,12 +11,14 @@ script.
     }
 
     function initWaline () {
+      var path_tmp = window.location.pathname
+      var path = path_tmp.replace("index.html","")
       const waline = Waline.init(Object.assign({
         el: '#waline-wrap',
         serverURL: '!{serverURL}',
         pageview: !{lazyload ? false : pageview},
         dark: 'html[data-theme="dark"]',
-        path: window.location.pathname,
+        path: path,
         comment: !{lazyload ? false : count},
       }, !{JSON.stringify(option)}))
     }
