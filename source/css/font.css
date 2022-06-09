@@ -39,6 +39,10 @@ blockquote {
   color: #666 !important;
 }
 
-.vactions label {
+#waline-wrap > div > div.wl-comment > div.wl-panel > div.wl-footer > div.wl-actions > label {
+  display: none !important
+}
+
+#waline-wrap > div > div.wl-comment > div.wl-panel > div.wl-footer > div.wl-actions > button:nth-child(3){
   display: none !important
 }
