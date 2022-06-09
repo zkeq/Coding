@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app"></div>
+
+    <template id="code">
+        <div>
+            <h2>{{message}}</h2>
+            <h2>{{counter}}</h2>
+            <button @click='increment'>+1</button>
+            <button @click='decrement'>-1</button>   
+        </div>
+    </template>
+
+    <!-- 可以用div 但是会渲染两边. 原始的数据会被保留 -->
+    <!-- 也就是 code 里面的内容在解析的时候被显示一次 被 Vue 解析之后, 在 app 中又被渲染一次-->
+
+    <script src="../js/vue.js"></script>
+    <script>
+        Vue.createApp({
+            template: '#code', // # 号开头的时候, 就是id. 不是class 会执行 querySelector(#why)
+            data: function() { // vue 2 中 也可以传入一个对象(虽然官方推荐是一个函数) [vue3 中不能传入对象, 否则会报错(只能传函数 返回一个对象)]
+                return { 
+                    counter: 100 ,
+                    message: "hello Vue.js!"
+                    // data 中的数据会被 vue 中劫持
+                }
+            },
+            methods: { // 这里不可用箭头函数, 因为箭头函数中的 this 指向的是父组件, 而不是当前组件
+                increment() { //语法糖 写法
+                    this.counter++;
+                    // this 这种就是指向 vue 实例
+                    // 可以修改或者获取 , 可以直接访问
+                    console.log("increment")
+                    console.log(this.counter)
+                },
+                decrement: function() { //ES5 写法
+                    this.counter--;
+                    console.log("decrement")
+                    console.log(this.counter)
+                }
+            }
+        }).mount("#app")
+</script>
+</body>
+</html>
