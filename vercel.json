@@ -1,0 +1,28 @@
+{
+    "rewrites": [
+        {
+            "source": "/feed",
+            "destination": "/feed.xml"
+        },
+        {
+            "source": "/feed.xml",
+            "destination": "/feed.xml"
+        },
+        {
+            "source": "/atom",
+            "destination": "/feed.xml"
+        },
+        {
+            "source": "/atom.xml",
+            "destination": "/feed.xml"
+        },
+        {
+            "source": "/rss",
+            "destination": "/feed.xml"
+        },
+        {
+            "source": "/rss.xml",
+            "destination": "/feed.xml"
+        }
+    ]
+}
