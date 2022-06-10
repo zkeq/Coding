@@ -46,3 +46,7 @@ blockquote {
 #waline-wrap > div > div.wl-comment > div.wl-panel > div.wl-footer > div.wl-actions > button:nth-child(3){
   display: none !important
 }
+
+.layout > .recent-posts .pagination > *:not(.space) {
+  border-radius: 12px;
+}
