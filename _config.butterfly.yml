@@ -11,8 +11,11 @@ menu:
     公共服务 ||  fa-solid fa-bolt-auto:
       YesPlayMusic: https://music.icodeq.com/ || fa-solid fa-mp3-player
       Pic Tools: https://pic.icodeq.com/ || fa-solid fa-image
-      自建不蒜子: https://busuanzi.icodeq.com/ || fa-solid fa-calculator
       NCM API: https://ncm.icodeq.com/ || fa-solid fa-music
+      自建不蒜子: https://busuanzi.icodeq.com/ || fa-solid fa-calculator
+      提问的智慧: https://ask.icodeq.com/ || fa-solid fa-circle-question
+      公共静态播放器: https://player.icodeq.com || fa-solid fa-tv-music
+      Java基础知识库: https://javadocs.zkeq.xyz || fa-brands fa-java
     Tools || fas fa-screwdriver-wrench:
       Learnonly导航 : https://www.learnonly.xyz/ || fas fa-home
       说说: /talk/ || fas fa-comment-alt
