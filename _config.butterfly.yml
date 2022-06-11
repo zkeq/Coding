@@ -8,6 +8,11 @@
 
 menu:
     Evolution Host: https://evolution-host.com || fas fa-rocket-launch
+    公共服务 ||  fa-solid fa-bolt-auto:
+      YesPlayMusic: https://music.icodeq.com/ || fa-solid fa-mp3-player
+      Pic Tools: https://pic.icodeq.com/ || fa-solid fa-image
+      自建不蒜子: https://busuanzi.icodeq.com/ || fa-solid fa-calculator
+      NCM API: https://ncm.icodeq.com/ || fa-solid fa-music
     Tools || fas fa-screwdriver-wrench:
       Learnonly导航 : https://www.learnonly.xyz/ || fas fa-home
       说说: /talk/ || fas fa-comment-alt
