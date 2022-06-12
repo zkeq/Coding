@@ -28,7 +28,7 @@ menu:
     Friends || fas fa-users:
       友情链接: /link/ || fas fa-heart
       朋友圈: /fcircle/ || fas fa-user-group
-    Travelling: https://travellings.link || fas fa-subway
+    开往: https://travellings.link || fas fa-subway
     CopyRight: /about/ || fas fa-archive
   # Home: / || fas fa-home
   # Archives: /archives/ || fas fa-archive
