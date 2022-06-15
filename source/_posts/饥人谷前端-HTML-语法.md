@@ -5,6 +5,10 @@ description: 本节课主要学习了<br>基础的HTML知识以及学习的框�
 date: 2022-06-15 14:34:37
 categories: 饥人谷
 cover: https://img.onmicrosoft.cn/2022-06-15/5.png
+copyright_author: 杭州饥人谷教育科技有限公司
+copyright_author_href: https://jirengu.com/
+copyright_url: https://xiedaimala.com
+copyright_info: 资料来源：饥人谷。任何组织或个人未经许可，禁止转载
 ---
 
 #### 如何制作出网页

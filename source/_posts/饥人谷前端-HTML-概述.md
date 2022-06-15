@@ -5,6 +5,10 @@ description: 本节课主要学习了<br> HTML 的历史和相关的常识
 date: 2022-06-15 14:02:02
 categories: 饥人谷
 cover: https://img.onmicrosoft.cn/2022-06-15/5.png
+copyright_author: 杭州饥人谷教育科技有限公司
+copyright_author_href: https://jirengu.com/
+copyright_url: https://xiedaimala.com
+copyright_info: 资料来源：饥人谷。任何组织或个人未经许可，禁止转载
 ---
 
 从入门到工作： HTML 全解
