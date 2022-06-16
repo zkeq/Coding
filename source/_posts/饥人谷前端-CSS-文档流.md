@@ -119,4 +119,3 @@ copyright_info: 资料来源：饥人谷。任何组织或个人未经许可，�
 - 不要用上面属性不就不脱离了
 
 [相关代码](http://js.jirengu.com/daviv/1/edit)
-<a class="jsbin-embed" href="http://js.jirengu.com/daviv/1/embed">JS Bin</a><script src="http://js.jirengu.com/js/embed.js"></script>
