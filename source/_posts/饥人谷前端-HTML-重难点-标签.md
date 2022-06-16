@@ -373,6 +373,7 @@ cover: https://img.onmicrosoft.cn/2022-06-15/5.png
 
 - 类型 type: `button `/ `checkbox `/ `email `/ `file `/ `hidden `/ `number `/ `password `/ `radio `/ `search `/ `submit `/ `tel `/ `text`
 - 其他 `name `/ `autofocus `/ `checked `/ `disabled `/ `maxlength `/ `pattern `/ `value `/ `placeholder`
+- 只要出现 disabled / ~ 属性 就不可输入，无论赋值是什么值都不可输入
 
 #### 事件
 
