@@ -5,6 +5,10 @@ description: 本节课主要学习了<br>HTML 重点标签
 date: 2022-06-15 19:54:44
 categories: 饥人谷
 cover: https://img.onmicrosoft.cn/2022-06-15/5.png
+copyright_author: 杭州饥人谷教育科技有限公司
+copyright_author_href: https://jirengu.com/
+copyright_url: https://xiedaimala.com
+copyright_info: 资料来源：饥人谷。任何组织或个人未经许可，禁止转载
 ---
 
 ### 英语小课堂
@@ -336,6 +340,9 @@ cover: https://img.onmicrosoft.cn/2022-06-15/5.png
 
 - `onsubmit`
   - 点击提交会触发
+
+- button 是将 当前form表单里面的所有input提交
+- 清除的也是一样原理
 
 ```html
 <!DOCTYPE html>
