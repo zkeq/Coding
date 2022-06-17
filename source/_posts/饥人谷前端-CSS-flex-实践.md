@@ -15,11 +15,13 @@ copyright_info: 资料来源：饥人谷。任何组织或个人未经许可，�
 
 ##### 不同布局
 
-- 用 `flex` 做两栏布局
-- 用 `flex` 做三栏布局
-- 用 `flex` 做四栏布局
-- 用 `flex` 做平均布局
-- 用 `flex` 组合使用，做更复杂的布局
+- 用 `flex` 做两栏布局 [DONE]
+- 用 `flex` 做三栏布局 [DONE]
+- 用 `flex` 做四栏布局 [DONE]
+- 用 `flex` 做平均布局 [DONE]
+- 用 `flex` 组合使用，做更复杂的布局 [DONE]
+- 
+  https://github.com/zkeq/jirengu_learn_03/blob/flex/daohang.css
 
 ##### 经验
 
