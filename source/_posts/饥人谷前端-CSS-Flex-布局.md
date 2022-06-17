@@ -31,7 +31,7 @@ copyright_info: 资料来源：饥人谷。任何组织或个人未经许可，�
 
 ```CSS
 .container {
-    flex-direction: row | row-reverse | column | colum-reverse;
+    flex-direction: row | row-reverse | column | column-reverse;
     /* 从左到右 从右到做 从上往下 从下往上 */
     /*  默认是 row  */
 }
