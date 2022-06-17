@@ -6,3 +6,4 @@
 db.json
 package-lock.json
 *.iml
+*.xml
