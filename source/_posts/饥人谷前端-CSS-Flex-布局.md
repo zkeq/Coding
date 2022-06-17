@@ -136,6 +136,10 @@ align-self 定制 align-items
 >
 > `flex: auto` 为将原本的宽度设置为首个属性
 
+> `justify-content: space-between;`
+> `margin-left: auto;`
+> 这两种方法都可以让元素靠右
+
 
 - 把教程过一遍，然后忘掉
 - 完成 Flex 青蛙游戏
