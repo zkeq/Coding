@@ -11,15 +11,15 @@ module.exports = {
       },
       {
         urlPattern: /^https:\/\/npm\.elemecdn\.com\/.*/,
-        handler: "cacheFirst"
+        handler: "CacheFirst"
       },
       {
         urlPattern: /^https:\/\/cdn\.plyr\.io\/.*/,
-        handler: "cacheFirst"
+        handler: "CacheFirst"
       },      
       {
         urlPattern: /^https:\/\/img\.onmicrosoft\.cn\/.*/,
-        handler: "cacheFirst"
+        handler: "CacheFirst"
       },
       {
         urlPattern: /.*\.html/,
@@ -27,7 +27,7 @@ module.exports = {
       },
       {
         urlPattern: /.*\.(?:png|jpg|jpeg|svg|gif)/,
-        handler: 'cacheFirst', // 缓存优先
+        handler: 'CacheFirst', // 缓存优先
       },
       {
         urlPattern: /.*\.css/,
