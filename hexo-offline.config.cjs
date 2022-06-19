@@ -3,11 +3,11 @@ module.exports = {
     runtimeCaching: [
       {
         urlPattern: /^https:\/\/jsd\.onmicrosoft\.cn\/.*/,
-        handler: "CacheFirst"
+        handler: "StaleWhileRevalidate"
       },
       {
         urlPattern: /^https:\/\/static\.onmicrosoft\.cn\/.*/,
-        handler: "CacheFirst"
+        handler: "StaleWhileRevalidate"
       },
       {
         urlPattern: /^https:\/\/npm\.elemecdn\.com\/.*/,
