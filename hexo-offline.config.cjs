@@ -2,8 +2,12 @@
 module.exports = {
     runtimeCaching: [
       {
-        urlPattern: /^https:\/\/s-gz-2220-icodeq\.oss\.dogecdn\.com\/.*/,
-        handler: "CacheFirst"
+        urlPattern: /^https:\/\/jsd\.onmicrosoft\.cn\/.*/,
+        handler: "StaleWhileRevalidate"
+      },
+      {
+        urlPattern: /^https:\/\/static\.onmicrosoft\.cn\/.*/,
+        handler: "StaleWhileRevalidate"
       },
       {
         urlPattern: /^https:\/\/npm\.elemecdn\.com\/.*/,
@@ -14,7 +18,7 @@ module.exports = {
         handler: "CacheFirst"
       },      
       {
-        urlPattern: /^https:\/\/ik\.imagekit\.io\/.*/,
+        urlPattern: /^https:\/\/img\.onmicrosoft\.cn\/.*/,
         handler: "CacheFirst"
       },
       {
