@@ -364,7 +364,7 @@ artitalk:
 # see https://hexoplusplus.js.org
 hpptalk:
   enable: true 
-  domain: vercel.admin.icodeq.com
+  domain: admin.icodeq.com
   path: talk
   limit: 12
   start: 0
