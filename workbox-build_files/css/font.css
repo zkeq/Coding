@@ -1,0 +1,52 @@
+@font-face{
+    font-family: 'HarmonyOS';
+    src: local('HarmonyOS'),
+    url('https://npm.elemecdn.com/zkeq-font@1.0.0/HarmonyOS.ttf') format('truetype');
+    font-display: swap;
+    font-weight: bold;
+    font-style: normal;
+  }
+
+@font-face{
+  font-family: 'Hack';
+  src: local('Hack'),
+  url('https://static.onmicrosoft.cn/zkeq/hack-regular-webfont.woff2') format('truetype');
+  font-display: swap;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.search-result {
+  margin: 0 0 8px;
+}
+
+/* 鼠标样式 */
+body {
+  cursor: url("https://static.onmicrosoft.cn/zkeq/cursor/normal.cur"), default;
+}
+a,
+img,
+button {
+  cursor: url("https://static.onmicrosoft.cn/zkeq/cursor/link.cur"), default !important;
+}
+
+#page-header {
+  background-color: #fff !important;
+}
+
+blockquote {
+  background-color: rgba(73,177,245,0.05) !important;
+  color: #666 !important;
+}
+
+#waline-wrap > div > div.wl-comment > div.wl-panel > div.wl-footer > div.wl-actions > label {
+  display: none !important
+}
+
+#waline-wrap > div > div.wl-comment > div.wl-panel > div.wl-footer > div.wl-actions > button:nth-child(3){
+  display: none !important
+}
+
+.layout > .recent-posts .pagination > *:not(.space) {
+  border-radius: 12px;
+}
