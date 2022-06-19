@@ -3,23 +3,23 @@ module.exports = {
     runtimeCaching: [
       {
         urlPattern: /^https:\/\/jsd\.onmicrosoft\.cn\/.*/,
-        handler: "StaleWhileRevalidate"
+        handler: "CacheFirst"
       },
       {
         urlPattern: /^https:\/\/static\.onmicrosoft\.cn\/.*/,
-        handler: "StaleWhileRevalidate"
+        handler: "CacheFirst"
       },
       {
         urlPattern: /^https:\/\/npm\.elemecdn\.com\/.*/,
-        handler: "StaleWhileRevalidate"
+        handler: "CacheFirst"
       },
       {
         urlPattern: /^https:\/\/cdn\.plyr\.io\/.*/,
-        handler: "StaleWhileRevalidate"
+        handler: "CacheFirst"
       },      
       {
         urlPattern: /^https:\/\/img\.onmicrosoft\.cn\/.*/,
-        handler: "StaleWhileRevalidate"
+        handler: "CacheFirst"
       },
       {
         urlPattern: /.*\.html/,
@@ -27,7 +27,7 @@ module.exports = {
       },
       {
         urlPattern: /.*\.(?:png|jpg|jpeg|svg|gif)/,
-        handler: 'StaleWhileRevalidate', // 缓存优先
+        handler: 'CacheFirst', // 缓存优先
       },
       {
         urlPattern: /.*\.css/,
