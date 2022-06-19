@@ -25,19 +25,19 @@ module.exports = {
       },
       {
         urlPattern: /.*\.html/,
-        handler: 'networkFirst'
+        handler: 'NetworkFirst'
       },
       {
         urlPattern: /.*\.(?:png|jpg|jpeg|svg|gif)/,
-        handler: 'cacheFirst', // 缓存优先
+        handler: 'CacheFirst', // 缓存优先
       },
       {
         urlPattern: /.*\.css/,
-        handler: 'staleWhileRevalidate', // 缓存优先同时后台更新
+        handler: 'StaleWhileRevalidate', // 缓存优先同时后台更新
       },
       {
         urlPattern: /.*\.js/,
-        handler: 'staleWhileRevalidate', // 缓存优先同时后台更新
+        handler: 'StaleWhileRevalidate', // 缓存优先同时后台更新
       }
     ]
   }
