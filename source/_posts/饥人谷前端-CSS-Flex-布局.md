@@ -14,9 +14,13 @@ copyright_info: 资料来源：饥人谷。任何组织或个人未经许可，�
 
 #### 教程（来自 CSS Tricks）
 
+![1](https://img.onmicrosoft.cn/2022-06-19/1.png)
+
 ##### 容器 container 的样式
 
 让一个元素变成 flex 容器
+
+![2](https://img.onmicrosoft.cn/2022-06-19/2.png)
 
 ```CSS
 .container {
@@ -29,6 +33,8 @@ copyright_info: 资料来源：饥人谷。任何组织或个人未经许可，�
 
 改变 items 流动方向（主轴）
 
+![3](https://img.onmicrosoft.cn/2022-06-19/3.png)
+
 ```CSS
 .container {
     flex-direction: row | row-reverse | column | column-reverse;
@@ -38,6 +44,8 @@ copyright_info: 资料来源：饥人谷。任何组织或个人未经许可，�
 ```
 
 改变折行
+
+![4](https://img.onmicrosoft.cn/2022-06-19/4.png)
 
 ```CSS
 .container {
@@ -49,6 +57,8 @@ copyright_info: 资料来源：饥人谷。任何组织或个人未经许可，�
 
 主轴对齐方式
 
+![5](https://img.onmicrosoft.cn/2022-06-19/5.png)
+
 默认主轴是横轴
 除非你改变了 flex-direction 方向
 ```CSS
@@ -59,6 +69,8 @@ copyright_info: 资料来源：饥人谷。任何组织或个人未经许可，�
 ```
 
 次轴对齐
+
+![6](https://img.onmicrosoft.cn/2022-06-19/6.png)
 
 默认次轴是横轴
 
@@ -73,6 +85,8 @@ copyright_info: 资料来源：饥人谷。任何组织或个人未经许可，�
 多行内容
 如何分布
 
+![7](https://img.onmicrosoft.cn/2022-06-19/7.png)
+
 ```CSS
 .container {
     align-content: flex-start | flex-end | center | stretch | space-between | space-around;
@@ -84,11 +98,15 @@ copyright_info: 资料来源：饥人谷。任何组织或个人未经许可，�
 
 item 上加 order
 
+![8](https://img.onmicrosoft.cn/2022-06-19/8.png)
+
 - 数值越大 表示优先级越低
 - 如果不写的话 默认的 `order` 为 `0`
 - 从小到大排列 可以是负数
 
 item 上面加 flex-grow
+
+![9](https://img.onmicrosoft.cn/2022-06-19/9.png)
 
 - 控制自己如何长胖
 - 如果是 `0` 的话就是不长胖
@@ -113,6 +131,8 @@ flex: flex-grow flex-shrink flex-basis
   - 详情见 MDN
 
 align-self 定制 align-items
+
+![10](https://img.onmicrosoft.cn/2022-06-19/10.png)
 
 - 针对单个子元素 可以和其他元素不一样
 

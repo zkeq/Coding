@@ -20,6 +20,8 @@ Grid 也分 container 和 items
 
 成为 container
 
+![11](https://img.onmicrosoft.cn/2022-06-19/11.png)
+
 ```CSS
 .container {
     display: grid | inline-grid;
@@ -27,13 +29,38 @@ Grid 也分 container 和 items
 ```
 
 行和列
+![12](https://img.onmicrosoft.cn/2022-06-19/12.png)
 ```CSS
 .container {
     grid-template-columns: 40px 50px auto 50px 40px;
     grid-template-rows: 25% 100px auto;
 }
 ```
+
+给每条线起名字，方便后续选择
+
+![13](https://img.onmicrosoft.cn/2022-06-19/13.png)
+![14](https://img.onmicrosoft.cn/2022-06-19/14.png)
+
+起名有啥用
+
+- item 可以设置范围
+
+![15](https://img.onmicrosoft.cn/2022-06-19/15.png)
+
+```CSS
+
+.item-a {
+grid-column-start: 2;
+grid-column-end: five;
+grid-row-start: row1-start;
+grid-row-end: 3;
+}
+```
+
 fr - free space 巧记：份
+
+![16](https://img.onmicrosoft.cn/2022-06-19/16.png)
 
 ```css
 .container {
@@ -48,6 +75,9 @@ fr - free space 巧记：份
 ```
 
 分区 grid-template-areas 
+
+![17](https://img.onmicrosoft.cn/2022-06-19/17.png)
+![18](https://img.onmicrosoft.cn/2022-06-19/18.png)
 
 ```css
 .item-a {
@@ -75,6 +105,8 @@ fr - free space 巧记：份
 
 空隙 gap
 
+![19](https://img.onmicrosoft.cn/2022-06-19/19.png)
+
 ```css
 .container {
     grid-template-columns: 100px 50px 100px;
@@ -95,4 +127,5 @@ fr - free space 巧记：份
 
 http://js.jirengu.com/tijuk/edit
 
-http://js.jirengu.com/kabok/edit?html,css,output
+淘宝电商页面布局模仿
+- http://js.jirengu.com/kabok/edit?html,css,output
