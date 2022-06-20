@@ -930,8 +930,8 @@ inject:
       - <link rel="stylesheet" href="https://static.onmicrosoft.cn/zkeq/docsearch.css"/></pre></li>
       - <link rel="preconnect" href="https://KI6VRR8JEE-dsn.algolia.net" crossorigin />
       - <script src="https://static.onmicrosoft.cn/zkeq/docsearch.js"></script>
-      - <script async src="https://cdn.plyr.io/3.6.12/plyr.js"></script>
-      - <link rel="stylesheet" href="https://cdn.plyr.io/3.6.12/plyr.css" />
+      - <script async src="https://plyr.onmicrosoft.cn/3.6.12/plyr.js"></script>
+      - <link rel="stylesheet" href="https://plyr.onmicrosoft.cn/3.6.12/plyr.css" />
       - <script src="https://static.onmicrosoft.cn/zkeq/spacing.js" defer></script>
       # - <link rel="stylesheet" href="/css/black-white.css">
   bottom:
