@@ -55,7 +55,7 @@ IP 有了，还需要什么？
 
 域名 和 IP 是怎么对应起来的
 - 通过 DNS
-  ![9](https://img.onmicrosoft.cn/2022-06-20/9.png)
+![9](https://img.onmicrosoft.cn/2022-06-20/9.png)
 
 ![10](https://img.onmicrosoft.cn/2022-06-20/10.png)
 
@@ -89,3 +89,7 @@ HTTP（协议）
   - 真正结束
 - HTTP
   - 规定请求的格式是什么，响应的格式是什么
+
+> nslookup 命令用于查询DNS的记录，查看域名解析是否正常，在网络故障的时候用来诊断网络问题。能够看到域名对应了几个IP。
+
+- `nslookup http://baidu.com`
