@@ -211,3 +211,99 @@ Google 团队写的文章(右上角中文)
 #### 心得
 - CSS 需要你有想象力，而不是逻辑
 - CSS 给出的属性都很简单，但是可以组合得很复杂
+
+### transition (过渡)
+#### 作用
+- 补充中间帧
+
+#### 语法
+- `transition`: 属性名 时长 过渡方式 延迟
+  - 属性名就是上下左右
+  - 时长可以写秒 也可以写毫秒
+  - 过渡方式有很多种，详情见 MDN 上面的数学曲线
+  - 延迟就是停多长时间再执行，也可以 ms
+- `transition`: `left 200ms linear`
+- 可以用逗号分隔两个不同的属性
+- `transition`: `left 200ms, top 400ms`
+- 可以用 `all` 代表所有属性
+- `transition`: `all 200ms`
+- 过渡方式有: `linear` | `ease` | `ease-in` | `ease-out` | `ease-in-out` | `cubic-bezier` | `step-start` | `step-end` | `steps`, [具体含义](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition-timing-function) 要靠数学知识
+  - https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function
+
+#### 注意：并不是所有属性都能过渡
+- `display: none => block` 没法过渡
+- 一般改成 `visibility: hidden => visible` （不要问为什么）
+  - `display` 和 `visibility` 的区别自己搜一下
+  - `opacity` 可以改变透明度过渡，但是一般在动画完成之后 `remove`
+  - `ontransitionend` 
+- `background` 颜色可以过渡吗？
+  - 任何颜色都可以
+- `opacity` 透明度可以过渡吗？
+  - 可以，只要有规律就可以过渡的
+
+#### 过渡必须要有起始
+- 一般只有一次动画，或者两次
+- 比如 `hover` 和非 `hover` 状态的过渡
+
+#### 除了起始，还可以有中间点
+##### 两种方法
+1. 使用两字 `transform`
+   - `.a === transform ===> .b`
+   - `.b === transform ===> .c`
+   - 如何知道到了中间点呢？
+   - 用 `setTimeout` 或者监听 `transitionend` 事件
+   - 示例：http://js.jirengu.com/buwah/1/edit?html,css,js,output
+2. 使用 `animation`
+   - 声明关键帧
+   - 添加动画
+   - 示例：http://js.jirengu.com/peran/1/edit?html,css,output
+##### animation
+```css
+#demo.start{
+  animation: xxx 1.5s;
+}
+
+
+@keyframes xxx {
+  0% {
+    transform: none;
+  }
+  66.66%{
+    transform: translateX(200px);
+  }
+  100%{
+    transform: translateX(200px) translateY(100px);
+  }
+}
+```
+- 如何让动画停在最后一帧
+  - 搜索 css animation stop at end
+  - [网友给出的答案](https://stackoverflow.com/a/12991203/1262580) 是加个 `forwards`
+  - JSBin 演示： http://js.jirengu.com/lodoy/1/edit?html,css,output
+
+##### `@keyframes` 完整语法
+
+标准写法
+- 搜搜 `keyframes MDN` 讲的很清楚+
+  - https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+- 一种写法是 from to
+- 另一种写法是百分数
+
+![1](https://img.onmicrosoft.cn/2022-06-20/1.png)
+
+##### animation
+
+- https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+
+缩写语法
+- `animation: 时长 | 过渡方式 | 延迟 | 次数 | 方向 |填充模式 |　是否暂停　｜　动画名;`
+- 时长：`1s` 或者 `1000ms`
+- 过渡方式：跟 `transition` 取值一样，如 `linear`
+- 次数：`3` 或者 `2.4` 或者 `infinite`
+  - `infinite` 无线的
+- 方向： `reverse` | `alternate` | `alternate-reverse`
+  - 反向 交替 交替反向
+- 填充模式：`none` | `forwards` | `backwards` | `both`
+- 是否暂停：`paused` | `running`
+  - http://js.jirengu.com/peran/2/edit?html,css,output
+- 以上所有属性都有对应的单独属性
