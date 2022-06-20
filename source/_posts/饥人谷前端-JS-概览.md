@@ -109,7 +109,7 @@ copyright_info: 资料来源：饥人谷。任何组织或个人未经许可，�
 
 ### 肇始于网景
 
-1993年，[国家超级电脑应用中心](https://zh.wikipedia.org/wiki/国家超级电脑应用中心)（NCSA）发表了[NCSA Mosaic](https://zh.wikipedia.org/wiki/NCSA_Mosaic)，这是最早流行的图形接口网页浏览器，它在[万维网](https://zh.wikipedia.org/wiki/全球資訊網)的普及上发挥了重要作用[[11\]](https://zh.wikipedia.org/wiki/JavaScript#cite_note-11)。1994年，Mosaic的主要开发人员随即创立了[Netscape](https://zh.wikipedia.org/wiki/Netscape)公司，并雇用了许多原来的NCSA Mosaic开发者用来开发[Netscape Navigator](https://zh.wikipedia.org/wiki/Netscape_Navigator)，该公司的目标是取代NCSA Mosaic成为世界第一的网页浏览器。在四个月内，已经占据了四分之三的浏览器市场，并成为1990年代互联网的主要浏览器[[12\]](https://zh.wikipedia.org/wiki/JavaScript#cite_note-12)。网景预见到网络需要变得更动态。公司的创始人[马克·安德森](https://zh.wikipedia.org/wiki/马克·安德森)认为[HTML](https://zh.wikipedia.org/wiki/HTML)需要一种[胶水语言](https://zh.wikipedia.org/wiki/胶水语言)，让网页设计师和兼职程序员可以很容易地使用它来组装图片和插件之类的组件，且代码可以直接编写在网页标记中。
+1993年，[国家超级电脑应用中心](https://zh.wikipedia.org/wiki/国家超级电脑应用中心)（NCSA）发表了[NCSA Mosaic](https://zh.wikipedia.org/wiki/NCSA_Mosaic)，这是最早流行的图形接口网页浏览器，它在[万维网](https://zh.wikipedia.org/wiki/全球資訊網)的普及上发挥了重要作用。1994年，Mosaic的主要开发人员随即创立了[Netscape](https://zh.wikipedia.org/wiki/Netscape)公司，并雇用了许多原来的NCSA Mosaic开发者用来开发[Netscape Navigator](https://zh.wikipedia.org/wiki/Netscape_Navigator)，该公司的目标是取代NCSA Mosaic成为世界第一的网页浏览器。在四个月内，已经占据了四分之三的浏览器市场，并成为1990年代互联网的主要浏览器。网景预见到网络需要变得更动态。公司的创始人[马克·安德森](https://zh.wikipedia.org/wiki/马克·安德森)认为[HTML](https://zh.wikipedia.org/wiki/HTML)需要一种[胶水语言](https://zh.wikipedia.org/wiki/胶水语言)，让网页设计师和兼职程序员可以很容易地使用它来组装图片和插件之类的组件，且代码可以直接编写在网页标记中。
 
 1995年，网景招募了[布兰登·艾克](https://zh.wikipedia.org/wiki/布蘭登·艾克)，目标是把[Scheme](https://zh.wikipedia.org/wiki/Scheme)语言嵌入到Netscape Navigator浏览器当中。但更早之前，网景已经跟[昇阳](https://zh.wikipedia.org/wiki/昇陽電腦)合作在Netscape Navigator中支持[Java](https://zh.wikipedia.org/wiki/Java)，这时网景内部产生激烈的争论。后来网景决定发明一种与Java搭配使用的辅助脚本语言并且语法上有些类似，这个决策导致排除了采用现有的语言，例如[Perl](https://zh.wikipedia.org/wiki/Perl)、[Python](https://zh.wikipedia.org/wiki/Python)、[Tcl](https://zh.wikipedia.org/wiki/Tcl)或Scheme。为了在其他竞争提案中捍卫JavaScript这个想法，公司需要有一个可以运作的原型。艾克在1995年5月仅花了十天时间就把原型设计出来了。
 
@@ -233,15 +233,18 @@ JavaScript中函数的参数长度是可变的，在函数内部可以通过`arg
 >
 > http://www.ruanyifeng.com/blog/2011/06/10_design_defects_in_javascript.html
 
-**1. 不适合开发大型程序**
+
+## Javascript的10个设计缺陷
+
+### 1. 不适合开发大型程序
 
 Javascript没有名称空间（namespace），很难模块化；没有如何将代码分布在多个文件的规范；允许同名函数的重复定义，后面的定义可以覆盖前面的定义，很不利于模块化加载。
 
-**2. 非常小的标准库**
+### 2. 非常小的标准库
 
 Javascript提供的标准函数库非常小，只能完成一些基本操作，很多功能都不具备。
 
-**3. null和undefined**
+### 3. null和undefined
 
 null属于对象（object）的一种，意思是该对象为空；undefined则是一种数据类型，表示未定义。
 
@@ -262,7 +265,7 @@ null属于对象（object）的一种，意思是该对象为空；undefined则�
 
 在编程实践中，null几乎没用，根本不应该设计它。
 
-**4. 全局变量难以控制**
+### 4. 全局变量难以控制
 
 Javascript的全局变量，在所有模块中都是可见的；任何一个函数内部都可以生成全局变量，这大大加剧了程序的复杂性。
 
@@ -277,7 +280,7 @@ Javascript的全局变量，在所有模块中都是可见的；任何一个函�
 　　alert(b); //2
 ```
 
-**5. 自动插入行尾分号**
+### 5. 自动插入行尾分号
 
 Javascript的所有语句，都必须以分号结尾。但是，如果你忘记加分号，解释器并不报错，而是为你自动加上分号。有时候，这会导致一些难以发现的错误。
 
@@ -307,7 +310,7 @@ function(){
 　　}
 ```
 
-**6. 加号运算符**
+### 6. 加号运算符
 
 +号作为运算符，有两个含义，可以表示数字与数字的和，也可以表示字符与字符的连接。
 
@@ -325,7 +328,7 @@ function(){
 
 这样的设计，不必要地加剧了运算的复杂性，完全可以另行设置一个字符连接的运算符。
 
-**7. NaN**
+### 7. NaN
 
 NaN是一种数字，表示超出了解释器的极限。它有一些很奇怪的特性：
 
@@ -337,7 +340,7 @@ NaN是一种数字，表示超出了解释器的极限。它有一些很奇怪�
 
 与其设计NaN，不如解释器直接报错，反而有利于简化程序。
 
-**8. 数组和对象的区分**
+### 8. 数组和对象的区分
 
 由于Javascript的数组也属于对象（object），所以要区分一个对象到底是不是数组，相当麻烦。[Douglas Crockford](http://javascript.crockford.com/remedial.html)的代码是这样的：
 
@@ -352,7 +355,7 @@ NaN是一种数字，表示超出了解释器的极限。它有一些很奇怪�
 　　}
 ```
 
-**9. == 和 ===**
+### 9. == 和 ===
 
 ==用来判断两个值是否相等。当两个值类型不同时，会发生自动转换，得到的结果非常不符合直觉。
 
@@ -370,7 +373,7 @@ NaN是一种数字，表示超出了解释器的极限。它有一些很奇怪�
 
 因此，推荐任何时候都使用"==="（精确判断）比较符。
 
-**10. 基本类型的包装对象**
+### 10. 基本类型的包装对象
 
 Javascript有三种基本数据类型：字符串、数字和布尔值。它们都有相应的建构函数，可以生成字符串对象、数字对象和布尔值对象。
 
