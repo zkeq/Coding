@@ -42,6 +42,11 @@
       avatar: https://img.onmicrosoft.cn/friends/f10.png
       descr: 又一个 B 站的 UP 主
 
+    - name: 浮云翩迁之间
+      link: https://blognas.hwb0307.com
+      descr: 百代繁华一朝都，谁非过客；千秋明月吹角寒，花是主人。
+      avatar: https://img.onmicrosoft.cn/friends/f11.jpg
+
 - class_name: 网站
   class_desc: 一些很有用处的网站.
   link_list:
