@@ -47,6 +47,12 @@
       descr: 百代繁华一朝都，谁非过客；千秋明月吹角寒，花是主人。
       avatar: https://img.onmicrosoft.cn/friends/f11.jpg
 
+    - name: 小然然的博客
+      link: https://likenomnom.vercel.app
+      descr: 正在建设zhong
+      avatar: https://likenomnom.vercel.app/images/avatar.jpg
+
+
 - class_name: 网站
   class_desc: 一些很有用处的网站.
   link_list:
