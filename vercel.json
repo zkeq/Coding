@@ -5,11 +5,19 @@
             "destination": "/feed.xml"
         },
         {
+            "source": "/feed/",
+            "destination": "/feed.xml"
+        },
+        {
             "source": "/feed.xml",
             "destination": "/feed.xml"
         },
         {
             "source": "/atom",
+            "destination": "/feed.xml"
+        },
+        {
+            "source": "/atom/",
             "destination": "/feed.xml"
         },
         {
