@@ -259,6 +259,19 @@ let square = new Square(5)
 
 ![5](https://img.onmicrosoft.cn/2022-06-29/6.png)
 
+1. 套公式 
+   - 原型是什么的意思就是 `__proto__` 是什么，然后套公式
+2. 跟第一题等价
+3. 对的
+4. ![9](https://img.onmicrosoft.cn/2022-06-29/9.png)
+
 ![5](https://img.onmicrosoft.cn/2022-06-29/7.png)
 
+1. 跟第二题等价
+2. Square.prototype
+
 ![5](https://img.onmicrosoft.cn/2022-06-29/8.png)
+
+1. 不知道
+2. 没有原型
+3. null
