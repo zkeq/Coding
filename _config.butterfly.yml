@@ -20,7 +20,7 @@ menu:
       Learnonly导航 : https://www.learnonly.xyz/ || fas fa-home
       说说: /talk/ || fas fa-comment-alt
       电影: /movies/ || fas fa-video
-      监控云台: https://uptime.icodeq.com || fas fa-link
+      监控云台: https://uptime.icodeq.com/status/admin || fas fa-link
       BING Wallpaper: /bing/ || fas fa-image-polaroid
     Ideal Plan || fas fa-paper-plane:
       追梦计划 : https://dream-plan.cn || fas fa-school
