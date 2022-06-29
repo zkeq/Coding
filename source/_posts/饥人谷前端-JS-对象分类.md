@@ -275,3 +275,260 @@ let square = new Square(5)
 1. 不知道
 2. 没有原型
 3. null
+
+Square 最终版(存疑)
+
+代码
+```js
+function Square(width){
+    this.width = width
+}
+Square.prototype.getArea = function(){
+    return this.width * this.width
+}
+Square.prototype.getLength = function(){
+    return this.width * 4
+}
+let square = new Square(5)
+square.width
+square.getArea()
+square.getLength()
+```
+
+正方形搞定了，写个圆？
+
+Circle
+```js
+function Circle(radius){
+  this.radius = radius
+}
+Circle.prototype.getArea = function(){
+  return Math.pow(this.radius,2) * Math.PI
+  // pow 平方
+}
+Circle.prototype.getLength = function(){
+  return this.radius * 2 * Math.PI
+}
+let circle = new Circle(5)
+circle.radius
+circle.getArea()
+circle.getLength()
+
+```
+
+长方形
+
+Rectangle
+```js
+function Rect(width, height){ 
+  this.width = width
+  this.height = height
+}
+Rect.prototype.getArea = function(){ 
+  return this.width * this.height  
+}
+Rect.prototype.getLength = function(){
+  return (this.width + this.height) * 2
+}
+let rect = new Rect(4,5)
+rect.width
+rect.height
+rect.getArea()
+rect.getLength()
+```
+
+#### 对象需要分类吗
+回到最开始的问题
+
+1. 理由一
+
+有很多对象拥有一样的属性和行为 
+需要把它们分为同一类 如 `square1` 和 `square2`
+这样创建类似对象的时候就很方便
+
+2. 理由二
+
+但是还有很多对象拥有其他的属性和行为
+
+所以就需要不同的分类 比如 `Square` / `Circle` / `Rect` 就是不同的分类
+
+`Array` / `Function` 也是不同的分类, 而 `Object` 创建出来的对象，是最没有特点的对象
+
+#### 类型 V.S. 类
+类型
+- 类型是 JS 数据的分类，有 7 种
+- 四基两空一对象
+
+类
+- 类是针对于对象的分类，有无数种
+- 常见的有 Array、Function、Date、RegExp 等
+
+#### 数组对象
+
+- 定义一个数组
+```js
+let arr = [1,2,3]
+let arr = new Array(1,2,3) // 元素为 1,2,3
+let arr = new Array(3) // 长度为 3
+```
+- 数组对象的自身属性
+```js
+'0' / '1' / '2' / 'length'
+```
+- 注意，属性名没有数字，只有字符串
+- 数组对象的共用属性
+```js
+'push' / 'pop' / 'shift' / 'unshift' / 'join'
+```
+其实就是英语小课堂啦，用法都在 MDN
+后面会有单独课程教这些 API
+
+#### 函数对象
+- 函数是对象
+- 定义一个函数
+```js
+function fn(x,y){return x+y}
+let fn2 = function fn(x,y){return x+y}
+let fn = (x,y) => x+y
+let fn = new Function('x','y', 'return x+y')
+```
+- 函数对象自身属性
+```js
+'name' / 'length'
+```
+- 函数对象共用属性
+```js
+'call' / 'apply' / 'bind'
+```
+后面会有单独课程介绍函数
+
+#### JS 终极一问
+- window 是谁构造的
+  - Window
+  - 可以通过 constructor 属性看出构造者
+- `window.Object` 是谁构造的
+  - `window.Function`
+  - 因为所有函数都是 `window.Function` 构造的
+- `window.Function` 是谁构造的
+  - `window.Function`
+  - 因为所有函数都是 window.Function 构造的
+  - 自己构造的自己？并不是这样，这是「上帝」的安排
+  - 浏览器构造了 Function，然后指定它的构造者是自己
+
+![10](https://img.onmicrosoft.cn/2022-06-29/10.png)
+
+#### ES 6 引入了[新语法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes)
+
+![11](https://static.xiedaimala.com/xdml/image/3ac7c224-c23d-491f-84b5-4fabfbeab9b8/2020-4-25-15-56-27.png)
+
+class 语法引入了更多概念
+
+```js
+class Square{
+  static x = 1
+  width = 0
+  constructor(width){
+    this.width = width
+  } 
+  getArea(){ 
+    return this.width * this.width 
+  }
+  getLength(){
+    return this.width * 4
+  }
+  get area2(){ // 只读属性
+    return this.width * this.width
+  }
+}
+```
+
+#### 新手建议
+这么多新语法怎么学
+- 两种学法
+  - 花一大块时间把 MDN class 文档全部看完，并记下来
+  - 看到方方用什么，就学一点，课程学完，就都学会了
+  - 推荐第二种学法，因为新语法实在太多了
+  - 在实践中学，记得更牢
+- 到底有多少新语法
+  - 我已经整理了 ES6 的所有新语法，[点击查看](https://fangyinghang.com/es-6-tutorials/)
+  - 关于类和对象的新语法有[页面1](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes)，[页面2](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#ECMAScript_6%E6%96%B0%E6%A0%87%E8%AE%B0)和[页面3](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+  - 所以前端学得越早，越轻松，当年我只用学 ES3
+
+#### 用 class 重写 Circle
+```js
+class Circle{
+  constructor(radius){
+    this.radius = radius
+  } 
+  getArea(){ 
+    return Math.pow(this.radius,2) * Math.PI  
+  }
+  getLength(){
+    return this.radius * 2 * Math.PI
+  }
+}
+let circle = new Circle(5)
+circle.radius
+circle.getArea()
+circle.getLength()
+```
+
+#### 用 class 重写 Rect
+```js
+class Rect{
+  constructor(width, height){ 
+    this.width = width
+    this.height = height
+  }
+  getArea(){ 
+    return this.width * this.height  
+  }
+  getLength(){
+    return (this.width + this.height) * 2
+  }
+}
+let react = new Rect(4,5)
+rect.width
+rect.height
+rect.getArea()
+rect.getLength()
+
+```
+#### 原型好，还是类好？
+- 都是用来给对象分类的
+
+# class 中两种函数写法的区别
+
+在手机端/APP学习本课
+
+许多同学对 class 语法的细节不太清楚，这里我总结几个容易混淆的语法，这两种写法的意思完全不一样：
+
+语法1：
+
+```js
+class Person{
+    sayHi(name){}
+    // 等价于
+    sayHi: function(name){} 
+    // 注意，一般我们不在这个语法里使用箭头函数
+}
+//等价于
+function Person(){}
+Person.prototype.sayHi = function(name){}
+```
+
+语法2：注意冒号变成了等于号
+
+```js
+class Person{
+  sayHi = (name)=>{} // 注意，一般我们不在这个语法里使用普通函数，多用箭头函数
+}
+// 等价于
+function Person(){
+    this.sayHi = (name)=>{}
+}
+```
+
+## 不要强求完全转换成 ES5
+
+大部分 class 语法都可以转为 ES5 语法，但并不是 100% 能转，有些 class 语法你意思理解就行，不需要强行转换为 ES5。
