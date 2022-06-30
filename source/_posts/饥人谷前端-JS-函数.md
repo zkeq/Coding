@@ -101,3 +101,11 @@ fn2()
   - this（除了箭头函数）
 
 ##### 调用时机不同，结果不同
+
+![5](https://img.onmicrosoft.cn/2022-06-30/5.png)
+![6](https://img.onmicrosoft.cn/2022-06-30/6.png)
+![7](https://img.onmicrosoft.cn/2022-06-30/7.png)
+![8](https://img.onmicrosoft.cn/2022-06-30/8.png)
+![9](https://img.onmicrosoft.cn/2022-06-30/9.png)
+![10](https://img.onmicrosoft.cn/2022-06-30/10.png)
+![11](https://img.onmicrosoft.cn/2022-06-30/11.png)
