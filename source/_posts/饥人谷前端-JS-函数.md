@@ -36,6 +36,7 @@ let f4 = (x,y) => ({name:x, age: y})
 直接返回对象会报错，需要加个圆括号（头疼）
 因为 `{}` 也是代码块的意思
 - 用构造函数
+
 ```js
 let f = new Function('x', 'y', 'return x+y')
 ```
