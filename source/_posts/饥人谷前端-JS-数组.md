@@ -38,12 +38,14 @@ JS 的数组不是典型数组
 
 #### 创建一个数组
 - 新建
+
 ```js
 let arr = [1,2,3]  // 简写形式
 let arr = new Array(1,2,3)  // 和第一句等价
 let arr = new Attr(3) // 参数只有一个的时候表示数组的长度
 ```
 - 转化
+
 ```js
 let arr = '1,2,3'.split(',') // 通过字符串来创建数组
 let arr = '123'.split('')
@@ -52,6 +54,7 @@ Array.from('123') // 从什么地方创建数组 只有符合条件才会
 // 2. length 属性
 ```
 - 伪数组
+
 ```js
 let divList = document.querySelectorAll('div')
 可以变成数组
@@ -66,10 +69,12 @@ console.dir(divArray)
 
 #### 创建一个数组（续）
 - 合并两个数组，得到新数组
+
 ```js
 arr1.concat(arr2)
 ```
 - 截取一个数组的一部分
+
 ```js
 arr1.slice(1) // 从第二个元素开始
 arr1.slice(0) // 全部截取，复制的方法
@@ -79,6 +84,7 @@ arr1.slice(0) // 全部截取，复制的方法
 - 删元素
   - 跟对象一样
   - 稀疏数组
+
 ```js
 let arr = ['a', 'b', 'c']
 delete arr['0']
@@ -87,20 +93,24 @@ arr // [empty, 'b', 'c']
 ```
 - 如果改 length 可以删元素吗？
   - 重要：不要随便改 length
+
 ```js
 let arr = [1,2,3,4,5]
 arr.length = 1
 ```
 - 删元素续
   - 删除头部的元素
+
 ```js
 arr.shift() // arr 被修改，并返回被删元素
 ```
 - 删除尾部的元素
+
 ```js
 arr.pop() // arr 被修改，并返回被删元素
 ```
 - 删除中间的元素
+
 ```js
 arr.splice(index, 1) // 删除 index 的一个元素
 arr.splice(index, 1, 'x') // 并在删除位置添加 'x'
@@ -108,6 +118,7 @@ arr.splice(index, 1, 'x', 'y') // 并在删除位置添加 'x', 'y'
 ```
 #### 查看所有元素
 - 查看所有属性名
+
 ```js
 let arr = [1,2,3,4,5];arr.x='xxx'
 Object.keys(arr)
@@ -115,6 +126,7 @@ for(let key in arr){console.log(`${key}:${arr[key]}`)}
 // 可能会获取到不想要的东西
 ```
 - 查看数字（字符串）属性名和值
+
 ```js
 for(let i = 0; i < arr.length; i ++){
     console.log(`${i}: ${arr[i]}`)
@@ -122,6 +134,7 @@ for(let i = 0; i < arr.length; i ++){
 // 推荐这种
 ```
 - 你要自己让 `i` 从 `0` 增长到 `length -1`
+
 ```js
 arr.forEach(function (item, index){
     console.log(`${index}: ${item}`)
@@ -137,6 +150,7 @@ arr.forEach((x,y) => {
 
 #### forEach 是一个坎
 - 自己写 forEach 才能理解 forEach
+
 ```js
 function forEach(array, fn) {
     for(let i = 0; i<array.length; i++){
@@ -157,16 +171,19 @@ function forEach(array, fn) {
 
 #### 查看单个属性
 - 跟对象一样
+
 ```js
 let arr = [111,222,333]
 arr[0]
 ```
 - 索引越界
+
 ```js
 arr[arr.length] === undefined
 arr[-1] === undefined
 ```
 - 举例
+
 ```js
 for(let i = 0; i<= arr.length; i++){
     console.log(arr[i].toString())
@@ -178,6 +195,7 @@ for(let i = 0; i<= arr.length; i++){
 
 #### 查看单个元素（续）
 - 查找某个元素是否在数组里
+
 ```js
 for(let i = 0; i<arr2.length; i++){
     if(arr[i] === 13){
@@ -191,6 +209,7 @@ for(let i = 0; i<arr2.length; i++){
 arr.indexOf(item) // 存在返回索引，否则返回 -1
 ```
 - 使用条件查找元素
+
 ```js
 arr.find(function (x){
         return x%5===0
@@ -200,6 +219,7 @@ arr.find(function (x){
 arr.find(item => item % 2 === 0) // 找第一个偶数
 ```
 - 使用条件查找元素的索引
+
 ```js
 arr.findIndex(function (x){
         return x%5===0
@@ -211,17 +231,20 @@ arr.findIndex(item => item % 2 === 0)
 ```
 #### 增加数组中的元素
 - 在尾部加元素
+
 ```js
 arr.push(newItem) // 修改 arr，返回新长度
 arr.push(item1, item2) // 修改 arr，返回新长度
 ```
 - 在头部加元素
+
 ```js
 arr.unshift(newItem) // 修改 arr, 返回新长度
 arr.unshift(item1, item2) // 修改 arr，返回新长度
 // 添加什么顺序，出现在数组里面就是什么顺序
 ```
 - 在中间添加元素
+
 ```js
 arr.splice(index, 0, 'x') // 在 index 处插入 'x'
 // 0 的意思的是什么都不删
@@ -234,6 +257,7 @@ arr.splice(index, 0, 'x', 'y')
 arr.reverse() // 修改原数组
 ```
 - 自定义顺序
+
 ```js
 arr.sort(function (a,b){
     if(a>b){
@@ -269,6 +293,7 @@ arr.sort((a,b) => a.score - b.score)
 #### 数字变换（续）
 - `map`
   - n 变 n
+
 ```js
 let arr = [1,2,3,4,5,6]
 for (let i=0; i<arr.length; i++){
@@ -281,12 +306,14 @@ arr.map(item => item*item)
 ```
 - `filter`
   - n 变少
+
 ```js
 arr.filter(item => item %2 ===0?true : false)
 arr.filter(item => item %2 ===0)
 ```
 - `reduce`
   - n 变 1
+
 ```js
 let arr = [1,2,3,4,5,6]
 let sum = 0
