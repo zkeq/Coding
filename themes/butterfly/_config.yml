@@ -569,7 +569,7 @@ display_mode: light
 beautify:
   enable: false
   field: post # site/post
-  title-prefix-icon: # '\f0c1'
+  title-prefix-icon: ''
   title-prefix-icon-color: # '#F47466'
 
 # Global font settings
