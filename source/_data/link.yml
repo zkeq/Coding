@@ -53,6 +53,12 @@
       avatar: https://likenomnom.vercel.app/images/avatar.jpg
 
 
+    - name: Nicexl
+      link: https://nicexl.eu.org
+      descr: Nicexl的博客
+      avatar: https://img.onmicrosoft.cn/friends/f13.jpg
+
+
 - class_name: 网站
   class_desc: 一些很有用处的网站.
   link_list:
