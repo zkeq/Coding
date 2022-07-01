@@ -109,3 +109,83 @@ fn2()
 ![9](https://img.onmicrosoft.cn/2022-06-30/9.png)
 ![10](https://img.onmicrosoft.cn/2022-06-30/10.png)
 ![11](https://img.onmicrosoft.cn/2022-06-30/11.png)
+
+#### 作用域
+
+- 每个函数都会默认创建一个作用域
+
+例1
+
+```js
+function fn(){
+    let a = 1
+}
+console.log(a) // a 不存在
+```
+- 问
+  - 是不是因为 fn 没执行函数
+- 答
+  - 就算 fn 执行了，也访问不到作用域里面的 a
+
+例2
+
+```js
+function fn(){
+    let a = 1
+}
+fn()
+console.log(a) // a 还是不存在
+```
+
+#### 全局变量 V.S. 局部变量
+- 在顶级作用域声明的变量是全局变量
+- window 的属性是全局变量
+- 其他都是局部变量
+
+函数可嵌套
+- 作用域也可嵌套
+
+例3
+
+```js
+function f1(){
+    let a = 1
+    
+    function f2(){
+        let a = 2
+        console.log(a)
+    }
+    
+    console.log(a)
+    a = 3
+    f2()
+}
+f1()
+```
+
+#### 作用域规则
+- 如果多个作用域有同名变量 a
+  - 那么查找 a 的声明时，就向上取最近的作用域
+  - 简称 就近原则
+  - 查找 a 的过程与函数执行无关
+  - 但 a 的值与函数执行有关
+
+例4
+
+```js
+function f1(){
+    let a = 1
+    function f2(){
+        let a = 2
+        function f3(){
+            console.log(a)
+        }
+        a = 22
+        f3()
+    }
+    console.log(a)
+    a = 100
+    f2()
+}
+f1()
+```
