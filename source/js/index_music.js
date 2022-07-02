@@ -1,4 +1,5 @@
 var auio;
+NProgress.start()
 function voiceInit () {
     auio = "https://media.onmicrosoft.cn/backgroud.mp3";
     auio = new Audio(auio); 
@@ -12,6 +13,7 @@ function voiceStop () {
     auio.pause();
 }
 window.onload = function(){
+NProgress.done();
 voiceInit()
 document.getElementById("body-wrap").addEventListener("click", function(){
     voicePaly();
@@ -24,3 +26,19 @@ ap.on('pause', function () {
     voicePaly();
 });
 }
+setInterval(function () {
+    if (NProgress.status !== null) {
+        NProgress.inc();
+        console.log(NProgress.status);
+    }
+}, 200)
+
+
+$(document).on('pjax:send', function() {
+    NProgress.start();
+})
+
+
+$(document).on('pjax:complete', function() {
+    NProgress.done();
+})
