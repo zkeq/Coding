@@ -111,7 +111,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: https://bpi.icodeq.com/icodeq-INDEX-pic
+index_img: https://img.onmicrosoft.cn/5se.jpg
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: https://bing.icodeq.com
