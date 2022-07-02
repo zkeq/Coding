@@ -9,13 +9,17 @@ function voicePaly () {
 function voiceStop () {
     auio.pause();
 }
+window.onload = function(){
 document.getElementById("body-wrap").addEventListener("click", function(){
     voicePaly();
-  });
+    });
 let ap = aplayers[0];
 ap.on('play', function () {
+    console.log('play');
     voiceStop();
 });
 ap.on('pause', function () {
+    console.log('pause');
     voicePaly();
 });
+}
