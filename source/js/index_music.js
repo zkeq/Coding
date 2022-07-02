@@ -18,11 +18,9 @@ document.getElementById("body-wrap").addEventListener("click", function(){
     });
 let ap = aplayers[0];
 ap.on('play', function () {
-    console.log('play');
     voiceStop();
 });
 ap.on('pause', function () {
-    console.log('pause');
     voicePaly();
 });
 }
