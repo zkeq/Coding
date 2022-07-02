@@ -29,7 +29,6 @@ ap.on('pause', function () {
 setInterval(function () {
     if (NProgress.status !== null) {
         NProgress.inc();
-        console.log(NProgress.status);
     }
 }, 200)
 
