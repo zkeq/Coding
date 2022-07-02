@@ -20,7 +20,7 @@ sticky: 3
 
 - https://github.com/louislam/uptime-kuma
 
-成品：[Zkeq の 监控云台 (icodeq.com)](https://uptime.icodeq.com)
+成品：[Zkeq の 监控云台 (icodeq.com)](https://uptime.icodeq.com/status/admin)
 
 见图 👀
 
