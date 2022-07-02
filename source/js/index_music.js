@@ -6,6 +6,16 @@ function voicePaly () {
     auio.play();
     auio.volume = 0.2;
 }
+function voiceStop () {
+    auio.pause();
+}
 document.getElementById("body-wrap").addEventListener("click", function(){
     voicePaly();
   });
+let ap = aplayers[0];
+ap.on('play', function () {
+    voiceStop();
+});
+ap.on('pause', function () {
+    voicePaly();
+});
