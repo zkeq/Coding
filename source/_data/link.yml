@@ -5,38 +5,47 @@
       link: https://www.therehello.top/
       avatar: https://img.onmicrosoft.cn/friends/f1.jpg
       descr: 通过答题脚本 遇到的大佬.
+
     - name: 云淡风轻
       link: https://blog.gocos.cn
       avatar: https://img.onmicrosoft.cn/friends/f2.ico
       descr: Wk-Helper 大佬的博客.
+
     - name: 探姬
       link: https://blog.probius.xyz
       avatar: https://img.onmicrosoft.cn/friends/f3.jpg
       descr: 又一个大佬的博客.
+
     - name: icodel's Blog
       link: https://www.icodel.cn
       avatar: https://img.onmicrosoft.cn/friends/f4.jpg
       descr: icodel's Blog
+
     - name: An Wen
       link: https://blog.zytllt.cn
       avatar: https://img.onmicrosoft.cn/friends/f5.png
       descr: 三生三世安安稳稳,婷婷玉立花落花开,与世无争做好自己.        
+
     - name: Pandolar
       link: https://blog.pandolar.top
       avatar: https://img.onmicrosoft.cn/friends/f6.jpg
-      descr: 我有旨酒，以燕乐嘉宾之心   
+      descr: 我有旨酒，以燕乐嘉宾之心  
+
     - name: 纳兰戏梦
       link: https://derm.top
       avatar: https://img.onmicrosoft.cn/friends/f7.jpg
       descr: 从未落时开始，于伊洛时结束。
+
     - name: xcsoft
       link: https://blog.xsot.cn
       avatar: https://img.onmicrosoft.cn/friends/f8.jpg
       descr: 原諒我這一生不放縱愛自由
+
     - name: 金桔猪
       link: https://blog.learnonly.xyz
       avatar: https://img.onmicrosoft.cn/friends/f9.jpg
       descr: 猪猪的作品集
+
     - name: kifuan
       link: https://kifuan.top
       avatar: https://img.onmicrosoft.cn/friends/f10.png
@@ -52,11 +61,15 @@
       descr: 正在建设中...
       avatar: https://likenomnom.vercel.app/images/avatar.jpg
 
-
     - name: Nicexl
       link: https://nicexl.eu.org
       descr: Nicexl的博客
       avatar: https://img.onmicrosoft.cn/friends/f13.jpg
+
+    - name: 杜老师说
+      link: https://dusays.com
+      descr: 师者，传道，授业，解惑！
+      avatar: https://cdn.dusays.com/avatar.png
 
 
 - class_name: 网站
