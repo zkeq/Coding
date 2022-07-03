@@ -12,11 +12,15 @@ function voicePaly () {
 function voiceStop () {
     auio.pause();
 }
+let times = 0;
 window.onload = function(){
 NProgress.done();
 voiceInit()
 document.getElementById("body-wrap").addEventListener("click", function(){
-    voicePaly();
+    if (times === 0) {
+        voicePaly();
+    }
+    times++;
     });
 let ap = aplayers[0];
 ap.on('play', function () {
