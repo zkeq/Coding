@@ -194,3 +194,178 @@ f1()
 
 #### 闭包
 - JS 的函数会就近寻找最近的变量，这就叫闭包
+
+> - 如果一个函数用到了外部的变量
+> - 那么这个函数加这个变量
+> - 就叫做 `闭包`
+> - 左边的 a 和 f3 组成了 闭包
+> - 闭包的用途以后讲
+> - 你也可以先搜一下
+
+```js
+function f1(){
+    let a = 1
+    function f2(){
+        ···
+        let a = 2  // 闭包，用到了外面的变量
+        function f3(){  // 闭包，用到了外面的变量
+            console.log(a)  // 闭包，用到了外面的变量
+        }  // 闭包，用到了外面的变量
+        ···0
+        a = 22
+        f3()
+    }
+    console.log(a)
+    a = 100
+    f2()
+}
+f1()
+```
+
+#### 形式参数
+- 形式参数的意思就是非实际参数
+
+```js
+function add(x, y){
+    return x+y
+}
+// 其中 x 和 y 就是形参，因为并不是实际的参数
+add(1, 2)
+// 调用 add 时，1 和 2 是实际参数，会被赋值给 x y
+```
+
+- 形参可认为是变量声明
+
+```js
+// 上面代码近似等价于下面代码
+function add(){
+    var x = arguments[0] // 当时发明形参的时候 只有 var
+    var y = arguments[1] // 当时发明形参的时候 只有 var
+    return x + y
+}
+```
+![1](https://img.onmicrosoft.cn/2022-07-03/1.png)
+
+// 传对象的时候，复制地址
+
+// `stack` 记了什么，就复制什么
+
+// 根据内存图，全部复制的
+
+#### 返回值
+- 每个函数都有返回值
+
+```js
+function hi(){
+    console.log('hi')
+}
+hi()
+// 没写 return，所以返回值是 undefined
+
+function hi(){
+    return console.log('hi')
+}
+hi()
+// 返回值为 console.log('hi') 的值，即 undefined
+```
+- 函数执行完了后才会返回
+- 只有函数有返回值
+  - ~~1+2 返回值为 3~~
+  - 1+2 值为 3
+
+#### 调用栈
+什么是调用栈
+- JS 引擎在调用一个函数前
+- 需要把函数所在环境 push 到一个数组里
+- 这个数组叫做调用栈
+- 等函数执行完了，就会把环境弹（pop）出来
+- 然后 return 到之前的环境，继续执行后续代码
+
+举例
+```js
+console.log(1)
+console.log('1+2的结果为' + add(1,2))
+console.log(2)
+```
+压栈 和 弹栈
+![2](https://img.onmicrosoft.cn/2022-07-03/2.png)
+
+#### 递归函数
+阶乘
+```js
+function f(n){
+    return n !== 1? n* f(n-1): 1
+}
+```
+理解递归
+```js
+f(4)
+= 4 * f(3)
+= 4 * (3 * f(2))
+= 4 * (3 * f(2 * f(1)))
+= 4 * (3 * (2 * (1)))
+= 4 * (3 * (2))
+= 4 * (6)
+= 24
+```
+先递进，再归回归
+
+![4](https://img.onmicrosoft.cn/2022-07-03/4.png)
+
+```js
+function f(n){
+    return n !== 1? n*f(n-1) : 1
+}
+```
+```js
+function sum(n){
+    return n !== 1? n + sum(n-1) : 1
+}
+sum(11000) // 60505500
+sum(11500) // Maximum call stack size exceeded
+
+sum(11419) // 65202490
+sum(11420) // Maximum call stack size exceeded
+```
+
+#### 递归函数的调用栈
+递归函数的调用栈很长
+- 请画出阶乘 (6) 的调用栈
+
+调用栈最长有多少
+```js
+function computeMaxCallStackSize(){
+    try {
+      return 1 + computeMaxCallStackSize();
+    } catch (e) {
+        // 报错说明 stack overflow 了
+        return 1;
+    }
+}
+Chrome 12578
+Firefox 26773
+Node 12536
+```
+#### 爆栈
+- 如果调用栈中压入的栈过多，程序就会崩溃
+
+#### 函数提升
+什么是函数提升
+- `function fn(){}`
+- 不管你把具名函数声明在哪里，他都会跑到第一行
+
+```js
+add(1,2)
+function add(x,y){
+    return x+y
+}
+```
+```js
+let add = 1
+function add(){} // 报错
+// Identifier 'add' has already been declared
+```
+
+什么不是函数提升
+- `let fn = function(){}`
+- 这是赋值，右边的匿名函数声明不会提升
