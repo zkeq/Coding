@@ -552,6 +552,18 @@ JS 怎么解决这种不和谐
 - 需要自己手动把 `person` 传到函数里，作为 `this`
 - 传什么就是什么
 
+```js
+let person = {
+    name: 'frank',
+    sayHi(){
+        console.log(this.name)
+    }
+}
+person.sayHi.call({name:1}) // 1
+```
+
+![4](https://img.onmicrosoft.cn/2022-07-04/1.png)
+
 应该学习哪种？
 - 学习大师调用法，因为小白调用你早就会了
 - 从这种 PPT 开始，默认用大师调用法
@@ -570,3 +582,15 @@ function add(x, y){
 - 但是代码里没有用 `this`
 - 所以只能用 `undefined` 占位
 - 其实用 `null` 也可以
+
+#### 例二
+- 自己实现一个 `forEach`
+
+```js
+Array.prototype.forEach2 = function (fn){
+    for(let i=0;i<this.length;i++){
+        fn(this[i], i, this)
+      //  for each 的源代码
+    }
+}
+```
