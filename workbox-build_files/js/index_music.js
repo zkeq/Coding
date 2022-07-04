@@ -22,7 +22,7 @@ function voiceStop () {
 let times = 0;
 window.onload = function(){
     Notiflix.Notify.init({
-        position: 'left-top',
+        position: 'center-top',
         distance: '1rem',
     })
     NProgress.done();
