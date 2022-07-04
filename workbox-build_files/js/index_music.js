@@ -40,6 +40,7 @@ setInterval(function () {
         NProgress.inc();
     }
     if (aplayers !== null && initap === 0) {
+        setTimeout(function () {
         let ap = aplayers[0];
         ap.on('play', function () {
             voiceStop();
@@ -47,6 +48,7 @@ setInterval(function () {
         ap.on('pause', function () {
             voicePaly();
         });
+        }, 1000);
         initap ++;
     }
 }, 200)
