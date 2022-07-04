@@ -585,6 +585,7 @@ function add(x, y){
 
 #### 例二
 - 自己实现一个 `forEach`
+- 可以用这个来实现
 
 ```js
 Array.prototype.forEach2 = function (fn){
@@ -594,4 +595,83 @@ Array.prototype.forEach2 = function (fn){
     }
 }
 ```
-可以用这个来实现
+this 是什么
+- 由于大家使用 `forEach2` 的时候总是会用 `arr.forEach2`
+- 所以 `arr` 就自动被传给 `forEach2` 了
+
+this 一定是数组吗？
+- 不一定，比如
+- `Array.prototype.forEach2.call({0:'a',1: 'b'})`
+- //  这就是个伪数组
+
+#### this 的两种使用方法
+隐式传递
+- `fn(1,2)` // 等价于 `fn.call(undefined, 1, 2)`
+- `obj.child.fn(1)` // 等价于 `obj.child.fn.call(obj,child,1)`
+
+显示传递
+- `fn.call(undefined, 1, 2)`
+- `fn.apply(undefined, [1,2])` // 数组
+- // 只是形式不同，其他全部都是一样的
+- // 只是中括号的问题
+
+#### 绑定 this
+使用 .bind 可以让 this 不被改变
+```js
+function f1(p1, p2){
+    console.log(this, p1, p1)
+}
+let f2 = f1.bind({name: 'frank'})
+// 那么 f2 就是 f1 绑定了 this 之后的新函数
+f2() // 等价于 f1.call({name: 'frank'})
+```
+.bind 还可以绑定其他参数
+```js
+let f3 = f1.bind({name: 'frank'}, 'hi')
+f3() // 等价于 f1.call({name: 'franl'}, 'hi'}
+```
+
+#### 箭头函数
+- 没有 `arguments` 和 `this`
+
+里面的 this 就是外面的 this
+- `console.log(this)` // window
+- `let fn = () => console.log(this)`
+- `fn()` // window
+
+就算你加 call 都没有
+- `fn.call({name:'frank'})` // window
+
+箭头函数自己没有 `this`
+也没有 arguments
+
+#### 总结
+- 每个函数都有这些东西
+  - `调用时机`
+  - `作用域`
+  - `闭包`
+  - `形式参数`
+  - `返回值`
+  - `调用栈`
+  - `函数提升`
+  - `arguments`（除了箭头函数）
+  - `this`（除了箭头函数）
+
+#### 立即执行函数
+- 只有 JS 才有的变态玩意，现在用得少
+
+![2](https://img.onmicrosoft.cn/2022-07-04/2.png)
+
+原理
+- ES5 时代，为了得到局部变量，必须引用一个函数
+- 但是这个函数如果有名字，就得不偿失
+- 于是这个函数必须是匿名函数
+- 声明匿名函数，然后立即加个 `()` 执行它
+- 但是 JS 标准认为这种语法不合法
+- 所以 JS 程序员寻求各种方法
+- 最终发现，只要在匿名函数前面加个运算符即可
+- `!`,`~`,`()`,`+`,`-` 都可以
+  - 用 `()` 可以，但是要加 `;`，也是唯一要加 `;` 的地方
+  - 因为 `()` 会被认为是调用了上一行的一个函数
+- 但是这里有些运算符会往上走
+- 所以方方推荐永远用 `!` 来解决
