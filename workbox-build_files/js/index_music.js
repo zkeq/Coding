@@ -33,17 +33,21 @@ window.onload = function(){
         }
         times++;
     });
-    let ap = aplayers[0];
-    ap.on('play', function () {
-        voiceStop();
-    });
-    ap.on('pause', function () {
-        voicePaly();
-    });
 }
+let initap = 0;
 setInterval(function () {
     if (NProgress.status !== null) {
         NProgress.inc();
+    }
+    if (aplayers !== null && initap === 0) {
+        let ap = aplayers[0];
+        ap.on('play', function () {
+            voiceStop();
+        });
+        ap.on('pause', function () {
+            voicePaly();
+        });
+        initap ++;
     }
 }, 200)
 
