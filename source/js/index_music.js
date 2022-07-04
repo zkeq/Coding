@@ -16,7 +16,7 @@ function voicePaly () {
     }, 3000);
 }
 function voiceStop () {
-    Notiflix.Notify.success('Pause: 和宇宙的温柔关联');
+    Notiflix.Notify.success('Pause: 和宇宙的温柔关联',{showOnlyTheLastOne: true});
     auio.pause();
 }
 let times = 0;
