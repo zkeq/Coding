@@ -9,9 +9,11 @@ function voiceInit () {
 function voicePaly () {
     auio.play();
     Notiflix.Notify.success('Music: 和宇宙的温柔关联');
-    Notiflix.Notify.success('Click here to pause', () => {
-        voiceStop();
-    });
+    setTimeout(function(){
+        Notiflix.Notify.success('Click here to pause', () => {
+            voiceStop();
+        },{showOnlyTheLastOne: true});
+    }, 3000);
 }
 function voiceStop () {
     Notiflix.Notify.success('Pause: 和宇宙的温柔关联');
