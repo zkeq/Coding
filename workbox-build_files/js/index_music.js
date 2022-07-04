@@ -21,7 +21,7 @@ let times = 0;
 window.onload = function(){
     Notiflix.Notify.init({
         position: 'left-top',
-        distance: '80px',
+        distance: '1rem',
     })
     NProgress.done();
     voiceInit()
