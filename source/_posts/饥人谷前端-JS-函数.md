@@ -594,3 +594,4 @@ Array.prototype.forEach2 = function (fn){
     }
 }
 ```
+可以用这个来实现
