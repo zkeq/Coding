@@ -369,3 +369,204 @@ function add(){} // 报错
 什么不是函数提升
 - `let fn = function(){}`
 - 这是赋值，右边的匿名函数声明不会提升
+
+#### JS 三座大山
+- 原型
+- this
+- AJAX
+
+#### `arguments` 和 `this`
+- 每个函数都有，除了箭头函数
+  - `arguments` 是一个包含所有参数的伪数组
+  - 如果不给任何条件，那么默认指向 `window`
+
+代码
+```js
+function fn(){
+    console.log(arguments)
+    console.log(this)
+}
+```
+
+如何传 `arguments`
+- 调用 `fn` 即可传 `arguments`
+- `fn(1,2,3)` 那么 `arguments` 就是 [1,2,3] 伪数组
+
+
+如何传 this
+- 目前可以用 `fn.call(xxx, 1, 2, 3)` 传 `this` 和 `arguments`
+  - 第一段 `this` 其他 `arguments`
+- 而且 xxx 会被 `自动转换成对象`（JS 的糟粕）
+  - 如何传的 `this` 不是对象，那么会自动封装成对象
+  - 如果加了 `'use strick'`就没有奇奇怪怪的规则了
+
+```js
+fn.call(1)
+function fn(){
+    'use strick'
+    console.log(this)
+}
+```
+
+`this` 是隐藏参数，`arguments` 是普通参数
+- this 是参数（此结论是方佬个人的）
+
+#### 假如没有 this
+
+代码
+```js
+let person = {
+  name: 'frank',
+  sayHi() {
+    console.log(`你好，我叫` + person.name)
+    // 不用 this 的话，这样是可行的
+  }
+}
+```
+分析
+- 我们可以用直接保存了对象地址的 `变量` 获取 `'name'`
+- 我们把这种方法简称为`引用`
+
+##### 问题一
+代码
+```js
+let sayHi = function (){
+     console.log(`你好，我叫`+ ~person~.name) // 这样不好
+}
+let person = {
+    name: 'frank',
+    'sayHi': sayHi()
+}
+```
+分析
+- `person` 如果改名，`sayHi` 函数就挂了
+- `sayHi` 函数甚至有可能在另一个文件里面
+- 所以我们不希望 `sayHi` 函数里出现 `person` 饮用 
+
+##### 问题二
+代码
+```js
+class Person{
+    constructor(name){
+        this.name = name
+        // 这里的 this 是 new 强制指定的
+    }
+    sayHi(){
+        console.log(???)
+    }
+}
+```
+分析
+- 这里只有类，还没创建对象，故不可能获取对象的引用
+- 那么如何拿到对象的 `name` ?
+
+需要一种办法拿到对象
+- 这样才能获取对象的 name 属性
+
+#### 一种土方法，用参数
+对象
+```js
+let person = {
+    name: 'frank',
+    sayHi(p){
+        console.log(`你好，我叫` + p.name)
+    }
+}
+person.sayHi(person)
+```
+类
+```js
+class Person{
+    constructor(name){
+        this.name = name
+    }
+    sayHi(p){
+        console.log(`你好，我叫` + p.name)
+    }
+}
+```
+
+![4](https://img.onmicrosoft.cn/2022-07-03/6.png)
+
+JS 没有模仿 `Python` 的思路
+- 走了另一条路
+
+JS 在每个函数里加了 this
+- 用 this 获取每个对象
+
+```js
+let person = {
+    name: 'frank',
+    sayHi(){ // sayHi(this){
+        console.log(`你好，我叫` + this.name)
+  }
+}
+person.sayHi()
+相当于
+person.sayHi(person)
+然后 person 被传给 this 了（person 是个地址）
+
+这样，每个函数都能用 this 获取一个未知对象的引用了
+
+person.sayHi() 会隐式地吧 person 作为 this 传给 sayHi
+- 方便 sayHi 获取 person 对应的对象
+```
+
+#### 总结一下目前的知识
+- 我们想让函数获取对象的引用
+- 但是并不想通过变量名做到
+- `Python` 通过额外的 `self` 参数做到
+- `JS` 通过额外的 `this` 做到
+  - `person.sayHi()` 会把 `person` 自动传给 `sayHi`
+  - `sayHi` 可以通过 `this` 引用 `person`
+  - `this` 就是最终调 `sayHi` 的对象
+  - 
+- 其他
+  - 注意 `person.sayHi` 和 `person.sayHi()` 的区别
+  - 注意 `person.sayHi()` 的断句 `(person.sayHi) ()`
+
+#### 这就引出另一个问题
+到底哪个对？
+```js
+let person = {
+    name: 'frank',
+    sayHi(){ // sayHi(this){
+        console.log(`你好，我叫` + this.name)
+  }
+}
+person.sayHi()
+person.sayHi(person)
+// 省略形式反而对了，完整形式反而是错的
+```
+JS 怎么解决这种不和谐
+- 提供两种调用方式
+
+#### 两种调用
+小白调用法
+- `person.sayHi()`
+- 会自动吧 `person` 传到函数里，作为 `this`
+- 隐藏了太多细节，只适合小白
+
+大师调用法
+- `person.sayHi.call(person)`
+- 需要自己手动把 `person` 传到函数里，作为 `this`
+- 传什么就是什么
+
+应该学习哪种？
+- 学习大师调用法，因为小白调用你早就会了
+- 从这种 PPT 开始，默认用大师调用法
+
+#### 例1
+```js
+function add(x, y){
+    return x + y 
+}
+```
+没有用到 `this`
+- `add.call(undefined, 1, 2)` // 3
+
+为什么要多写一个 `undefined`
+- 因为一个参数要作为 `this`
+- 但是代码里没有用 `this`
+- 所以只能用 `undefined` 占位
+- 其实用 `null` 也可以
