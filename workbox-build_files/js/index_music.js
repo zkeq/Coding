@@ -8,12 +8,21 @@ function voiceInit () {
 }
 function voicePaly () {
     auio.play();
+    Notiflix.Notify.success('Music: 和宇宙的温柔关联');
+    Notiflix.Notify.success('Click here to pause', () => {
+        voiceStop();
+    });
 }
 function voiceStop () {
+    Notiflix.Notify.success('Pause: 和宇宙的温柔关联');
     auio.pause();
 }
 let times = 0;
 window.onload = function(){
+Notiflix.Notify.init({
+    position: 'left-top',
+    distance: '80px',
+})
 NProgress.done();
 voiceInit()
 document.getElementById("body-wrap").addEventListener("click", function(){
