@@ -48,7 +48,7 @@ setInterval(function () {
         ap.on('pause', function () {
             voicePaly();
         });
-        }, 5000);
+        }, 1000);
         initap ++;
     }
 }, 200)
