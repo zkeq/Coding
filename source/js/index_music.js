@@ -4,7 +4,7 @@ function voiceInit () {
     auio = "https://media.onmicrosoft.cn/backgroud.mp3";
     auio = new Audio(auio);
     auio.loop = true;
-    auio.volume = 0.2;
+    auio.volume = 1;
 }
 function voicePaly () {
     auio.play();
