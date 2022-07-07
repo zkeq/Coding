@@ -23,7 +23,7 @@ copyright_info: 资料来源：知乎。
 - y 时间（time）
 - z 参数（会自动传入第一个参数，也就是函数的参数中) 可省略
 
-```text
+```js
 setTimeout(function(){
   alert("Hello"); 
 }, 3000);
@@ -46,7 +46,7 @@ setTimeout(function(){
 
 思考：以下代码会打印出什么？
 
-```text
+```js
 let i=0
 for(i=0;i<6;i++){
   setTimeout(()=>{console.log(i)},1000)
@@ -55,7 +55,7 @@ for(i=0;i<6;i++){
 
 **运行上面代码，看看会打印出什么结果**
 
-```text
+```js
 let i=0
 for(i=0;i<6;i++){
   setTimeout(()=>{console.log(i)},1000)
@@ -87,7 +87,7 @@ for(i=0;i<6;i++){
 
 > **JS变态之处：**把let声明写入for循环中，则会正常打印出 0、1、2、3、4、5 （服了JS，迎合新人）
 
-```text
+```js
 for(let i = 0; i<6; i++){
   setTimeout(()=>{
     console.log(i)
@@ -105,7 +105,7 @@ for(let i = 0; i<6; i++){
 
 **方法二：**
 
-```text
+```js
 for(i=0;i<6;i++){
   let j = i
   setTimeout(()=>{console.log(j)},1000)
@@ -114,7 +114,7 @@ for(i=0;i<6;i++){
 
 **方法三：闭包**
 
-```text
+```js
 for(var i=0;i<6;i++){
   !function(i){  //这是里面的i //在匿名函数前加上运算符‘ ！’，不生成新的全局变量（防止污染全局）
      setTimeout(()=>{console.log(i)},1000)  //这是里面的i
@@ -136,7 +136,7 @@ for(var i=0;i<6;i++){
 
 **方法四：利用 setTimeout 的第三个参数,将i传进去**
 
-```text
+```js
 let i
 for(i = 0; i<6; i++){
     setTimeout((value)=>{
@@ -158,7 +158,7 @@ for(i = 0; i<6; i++){
 
 **方法五：const关键字**
 
-```text
+```js
 let i
 for(i = 0; i<6; i++){
     const x = i
@@ -170,7 +170,7 @@ for(i = 0; i<6; i++){
 
 **拓展例1：**
 
-```text
+```js
 function sum(x,y,z){
     console.log(x+y+z);
 }
@@ -181,7 +181,7 @@ setTimeout(sum,1000,1,2,3);
 
 **拓展例2：**
 
-```text
+```js
 var i=0;
 setTimeout(function(){
     console.log('第二次'+i)
@@ -202,7 +202,7 @@ setTimeout(function(){
 
 **setTimeout的意思**
 
-```text
+```js
 setTimeout(fn(),1000)
 f2()
 ```
