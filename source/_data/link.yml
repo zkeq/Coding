@@ -69,12 +69,17 @@
     - name: 杜老师说
       link: https://dusays.com
       descr: 师者，传道，授业，解惑！
-      avatar: https://cdn.dusays.com/avatar.png
+      avatar: https://img.onmicrosoft.cn/friends/f15.png
 
     - name: Gahotx
       link: https://gahotx.cn/
-      avatar: https://pub.gahotx.cn/photo/cat.jpg
+      avatar: https://img.onmicrosoft.cn/friends/f16.jpg
       descr: Don’t repeat yourself
+
+    - name: 冷筱宇的小窝
+      descr: 一个喜欢折腾的青年
+      link: https://www.789dl.cn/
+      avatar: https://img.onmicrosoft.cn/friends/f14.jpg
 
 
 - class_name: 网站
