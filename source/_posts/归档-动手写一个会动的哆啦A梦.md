@@ -5,6 +5,7 @@ description: 使用 CSS 写一个的哆啦A梦
 date: 2022-07-09 18:35:46
 categories: 归档
 cover: https://img.onmicrosoft.cn/2022-07-09/3.png
+sticky: 2
 ---
 
 ### TL;DR
