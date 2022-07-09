@@ -8,6 +8,8 @@ cover: https://img.onmicrosoft.cn/2022-07-09/1.png
 sticky: 5
 ---
 
+<script src="https://dream-plan.cn/dplayer/dplayer.js"></script>
+
 ### TD;DR
 
 - 官网地址：https://news.icodeq.com
@@ -123,7 +125,6 @@ day_news = soup.find('div', attrs={"class": "post_body"})
 
 哦，对了，这是实测视频
 
-<script src="https://dream-plan.cn/dplayer/dplayer.js"></script>
 
 <div id='d1'>
 <video id="p1" width="100%" height="100%" controls=""  data-poster="https://img.onmicrosoft.cn/2022-07-09/1.png">
@@ -134,6 +135,7 @@ day_news = soup.find('div', attrs={"class": "post_body"})
 <script>
 (
 function () {
+
 const p_1 = new Plyr('#p1');
 const dp1 = new DPlayer({
     container: document.getElementById('d1'),
@@ -144,8 +146,10 @@ const dp1 = new DPlayer({
         url: 'https://media.onmicrosoft.cn/news.mp4'
     },
 });
+
 }
 )()
+
 </script>
 
 那么，这是项目地址：
