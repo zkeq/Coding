@@ -1,4 +1,10 @@
 {
+    "redirects": [
+      {
+        "source": "/:path*",
+        "destination": "https://blog.xsot.cn/"
+      }
+    ],
     "rewrites": [
         {
             "source": "/feed",
