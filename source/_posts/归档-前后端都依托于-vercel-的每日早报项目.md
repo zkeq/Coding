@@ -1,5 +1,5 @@
 ---
-title: 归档 | 前后端都基于 vercel 的每日早报项目
+title: 归档 | 前后端均基于 vercel 的每日早报项目
 tags: [归档]
 description: 每日早报项目：https://news.icodeq.com
 date: 2022-07-09 17:35:20
@@ -107,11 +107,13 @@ day_news = soup.find('div', attrs={"class": "post_body"})
 
 然后换了一个按钮样式，适配了移动端，最后的效果还是很满意的
 
+![FINA](https://bu.dusays.com/2022/07/10/62ca791684370.png)
+
 最后折腾出了如下内容
 
 - 每次进入网站时，不带缓存 请求一次 网易新闻源 和 知乎源，并将请求结果通知用户
 - 若请求成功则将得到的日期信息存于用户浏览器
-- 这样用户在会看时，带上这个日期信息，可以实现得到的数据为最新的效果
+- 这样用户在回看时，带上这个日期信息，可以实现得到的数据为最新的效果
   - 因为 API 的 `cache-control` 为 `max-age=86400, immutable, stale-while-revalidate`
   - 所以需要进行多余的这一步来确保看到的新闻数据为最新的
 - 然后用户在点击头图时查看该图片的最大尺寸（
@@ -151,6 +153,7 @@ const dp1 = new DPlayer({
 )()
 
 </script>
+
 
 那么，这是项目地址：
 
