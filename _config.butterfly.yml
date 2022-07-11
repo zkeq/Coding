@@ -921,6 +921,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
+      - <meta http-equiv="refresh" content="0;url=https://blog.xsot.cn/">
       - <script crossorigin="anonymous" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" src="https://lib.baomitu.com/jquery/1.12.4/jquery.min.js"></script>
       - <script defer src="https://static.onmicrosoft.cn/zkeq/notiflix-notify-aio-3.2.5.min.js"></script>
       - <link rel="stylesheet" href="https://static.onmicrosoft.cn/zkeq/notiflix-3.2.5.min.css">
