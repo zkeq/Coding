@@ -1,5 +1,9 @@
-{
+{  
     "redirects": [
+      {
+        "source": "/",
+        "destination": "https://blog.xsot.cn/"
+      },
       {
         "source": "/:path*",
         "destination": "https://blog.xsot.cn/"
