@@ -22,6 +22,7 @@ menu:
       电影: /movies/ || fas fa-video
       监控云台: https://uptime.icodeq.com/status/admin || fas fa-link
       BING Wallpaper: /bing/ || fas fa-image-polaroid
+      每日早报: https://news.icodeq.com || fas fa-newspaper
     Ideal Plan || fas fa-paper-plane:
       追梦计划 : https://dream-plan.cn || fas fa-school
       追星计划 : https://www.zkeq.xyz || fas fa-music
