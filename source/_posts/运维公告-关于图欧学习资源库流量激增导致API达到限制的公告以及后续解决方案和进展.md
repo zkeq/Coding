@@ -30,7 +30,7 @@ sticky: 8
 {% gallery %}
 ![](https://img.onmicrosoft.cn/2022-07-19/1.webp)
 ![](https://img.onmicrosoft.cn/2022-07-19/2.webp)
-![](https://img.onmicrosoft.cn/2022-07-19/4.jpg)
+![](https://img.onmicrosoft.cn/2022-07-19/13.jpg)
 {% endgallery %}
 
 
