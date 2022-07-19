@@ -21,7 +21,7 @@ sticky: 8
 > 然后网站大佬还在修复中，如果修复成功了会第一时间通知大家，你们可以进群关注最新的进展
 
 
-- 图欧学习资源库·阿里盘：https://tuo.icodeq.com/
+- 图欧学习资源库·阿里盘：https://tuo.icodeq.com/alipan
 
 - 图欧学习资源库·百度盘：https://tuo.icodeq.com/baidu
 
