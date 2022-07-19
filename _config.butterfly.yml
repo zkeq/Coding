@@ -289,7 +289,6 @@ comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo
   use: 
-    - waline
     - giscus
   # - Disqus
   text: true # Display the comment name next to the button
