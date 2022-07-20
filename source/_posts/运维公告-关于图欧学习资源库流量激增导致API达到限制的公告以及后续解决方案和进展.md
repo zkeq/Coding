@@ -120,4 +120,30 @@ sticky: 8
 
 ![12](https://img.onmicrosoft.cn/2022-07-19/12.png)
 
+### `2022-07-19 晚上`
+
+- `Vercel` 账号达到限制额度，将网站全站转移到小号上面
+- 开始想办法节约资源，首先想到的是通过将静态文件托管至cdn.其余文件依旧走vercel的流量
+- 但是这样仍然无法解决流量过大的问题，并且此时的后备账号资源仍然不可用
+- 故尝试启用 `tuostatic.onmicrosoft.cn` 域名来进行cdn缓存源站，减少服务器压力
+- 并将错误页面由本文章修改至cdn临时缓存站
+- 但是原域名并不想舍弃，并且这个域名太长了不大好记
+- 故尝试使用 `ClientWorker` 来进行路由获取 
+  - https://clientworker.js.org/
+- 请了 [Cyfan](https://blog.cyfan.top)大佬来适配站点
+- 由于时间太晚暂时启用 `tuostatic.onmicrosoft.cn` 来应对夜间的流量
+  - （流量此时变小
+
+![12](https://img.onmicrosoft.cn/2022-07-19/14.png)
+
+### `2022-07-20 上午`
+
+- 由 `ClientWorker` 驱动的主站正式部署，并且增加一个 `cdn源站`，实现异地双热备份。
+- 此时已经将全部的流量压力导至自用 `CDN` `vercel` 仅作为 `ClientWorker` 安装媒介使用
+- 修改相关源码，使其适配 `ClientWorker`，修复无法预览文件的 `BUG`
+- 正式上线 `tuostudy.onmicrosoft.cn` CDN 域名，用来缓存用到的静态资源，并将 `tuostatic.onmicrosoft.cn` 重定向到新域名
+- 首批迁移工作已经进行 `80%`，此时服务器压力大幅度改善，网站在线率提升
+
+![12](https://img.onmicrosoft.cn/2022-07-19/15.png)
+
 ### `本文实时更新，更多进展第一时间同步`
