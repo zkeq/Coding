@@ -21,10 +21,10 @@ NProgress.start()
 // }
 // let times = 0;
 window.onload = function(){
-    Notiflix.Notify.init({
-        position: 'center-top',
-        distance: '60px',
-    })
+    // Notiflix.Notify.init({
+    //     position: 'center-top',
+    //     distance: '60px',
+    // })
     NProgress.done();
     // voiceInit()
     // document.getElementById("body-wrap").addEventListener("click", function(){
