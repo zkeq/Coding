@@ -140,10 +140,43 @@ sticky: 8
 
 - 由 `ClientWorker` 驱动的主站正式部署，并且增加一个 `cdn源站`，实现异地双热备份。
 - 此时已经将全部的流量压力导至自用 `CDN` `vercel` 仅作为 `ClientWorker` 安装媒介使用
-- 修改相关源码，使其适配 `ClientWorker`，修复无法预览文件的 `BUG`
+- 修改相关源码，使其适配 `ClientWorker 2.3.2`，修复无法预览文件的 `BUG`
 - 正式上线 `tuostudy.onmicrosoft.cn` CDN 域名，用来缓存用到的静态资源，并将 `tuostatic.onmicrosoft.cn` 重定向到新域名
 - 首批迁移工作已经进行 `80%`，此时服务器压力大幅度改善，网站在线率提升
 
 ![12](https://img.onmicrosoft.cn/2022-07-19/15.png)
+
+### `2022-07-21`
+
+- `CDN` 日流量稳定在 `1G` 左右，修复相应的文件头，添加防盗链，并且不影响播放器的直接调用
+- 继续跟进 `ClientWorker` 版本，更新版本至 `2.4.0` 和 `2.4.2`
+  - 反馈BUG，大佬修复了 `post` 无 `body` 的 bug
+  - 修复一些情况卡死的bug
+  - 网站流量逐渐稳定，在线人数180人左右，服务器压力稳定
+
+### `2022-07-22`
+- 主账号下载次数达到限制，原因为止，切换至备用账号一段时间后切回主号，恢复正常
+  - 暂时暂停第二波账号备份，为主账号的再次崩溃做预案
+- 为 `CDN` 账号增加可用资源，购入流量资源做储备
+- 再次跟进 `ClientWorker` 版本，更新版本至 `2.5.2` 期间出现网页假死的情况，紧急退回至 `2.4.2`，暂时恢复正常
+  - 刷新相关 `CDN` 缓存，经过排查确实是升级 `ClientWorker` 版本导致的 BUG
+
+### `2022-07-23`
+- 跟进 `ClientWorker` 版本，至 `2.6.0` ，反馈配置不兼容问题后跟进至 `2.6.1`
+- 更新相关的文件，增加缓存，此时的网页内容访问再次提升，存于浏览器 `15分钟` CDN缓存，优化用户访问体验
+- 网站速度得到进一步提示，见如下视频：
+
+<video id="p1" width="100%" height="100%" controls=""  data-poster="https://img.onmicrosoft.cn/2022-07-19/5.jpg">
+  <source src="https://img.onmicrosoft.cn/2022-07-19/fast.mp4" type="video/mp4" />
+</video>
+
+<script>
+(
+function () {
+const p_1 = new Plyr('#p1');
+
+}
+)()
+</script>
 
 ### `本文实时更新，更多进展第一时间同步`
