@@ -339,3 +339,4 @@ $('p').fadeOut(300, function() { $(this).remove(); });
 [.stop()](https://api.jquery.com/stop/)和[.delay()](https://api.jquery.com/delay/)用来停止或延缓特效的执行。
 
 [$.fx.off](https://api.jquery.com/jQuery.fx.off/)如果设置为true，则关闭所有网页特效。
+
