@@ -41,7 +41,6 @@ axios({
   .then(function(response) {
   response.data.pipe(fs.createWriteStream('ada_lovelace.jpg'))
 });
-复制代码
 ```
 
 # POST 请求
@@ -67,8 +66,6 @@ axios({
     lastName: 'Flintstone'
   }
 });
-  
-复制代码
 ```
 
 # 并行请求
@@ -86,7 +83,6 @@ axios.all([getUserAccount(), getUserPermissions()])
   .then(axios.spread(function (acct, perms) {
     // Both requests are now complete
   }));
-复制代码
 ```
 
 # 创建实例
@@ -97,7 +93,6 @@ var instance = axios.create({
   timeout: 1000,
   headers: {'X-Custom-Header': 'foobar'}
 });
-复制代码
 ```
 
 # Response
@@ -111,7 +106,6 @@ axios.get('/user/12345')
     console.log(response.headers);
     console.log(response.config);
   });
-复制代码
 ```
 
 # Config
@@ -147,7 +141,6 @@ instance.defaults.timeout = 2500;
 instance.get('/longRequest', {
   timeout: 5000
 });
-复制代码
 ```
 
 # 拦截器
@@ -182,7 +175,6 @@ axios.interceptors.request.eject(myInterceptor);
 
 var instance = axios.create();
 instance.interceptors.request.use(function () {/*...*/});
-复制代码
 ```
 
 # 错误处理
@@ -217,7 +209,6 @@ axios.get('/user/12345', {
     return status < 500; // Reject only if the status code is greater than or equal to 500
   }
 })
-复制代码
 ```
 
 # 取消请求
