@@ -156,3 +156,5 @@ console.log(array)
 
 ![3](https://img.onmicrosoft.cn/2022-07-29/8.png)
 
+- 文档：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
