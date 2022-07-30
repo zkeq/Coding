@@ -29,7 +29,7 @@ cover: https://img.onmicrosoft.cn/2022-02-04/7.png
     <div id="app">
         <h2>world</h2>
     </div>
-    <script src="https://npm.elemecdn.com/vue@3.0.11/dist/vue.global.js"></script>
+    <script src="https://npm.onmicrosoft.cn/vue@3.0.11/dist/vue.global.js"></script>
     <script>
         const why = {
             template: '<h2>hello</h2>',

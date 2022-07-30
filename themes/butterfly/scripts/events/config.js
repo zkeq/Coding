@@ -71,7 +71,7 @@ hexo.extend.filter.register('before_generate', () => {
     medium_zoom: 'https://jsd.onmicrosoft.cn/npm/medium-zoom/dist/medium-zoom.min.js',
     snackbar_css: 'https://jsd.onmicrosoft.cn/npm/node-snackbar/dist/snackbar.min.css',
     snackbar: 'https://jsd.onmicrosoft.cn/npm/node-snackbar/dist/snackbar.min.js',
-    fontawesomeV6: 'https://npm.elemecdn.com/font6pro@6.0.1/css/all.min.css',
+    fontawesomeV6: 'https://npm.onmicrosoft.cn/font6pro@6.0.1/css/all.min.css',
     flickr_justified_gallery_js: 'https://jsd.onmicrosoft.cn/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
     flickr_justified_gallery_css: 'https://jsd.onmicrosoft.cn/npm/flickr-justified-gallery@2/dist/fjGallery.min.css',
     aplayer_css: 'https://jsd.onmicrosoft.cn/npm/aplayer@1/dist/APlayer.min.css',
