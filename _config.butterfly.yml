@@ -404,11 +404,11 @@ waline:
   pageview: false
   option:
     emoji: [
-          "https://npm.elemecdn.com/@waline/emojis@1.0.1/alus",
-          "https://npm.elemecdn.com/@waline/emojis@1.0.1/bilibili",
-          "https://npm.elemecdn.com/@waline/emojis@1.0.1/weibo",
-          "https://npm.elemecdn.com/@waline/emojis@1.0.1/qq",
-          "https://npm.elemecdn.com/@waline/emojis@1.0.1/tieba"
+          "https://npm.onmicrosoft.cn/@waline/emojis@1.0.1/alus",
+          "https://npm.onmicrosoft.cn/@waline/emojis@1.0.1/bilibili",
+          "https://npm.onmicrosoft.cn/@waline/emojis@1.0.1/weibo",
+          "https://npm.onmicrosoft.cn/@waline/emojis@1.0.1/qq",
+          "https://npm.onmicrosoft.cn/@waline/emojis@1.0.1/tieba"
         ]
 
 # utterances
@@ -666,7 +666,7 @@ beautify:
 font:
   global-font-size:
   code-font-size:
-  font-family: "HarmonyOS"
+  font-family: "HarmonyOS_Regular"
   code-font-family:
 
 # Font settings for the site title and site subtitle
@@ -939,7 +939,7 @@ inject:
       # - <link rel="stylesheet" href="/css/black-white.css">
   bottom:
       - <div class=" aplayer no-destroy " data-id="1050282" data-server="netease" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="true" data-autoplay="false" muted></div>
-      - <script src="https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js"></script>
+      - <script src="https://npm.onmicrosoft.cn/nprogress@0.2.0/nprogress.js"></script>
       - <link href="/css/nprogress.css" rel="stylesheet">
       - <script src="/js/index_music.js"></script>
     # - <script src="xxxx"></script>
@@ -957,8 +957,8 @@ inject:
 # # ---------  pjax: https://cdn.jsdelivr.net/npm/pjax/pjax.min.js
 
 # #   # comments
-# #  --------- gitalk: https://npm.elemecdn.com/gitalk@1.7.2/dist/gitalk.min.js
-# # ---------  gitalk_css: https://npm.elemecdn.com/gitalk@1.7.2/dist/gitalk.css
+# #  --------- gitalk: https://npm.onmicrosoft.cn/gitalk@1.7.2/dist/gitalk.min.js
+# # ---------  gitalk_css: https://npm.onmicrosoft.cn/gitalk@1.7.2/dist/gitalk.css
 # #   # valine: https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js
 # #   # disqusjs: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js
 # #   # disqusjs_css: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css
@@ -989,13 +989,13 @@ inject:
 
 # #   # background effect
 # #   # canvas_ribbon: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js
-#   canvas_fluttering_ribbon: https://npm.elemecdn.com/butterfly-extsrc@1.1.0/dist/canvas-fluttering-ribbon.min.js
+#   canvas_fluttering_ribbon: https://npm.onmicrosoft.cn/butterfly-extsrc@1.1.0/dist/canvas-fluttering-ribbon.min.js
 # #   # canvas_nest: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js
 
-#   lazyload: https://npm.elemecdn.com/vanilla-lazyload@17.5.0/dist/lazyload.iife.min.js
+#   lazyload: https://npm.onmicrosoft.cn/vanilla-lazyload@17.5.0/dist/lazyload.iife.min.js
 #   instantpage: https://cdnjs.loli.net/ajax/libs/instant.page/5.1.0/instantpage.min.js
 #   typed: https://cdnjs.loli.net/ajax/libs/typed.js/2.0.12/typed.min.js 
-#   # pangu: https://npm.elemecdn.com/pangu@4.0.7/dist/browser/pangu.min.js
+#   # pangu: https://npm.onmicrosoft.cn/pangu@4.0.7/dist/browser/pangu.min.js
 
 # #   # # photo
 # #   fancybox_css: https://cdnjs.loli.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css  
@@ -1007,10 +1007,10 @@ inject:
 # #   snackbar: https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js
 
 # #   # # effect
-# #   activate_power_mode: https://npm.elemecdn.com/butterfly-extsrc@1.1.0/dist/activate-power-mode.min.js
-#   fireworks: https://npm.elemecdn.com/butterfly-extsrc@1.1.0/dist/fireworks.min.js
-# #   click_heart: https://npm.elemecdn.com/butterfly-extsrc@1.1.0/dist/click-heart.min.jss
-# #   ClickShowText: https://npm.elemecdn.com/butterfly-extsrc@1.1.0/dist/click-show-text.min.js
+# #   activate_power_mode: https://npm.onmicrosoft.cn/butterfly-extsrc@1.1.0/dist/activate-power-mode.min.js
+#   fireworks: https://npm.onmicrosoft.cn/butterfly-extsrc@1.1.0/dist/fireworks.min.js
+# #   click_heart: https://npm.onmicrosoft.cn/butterfly-extsrc@1.1.0/dist/click-heart.min.jss
+# #   ClickShowText: https://npm.onmicrosoft.cn/butterfly-extsrc@1.1.0/dist/click-show-text.min.js
 
 # #   # # fontawesome
 #   fontawesome: https://cdnjs.loli.net/ajax/libs/font-awesome/5.15.4/css/all.min.css
@@ -1023,9 +1023,9 @@ inject:
 #   justifiedGallery_css: https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css
 
 # #   # # aplayer
-# #   # aplayer_css: https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.css
-#   aplayer_js: https://npm.elemecdn.com/aplayer@1.10.1/dist/APlayer.min.js
-#   meting_js: https://npm.elemecdn.com/meting@1.2.0/dist/Meting.min.js
+# #   # aplayer_css: https://npm.onmicrosoft.cn/aplayer@1.10.1/dist/APlayer.min.css
+#   aplayer_js: https://npm.onmicrosoft.cn/aplayer@1.10.1/dist/APlayer.min.js
+#   meting_js: https://npm.onmicrosoft.cn/meting@1.2.0/dist/Meting.min.js
 
 # #   # # Prism.js
 #   # prismjs_js: https://cdnjs.loli.net/ajax/libs/prism/1.26.0/prism.min.js
