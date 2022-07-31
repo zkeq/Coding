@@ -45,7 +45,7 @@ axios({
 
 # POST 请求
 
-```php
+```javascript
 axios.post('/user', {
     firstName: 'Fred',
     lastName: 'Flintstone'
@@ -70,7 +70,7 @@ axios({
 
 # 并行请求
 
-```csharp
+```javascript
 function getUserAccount() {
   return axios.get('/user/12345');
 }
@@ -87,7 +87,7 @@ axios.all([getUserAccount(), getUserPermissions()])
 
 # 创建实例
 
-```php
+```javascript
 var instance = axios.create({
   baseURL: 'https://some-domain.com/api/',
   timeout: 1000,
@@ -97,7 +97,7 @@ var instance = axios.create({
 
 # Response
 
-```lua
+```javascript
 axios.get('/user/12345')
   .then(function(response) {
     console.log(response.data);
@@ -110,7 +110,7 @@ axios.get('/user/12345')
 
 # Config
 
-```php
+```javascript
 // Global axios defaults
 
 axios.defaults.baseURL = 'https://api.example.com';
@@ -145,7 +145,7 @@ instance.get('/longRequest', {
 
 # 拦截器
 
-```php
+```javascript
 // Intercept request/responses
 
 // Add a request interceptor
@@ -213,7 +213,7 @@ axios.get('/user/12345', {
 
 # 取消请求
 
-```php
+```javascript
 // Cancel request with cancel token
 
 var CancelToken = axios.CancelToken;
