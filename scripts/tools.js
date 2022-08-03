@@ -116,5 +116,9 @@ function createGist (md5, gh_content, lang){
     request.setRequestHeader("Authorization", "token " + github_token);
     request.send(JSON.stringify(requestData));
     response = request.responseText;
+    // 如果状态码不是200就报错
+    if (request.status != 201) {
+        return createGist(md5, gh_content, lang);
+    }
     return JSON.parse(response)["id"];
 }
