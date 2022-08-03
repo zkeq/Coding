@@ -110,6 +110,7 @@ srcdoc="<head><base target='_blank'/></head><body><script src='https://gist.onmi
     });
 }, 9);
 
+
 function createGist (md5, gh_content, lang){
     let response = ''
     let requestData = {
