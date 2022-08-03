@@ -33,19 +33,9 @@ while (!is_end) {
     }
 }
 
-// hexo.extend.filter.register('before_post_render', function (data) {
-//     // console.log(data);
-//     return data;
-// });
-
-const css = hexo.extend.helper.get('css').bind(hexo);
-
 // scripts/plantuml.js
 const rBacktick = /^((?:[^\S\r\n]*>){0,3}[^\S\r\n]*)(`{3,}|~{3,})[^\S\r\n]*((?:.*?[^`\s])?)[^\S\r\n]*\n((?:[\s\S]*?\n)?)(?:(?:[^\S\r\n]*>){0,3}[^\S\r\n]*)\2[^\S\r\n]?(\n+|$)/gm;
-const rPuml = /^\s*plantuml/;
-const rArgs = /([-_0-9a-zA-Z]+)="(.*?)(?<!\\)"/g;
-const escapeSwigTag = str => str.replace(/{/g, '&#123;').replace(/}/g, '&#125;');
-
+// 另一种正则：```(\w+?\n)([\s\S]+?)```
 
 hexo.extend.filter.register('before_post_render', function (data) {
     const dataContent = data.content;
