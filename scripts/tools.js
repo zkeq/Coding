@@ -103,14 +103,14 @@ hexo.extend.filter.register('before_post_render', function (data) {
             // iframe_ele.setAttribute("onload", "javascript:this.style.height=`${this.contentWindow.document.body.offsetHeight}px`;this.contentWindow.document.getElementsByClassName('gist-data')[0].style.height=`${this.clientHeight-65}px`;")
             // iframe_ele.setAttribute("srcdoc", `<head><base target='_blank'/></head><body><script src='https://gist.onmicrosoft.cn/zkeq/${id}.js'></script></body>`)
         return `
-        
-        <iframe 
-        style="border:none;width:100%;max-height:50vh"
-        onload="javascript:this.style.height=\`\${this.contentWindow.document.body.offsetHeight}px\`;this.contentWindow.document.getElementsByClassName('gist-data')[0].style.height=\`\${this.clientHeight-65}px\`;"
-        srcdoc="<head><base target='_blank'/></head><body><script src='https://gist.onmicrosoft.cn/zkeq/${id}.js'></script></body>">
-        </iframe>
-        
-        `;
+
+<iframe 
+style="border:none;width:100%;max-height:50vh"
+onload="javascript:this.style.height=\`\${this.contentWindow.document.body.offsetHeight}px\`;this.contentWindow.document.getElementsByClassName('gist-data')[0].style.height=\`\${this.clientHeight-65}px\`;"
+srcdoc="<head><base target='_blank'/></head><body><script src='https://gist.onmicrosoft.cn/zkeq/${id}.js'></script></body>">
+</iframe>
+
+`;
     });
 }, 9);
 
