@@ -81,9 +81,14 @@ hexo.extend.filter.register('before_post_render', function (data) {
             let index = page_list.indexOf(md5);
             // 找到对应的id
             var id = id_list[index];
+            console.log("该gist已经存在，使用原来的id：" + id);
         }else{
             // 如果没有找到就新建一个gist
+            console.log("该gist不存在，新建一个gist");
+            console.log(gh_content);
+            console.log('-------------')
             var id = createGist(md5, gh_content, lang);
+            console.log("新建gist，id：" + id);
         }
         // 查看这个gist的嵌入代码
         var request = new XMLHttpRequest();
@@ -93,7 +98,6 @@ hexo.extend.filter.register('before_post_render', function (data) {
         request.send();
         let gist_code = request.responseText;
         str = "<script>" + gist_code + "</script>";
-        console.log(str);
         return str
     });
 }, 9);
