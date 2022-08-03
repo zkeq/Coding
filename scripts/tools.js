@@ -107,7 +107,7 @@ hexo.extend.filter.register('before_post_render', function (data) {
 <iframe 
 style="border:none;width:100%;max-height:50vh"
 onload="javascript:this.style.height=\`\${this.contentWindow.document.body.offsetHeight+25}px\`;this.contentWindow.document.getElementsByClassName('gist-data')[0].style.height=\`\${this.clientHeight-65}px\`;"
-srcdoc="<head><base target='_blank'/></head><body><script src='https://gist.onmicrosoft.cn/zkeq/${id}.js'></script></body>">
+srcdoc="<head><base target='_blank'/></head><body><script src='https://gist.onmicrosoft.cn/zkeq/${id}.js'></script><link rel="stylesheet" href=".gist-meta a:nth-child(2) {display: none;}"></body>">
 </iframe>
 
 `;
