@@ -3399,7 +3399,7 @@ h1.page-title + .tag-cloud-list {
   margin: 0 0 16px;
 }
 #article-container iframe {
-  margin: 0 0 20px;
+  margin: 0 0;
 }
 #article-container kbd {
   margin: 0 3px;
