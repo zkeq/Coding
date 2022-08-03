@@ -90,15 +90,19 @@ hexo.extend.filter.register('before_post_render', function (data) {
             var id = createGist(md5, gh_content, lang);
             console.log("新建gist，id：" + id);
         }
-        // 查看这个gist的嵌入代码
-        var request = new XMLHttpRequest();
-        let gist_url = "https://gist.github.com/zkeq/" + id + ".js"
-        console.log(gist_url);
-        request.open("GET", gist_url, false);
-        request.send();
-        let gist_code = request.responseText;
-        str = "<script>" + gist_code + "</script>";
-        return str
+        // // 查看这个gist的嵌入代码
+        // var request = new XMLHttpRequest();
+        // let gist_url = "https://gist.github.com/zkeq/" + id + ".js"
+        // console.log(gist_url);
+        // request.open("GET", gist_url, false);
+        // request.send();
+        // let gist_code = request.responseText;
+        // str = "<script>" + gist_code + "</script>";
+        iframe_ele = document.createElement('iframe');
+        iframe_ele.style = "border:none;width:100%;max-height:50vh";
+        iframe_ele.setAttribute("onload", "javascript:this.style.height=`${this.contentWindow.document.body.offsetHeight}px`;this.contentWindow.document.getElementsByClassName('gist-data')[0].style.height=`${this.clientHeight-65}px`;")
+        iframe_ele.setAttribute("srcdoc", `<head><base target='_blank'/></head><body><script src='https://gist.onmicrosoft.cn/zkeq/${id}.js'></script></body>`)
+        return iframe_ele.outerHTML;
     });
 }, 9);
 
