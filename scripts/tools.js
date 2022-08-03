@@ -40,10 +40,6 @@ hexo.extend.filter.register('before_post_render', function (data) {
 
 const css = hexo.extend.helper.get('css').bind(hexo);
 
-hexo.extend.injector.register('head_end', () => {
-    return css('https://github.githubassets.com/assets/gist-embed-93428d678e02.css');
-});
-
 // scripts/plantuml.js
 const rBacktick = /^((?:[^\S\r\n]*>){0,3}[^\S\r\n]*)(`{3,}|~{3,})[^\S\r\n]*((?:.*?[^`\s])?)[^\S\r\n]*\n((?:[\s\S]*?\n)?)(?:(?:[^\S\r\n]*>){0,3}[^\S\r\n]*)\2[^\S\r\n]?(\n+|$)/gm;
 const rPuml = /^\s*plantuml/;
@@ -105,7 +101,7 @@ hexo.extend.filter.register('before_post_render', function (data) {
         return `
 
 <iframe 
-style="border:none;width:100%;max-height:50vh"
+style="border:none;width:100%;"
 onload="javascript:this.style.height=\`\${this.contentWindow.document.body.offsetHeight+30}px\`;this.contentWindow.document.getElementsByClassName('gist-data')[0].style.height=\`\${this.clientHeight-65}px\`;"
 srcdoc="<head><base target='_blank'/></head><body><script src='https://gist.onmicrosoft.cn/zkeq/${id}.js'></script><style>.gist-meta a:nth-child(2) {display: none;}</style></body>">
 </iframe>
