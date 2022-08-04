@@ -48,7 +48,7 @@ hexo.extend.filter.register('before_post_render', function (data) {
         // 如果有 _args 就用 _args 如果没有就默认为js
         let lang = _args ? _args : 'js';
         lang_list = {
-            "javescript": "js",
+            "javascript": "js",
             "python": "py",
             "SQL": "sql",
             "Python": "py",
