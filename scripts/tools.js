@@ -93,7 +93,7 @@ hexo.extend.filter.register('before_post_render', function (data) {
 <iframe 
 style="border:none;width:100%;;max-height:66vh;"
 onload="javascript:this.style.height=\`\${this.contentWindow.document.body.offsetHeight+20}px\`;this.contentWindow.document.getElementsByClassName('gist-data')[0].style.height=\`\${this.clientHeight-60}px\`;"
-srcdoc="<head><base target='_blank'/></head><body><script src='https://gist.onmicrosoft.cn/zkeq/${id}.js'></script><style>.gist-meta a:nth-child(2) {overflow:hidden;text-overflow: ellipsis;display: inline-block;max-width: 80px;} html {overflow: hidden;text-overflow: ellipsis;display: inline-block;} * {margin: 0}</style></body>">
+srcdoc="<head><base target='_blank'/></head><body><script src='https://gist.onmicrosoft.cn/zkeq/${id}.js'></script><style>.gist-meta a:nth-child(2) {display: none;} html {overflow: hidden;text-overflow: ellipsis;display: inline-block;} * {margin: 0}</style></body>">
 </iframe>
 
 `;
