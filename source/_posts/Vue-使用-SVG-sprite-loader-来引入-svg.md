@@ -96,9 +96,15 @@ module.exports = {
 其他备注
 
 ```json
-注意你的 svg 相关依赖的版本需要跟我保持一致，否则会报错
+// 注意你的 svg 相关依赖的版本需要跟我保持一致，否则会报错
 
-    "svg-sprite-loader": "^4.1.6",
-    "svg-sprite-loader-mod": "^4.1.6-mod1",
-    "svgo-loader": "^2.2.1",
+//     "svg-sprite-loader": "^4.1.6",
+//     "svg-sprite-loader-mod": "^4.1.6-mod1",
+//     "svgo-loader": "^2.2.1",
+
+好像并不会报错hhh，我用的最新的版本
+
+        "svg-sprite-loader": "^6.0.11",
+
+笑死我了，能用就行
 ```
