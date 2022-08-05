@@ -253,7 +253,15 @@ Vue.component("Icon", Icon)
 }
 ```
 
-完整的版本号
+讲师推荐的配置为
+```json
+// 注意你的 svg 相关依赖的版本需要跟我保持一致，否则会报错
+    "svg-sprite-loader": "^4.1.6",
+    "svg-sprite-loader-mod": "^4.1.6-mod1",
+    "svgo-loader": "^2.2.1",
+```
+
+我的完整的版本号
 ```json
 {
   "name": "morney-3",
