@@ -60,6 +60,7 @@ module.exports = {
       .test(/\.svg$/)
       .include.add(dir).end() // 包含 icons 目录
       .use('svg-sprite-loader').loader('svg-sprite-loader').options({extract:false}).end()
+      // 下文会解决一个 svg 填充问题，也就是下面被注释掉的代码
     config.plugin('svg-sprite').use(require('svg-sprite-loader/plugin'), [{plainSprite: true}])
     config.module.rule('svg').exclude.add(dir) // 其他 svg loader 排除 icons 目录
 
@@ -217,3 +218,125 @@ Vue.component("Icon", Icon)
     </div>
 </template>
 ```
+
+#### 遇到的一个小 `bug`: `fill` 颜色
+
+尝试实现切换标签页的时候自动更改填充颜色来达到突出显示的效果
+
+但是并不是所有的 svg 都会自动变色, 只有一些标签会起作用... 于是我直接干脆调成了这样
+
+![2](https://img.onmicrosoft.cn/2022-08-05/4.png)
+
+和这样
+
+![3](https://img.onmicrosoft.cn/2022-08-05/5.png)
+
+笑死我了，直接逃避这个问题
+
+经过排查发现是 `svg` 代码里面的 `fill` 属性来控制了颜色，从而 `css` 不能从外部更改颜色
+
+如图：
+
+![1](https://img.onmicrosoft.cn/2022-08-05/2.png)
+
+手动删掉此属性即可正常用css指定颜色，但是如果有很多svg.这样的话未必太过麻烦
+
+我们可以使用一个叫做 `svgo-loader` 的插件来解决此问题
+
+不知道是什么原因，高版本的这个插件会导致加载不出 svg 的 bug，我使用的是一下版本，是正常使用的
+
+```json
+{
+    "devDependencies": {
+        "svgo-loader": "^2.2.1",
+    }
+}
+```
+
+完整的版本号
+```json
+{
+  "name": "morney-3",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "3.15.2",
+    "register-service-worker": "1.7.2",
+    "vue": "2.6.14",
+    "vue-class-component": "7.2.6",
+    "vue-property-decorator": "9.1.2",
+    "vue-router": "3.5.2",
+    "vuex": "3.6.2"
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.25",
+    "@typescript-eslint/eslint-plugin": "4.28.4",
+    "@typescript-eslint/parser": "4.28.4",
+    "@vue/cli-plugin-babel": "4.5.13",
+    "@vue/cli-plugin-eslint": "4.5.13",
+    "@vue/cli-plugin-pwa": "4.5.13",
+    "@vue/cli-plugin-router": "4.5.13",
+    "@vue/cli-plugin-typescript": "4.5.13",
+    "@vue/cli-plugin-unit-jest": "4.5.13",
+    "@vue/cli-plugin-vuex": "4.5.13",
+    "@vue/cli-service": "4.5.13",
+    "@vue/eslint-config-typescript": "7.0.0",
+    "@vue/test-utils": "1.2.2",
+    "eslint": "6.8.0",
+    "eslint-plugin-vue": "6.2.2",
+    "sass": "1.36.0",
+    "sass-loader": "8.0.2",
+    "svg-sprite-loader": "^6.0.11",
+    "svg-sprite-loader-mod": "^4.1.6-mod1",
+    "svgo-loader": "^2.2.1",
+    "typescript": "4.1.6",
+    "vue-template-compiler": "2.6.14"
+  }
+}
+```
+
+安装完之后，我们需要配置 `vue.config.js` 文件
+
+```js
++      .use('svgo-loader').loader('svgo-loader')
++      .tap(options => ({...options, plugins: [{removeAttrs: {attrs: 'fill'}}]}))
++      .end()
+```
+
+完整的 `vue.config.js`
+
+```js
+module.exports = {
+  lintOnSave: false
+}
+const path = require('path')
+
+module.exports = {
+  lintOnSave: false,
+  chainWebpack: config =>{
+    const dir = path.resolve(__dirname, 'src/assets/icons')
+
+    config.module
+      .rule('svg-sprite')
+      .test(/\.svg$/)
+      .include.add(dir).end() // 包含 icons 目录
+      .use('svg-sprite-loader').loader('svg-sprite-loader').options({extract:false}).end()
+      .use('svgo-loader').loader('svgo-loader')
+      .tap(options => ({...options, plugins: [{removeAttrs: {attrs: 'fill'}}]}))
+      .end()
+    config.plugin('svg-sprite').use(require('svg-sprite-loader/plugin'), [{plainSprite: true}])
+    config.module.rule('svg').exclude.add(dir) // 其他 svg loader 排除 icons 目录
+
+  }
+}
+```
+
+收工，效果如下
+
+![1](https://img.onmicrosoft.cn/2022-08-05/1.png)
