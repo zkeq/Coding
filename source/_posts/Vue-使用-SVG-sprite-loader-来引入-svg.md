@@ -248,17 +248,12 @@ Vue.component("Icon", Icon)
 ```json
 {
     "devDependencies": {
+        "svg-sprite-loader": "^6.0.11", 
+        //已知 svg-sprite-loader 的 4.1.6 版本会有 bug
+        // 故推荐使用高版本的，最新版已经修复了 bug，推荐使用 ^6.0.11
         "svgo-loader": "^2.2.1",
     }
 }
-```
-
-讲师推荐的配置为
-```json
-// 注意你的 svg 相关依赖的版本需要跟我保持一致，否则会报错
-    "svg-sprite-loader": "^4.1.6",
-    "svg-sprite-loader-mod": "^4.1.6-mod1",
-    "svgo-loader": "^2.2.1",
 ```
 
 我的完整的版本号（可以正常使用的，就第一个 `loader` 版本号比以上高一些）
@@ -301,7 +296,6 @@ Vue.component("Icon", Icon)
     "sass": "1.36.0",
     "sass-loader": "8.0.2",
     "svg-sprite-loader": "^6.0.11",
-    "svg-sprite-loader-mod": "^4.1.6-mod1",
     "svgo-loader": "^2.2.1",
     "typescript": "4.1.6",
     "vue-template-compiler": "2.6.14"
