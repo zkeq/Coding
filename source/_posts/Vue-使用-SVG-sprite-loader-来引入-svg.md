@@ -343,3 +343,12 @@ module.exports = {
 收工，效果如下
 
 ![1](https://img.onmicrosoft.cn/2022-08-05/1.png)
+
+PS: `vue.config.js` 报 `eslint` 错误怎么办？
+
+![1](https://static.xiedaimala.com/xdml/image/3ac7c224-c23d-491f-84b5-4fabfbeab9b8/2020-8-6-17-40-56.png)
+
+```js
+/* eslint-disable */ 
+```
+把这句话添加到 `vue.config.js` 的第一行即可
