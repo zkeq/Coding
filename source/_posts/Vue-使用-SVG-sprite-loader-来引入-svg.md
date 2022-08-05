@@ -108,3 +108,128 @@ module.exports = {
 
 笑死我了，能用就行
 ```
+
+#### 在 `shims-vue.d.ts` 中添加 
+
+这一步是为了解决 `ts` 报错
+
+```ts
+declare module '*.svg' {
+  const content: string;
+  export default content;
+}
+
+```
+
+```js
+
+#### 接着在 `TS` 里面引入
+
+```vue
+<script lang="ts">
+// 笑死我了，这是菜鸡写法
+    import x from '@/assets/icons/Labels.svg'
+    import y from '@/assets/icons/Money.svg'
+    console.log(x)
+    console.log(y)
+</script>
+```
+
+这一步的作用就是在 `html` 的 `head` 部分嵌入一个 `symbol` ，接着我们在 `template` 里面用 `<use />` 标签就可以使用啦
+
+```vue
+<template>
+    <div class="nav">
+      <router-link to="/money">
+        <svg>
+            <use xlink:href="#Money" />
+        </svg>
+      </router-link>
+    </div>
+</template>
+```
+
+想必看出来了，这样引入真的 **很麻烦**，如果我们有几十个 `svg` ，难道要一个一个的引入？？
+
+而且每次都要写 `<svg><use /></svg>` 好麻烦，我们可不可以把它封装成一个组件呢？
+
+#### 引入整个 `svg` 目录？
+
+```ts
+  let importAll = (requireContext: __WebpackModuleApi.RequireContext) => requireContext.keys().forEach(requireContext);
+  // 这玩意是搜的全网搜到的？
+  try {importAll(require.context('../assets/icons', true, /\.svg$/));} catch (error) {console.log(error);}
+  // 如果不加 try，在单元测试的时候可能会遇到问题
+
+// 牛逼，好用
+```  
+
+#### 将 `icon` 封装成组件
+
+`@/components/Icon.vue`
+
+```vue
+<template>
+    <svg class="icon">
+        <use :xlink:href="'#' + name" />
+    </svg>
+</template>
+
+<script lang="ts">
+    let importAll = (requireContext: __WebpackModuleApi.RequireContext) => requireContext.keys().forEach(requireContext);
+    // 这玩意是搜的全网搜到的？
+    try {importAll(require.context('../assets/icons', true, /\.svg$/));} catch (error) {console.log(error);}
+    // 如果不加 try，在单元测试的时候可能会遇到问题
+
+    export default {
+        name: 'Icon',
+        props: ['name']
+        // 以下代码是自动生成的
+        // props: {
+        //     name: {
+        //         type: String,
+        //         required: true
+        //     }
+        // }
+        
+    }
+</script>
+
+<style lang="scss" scoped>
+// 这个样式代码是阿里矢量字体库里面给的css
+    .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+    }
+</style>
+```
+
+`@/main.ts` 全局注册
+
+```ts
+import Icon from "@/components/Icon.vue";
+Vue.component("Icon", Icon)
+```
+
+然后直接在 `view` 里面使用 `<Icon />`即可
+
+```vue
+<template>
+    <div class="nav">
+      <router-link to="/money">
+        <Icon name="Money"/>
+      </router-link>
+      |
+      <router-link to="/lables">
+        <Icon name="Labels"/>
+      </router-link>
+      |
+      <router-link to="/statistics">
+        <Icon name="Statistics"/>
+      </router-link>
+    </div>
+</template>
+```
