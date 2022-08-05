@@ -158,9 +158,9 @@ declare module '*.svg' {
   // 这玩意是搜的全网搜到的？
   try {importAll(require.context('../assets/icons', true, /\.svg$/));} catch (error) {console.log(error);}
   // 如果不加 try，在单元测试的时候可能会遇到问题
-
-// 牛逼，好用
-```  
+  
+  // 牛逼，好用
+```
 
 #### 将 `icon` 封装成组件
 
