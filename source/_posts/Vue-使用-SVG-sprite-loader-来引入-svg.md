@@ -24,23 +24,6 @@ yarn add svg-sprite-loader -D
 官方的代码是这样的
 
 ```js
-// webpack 1
-{
-  test: /\.svg$/,
-  loader: 'svg-sprite-loader',
-  query: { ... }
-}
-
-// webpack 1 multiple loaders
-{
-  test: /\.svg$/,
-  loaders: [
-    `svg-sprite-loader?${JSON.stringify({ ... })}`,
-    'svg-transform-loader',
-    'svgo-loader'
-  ]
-}
-
 // webpack >= 2
 {
   test: /\.svg$/,
@@ -60,6 +43,9 @@ yarn add svg-sprite-loader -D
 ```
 
 翻译成 `Vue.config.js`，用到的 `chainWebpack`
+
+- https://cli.vuejs.org/zh/guide/webpack.html
+- https://github.com/mozilla-neutrino/webpack-chain
 
 ```js
 const path = require('path')
