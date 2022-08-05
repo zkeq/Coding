@@ -121,8 +121,6 @@ declare module '*.svg' {
 
 ```
 
-```js
-
 #### 接着在 `TS` 里面引入
 
 ```vue
