@@ -5,7 +5,7 @@ description: 本节课主要学习了<br>一些常用的 webpack 配置
 date: 2022-08-02 18:06:15
 categories: [前端]
 cover: https://img.onmicrosoft.cn/2022-08-02/1.png
-sticky: 3
+sticky: 2
 ---
 
 `webpack` 官网
