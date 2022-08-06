@@ -3,6 +3,7 @@ title: Vue | 使用 SVG sprite loader 来引入 svg
 tags: [Vue]
 description: 本节课主要学习了<br>使用 SVG sprite loader 来引入 svg
 date: 2022-08-05 02:22:14
+updated: 2022-08-06 09:49:18
 categories: 饥人谷
 cover: https://img.onmicrosoft.cn/2022-08-05/6.png
 copyright_author: 杭州饥人谷教育科技有限公司
@@ -252,12 +253,12 @@ Vue.component("Icon", Icon)
         "svg-sprite-loader": "^6.0.11", 
         //已知 svg-sprite-loader 的 4.1.6 版本会有 bug
         // 故推荐使用高版本的，最新版已经修复了 bug，推荐使用 ^6.0.11
-        "svgo-loader": "^2.2.1",
+        "svgo-loader": "^2.2.1", // 即此版本可正常使用
     }
 }
 ```
 
-我的完整的版本号（可以正常使用的，就第一个 `loader` 版本号比以上高一些）
+我的完整的版本号（可以正常使用的）
 ```json
 {
   "name": "morney-3",

@@ -61,13 +61,12 @@ hexo.extend.filter.register('before_post_render', function (data) {
         const hash = crypto.createHash('md5');
         hash.update(gh_content, 'utf8');
         const md5 = hash.digest('hex');
-        console.log(md5);
+        process.stdout.write(md5);
         if (page_list.includes(md5)) {
             // 找到是第几个元素
             let index = page_list.indexOf(md5);
             // 找到对应的id
             var id = id_list[index];
-            console.log("该gist已经存在，使用原来的id：" + id);
         }else{
             // 如果没有找到就新建一个gist
             console.log("该gist不存在，新建一个gist");
