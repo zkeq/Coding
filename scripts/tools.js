@@ -61,7 +61,7 @@ hexo.extend.filter.register('before_post_render', function (data) {
         const hash = crypto.createHash('md5');
         hash.update(gh_content, 'utf8');
         const md5 = hash.digest('hex');
-        process.stdout.write(md5);
+        process.stdout.write(md5 + "|" + lang + "||");
         if (page_list.includes(md5)) {
             // 找到是第几个元素
             let index = page_list.indexOf(md5);
