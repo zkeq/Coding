@@ -123,6 +123,26 @@ const result = data.reduce((acc, cur) => {
     , [])
 ```
 
+### 题解四
+
+优化题解三, 删掉 `return`
+
+```js
+const result = data.reduce((acc, cur) =>
+
+    acc.concat(
+
+        cur.data.map((item) => ({
+            ...item,
+            code: cur.code
+        })
+        )
+
+    )
+
+    , [])
+```
+
 ### 对得到的数组进行按 title 排序
 
 ```js
