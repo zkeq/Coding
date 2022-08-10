@@ -109,3 +109,9 @@ const result = data.reduce((acc, cur) => {
 data.map(item => item.data.map(v =>({code: item.code, ...v}))).flat()
 ```
 
+
+### 对得到的数组进行按 title 排序
+
+```js
+result.sort((a, b) => a.title > b.title ? 1 : -1)
+``` 
