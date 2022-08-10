@@ -132,7 +132,7 @@ const result = data.reduce((acc, cur) => // 箭头函数不用 return 值 https:
 
     acc.concat(
 
-        cur.data.map((item) => ({ // 多加一个括号，是为了把返回值放到变量里
+        cur.data.map((item) => ({ // 多加一个括号，是为了把返回值当做一个参数返回
             ...item,
             code: cur.code
         })
