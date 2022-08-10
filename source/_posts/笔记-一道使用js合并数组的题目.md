@@ -109,6 +109,19 @@ const result = data.reduce((acc, cur) => {
 data.map(item => item.data.map(v =>({code: item.code, ...v}))).flat()
 ```
 
+### 题解三
+
+将题解一的 `foreach + push` 用 `map` 代替
+
+```js
+const result = data.reduce((acc, cur) => {
+    return acc.concat(cur.data.map((item)=>{
+      item.code = cur.code
+      return item
+    }))
+    }
+    , [])
+```
 
 ### 对得到的数组进行按 title 排序
 
