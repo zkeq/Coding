@@ -128,11 +128,11 @@ const result = data.reduce((acc, cur) => {
 优化题解三, 删掉 `return`
 
 ```js
-const result = data.reduce((acc, cur) =>
+const result = data.reduce((acc, cur) => // 箭头函数不用 return 值 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 
     acc.concat(
 
-        cur.data.map((item) => ({
+        cur.data.map((item) => ({ // 多加一个括号，是为了把返回值放到变量里
             ...item,
             code: cur.code
         })
