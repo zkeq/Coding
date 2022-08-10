@@ -15,7 +15,7 @@ copyright_info: 资料来源：饥人谷。任何组织或个人未经许可，�
 
 有如下数组
 
-```json
+```js
 [
     {
         code: 1,
@@ -62,7 +62,7 @@ const result = data.reduce((acc, cur) => {
 
 接着我们拿到了数组第一层的每一项
 
-```json
+```js
     {
         code: 1,
         data: [
