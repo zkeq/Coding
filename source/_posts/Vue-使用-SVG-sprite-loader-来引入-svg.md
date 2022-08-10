@@ -32,7 +32,6 @@ yarn add svg-sprite-loader -D
   loader: 'svg-sprite-loader',
   options: { ... }
 }
-
 // webpack >= 2 multiple loaders
 {
   test: /\.svg$/,
@@ -51,12 +50,10 @@ yarn add svg-sprite-loader -D
 
 ```js
 const path = require('path')
-
 module.exports = {
   lintOnSave: false,
   chainWebpack: config =>{
     const dir = path.resolve(__dirname, 'src/assets/icons')
-
     config.module
       .rule('svg-sprite')
       .test(/\.svg$/)
@@ -65,8 +62,6 @@ module.exports = {
       // 下文会解决一个 svg 填充问题，也就是下面被注释掉的代码
     config.plugin('svg-sprite').use(require('svg-sprite-loader/plugin'), [{plainSprite: true}])
     config.module.rule('svg').exclude.add(dir) // 其他 svg loader 排除 icons 目录
-
-
     // config.module
     //   .rule('svg-sprite')
     //   .test(/\.(svg)(\?.*)?$/)
@@ -77,7 +72,6 @@ module.exports = {
     //   .end()
     // config.plugin('svg-sprite').use(require('svg-sprite-loader-mod/plugin'), [{plainSprite: true}])
     // config.module.rule('svg').exclude.add(dir)
-
   }
 }
 ```
@@ -85,17 +79,9 @@ module.exports = {
 其他备注
 
 ```json
-// 注意你的 svg 相关依赖的版本需要跟我保持一致，否则会报错
-
-//     "svg-sprite-loader": "^4.1.6",
-//     "svg-sprite-loader-mod": "^4.1.6-mod1",
-//     "svgo-loader": "^2.2.1",
-
-好像并不会报错hhh，我用的最新的版本
-
-        "svg-sprite-loader": "^6.0.11",
-
-笑死我了，能用就行
+// svg 相关组件版本
+     "svg-sprite-loader": "^6.0.11",
+     "svgo-loader": "^2.2.1"
 ```
 
 #### 在 `shims-vue.d.ts` 中添加 
@@ -107,7 +93,6 @@ declare module '*.svg' {
   const content: string;
   export default content;
 }
-
 ```
 
 #### 接着在 `TS` 里面引入
@@ -161,13 +146,11 @@ declare module '*.svg' {
         <use :xlink:href="'#' + name" />
     </svg>
 </template>
-
 <script lang="ts">
     let importAll = (requireContext: __WebpackModuleApi.RequireContext) => requireContext.keys().forEach(requireContext);
     // 这玩意是搜的全网搜到的？
     try {importAll(require.context('../assets/icons', true, /\.svg$/));} catch (error) {console.log(error);}
     // 如果不加 try，在单元测试的时候可能会遇到问题
-
     export default {
         name: 'Icon',
         props: ['name']
@@ -181,7 +164,6 @@ declare module '*.svg' {
         
     }
 </script>
-
 <style lang="scss" scoped>
 // 这个样式代码是阿里矢量字体库里面给的css
     .icon {
@@ -248,6 +230,7 @@ Vue.component("Icon", Icon)
 不知道是什么原因，高版本的这个插件会导致加载不出 svg 的 bug，我使用的是以下版本，是正常使用的
 
 ```json
+// 和上文提到的一样
 {
     "devDependencies": {
         "svg-sprite-loader": "^6.0.11", 
@@ -320,12 +303,10 @@ module.exports = {
   lintOnSave: false
 }
 const path = require('path')
-
 module.exports = {
   lintOnSave: false,
   chainWebpack: config =>{
     const dir = path.resolve(__dirname, 'src/assets/icons')
-
     config.module
       .rule('svg-sprite')
       .test(/\.svg$/)
@@ -336,7 +317,6 @@ module.exports = {
       .end()
     config.plugin('svg-sprite').use(require('svg-sprite-loader/plugin'), [{plainSprite: true}])
     config.module.rule('svg').exclude.add(dir) // 其他 svg loader 排除 icons 目录
-
   }
 }
 ```
