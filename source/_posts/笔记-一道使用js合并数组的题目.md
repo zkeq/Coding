@@ -128,7 +128,9 @@ const result = data.reduce((acc, cur) => {
 优化题解三, 删掉 `return`
 
 ```js
-const result = data.reduce((acc, cur) => // 箭头函数不用 return 值 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+const result = data.reduce((acc, cur) => 
+// 箭头函数不用 return 值 :D
+// https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 
     acc.concat(
 
