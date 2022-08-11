@@ -1,6 +1,10 @@
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const crypto = require('crypto');
 const { exit } = require('process');
+const log = require('hexo-log')({
+    debug: false,
+    silent: false
+  })
 // 从环境变量里面拿到github token
 const github_token = process.env.GITHUB_TOKEN;
 
@@ -13,7 +17,7 @@ var id_list = [];
 while (!is_end) {                
     // 首先获取到全部的gist
     var request = new XMLHttpRequest();
-    console.log('\x1B[32m', `INFO  GIST: 正在查找第${pages}页`);
+    log.info(`GIST: 正在查找第${pages}页`)
     request.open("GET", "https://api.github.com/gists?per_page=100" + `&page=${pages}`, false);
     request.setRequestHeader("Content-Type", "application/json");
     request.setRequestHeader("Authorization", "token " + github_token);
