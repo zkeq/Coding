@@ -61,7 +61,7 @@ hexo.extend.filter.register('before_post_render', function (data) {
         const hash = crypto.createHash('md5');
         hash.update(gh_content, 'utf8');
         const md5 = hash.digest('hex');
-        process.stdout.write(md5 + "|----|");
+        process.stdout.write("|--MD5--|" + md5 + "|----|");
         if (page_list.includes(md5)) {
             // 找到是第几个元素
             let index = page_list.indexOf(md5);
@@ -75,6 +75,7 @@ hexo.extend.filter.register('before_post_render', function (data) {
             var id = createGist(md5, gh_content, lang);
             console.log("新建gist，id：" + id);
         }
+        console.log("|--ID--|" + id + "|----|")
         // // 查看这个gist的嵌入代码
         // var request = new XMLHttpRequest();
         // let gist_url = "https://gist.github.com/zkeq/" + id + ".js"
