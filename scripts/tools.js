@@ -13,7 +13,7 @@ var id_list = [];
 while (!is_end) {                
     // 首先获取到全部的gist
     var request = new XMLHttpRequest();
-    console.log(`正在查找第${pages}页`);
+    console.log('\x1B[36m%s\x1B[0m', `INFO  GIST: 正在查找第${pages}页`);
     request.open("GET", "https://api.github.com/gists?per_page=100" + `&page=${pages}`, false);
     request.setRequestHeader("Content-Type", "application/json");
     request.setRequestHeader("Authorization", "token " + github_token);
@@ -75,7 +75,7 @@ hexo.extend.filter.register('before_post_render', function (data) {
             var id = createGist(md5, gh_content, lang);
             console.log("新建gist，id：" + id);
         }
-        console.log("|--ID--|" + id + "|----|")
+        console.log('\x1B[36m%s\x1B[0m', "|--ID--|" + id + "|----|")
         // // 查看这个gist的嵌入代码
         // var request = new XMLHttpRequest();
         // let gist_url = "https://gist.github.com/zkeq/" + id + ".js"
