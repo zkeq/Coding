@@ -50,6 +50,21 @@ script.
   })
 
   document.addEventListener('pjax:complete', function () {
+      try {
+      var ua  = (navigator.userAgent || "").toLowerCase();
+      if (/iphone|ipad|ipod/.test(ua))
+        {
+            // 重新加载一遍 CSS
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'https://githubassets.onmicrosoft.cn/assets/gist-embed-549f23051d8d.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    } catch (e) {
+      console.error("ios 适配失败");
+    }
+
     window.refreshFn()
 
     document.querySelectorAll('script[data-pjax]').forEach(item => {
