@@ -84,7 +84,17 @@
     - name: cxbsoft
       descr: cxbsoft 大佬
       link: https://blog.bsot.cn
-      avatar: https://tva1.sinaimg.cn/large/008i3skNgy1gshga7k1d1j30on0olwi7.jpg
+      avatar: https://img.onmicrosoft.cn/friends/f17.jpg
+
+    - name: 文武科技柜
+      link: https://www.wangdu.site/
+      descr: 文武科技社的后花园
+      avatar: https://img.onmicrosoft.cn/friends/f18.png
+
+    - name: 陈慢慢的博客
+      link: http://chenmanman.top/
+      descr: 学习使我快乐!
+      avatar: https://img.onmicrosoft.cn/friends/f19.ico
 
 - class_name: 网站
   class_desc: 一些很有用处的网站.
