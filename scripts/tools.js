@@ -94,7 +94,11 @@ hexo.extend.filter.register('before_post_render', function (data) {
             // iframe_ele.setAttribute("srcdoc", `<head><base target='_blank'/></head><body><script src='https://gist.onmicrosoft.cn/zkeq/${id}.js'></script></body>`)
         return `
 
-<script data-pjax src='https://gist.onmicrosoft.cn/zkeq/${id}.js'></script>
+<iframe 
+style="border:none;width:100%;;max-height:66vh;"
+onload="javascript:this.style.height=\`\${this.contentWindow.document.body.offsetHeight+20}px\`;this.contentWindow.document.getElementsByClassName('gist-data')[0].style.height=\`\${this.clientHeight-55}px\`;"
+srcdoc="<script src='https://gist.onmicrosoft.cn/zkeq/${id}.js'></script><style>.gist-meta a:nth-child(2) {display: none;} html {overflow: hidden;text-overflow: ellipsis;display: inline-block;} * {margin: 0}</style>">
+</iframe>
 
 `;
     });
