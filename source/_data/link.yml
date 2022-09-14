@@ -163,4 +163,5 @@
       descr: 无需上传文件的多功能图片批量处理程序 v3.0
     - name: 公共静态播放器
       link: https://player.icodeq.com
-      avatar: https://img.onmicrosoft.cn/friends/t11.ic
+      avatar: https://img.onmicrosoft.cn/friends/t11.ico
+      descr: 提供一个尽可能全面的播放器来用开发者测试和日常使用。
