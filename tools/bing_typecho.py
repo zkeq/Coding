@@ -8,9 +8,9 @@ import datetime
 bing_cid = 13
 
 data = requests.get(
-    "https://ghproxy.futils.com/https://raw.githubusercontent.com/zkeq/Bing-Wallpaper-Action/main/README.md")
+    "https://raw.onmicrosoft.cn/Bing-Wallpaper-Action/main/README.md")
 zh_time = requests.get(
-    "https://ghproxy.futils.com/https://raw.githubusercontent.com/zkeq/Bing-Wallpaper-Action/main/data/zh-CN_all.json").json()
+    "https://raw.onmicrosoft.cn/Bing-Wallpaper-Action/main/data/zh-CN_all.json").json()
 
 # 2022-05-09 02:34:42 转时间类型
 time_array = time.strptime(zh_time["LastUpdate"], "%Y-%m-%d %H:%M:%S")
