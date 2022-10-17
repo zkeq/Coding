@@ -2872,11 +2872,11 @@ hexo-generator-archive@^1.0.0:
   dependencies:
     hexo-pagination "1.0.0"
 
-hexo-generator-category@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/hexo-generator-category/-/hexo-generator-category-1.0.0.tgz"
+hexo-generator-category@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/hexo-generator-category/-/hexo-generator-category-2.0.0.tgz#55473d5fafaec1cab7a5d9c0da7b159c0133d65c"
   dependencies:
-    hexo-pagination "1.0.0"
+    hexo-pagination "3.0.0"
 
 hexo-generator-feed@^3.0.0:
   version "3.0.0"
@@ -2951,6 +2951,10 @@ hexo-offline-zkeq@^1.2.0:
 hexo-pagination@1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/hexo-pagination/-/hexo-pagination-1.0.0.tgz"
+
+hexo-pagination@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/hexo-pagination/-/hexo-pagination-3.0.0.tgz#b98b050bbddff25ae646e3d00ad607ac6ae77ea7"
 
 hexo-renderer-ejs@^2.0.0:
   version "2.0.0"
