@@ -109,8 +109,28 @@
     - name: 邵佳成
       link: https://blog.sjcblog.top/
       descr: 掘金前端竞赛遇到的又 1 个大佬
-      avatar: https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/63e7c5a03f6e4fda9738328bccd4f6ba~tplv-k3u1fbpfcp-watermark.image 
-
+      avatar: https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/63e7c5a03f6e4fda9738328bccd4f6ba~tplv-k3u1fbpfcp-watermark.image
+      
+    - name: 心流
+      link: https://blog.panghai.top/
+      descr: 保持谨慎，保持乐观
+      avatar: https://blog.panghai.top/img/avatar.png
+      
+    - name: 今夕何夕兮
+      link: https://www.lyboy.top/
+      descr: 今夕何夕，尽三千繁华，见此良人，皆虚梦一场
+      avatar: https://lyboy.oss-accelerate.aliyuncs.com/wordpress/logo1.png
+      
+    - name: 是非题
+      link: https://www.shifeiti.com/
+      descr: 记录生活，热爱跑步，学习 FPGA 中
+      avatar: https://other.shifeiti.com/logo/logo.png
+      
+    - name: 涛声依旧
+      link: https://weekdaycare.cn/
+      descr: 永远相信美好的事情即将发生
+      avatar: https://pic1.imgdb.cn/item/630c05de16f2c2beb1d86de2.jpg
+      
 
 - class_name: 网站
   class_desc: 一些很有用处的网站.
