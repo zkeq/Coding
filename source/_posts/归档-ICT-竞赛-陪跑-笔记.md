@@ -5,6 +5,7 @@ description: 好久没学习新东西了，没什么事做，正巧老师说有�
 date: 2022-11-27 21:25:02
 categories: 归档
 cover: https://img.onmicrosoft.cn/2022-11-27/2.png
+sticky: 3
 ---
 
 > 好久没学习新东西了，没什么事做，正巧老师说有个竞赛，就花了几天听了几节课，陪跑了一下（
