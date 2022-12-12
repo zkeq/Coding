@@ -99,7 +99,7 @@ cover: https://img.onmicrosoft.cn/2022/12/12/11a013bd-6526-457f-80c4-a1d2204e0d5
 
 ##### 课程讲授的方式
 
-![image-20221212185119864](/Users/zkeq/Library/Application Support/typora-user-images/image-20221212185119864.png)
+![](https://img.onmicrosoft.cn/2022/12/12/f6179c31-125c-4829-ba8e-14a258ecf28d.png)
 
 ### 邂逅Web开发
 
