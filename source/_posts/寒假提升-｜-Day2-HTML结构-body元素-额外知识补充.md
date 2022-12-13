@@ -23,6 +23,11 @@ date: 2022-12-13 19:12:35
 	https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 ```
 
+>务必下载！！
+>
+>今日的代码和讲义 以及思维导图：[【点击此链接下载 Day02.zip】](https://adobe.onmicrosoft.cn/d/Front-end_Refinement/22%E8%AE%A16%20%E5%89%8D%E7%AB%AF%20%E5%AF%92%E5%81%87%E6%8F%90%E5%8D%87%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E8%B5%84%E6%96%99/01_%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3HTML%2BCSS%E5%9F%BA%E7%A1%80%E5%8E%9F%E7%90%86/%E5%88%86%E5%A4%A9%E6%95%B0%E7%89%88%E6%9C%AC/Day02.zip?sign=zi8ue_qXOGT4tQXpBg7OxWnb5J3RJT_gP5knTNnOiFg=:0)
+
+
 ![](https://img.onmicrosoft.cn/2022/12/13/3b5db2c2-6185-4938-82a8-ac63a05fd466.png)
 
 ## 一. HTML结构
