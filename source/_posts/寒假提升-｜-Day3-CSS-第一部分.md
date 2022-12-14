@@ -9,7 +9,7 @@ cover: https://img.onmicrosoft.cn/2022/12/12/11a013bd-6526-457f-80c4-a1d2204e0d5
 date: 2022-12-14 18:51:56
 ---
 
-{% tabs homework %}
+{% tabs homework, -1 %}
 
 <!-- tab Day1参考答案 -->
 #### 今日作业：
@@ -27,6 +27,8 @@ date: 2022-12-14 18:51:56
 ```
 <!-- endtab -->
 
+{% endtabs %}
+{% tabs homework, -1 %}
 <!-- tab Day1参考答案 -->
 
 #### 一. 说出软件和应用程序的区别？（自己整理）
@@ -129,7 +131,8 @@ JavaScript：网页的灵魂，负责网页的交互处理
 
 
 <!-- endtab -->
-
+{% endtabs %}
+{% tabs homework, -1 %}
 <!-- tab Day2参考答案 -->
 
 #### 一. 完成课堂所有的代码练习（必须全部自己实现）
