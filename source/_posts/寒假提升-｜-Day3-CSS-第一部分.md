@@ -26,11 +26,7 @@ date: 2022-12-14 18:51:56
 	每个同学自己总结;
 ```
 <!-- endtab -->
-<!-- tab 点击收起 -->
-此 Tag 只是为了方便收起，无内容
-<!-- endtab -->
-{% endtabs %}
-{% tabs homework %}
+
 <!-- tab Day1参考答案 -->
 #### Day1参考答案
 ##### 一. 说出软件和应用程序的区别？（自己整理）
@@ -133,11 +129,7 @@ JavaScript：网页的灵魂，负责网页的交互处理
 
 
 <!-- endtab -->
-<!-- tab 点击收起 -->
-此 Tag 只是为了方便收起，无内容
-<!-- endtab -->
-{% endtabs %}
-{% tabs homework %}
+
 <!-- tab Day2参考答案 -->
 #### Day2参考答案
 ##### 一. 完成课堂所有的代码练习（必须全部自己实现）
@@ -496,9 +488,6 @@ span元素包裹的内容会显示在同一行,默认情况下是跟普通的文
 https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 
 
-<!-- endtab -->
-<!-- tab 点击收起 -->
-此 Tag 只是为了方便收起，无内容
 <!-- endtab -->
 {% endtabs %}
 
