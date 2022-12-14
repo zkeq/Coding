@@ -3,7 +3,7 @@ title: Github | 使用 Action 操作 Selenium 方案
 tags: [归档]
 description: 本文主要讲了了<br> 使用 Action 操作 Selenium 的一种可行方案
 date: 2022-02-27 19:22:46
-categories: [笔记, 置顶文章] 
+categories: [置顶文章, 笔记]
 cover: https://img.onmicrosoft.cn/2022-03-17/22TC/2022/02/27/8d4a557bbf7b1.png
 ---
 

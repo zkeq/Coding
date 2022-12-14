@@ -3,7 +3,7 @@ title: 使用 Hexo 搭建博客 保姆式教程
 tags: [笔记]
 description: 这篇文章是自己使用Hexo这几个月自己总结出来的教程
 date: 2021-12-13 22:32:07
-categories: [CMD, 置顶文章] 
+categories: [置顶文章, CMD]
 cover: https://img.onmicrosoft.cn/2021-12-13/3.png
 ---
 
