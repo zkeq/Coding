@@ -3,9 +3,8 @@ title: 笔记|使用WSL安装Linux系统并搭建本地局域网网盘
 tags: [笔记]
 description: 使用win11的wsl功能安装了linux系统ubuntn.<br>实现在win11下使用linux系统搭建的本地网盘来访问Windows的文件看电影的需求。
 date: 2021-11-26 22:56:25
-categories: [CMD]
+categories: [CMD, 置顶文章] 
 cover: https://img.onmicrosoft.cn/2021-11-26/1.png
-sticky: 1
 ---
 #### 事情起因
 

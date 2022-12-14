@@ -3,9 +3,8 @@ title: Vercel | 使用 vercel 实现 API 的几种模板
 tags: [归档]
 description: 本节课主要记录了<br> 使用 vercel 实现 API 的几种模板。
 date: 2022-02-27 21:50:17
-categories: 笔记
+categories: [笔记, 置顶文章] 
 cover: https://img.onmicrosoft.cn/2022-03-17/22TC/2022/02/28/c1e42547c69c5.png
-sticky: 3
 ---
 
 平时的话我们总会遇到一些简单的 `API` 需求，但是现在的话呢，我又没有服务器..
