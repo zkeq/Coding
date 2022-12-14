@@ -3,9 +3,8 @@ title: Hexo 完美嵌入Typora导出的html文件
 tags: [笔记]
 description: 在编写文档的时候摸索出来的技巧
 date: 2021-12-14 01:00:50
-categories: CMD
+categories: [CMD, 置顶文章] 
 cover: https://img.onmicrosoft.cn/2021-12-13/4.png
-sticky: 1
 ---
 
 ### 步骤如下
