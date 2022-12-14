@@ -9,7 +9,7 @@ cover: https://img.onmicrosoft.cn/2022/12/12/11a013bd-6526-457f-80c4-a1d2204e0d5
 date: 2022-12-14 18:51:56
 ---
 
-{% tabs homework, -1 %}
+{% tabs homework %}
 
 <!-- tab Day1参考答案 -->
 #### 今日作业：
@@ -26,7 +26,8 @@ date: 2022-12-14 18:51:56
 	每个同学自己总结;
 ```
 <!-- endtab -->
-
+<!-- tab 点击收起 -->
+<!-- endtab -->
 {% endtabs %}
 {% tabs homework, -1 %}
 <!-- tab Day1参考答案 -->
@@ -130,6 +131,8 @@ JavaScript：网页的灵魂，负责网页的交互处理
 快捷键： ctrl + /
 
 
+<!-- endtab -->
+<!-- tab 点击收起 -->
 <!-- endtab -->
 {% endtabs %}
 {% tabs homework, -1 %}
@@ -491,6 +494,8 @@ span元素包裹的内容会显示在同一行,默认情况下是跟普通的文
 https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 
 
+<!-- endtab -->
+<!-- tab 点击收起 -->
 <!-- endtab -->
 {% endtabs %}
 
