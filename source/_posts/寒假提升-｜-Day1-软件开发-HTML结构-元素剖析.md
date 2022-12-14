@@ -18,7 +18,7 @@ cover: https://img.onmicrosoft.cn/2022/12/12/11a013bd-6526-457f-80c4-a1d2204e0d5
 
 >务必下载！！
 >
->今日的代码和讲义 以及思维导图：[【点击此链接下载 Day01.zip】](https://adobe.onmicrosoft.cn/d/Front-end_Refinement/22%E8%AE%A16%20%E5%89%8D%E7%AB%AF%20%E5%AF%92%E5%81%87%E6%8F%90%E5%8D%87%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E8%B5%84%E6%96%99/01_%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3HTML%2BCSS%E5%9F%BA%E7%A1%80%E5%8E%9F%E7%90%86/%E5%88%86%E5%A4%A9%E6%95%B0%E7%89%88%E6%9C%AC/Day01.zip?sign=crfm59YjLlV8Fo3mHP3q5je3UwzhBwM5zNmtL89qT10=:0)
+>今日的代码和讲义 以及思维导图：[【点击此链接下载 Day01.zip】](https://share.onmicrosoft.cn/u6jeu4q52)
 
 ![](https://img.onmicrosoft.cn/2022/12/12/a86e9a3e-02c0-4799-b8cc-a6ceb02f1971.png)
 
