@@ -29,7 +29,7 @@ date: 2022-12-14 18:51:56
 <!-- tab 点击收起 -->
 <!-- endtab -->
 {% endtabs %}
-{% tabs homework, -1 %}
+{% tabs homework %}
 <!-- tab Day1参考答案 -->
 
 #### 一. 说出软件和应用程序的区别？（自己整理）
@@ -135,7 +135,7 @@ JavaScript：网页的灵魂，负责网页的交互处理
 <!-- tab 点击收起 -->
 <!-- endtab -->
 {% endtabs %}
-{% tabs homework, -1 %}
+{% tabs homework %}
 <!-- tab Day2参考答案 -->
 
 #### 一. 完成课堂所有的代码练习（必须全部自己实现）
