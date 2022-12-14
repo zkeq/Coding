@@ -3,7 +3,7 @@ title: 笔记 | 一些常用的 webpack 配置
 tags: [笔记]
 description: 本节课主要学习了<br>一些常用的 webpack 配置
 date: 2022-08-02 18:06:15
-categories: [置顶文章, 前端]
+categories: [A置顶文章, 前端]
 cover: https://img.onmicrosoft.cn/2022-08-02/1.png
 ---
 
