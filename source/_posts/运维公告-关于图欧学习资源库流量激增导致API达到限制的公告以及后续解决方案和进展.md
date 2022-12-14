@@ -3,7 +3,7 @@ title: 运维公告 | 关于图欧学习资源库流量激增导致API达到限�
 tags: [运维]
 description: 关于图欧学习资源库流量激增导致API达到限制的公告以及后续解决方案和进展
 date: 2022-07-19 13:15:33
-categories: [公共, 置顶文章] 
+categories: [置顶文章, 公共] 
 cover: https://img.onmicrosoft.cn/2022-07-19/5.jpg
 ---
 

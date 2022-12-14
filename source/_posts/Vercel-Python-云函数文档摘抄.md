@@ -4,7 +4,7 @@ title: Vercel | Python 云函数文档摘抄
 tags: [笔记]
 description: 本节课主要学习了<br> Python 云函数文档摘抄
 date: 2022-04-20 10:45:51
-categories: [其他, 置顶文章] 
+categories: [置顶文章, 其他] 
 cover: https://img.onmicrosoft.cn/2022-04-20/01.png
 ---
 ## [Python](https://vercel.com/docs/runtimes#official-runtimes/python)
