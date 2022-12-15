@@ -515,7 +515,7 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 
 #### 认识URL
 
-- **URL** **代表着是统一资源定位符(**Uniform Resource Locator**)**
+- **URL** 代表着是统一资源定位符(**Uniform Resource Locator**)
 
 - **通俗点说:**URL 无非就是一个给定的独特资源在 Web 上的地址。 
   - 理论上说，每个有效的 URL 都指向一个唯一的资源; 
@@ -533,8 +533,8 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 #### 和URI的区别
 
 - 和URI的区别:
-  - `URI` = `Uniform Resource Identifier` 统一资源**标志符，**用于标识 Web 技术使用的逻辑或物理资源。**;** 
-  - `URL` = `Uniform Resource Locator` 统一资源**定位符，**俗称网络地址，相当于网络中的门牌号**;**
+  - `URI` = `Uniform Resource Identifier` 统一资源标志符，用于标识 Web 技术使用的逻辑或物理资源。; 
+  - `URL` = `Uniform Resource Locator` 统一资源定位符，俗称网络地址，相当于网络中的门牌号;
 
 - `URI` 在某一个规则下能把一个资源独一无二的识别出来。
   - `URL` 作为一个网络Web资源的地址，可以唯一将一个资源识别出来，所以 `URL` 是一个 `URI`; 
@@ -589,7 +589,7 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 
 ### 2.1. 认识CSS
 
-- CSS表示层叠样式表(**C**ascading **S**tyle **S**heet，简称:CSS，又称为又称**串样式列表**、**级联样式表**、**串接样式表**、**阶层式样式表**)， 是为网页添加样式的代码。
+- CSS表示层叠样式表(Cascading Style Sheet，简称:CSS，又称为又称**串样式列表**、**级联样式表**、**串接样式表**、**阶层式样式表**)， 是为网页添加样式的代码。
 
 - CSS是一种语言吗?(知道即可)
   - MDN解释:CSS 也不是真正的编程语言，甚至不是标记语言。它是一门样式表语言; 
