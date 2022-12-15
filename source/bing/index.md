@@ -5,7 +5,7 @@ aside: false
 date: 2022-12-15 00:48:31
 ---
 
-> If the date you see is 2 days ago, press `Ctrl + F5` to force a refresh, Maybe because I have `workbox` enabled.
+> If the date you see is 2 days ago, press `Ctrl + F5` / `⇪ + ⌘ + R` to force a refresh, Maybe because I have `workbox` enabled.
 
 # Bing Wallpaper
 <!--2022-12-15 00:49:11-->
