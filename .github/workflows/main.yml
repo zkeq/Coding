@@ -8,6 +8,7 @@ on:
       - GetDataBase
   # watch:
   #   types: [started]
+  workflow_dispatch:
 
 jobs:
   Crawler:
