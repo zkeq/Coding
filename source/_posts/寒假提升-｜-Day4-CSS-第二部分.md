@@ -26,7 +26,7 @@ date: 2022-12-16 00:15:16
 <!-- endtab -->
 
 <!-- tab Day3参考答案 -->
-#### Day2参考答案
+#### Day3参考答案
 
 ##### 一. 说说你对元素语义化的理解
 
@@ -95,7 +95,7 @@ css有三种常用的编写方式，分别是内联样式、内部样式表和�
 
 * 案例一：登录案例
 
-  * ```html
+```html
     <!DOCTYPE html>
     <html lang="en">
     
@@ -183,11 +183,11 @@ css有三种常用的编写方式，分别是内联样式、内部样式表和�
     </body>
     
     </html>
-    ```
+```
 
 * 案例二：网页布局案例
 
-  * ```html
+```html
     <!DOCTYPE html>
     <html lang="en">
     
@@ -237,7 +237,7 @@ css有三种常用的编写方式，分别是内联样式、内部样式表和�
     </body>
     
     </html>
-    ```
+```
 
 
 
@@ -279,6 +279,13 @@ css有三种常用的编写方式，分别是内联样式、内部样式表和�
 
 <!-- endtab -->
 {% endtabs %}
+
+>务必下载！！
+>
+>今日的代码和讲义 以及思维导图：[【点击此链接下载 Day04.zip】](https://share.onmicrosoft.cn/dnvslrhxu)
+
+
+## 大纲
 
 
 ![](https://img.onmicrosoft.cn/2022/12/15/b9b7ef15-7cdb-4016-be3b-dbd31f3882a5.png)
