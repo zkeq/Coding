@@ -796,9 +796,9 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 
 * color keywords(颜色关键字)
 * RGB
-  * 十六进制: #aabbcc;
-  * 缩写: #abc
-  * 函数: rgb(0~255, 0~255, 0~255)
+  * 十六进制: `#aabbcc`;
+  * 缩写: `#abc`
+  * 函数: `rgb(0~255, 0~255, 0~255)`
 
 - 在CSS中，颜色，有以下几种表示方法:
 
