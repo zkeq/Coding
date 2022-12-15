@@ -505,8 +505,6 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 
 ### 3.2. URL
 
-> (以下内容好像视频里没有，我再找找)
-
 * URL的格式:
   * 协议://主机:端口/路径/文件名?查询#片段id
 * 和URI的区别:
