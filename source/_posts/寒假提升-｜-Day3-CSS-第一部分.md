@@ -517,7 +517,7 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 
 - **URL** 代表着是统一资源定位符(**Uniform Resource Locator**)
 
-- **通俗点说:**URL 无非就是一个给定的独特资源在 Web 上的地址。 
+- 通俗点说:URL 无非就是一个给定的独特资源在 Web 上的地址。 
   - 理论上说，每个有效的 URL 都指向一个唯一的资源; 
   - 这个资源可以是一个 HTML 页面，一个 CSS 文档，一幅图像，等等;
 
