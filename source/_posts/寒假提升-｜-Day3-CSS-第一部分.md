@@ -506,17 +506,17 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 ### 3.2. URL
 
 * URL的格式:
-  * 协议://主机:端口/路径/文件名?查询#片段id
+  * `协议://主机:端口/路径/文件名?查询#片段id`
 * 和URI的区别:
-  * URI:标志符
-  * URL: 定位符(网络地址)
+  * `URI` :标志符
+  * `URL` : 定位符(网络地址)
 
 #### 认识URL
 
-- **URL** 代表着是统一资源定位符(**Uniform Resource Locator**)
+- `URL` 代表着是统一资源定位符(**Uniform Resource Locator**)
 
-- 通俗点说:URL 无非就是一个给定的独特资源在 Web 上的地址。 
-  - 理论上说，每个有效的 URL 都指向一个唯一的资源; 
+- 通俗点说: `URL` 无非就是一个给定的独特资源在 Web 上的地址。 
+  - 理论上说，每个有效的 `URL` 都指向一个唯一的资源; 
   - 这个资源可以是一个 HTML 页面，一个 CSS 文档，一幅图像，等等;
 
 ![](https://img.onmicrosoft.cn/2022/12/13/8cbe0199-b099-4fb4-a38b-6c947be88173.png)
@@ -543,7 +543,7 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 
 ### 3.3元素的语义化
 
-- 元素的语义化:用正确的元素做正确的事情。
+- `元素的语义化` :用正确的元素做正确的事情。
 - 理论上来说，所有的HTML元素，我们都能实现相同的事情:
 
 ![](https://img.onmicrosoft.cn/2022/12/13/166a1378-7b94-4bf3-9297-6e125c2331a5.png)
@@ -560,10 +560,10 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 
 ### 3.4 什么是SEO?
 
-- 搜索引擎优化(英语:search engine optimization，缩写为SEO)是通过了解搜索引擎的运作规则来调整网站，以及提高网站 在有关搜索引擎内排名的方式。
+- 搜索引擎优化 (英语:`search engine optimization`，缩写为 `SEO` )是通过了解搜索引擎的运作规则来调整网站，以及提高网站 在有关搜索引擎内排名的方式。
 
-- 在后续我们还会讲解SPA以及SSR相关的概念
-  - 它们也有SEO、首屏渲染速度有关;
+- 在后续我们还会讲解 `SPA` 以及 `SSR` 相关的概念
+  - 它们也有 `SEO` `、首屏渲染速度` 有关;
   - 到时候会具体补充;
 
 ![](https://img.onmicrosoft.cn/2022/12/13/f1894225-2f29-49ed-8199-62c6b0f9546a.png)
@@ -587,10 +587,10 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 
 ### 2.1. 认识CSS
 
-- CSS表示层叠样式表(Cascading Style Sheet，简称:CSS，又称为又称**串样式列表**、**级联样式表**、**串接样式表**、**阶层式样式表**)， 是为网页添加样式的代码。
+- `CSS` 表示 `层叠样式表` (`Cascading Style Sheet`，简称:CSS，又称为又称**串样式列表**、**级联样式表**、**串接样式表**、**阶层式样式表**)， 是为网页添加样式的代码。
 
 - CSS是一种语言吗?(知道即可)
-  - MDN解释:CSS 也不是真正的编程语言，甚至不是标记语言。它是一门样式表语言; 
+  - MDN解释: `CSS` 也不是真正的编程语言，甚至不是标记语言。它是一门样式表语言; 
   - 维基百科解释:是一种计算机语言，但是不算是一种编程语言;
 
 ![](https://img.onmicrosoft.cn/2022/12/14/0d7c7695-3c0d-4426-a770-dd31bd8bca31.png)
@@ -598,17 +598,17 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 #### CSS的历史
 
 - 早期的网页都是通过HTML来编写的，但是我们希望HTML页面可以更加丰富:
-  - 这个时候就增加了很多具备特殊样式的元素:比如i、strong、del等等;
+  - 这个时候就增加了很多具备特殊样式的元素:比如 `i` 、 `strong` 、 `del` 等等;
   - 后来也有不同的浏览器实现各自的样式语言，但是没有统一的规划;
-  - 1994年，哈肯·维姆·莱和伯特·波斯合作设计CSS，在1996年的时候发布了CSS1; 
-  - 直到1997年初，W3C组织才专门成立了CSS的工作组，1998年5月发布了CSS2; 
-  - 在2006~2009非常流行 “DIV+CSS”布局的方式来替代所有的html标签;
-  - 从CSS3开始，所有的CSS分成了不同的模块(modules)，每一个“modules”都有于CSS2中额外增加的功能，以及向后 兼容。
-  - 直到2011年6月7日，CSS 3 Color Module终于发布为W3C Recommendation。
+  - 1994年，哈肯·维姆·莱和伯特·波斯合作设计CSS，在1996年的时候发布了 `CSS1` ; 
+  - 直到1997年初，W3C组织才专门成立了CSS的工作组，1998年5月发布了 `CSS2` ; 
+  - 在2006~2009非常流行 `DIV+CSS` 布局的方式来替代所有的 `html` 标签;
+  - 从 `CSS3` 开始，所有的CSS分成了不同的模块(modules)，每一个 `“modules”` 都有于CSS2中额外增加的功能，以及向后 兼容。
+  - 直到2011年6月7日，`CSS 3 Color Module` 终于发布为 `W3C Recommendation`。
 
 - 总结:CSS的出现是为了美化HTML的，并且让结构(HTML)与样式(CSS)分离;
-  - 美化方式一:为HTML添加各种各样的样式，比如颜色、字体、大小、下划线等等; 
-  - 美化方式二:对HTML进行布局，按照某种结构显示(CSS进行布局 – 浮动、flex、grid);
+  - `美化方式一` :为HTML添加各种各样的样式，比如颜色、字体、大小、下划线等等; 
+  - `美化方式二 `:对HTML进行布局，按照某种结构显示(CSS进行布局 – 浮动、flex、grid);
 
 #### CSS如何编写呢?
 
@@ -617,8 +617,8 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 ![](https://img.onmicrosoft.cn/2022/12/14/c6a8051a-48e0-4d32-b383-5045629874cb.png)
 
 - 声明(**Declaration**)一个**单独的**CSS规则，如 color: red; 用来指定添加的CSS样式。
-  - 属性名(Property name):要添加的css规则的名称;
-  - 属性值(Property value):要添加的css规则的值;
+  - `属性名(Property name)` :要添加的css规则的名称;
+  - `属性值(Property value)` :要添加的css规则的值;
 
 - 但是有个问题:我们会编写了，要编写到什么位置呢?
 
@@ -627,9 +627,9 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 #### 如何将CSS样式应用到元素上?
 
 - CSS提供了3种方法，可以将CSS样式应用到元素上:
-  - 内联样式(inline style)
-  - 内部样式表(internal style sheet)、文档样式表(document style sheet)、内嵌样式表(embed style sheet)
-  - 外部样式表(external style sheet)
+  - `内联样式(inline style)`
+  - `内部样式表(internal style sheet)`、`文档样式表(document style sheet)`、`内嵌样式表(embed style sheet)`
+  - `外部样式表(external style sheet)`
 
 - 疑问:三种方式，学好哪一个呢?
   - 每一个都很重要，目前开发中不同的场景都会用到
@@ -638,7 +638,7 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 
 #### 内联样式(inline style)
 
-- 内联样式(inline style)，也有人翻译成行内样式。
+- `内联样式(inline style)`，也有人翻译成行内样式。
   - 内联样式表存在于HTML元素的style属性之中。
 
 ![](https://img.onmicrosoft.cn/2022/12/14/b6c8bb96-9a79-4855-9597-3feeb7995eb2.png)
@@ -649,11 +649,11 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
   - 1.在 `原生的HTML编写` 过程中确实这种写法是不推荐的
   - 2.在 `Vue的template` 中某些动态的样式是会使用内联样式的;
 
-◼ 所以，内联样式的写法依然需要掌握。
+- 所以，内联样式的写法依然需要掌握。
 
 #### 内部样式表(internal style sheet)
 
-- 内部样式表(internal style sheet)
+- `内部样式表(internal style sheet)`
   - 将CSS放在HTML文件 `<head>` 元素里的 `<style>` 元素之中。
 
 ![](https://img.onmicrosoft.cn/2022/12/14/10414e96-d145-4804-95bc-0d29ac8d7014.png)
@@ -662,9 +662,9 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 
 #### 外部样式表(external style sheet)
 
-- 外部样式表(external style sheet) 是将css编写一个独立的文件中，并且通过 `<link>` 元素引入进来;
+- `外部样式表(external style sheet)` 是将css编写一个独立的文件中，并且通过 `<link>` 元素引入进来;
 - 使用外部样式表主要分成两个步骤:
-  - 第一步:将css样式在一个独立的css文件中编写(后缀名为.css); 
+  - 第一步:将 css 样式在一个独立的 css 文件中编写(后缀名为.css); 
   - 第二步:通过 `<link>` 元素引入进来;
 - link元素的作用，后续单独讲解。
 
@@ -672,7 +672,7 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 
 #### @import
 
-- 可以在style元素或者CSS文件中使用@import导入其他的CSS文件
+- 可以在 `style元素` 或者 `CSS文件` 中使用 @`import` 导入其他的CSS文件
 
 ![](https://img.onmicrosoft.cn/2022/12/14/6a171a40-97be-431b-8632-149d8c9075b1.png)
 
@@ -682,8 +682,8 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 /* 注释 */
 ```
 
-- CSS代码也可以添加注释来方便阅读:
-  - CSS的注释和HTML的注释是不一样的;
+- CSS 代码也可以添加注释来方便阅读:
+  - CSS 的注释和 HTML 的注释是不一样的;
   - `/* 注释内容 */` 
 
 ### 2.5. 常见的CSS
@@ -703,18 +703,18 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 
 #### CSS属性的官方文档 
 
-- CSS官方文档地址
+- `CSS` 官方文档地址
   - https://www.w3.org/TR/?tag=css
-- CSS推荐文档地址:
+- `CSS` 推荐文档地址:
   - https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference#%E5%85%B3%E9%94%AE%E5%AD%97%E7%B4%A2%E5%BC%95
 
-- 由于浏览器版本、CSS 版本等问题，查询某些CSS是否可用:
-  - 可以到 https://caniuse.com/ 查询CSS属性的可用性;
-  - 这个网站在后续的 browserlist 工具中我们再详细说明;
+- 由于浏览器版本、 `CSS` 版本等问题，查询某些 `CSS` 是否可用:
+  - 可以到 https://caniuse.com/ 查询 `CSS` 属性的可用性;
+  - 这个网站在后续的 `browserlist` 工具中我们再详细说明;
 
 #### 目前需要掌握的CSS属性
 
-- 要想深刻理解所有常用CSS属性，最好先学会以下几个最基础最常用的CSS属性
+- 要想深刻理解所有常用 `CSS属性` ，最好先学会以下几个最基础最常用的CSS属性
   - `font-size` :文字大小
   - `color` :前景色(文字颜色)
   - `background-color` :背景色
@@ -723,13 +723,13 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
 
 ##### CSS属性- background-color
 
-- background-color 决定背景色
+- `background-color` 决定背景色
 
 ![](https://img.onmicrosoft.cn/2022/12/14/dd321842-c872-421c-b6d5-63becb3a3132.png)
 
 ##### CSS属性- color
 
-- color属性用来设置文本内容的
+- `color` 属性用来设置文本内容的
   - 包括文字、装饰线、边框、外轮廓等的颜色
 
 ![](https://img.onmicrosoft.cn/2022/12/14/2e4d3883-6e64-49d7-9dd5-1c2bddaee4b1.png)
@@ -806,9 +806,9 @@ https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps
   - https://developer.mozilla.org/zh-CN/docs/Web/CSS/color_value#%E8%AF%AD%E6%B3%95
 
 - RGB颜色:
-  -  RGB是一种色彩空间，通过R(red，红色)、G(green，绿色)、B(blue，蓝色)三原色来组成了不同的颜色;
+  -  `RGB` 是一种色彩空间，通过`R`(red，红色)、`G`(green，绿色)、`B`(blue，蓝色)三原色来组成了不同的颜色;
     - ✓ 也就是通过调整这三个颜色不同的比例，可以组合成其他的颜色; 
-  - RGB各个原色的取值范围是 0~255;
+  - RGB各个原色的取值范围是 `0~255`;
 
 #### RGB的表示方法
 
