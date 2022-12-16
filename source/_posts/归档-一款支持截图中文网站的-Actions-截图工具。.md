@@ -68,7 +68,7 @@ date: 2022-12-16 21:02:57
 
 ### 项目README
 
-[![Python-WebSite-Screenshot](https://socialify.git.ci/zkeq/Python-WebSite-Screenshot/image?description=1&font=Bitter&forks=1&language=1&owner=1&pattern=Plus&stargazers=1&theme=Dark)](https://socialify.git.ci/zkeq/Python-WebSite-Screenshot/image?description=1&font=Bitter&forks=1&language=1&owner=1&pattern=Plus&stargazers=1&theme=Dark)](https://github.com/zkeq/Python-WebSite-Screenshot)
+[![Python-WebSite-Screenshot](https://socialify.git.ci/zkeq/Python-WebSite-Screenshot/image?description=1&font=Bitter&forks=1&language=1&owner=1&pattern=Plus&stargazers=1&theme=Dark)](https://github.com/zkeq/Python-WebSite-Screenshot)
 
 > 本项目是由 `Python` 写成的网站截图工具。
 >
