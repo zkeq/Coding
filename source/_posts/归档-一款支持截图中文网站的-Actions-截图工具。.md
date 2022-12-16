@@ -28,39 +28,39 @@ date: 2022-12-16 21:02:57
 {% tabs homework %}
 
 <!-- tab www.google.com -->
-![](http://img.onmicrosoft.cn/2022-12-16/2022-12-16_09-44-36.png)
+![](https://img.onmicrosoft.cn/2022-12-16/2022-12-16_09-44-36.png)
 <!-- endtab -->
 
 <!-- tab adobe.onmicrosoft.cn -->
-![](http://img.onmicrosoft.cn/2022-12-16/2022-12-16_08-24-39.png)
+![](https://img.onmicrosoft.cn/2022-12-16/2022-12-16_08-24-39.png)
 <!-- endtab -->
 
 <!-- tab icodeq.com -->
-![](http://img.onmicrosoft.cn/2022-12-16/2022-12-16_08-24-12.png)
+![](https://img.onmicrosoft.cn/2022-12-16/2022-12-16_08-24-12.png)
 <!-- endtab -->
 
 <!-- tab alist.learnonly.xyz -->
-![](http://img.onmicrosoft.cn/2022-12-16/2022-12-16_08-22-40.png)
+![](https://img.onmicrosoft.cn/2022-12-16/2022-12-16_08-22-40.png)
 <!-- endtab -->
 
 <!-- tab blog.learnonly.xyz -->
-![](http://img.onmicrosoft.cn/2022-12-16/2022-12-16_09-30-31.png)
+![](https://img.onmicrosoft.cn/2022-12-16/2022-12-16_09-30-31.png)
 <!-- endtab -->
 
 <!-- tab github.com -->
-![](http://img.onmicrosoft.cn/2022-12-16/2022-12-16_08-24-58.png)
+![](https://img.onmicrosoft.cn/2022-12-16/2022-12-16_08-24-58.png)
 <!-- endtab -->
 
 <!-- tab tuostudy.com -->
-![](http://img.onmicrosoft.cn/2022-12-16/2022-12-16_08-25-14.png)
+![](https://img.onmicrosoft.cn/2022-12-16/2022-12-16_08-25-14.png)
 <!-- endtab -->
 
 <!-- tab www.fast.com -->
-![](http://img.onmicrosoft.cn/2022-12-16/2022-12-16_09-44-45.png)
+![](https://img.onmicrosoft.cn/2022-12-16/2022-12-16_09-44-45.png)
 <!-- endtab -->
 
 <!-- tab www.youtube.com -->
-![](http://img.onmicrosoft.cn/2022-12-16/2022-12-16_12-11-04.png)
+![](https://img.onmicrosoft.cn/2022-12-16/2022-12-16_12-11-04.png)
 <!-- endtab -->
 
 {% endtabs %}
@@ -208,7 +208,7 @@ python add: chrome_options.add_argument('lang=zh_CN.UTF-8')
 
 后来发现不是，这张方法有bug，以我的博客为例，会变成这样：
 
-<img src="http://img.onmicrosoft.cn/2022-12-16/1c984508c9c762ad7654bb6e70dad46e.jpeg" style="zoom: 7%;" />
+<img src="https://img.onmicrosoft.cn/2022-12-16/1c984508c9c762ad7654bb6e70dad46e.jpeg" style="zoom: 7%;" />
 
 也就是说屏幕被拉长了..但是同时背景图片因为设置了某个样式，他也被拉长了
 
