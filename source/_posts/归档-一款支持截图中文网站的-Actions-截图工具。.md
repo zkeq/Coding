@@ -56,7 +56,7 @@ date: 2022-12-16 21:02:57
 <!-- endtab -->
 
 <!-- tab www.fast.com -->
-![](https://img.onmicrosoft.cn/2022-12-16/2022-12-16_09-44-45.png)
+![](https://img.onmicrosoft.cn/2022-12-16/2022-12-16_11-36-36.png)
 <!-- endtab -->
 
 <!-- tab www.youtube.com -->
