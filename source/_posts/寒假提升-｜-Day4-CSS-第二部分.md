@@ -333,8 +333,14 @@ css有三种常用的编写方式，分别是内联样式、内部样式表和�
   * 特性
   * 或者其他方法
 
+> 也就是说 `text-align` 只能把行内元素居中
+>
+> 如果是块级别元素可以用 `margin: 0 auto;` 来对齐
+>
+> 或者使用 `inline-block` 来使用  `text-align`
+
 - `text-align`: 直接翻译过来设置文本的对齐方式 ;
-- `MDN`:定义行内内容(例如文字)如何相对它的块父元素对齐;
+- `MDN`: 定义行内内容(例如文字)如何相对它的块父元素对齐;
 - 常用的值
   - `left` :左对齐
   - `right` :右对齐
@@ -342,6 +348,8 @@ css有三种常用的编写方式，分别是内联样式、内部样式表和�
   - `justify` :两端对齐
 
 ![](https://img.onmicrosoft.cn/2022/12/15/fd646e51-731e-43e2-86f5-7b421e6b87da.png)
+
+`text-align-last` ：`justify` 最后一行文字的排布
 
 ### 1.5. letter-word-spacing(一般)
 
