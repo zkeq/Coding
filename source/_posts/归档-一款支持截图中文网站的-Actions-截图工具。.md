@@ -35,6 +35,10 @@ date: 2022-12-16 21:02:57
 ![](http://img.onmicrosoft.cn/2022-12-16/2022-12-16_08-24-39.png)
 <!-- endtab -->
 
+<!-- tab icodeq.com -->
+![](http://img.onmicrosoft.cn/2022-12-16/2022-12-16_08-24-12.png)
+<!-- endtab -->
+
 <!-- tab alist.learnonly.xyz -->
 ![](http://img.onmicrosoft.cn/2022-12-16/2022-12-16_08-22-40.png)
 <!-- endtab -->
@@ -375,3 +379,16 @@ for i in data:
     get_screenshot(url, width, height, timeout, real_time_out, host_dir, full_page)
 ```
 
+### 一些其他的本文未提及的相关资料
+
+笔者只是看到这些，并未全部验证可行性，感谢所有为中文编程区做出教程的博主！
+
+- [selenium进行网页长截图，模块长截图](https://blog.csdn.net/Zhong____/article/details/127258151)
+- [Selenium执行cdp命令，driver.execute_cdp_cmd用法](https://www.cnblogs.com/superhin/p/11481910.html)
+- [使用selenium网页截图，解决截图不全问题](https://blog.csdn.net/muttry/article/details/114577445)
+- [Selenium全屏截图，使用PIL拼接滚动截图](https://www.cnblogs.com/superhin/p/11482188.html)
+- [Python selenium操作浏览器全屏截图](https://blog.csdn.net/komany2010/article/details/108638913)
+- [使用Selenium Webdriver进行全屏截图](https://blog.csdn.net/dnc8371/article/details/106809193)
+- [selenium中整个页面的截图及局部截图（方法分析）](https://blog.csdn.net/weixin_45541762/article/details/115526509)
+- [python+selenium 把整个网页截图 长截图](https://blog.csdn.net/yutu75/article/details/115524985)
+- [selenium 截长图](https://blog.csdn.net/yechunyao/article/details/125450825)
