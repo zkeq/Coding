@@ -40,7 +40,7 @@ date: 2022-12-16 21:02:57
 <!-- endtab -->
 
 <!-- tab alist.learnonly.xyz -->
-![](https://img.onmicrosoft.cn/2022-12-16/2022-12-16_08-22-40.png)
+![](https://img.onmicrosoft.cn/2022-12-16/2022-12-16_12-10-41.png)
 <!-- endtab -->
 
 <!-- tab blog.learnonly.xyz -->
@@ -48,7 +48,7 @@ date: 2022-12-16 21:02:57
 <!-- endtab -->
 
 <!-- tab github.com -->
-![](https://img.onmicrosoft.cn/2022-12-16/2022-12-16_08-24-58.png)
+![](https://img.onmicrosoft.cn/2022-12-16/2022-12-16_12-13-18.png)
 <!-- endtab -->
 
 <!-- tab tuostudy.com -->
