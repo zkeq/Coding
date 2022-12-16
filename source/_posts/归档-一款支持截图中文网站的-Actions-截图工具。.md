@@ -2,7 +2,7 @@
 title: 归档 | 一款支持截图中文网站的 Actions 截图工具。
 tags: [归档]
 categories: [A置顶文章, 工具]
-description: 本系列文章将会记录寒假期间的学习计划，主要是知识点和同学们当前进度的检查。
+description: 一个使用 Python + Selenium + Github Action 实现的截图工具。
 cover: https://socialify.git.ci/zkeq/Python-WebSite-Screenshot/image?description=1&font=Bitter&forks=1&language=1&owner=1&pattern=Plus&stargazers=1&theme=Dark
 date: 2022-12-16 21:02:57
 ---
@@ -22,6 +22,10 @@ date: 2022-12-16 21:02:57
 7. 支持定时，全自动触发
 
 >  仓库地址：https://github.com/zkeq/Python-WebSite-Screenshot
+
+> 补充：写完此文后我发现一个使用 `ts + puppeteer` 编写的截图仓库，并且可运行于 `vercel` 推荐一波：
+>
+> https://github.com/Lete114/WebStack-Screenshot 
 
 ### 无图无真相
 
