@@ -22,11 +22,15 @@ module.exports = {
         handler: "CacheFirst"
       },
       {
+        urlPattern: /^https:\/\/s1\.hdslb\.com\/.*/,
+        handler: "CacheFirst"
+      },
+      {
         urlPattern: /.*\.html/,
         handler: 'NetworkOnly'
       },
       {
-        urlPattern: /.*\.(?:png|jpg|jpeg|svg|gif)/,
+        urlPattern: /.*\.(?:png|jpg|jpeg|svg|gif|woff2)/,
         handler: 'CacheFirst', // 缓存优先
       },
       {
