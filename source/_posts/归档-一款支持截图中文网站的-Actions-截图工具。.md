@@ -3,7 +3,7 @@ title: 归档 | 一款支持截图中文网站的 Actions 截图工具。
 tags: [归档]
 categories: [A置顶文章, 工具]
 description: 本系列文章将会记录寒假期间的学习计划，主要是知识点和同学们当前进度的检查。
-cover: https://img.onmicrosoft.cn/2022/12/12/11a013bd-6526-457f-80c4-a1d2204e0d52.png
+cover: https://socialify.git.ci/zkeq/Python-WebSite-Screenshot/image?description=1&font=Bitter&forks=1&language=1&owner=1&pattern=Plus&stargazers=1&theme=Dark
 date: 2022-12-16 21:02:57
 ---
 
