@@ -102,7 +102,7 @@ updated_option: 'date'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 12
+per_page: 0
 pagination_dir: page
 
 # Include / Exclude file(s)
