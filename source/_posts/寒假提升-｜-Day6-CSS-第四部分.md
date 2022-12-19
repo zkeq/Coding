@@ -339,6 +339,12 @@ none：隐藏元素
 <!-- endtab -->
 {% endtabs %}
 
+
+>务必下载！！
+>
+>今日的代码和讲义 以及思维导图：[【点击此链接下载 Day06.zip】](https://share.onmicrosoft.cn/ubsxpci8j)
+
+
 ![](https://img.onmicrosoft.cn/2022/12/19/34146e25-af12-4bb7-804b-aee6ccfa70f5.png)
 
 ## 一. 盒子模型
