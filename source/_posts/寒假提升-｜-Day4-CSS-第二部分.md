@@ -284,6 +284,11 @@ css有三种常用的编写方式，分别是内联样式、内部样式表和�
 >
 >今日的代码和讲义 以及思维导图：[【点击此链接下载 Day04.zip】](https://share.onmicrosoft.cn/dnvslrhxu)
 
+<iframe width="100%" scrolling=no height="500" frameborder="0" src="https://code.icodeq.com/fe-6"></iframe>
+
+<iframe width="100%" scrolling=no height="500" frameborder="0" src="https://code.icodeq.com/fe-7"></iframe>
+
+<iframe width="100%" scrolling=no height="500" frameborder="0" src="https://code.icodeq.com/fe-8"></iframe>
 
 ## 大纲
 
