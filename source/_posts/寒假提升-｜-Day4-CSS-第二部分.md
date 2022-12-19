@@ -654,5 +654,8 @@ css有三种常用的编写方式，分别是内联样式、内部样式表和�
 
 - `::before` 和 `::after` 用来在一个元素的 **内容之前或之后插入** 其他内容(可以是文字、图片)
   - 常通过 `content 属性` 来为一个元素添加修饰性的内容。
+- 使用伪元素的过程中，不要将 `content` 省略，如果没有文字就用 `content: ""`。
+- 如果位置不对的话可以用相对定位来进行微调 `position: relative; left: 5px; top: 2px;`
+- 如果要设置宽和高，先把它变成一个 `div` ：`display: inline-block;`
 
 ![](https://img.onmicrosoft.cn/2022/12/17/fe7d4963-cca9-40df-b4a1-80e226cc9394.png)
