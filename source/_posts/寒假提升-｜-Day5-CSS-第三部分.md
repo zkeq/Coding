@@ -1010,9 +1010,6 @@ line-height表示一行文字的高度,也是两行文字基线之间的间距.
 
 模仿腾讯课堂历史回放模块
 
-<iframe width="100%" scrolling=no height="500" frameborder="0" src="https://code.onmicrosoft.cn/ex-homework#/7178872958247501861"></iframe>
-
-
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -1142,6 +1139,8 @@ line-height表示一行文字的高度,也是两行文字基线之间的间距.
 </html>
 
 ```
+
+<iframe width="100%" scrolling=no height="500" frameborder="0" src="https://code.onmicrosoft.cn/ex-homework#/7178872958247501861"></iframe>
 
 <!-- endtab -->
 
