@@ -36,6 +36,8 @@ date: 2022-12-20 09:00:33
 * target
 ```
 
+![](https://img.onmicrosoft.cn/2022/12/20/1d60fe16-90ac-4db6-899b-240b64c53f03.png)
+
 <!-- endtab -->
 
 <!-- tab Day6参考答案 -->
@@ -1092,8 +1094,6 @@ border-box:  padding、border都布置在width、height里边
 <iframe width="100%" scrolling=no height="500" frameborder="0" src="https://code.icodeq.com/fe-12"></iframe>
 <iframe width="100%" scrolling=no height="500" frameborder="0" src="https://code.icodeq.com/fe-13"></iframe>
 
-
-![](https://img.onmicrosoft.cn/2022/12/20/1d60fe16-90ac-4db6-899b-240b64c53f03.png)
 
 ### 概览
 
