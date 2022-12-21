@@ -7,7 +7,7 @@ cover: https://img.onmicrosoft.cn/2022-12-21/1.jpg
 date: 2022-12-21 16:02:21
 ---
 
-<script data-pjax  type="text/javascript" src="https://player.dogecloud.com/js/loader"></script>
+<script data-pjax type="text/javascript" src="https://player.dogecloud.com/js/loader"></script>
 
 首先看效果
 
