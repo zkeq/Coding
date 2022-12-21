@@ -165,6 +165,10 @@ function deleteGist(hash) {
 hexo.extend.filter.register('before_exit', function(){
     // for循环遍历所有的gist
     for (let i = 0; i < page_list.length; i++) {
+        // 如果 当前项在列表中有重复的，就删除该gist
+        if (page_list.indexOf(page_list[i]) !== i) {
+            deleteGist(id_list[i]);
+        }
         // 如果在 used_hash 中没有找到该gist的hash，并且该hash是个hash
         if (!used_hash.includes(page_list[i]) && isMd5(page_list[i])) {
             // 删除该gist
