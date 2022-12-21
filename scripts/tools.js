@@ -168,7 +168,7 @@ hexo.extend.filter.register('before_exit', function(){
         // 如果在 used_hash 中没有找到该gist的hash，并且该hash是个hash
         if (!used_hash.includes(page_list[i]) && isMd5(page_list[i])) {
             // 删除该gist
-            deleteGist(page_list[i].hash);
+            deleteGist(page_list[i]);
         }
     }
   });
