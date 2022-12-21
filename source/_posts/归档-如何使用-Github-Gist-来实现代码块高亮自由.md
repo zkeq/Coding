@@ -254,7 +254,7 @@ hexo.extend.filter.register('before_post_render', function (data) {
 - `注意！！！：请将 105 行的 zkeq 替换为你的 GitHub 用户名`
 - 示例：https://github.com/zkeq/Coding/blob/main/scripts/tools.js
 - 值得注意的是，`Github API` 有限制，似乎短时间最多创建 `400` 个 `Gist` ，如果代码块太多，只需要隔一段时间再来跑一遍即可，比如我的就是 `1200` 个，跑了三次左右跑完了，而且这个只是第一次需要跑，后续每次更新文章最多就十几个代码块，所以就第一次慢，以后还是很快的
-- 创建太多不会提示报错，只是会卡住，手动暂停部署即可
+- 创建太多不会停止，只是会提示报错，卡住而已，手动暂停部署即可
 
 ```js
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
@@ -400,6 +400,9 @@ function createGist (md5, gh_content, lang){
     response = request.responseText;
     // 如果状态码不是200就报错
     if (request.status != 201) {
+        console.log(response);
+        console.log('\x1B[31m', "|--ERR POST--|" + md5 + "|--ERR POST--|", '\x1B[0m');
+        // 当前上传量达到 Github API 限制，请隔一段时间再来上传
         return createGist(md5, gh_content, lang);
     }
     return JSON.parse(response)["id"];
@@ -420,8 +423,9 @@ function deleteGist(hash) {
     request.setRequestHeader("Authorization", "token " + github_token);
     request.send();
     // 如果状态码不是204就报错
-    if (request.status !== 204) {
+    if (request.status !== 204 && request.status !== 404) {
         console.log('\x1B[31m', "|--ERR DEL--|" + hash + "|----|")
+        console.log(request.responseText);
         return deleteGist(hash);
     }else{
         console.log('\x1B[34m', "|--DEL--|" + hash + "|----|")
