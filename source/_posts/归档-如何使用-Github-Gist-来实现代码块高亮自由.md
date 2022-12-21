@@ -11,6 +11,23 @@ date: 2022-12-21 16:02:21
 
 首先看效果
 
+```ts
+class MyClass {
+  public static myValue: string;
+  constructor(init: string) {
+    this.myValue = init;
+  }
+}
+import fs = require("fs");
+module MyModule {
+  export interface MyInterface extends Other {
+    myProperty: any;
+  }
+}
+declare magicNumber number;
+myArray.forEach(() => { }); // fat arrow syntax
+```
+
 
 <div id="player_c14f813b8fd5c6a3"></div>
 <script type="text/javascript">
