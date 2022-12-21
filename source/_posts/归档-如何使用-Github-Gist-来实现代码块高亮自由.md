@@ -395,8 +395,19 @@ function createGist (md5, gh_content, lang){
 
 4. 然后点击部署就可以啦，会出现文章开头视频的效果，如果后续发布文章，就会是这样：
 
-<div style="position: relative; padding: 28% 45%;">
-<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" allowfullscreen="true" src="https://player.icodeq.com/mp4/?url=https://media.onmicrosoft.cn/hellohnjm/%E5%B1%8F%E5%B9%95%E5%BD%95%E5%88%B62022-09-09%2015.49.00.mov?pic=https://img.onmicrosoft.cn/2022-12-21/6.png" frameborder="no" scrolling="no"></iframe>
-</div>
+<div id="player_8d28ecadbfd32c7a"></div>
+<script type="text/javascript">
+    (
+function () {
+var player = new DogePlayer({
+    container: document.getElementById('player_8d28ecadbfd32c7a'),
+    userId: 2220,
+    vcode: '8d28ecadbfd32c7a',
+    autoPlay: false,
+    pic: 'https://img.onmicrosoft.cn/2022-12-21/6.png'
+});
+}
+)()
+</script>
 
 有问题评论区提出哦
