@@ -7,6 +7,8 @@ cover: https://img.onmicrosoft.cn/2022-12-21/1.jpg
 date: 2022-12-21 11:45:44
 ---
 
+<script data-pjax  type="text/javascript" src="https://player.dogecloud.com/js/loader"></script>
+
 首先看效果
 
 
@@ -45,7 +47,7 @@ var player = new DogePlayer({
 
 经过一番摸索之后，发现了 `Github Gist` ，这个是一个类似代码片段的东西，可以用来粘贴代码分享到类似于 `twitter` 的社交平台，而且令我兴奋的是它支持 `Embed`，这不正我想要的吗？
 
-![3](https://img.onmicrosoft.cn/2022-12-21/3.png)
+<img src="https://img.onmicrosoft.cn/2022-12-21/3.png" alt="3" style="zoom:33%;" />
 
 于是就开始了我的探索之旅。
 
@@ -177,7 +179,7 @@ while (!is_end) {
 
 - https://betterprogramming.pub/how-to-use-event-bus-in-react-architecture-f90485477647
 
-![4](https://img.onmicrosoft.cn/2022-12-21/4.png)
+<img src="https://img.onmicrosoft.cn/2022-12-21/4.png" alt="4" style="zoom:33%;" />
 
 很爽，之后我就直接拿来用了，这里就不多说了，直接上代码：
 
@@ -213,7 +215,7 @@ srcdoc='<meta name="description" content="Instantly share code, notes, and snipp
   
 2. 然后，在环境变量中添加 `GITHUB_TOKEN`，值为你刚刚创建的 `Token`，这里我使用的是 `vercel`，所以是在 `vercel` 的环境变量中添加，其他平台也是一样的。
 
-![4](https://img.onmicrosoft.cn/2022-12-21/4.png)
+![4](https://img.onmicrosoft.cn/2022-12-21/5.png)
 
 3. 然后，你需要在 `Hexo` 根目录，创建一个文件夹 `scripts`，里面创建一个 `gist.js` 文件（名字随意，扩展名要js），内容如下：
 
