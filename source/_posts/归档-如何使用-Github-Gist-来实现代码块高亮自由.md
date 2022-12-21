@@ -20,7 +20,8 @@ var player = new DogePlayer({
     container: document.getElementById('player_c14f813b8fd5c6a3'),
     userId: 2220,
     vcode: 'c14f813b8fd5c6a3',
-    autoPlay: false
+    autoPlay: false,
+    pic: 'https://img.onmicrosoft.cn/2022-12-21/1.jpg'
 });
 }
 )()
