@@ -36,7 +36,6 @@ axios.get('/some/URL')
   .catch(function (error){
     console.log(error);
   });
-  ;
 ```
 使用结构赋值获取响应数据：
 ```js
