@@ -204,6 +204,16 @@ srcdoc='<meta name="description" content="Instantly share code, notes, and snipp
 
 效果就是本博客所用的，也是你目前看到的代码块。
 
+这里使用的是 `before_post_render`
+```js
+hexo.extend.filter.register('before_post_render', function (data) {
+```
+这个函数会在每篇文章渲染之前执行，这里我们可以对文章的内容进行修改，比如添加代码高亮，添加图片懒加载等等。
+
+详情见 `Hexo` 官方文档
+
+- https://hexo.io/zh-cn/api/filter#before-post-render
+
 那么如何使用呢？
 
 ## 使用
@@ -365,17 +375,6 @@ function createGist (md5, gh_content, lang){
     return JSON.parse(response)["id"];
 }
 ```
-
-这里使用的是 `before_post_render`
-```js
-hexo.extend.filter.register('before_post_render', function (data) {
-```
-这个函数会在每篇文章渲染之前执行，这里我们可以对文章的内容进行修改，比如添加代码高亮，添加图片懒加载等等。
-
-详情见 `Hexo` 官方文档
-
-- https://hexo.io/zh-cn/api/filter#before-post-render
-
 
 4. 然后点击部署就可以啦，会出现文章开头视频的效果，如果后续发布文章，就会是这样：
 
