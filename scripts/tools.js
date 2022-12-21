@@ -14,35 +14,43 @@ var is_end = false;
 var page_list = [];
 var id_list = [];
 var used_hash = [];
-// for 循环找出所有gist
-while (!is_end) {                
-    // 首先获取到全部的gist
-    var request = new XMLHttpRequest();
-    log.info(`GIST: 正在查找第${pages}页`)
-    request.open("GET", "https://api.github.com/gists?per_page=100" + `&page=${pages}`, false);
-    request.setRequestHeader("Content-Type", "application/json");
-    request.setRequestHeader("Authorization", "token " + github_token);
-    request.send(null);
-    data_json = JSON.parse(request.responseText);
-    // 如果没有gist就结束
-    if (data_json.length == 0) {
-        is_end = true;
-        break;
-    } else {
-        // 如果有gist就把gist加入到page_list
-        data_json.forEach(element => {
-            page_list.push(element["description"]);
-            id_list.push(element["id"]);
-        });
-        pages = pages + 1;
+var Is_Load_Github = false;
+
+function Load_Github(){
+    // for 循环找出所有gist
+    while (!is_end) {                
+        // 首先获取到全部的gist
+        var request = new XMLHttpRequest();
+        log.info(`GIST: 正在查找第${pages}页`)
+        request.open("GET", "https://api.github.com/gists?per_page=100" + `&page=${pages}`, false);
+        request.setRequestHeader("Content-Type", "application/json");
+        request.setRequestHeader("Authorization", "token " + github_token);
+        request.send(null);
+        data_json = JSON.parse(request.responseText);
+        // 如果没有gist就结束
+        if (data_json.length == 0) {
+            is_end = true;
+            break;
+        } else {
+            // 如果有gist就把gist加入到page_list
+            data_json.forEach(element => {
+                page_list.push(element["description"]);
+                id_list.push(element["id"]);
+            });
+            pages = pages + 1;
+        }
     }
 }
-
 // scripts/plantuml.js
 const rBacktick = /^((?:[^\S\r\n]*>){0,3}[^\S\r\n]*)(`{3,}|~{3,})[^\S\r\n]*((?:.*?[^`\s])?)[^\S\r\n]*\n((?:[\s\S]*?\n)?)(?:(?:[^\S\r\n]*>){0,3}[^\S\r\n]*)\2[^\S\r\n]?(\n+|$)/gm;
 // 另一种正则：```(\w+?\n)([\s\S]+?)```
 
 hexo.extend.filter.register('before_post_render', function (data) {
+    if (!Is_Load_Github){
+        Load_Github();
+        Is_Load_Github = true;
+    }
+
     const dataContent = data.content;
     if ((!dataContent.includes('```') && !dataContent.includes('~~~'))) return;
 
