@@ -153,7 +153,7 @@ function deleteGist(hash) {
     request.setRequestHeader("Authorization", "token " + github_token);
     request.send();
     // 如果状态码不是204就报错
-    if (request.status != 204) {
+    if (request.status !== 204) {
         console.log('\x1B[31m', "|--ERR DEL--|" + hash + "|----|")
         return deleteGist(hash);
     }else{
