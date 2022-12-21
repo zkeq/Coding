@@ -144,7 +144,6 @@ function createGist (md5, gh_content, lang){
         console.log(response);
         console.log('\x1B[31m', "|--ERR POST--|" + md5 + "|--ERR POST--|", '\x1B[0m');
         // 当前上传量达到 Github API 限制，请隔一段时间再来上传
-        hexo.exit(1);
         return createGist(md5, gh_content, lang);
     }
     return JSON.parse(response)["id"];
@@ -165,8 +164,9 @@ function deleteGist(hash) {
     request.setRequestHeader("Authorization", "token " + github_token);
     request.send();
     // 如果状态码不是204就报错
-    if (request.status !== 204) {
+    if (request.status !== 204 && request.status !== 404) {
         console.log('\x1B[31m', "|--ERR DEL--|" + hash + "|----|")
+        console.log(request.responseText);
         return deleteGist(hash);
     }else{
         console.log('\x1B[34m', "|--DEL--|" + hash + "|----|")
