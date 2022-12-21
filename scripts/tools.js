@@ -141,6 +141,10 @@ function createGist (md5, gh_content, lang){
     response = request.responseText;
     // 如果状态码不是200就报错
     if (request.status != 201) {
+        console.log(response);
+        console.log('\x1B[31m', "|--ERR POST--|" + md5 + "|--ERR POST--|", '\x1B[0m');
+        // 当前上传量达到 Github API 限制，请隔一段时间再来上传
+        hexo.exit(1);
         return createGist(md5, gh_content, lang);
     }
     return JSON.parse(response)["id"];
