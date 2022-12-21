@@ -413,3 +413,26 @@ var player = new DogePlayer({
 </script>
 
 有问题评论区提出哦
+
+## 新增功能
+
+- 2022.12.21 新增自动清理 `无用 Gist` 的功能（识别到 `description` 为 `md5` 才会清理 不会误删）
+
+![7](https://img.onmicrosoft.cn/2022-12-21/7.png)
+
+还是很爽很壮观的（删了1000条左右没用的测试数据[其实是第一次跑的时候忘记加扩展名了，索性再跑了一遍hhh]）
+
+<div id="player_6d01edc221d94dc8"></div>
+<script type="text/javascript">
+    (
+function () {
+var player = new DogePlayer({
+    container: document.getElementById('player_6d01edc221d94dc8'),
+    userId: 2220,
+    vcode: '6d01edc221d94dc8',
+    autoPlay: false,
+    pic: 'https://img.onmicrosoft.cn/2022-12-21/6.png'
+});
+}
+)()
+</script>
