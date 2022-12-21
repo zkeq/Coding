@@ -4,7 +4,7 @@ tags: [归档]
 categories: [A置顶文章, 工具]
 description: 利用 Hexo 是先构建再发布的模式，首先推送代码块到 Github Gist 并且生成 iframe 框架 并嵌入文章。
 cover: https://img.onmicrosoft.cn/2022-12-21/1.jpg
-date: 2022-12-21 11:45:44
+date: 2020-12-21 11:45:44
 ---
 
 <script data-pjax  type="text/javascript" src="https://player.dogecloud.com/js/loader"></script>
