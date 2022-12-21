@@ -483,7 +483,7 @@ date: 2022-12-20 16:09:54
 
 ### 2.3. 字体图标
 
-````markdown
+````js
 * 选择图标
 * 下载代码
 * 在项目中使用
@@ -522,7 +522,7 @@ date: 2022-12-20 16:09:54
 
 ### 2.4. CSS Sprite
 
-```markdown
+```js
 将多个图标放到一张图片
 
 使用图片
@@ -592,7 +592,7 @@ cursor: pointer
 
 ### 3.2. 元素的定位
 
-```markdown
+```js
 常见的值:
 
 * static
@@ -628,7 +628,7 @@ cursor: pointer
 
 ### 3.3. 相对定位
 
-```markdown
+```js
 * relative
   * 相对自己原来的位置(标准流中的位置)
   * left/right/top/bottom
@@ -650,7 +650,7 @@ cursor: pointer
 
 ### 3.4. 固定定位
 
-```markdown
+```js
 * fixed
   * 相对视口(可视区域viewport)
   * 不会随着内容的滚动而滚动
