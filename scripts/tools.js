@@ -60,9 +60,12 @@ hexo.extend.filter.register('before_post_render', function (data) {
             "Javascript": "js",
             "html": "html",
             "HTML": "html",
+            "JS": "js",
+            "Js": "js"
         }
         lang = lang_list[lang] ? lang_list[lang] : lang;
         const hash = crypto.createHash('md5');
+        hash.update(lang, 'utf8');
         hash.update(gh_content, 'utf8');
         const md5 = hash.digest('hex');
         process.stdout.write("INFO  |--MD5--|" + md5 + "|----|");
