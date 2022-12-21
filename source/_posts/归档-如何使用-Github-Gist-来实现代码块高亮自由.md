@@ -55,6 +55,8 @@ var player = new DogePlayer({
 
 首先，我们需要创建一个 Github Gist，这个很简单，直接在 Github 上创建一个 Gist 就行了。
 
+- https://gist.github.com/
+
 但是我们总不能把每篇文章写的代码都手动的创建吧，这太笨了，而且我博客有 `900+` 代码块，这太费人了
 
 ## 2. 使用 Github API
@@ -377,7 +379,7 @@ hexo.extend.filter.register('before_post_render', function (data) {
 4. 然后点击部署就可以啦，会出现文章开头视频的效果，如果后续发布文章，就会是这样：
 
 <div style="position: relative; padding: 28% 45%;">
-<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" allowfullscreen="true" src="https://player.icodeq.com/mp4/?url=https://media.onmicrosoft.cn/hellohnjm/%E5%B1%8F%E5%B9%95%E5%BD%95%E5%88%B62022-09-09%2015.49.00.mov&pic=https://img.onmicrosoft.cn/2022-12-21/1.jpg" frameborder="no" scrolling="no"></iframe>
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" allowfullscreen="true" src="https://player.icodeq.com/mp4/?url=https://media.onmicrosoft.cn/hellohnjm/%E5%B1%8F%E5%B9%95%E5%BD%95%E5%88%B62022-09-09%2015.49.00.mov?pic=https://img.onmicrosoft.cn/2022-12-21/1.jpg" frameborder="no" scrolling="no"></iframe>
 </div>
 
 有问题评论区提出哦
