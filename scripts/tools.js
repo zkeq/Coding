@@ -13,6 +13,7 @@ var pages = 1;
 var is_end = false;
 var page_list = [];
 var id_list = [];
+var used_hash = [];
 // for 循环找出所有gist
 while (!is_end) {                
     // 首先获取到全部的gist
@@ -70,6 +71,8 @@ hexo.extend.filter.register('before_post_render', function (data) {
         const md5 = hash.digest('hex');
         process.stdout.write("INFO  |--MD5--|" + md5 + "|----|");
         if (page_list.includes(md5)) {
+            // 推送到used_hash
+            used_hash.push(md5);
             // 找到是第几个元素
             let index = page_list.indexOf(md5);
             // 找到对应的id
@@ -134,3 +137,38 @@ function createGist (md5, gh_content, lang){
     }
     return JSON.parse(response)["id"];
 }
+
+function isMd5(str) {
+    return /^[a-f0-9]{32}$/i.test(str);
+}
+
+function deleteGist(hash) {
+    var request = new XMLHttpRequest();
+    // DELETE
+    request.open("DELETE", `https://api.github.com/gists/${hash}`, false);
+    // Accept: application/vnd.github+json
+    request.setRequestHeader("Accept", "application/vnd.github+json");
+    // X-GitHub-Api-Version: 2022-11-28
+    request.setRequestHeader("X-GitHub-Api-Version", "2022-11-28");
+    request.setRequestHeader("Authorization", "token " + github_token);
+    request.send();
+    // 如果状态码不是204就报错
+    if (request.status != 204) {
+        console.log('\x1B[31m', "|--ERR DEL--|" + hash + "|----|")
+        return deleteGist(hash);
+    }else{
+        console.log('\x1B[34m', "|--DEL--|" + hash + "|----|")
+    }
+}
+
+
+hexo.extend.filter.register('before_exit', function(){
+    // for循环遍历所有的gist
+    for (let i = 0; i < page_list.length; i++) {
+        // 如果在 used_hash 中没有找到该gist的hash，并且该hash是个hash
+        if (!used_hash.includes(page_list[i]) && isMd5(page_list[i])) {
+            // 删除该gist
+            deleteGist(page_list[i].hash);
+        }
+    }
+  });
