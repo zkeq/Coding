@@ -249,7 +249,19 @@ hexo.extend.filter.register('before_post_render', function (data) {
 
 ![4](https://img.onmicrosoft.cn/2022-12-21/5.png)
 
-3. 然后，你需要在 `Hexo` 根目录，创建一个文件夹 `scripts`，里面创建一个 `gist.js` 文件（名字随意，扩展名要js），内容如下：
+3. 然后安装依赖 `XMLHttpRequest` 和 `crypto`
+
+```js
+npm install xmlhttprequest@1.8.0 crypto@1.0.1
+或者
+yarn add xmlhttprequest@1.8.0 crypto@1.0.1
+
+如果使用的是 vercel 这样的平台，可直接在 `package.json` 中添加依赖
+    "crypto": "^1.0.1",
+    "xmlhttprequest": "^1.8.0"
+```
+
+4. 然后，你需要在 `Hexo` 根目录，创建一个文件夹 `scripts`，里面创建一个 `gist.js` 文件（名字随意，扩展名要js），内容如下：
 
 - `注意！！！：请将 105 行的 zkeq 替换为你的 GitHub 用户名`
 - 示例：https://github.com/zkeq/Coding/blob/main/scripts/tools.js
@@ -449,7 +461,7 @@ hexo.extend.filter.register('before_exit', function(){
   });
 ```
 
-4. 然后点击部署就可以啦，会出现文章开头视频的效果，如果后续发布文章，就会是这样：
+5. 然后点击部署就可以啦，会出现文章开头视频的效果，如果后续发布文章，就会是这样：
 
 <div id="player_8d28ecadbfd32c7a"></div>
 <script type="text/javascript">
