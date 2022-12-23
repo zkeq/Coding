@@ -184,31 +184,31 @@ date: 2022-12-23 21:08:50
 
 * 方式二  利用已经编写好的class, 直接使用即可;
 
-* ```html
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
-      <link rel="stylesheet" href="./fonts03/iconfont.css" />
-      <style>
-        .icon-hetong {
-          display: inline-block;
-          width: 40px;
-          height: 40px;
-          font-size: 30px;
-          background-color: pink;
-        }
-      </style>
-    </head>
-    <body>
-      <i class="iconfont icon-hetong"></i>
-    </body>
-  </html>
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./fonts03/iconfont.css" />
+    <style>
+      .icon-hetong {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <i class="iconfont icon-hetong"></i>
+  </body>
+</html>
   
-  ```
+```
 
   
 
