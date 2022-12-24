@@ -53,6 +53,8 @@ var player = new DogePlayer({
 
 利用 highlight.js 的话，可以实现代码块的高亮，但是，Highlight.js 的代码块高亮，也是有限的，而且，Highlight.js 的代码块高亮，也不是很好看，因为大家不是设计师，手动调也很难如愿。
 
+~(以上的一堆废话由 Copilot 生成)~
+
 当然我尝试过手调一版：
 
 ![2](https://img.onmicrosoft.cn/2022-12-21/2.png)
