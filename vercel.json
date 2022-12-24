@@ -33,8 +33,8 @@
             "destination": "/feed.xml"
         },
         {
-            "source":"/:blog*/:path*.html",
-            "destination":"/:blog*"
+            "source":"/:year*/:blog*/:path*.html",
+            "destination":"/:year*/:blog*/"
         }
     ]
 }
