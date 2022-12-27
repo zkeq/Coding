@@ -289,7 +289,8 @@ comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo
   use: 
-    - giscus
+    - Giscus
+    - Artalk
   # - Disqus
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
@@ -320,12 +321,8 @@ disqus:
 # https://github.com/SukkaW/DisqusJS
 disqusjs:
   shortname:
-  siteName:
   apikey:
-  api:
-  nocomment: # display when a blog post or an article has no comment attached
-  admin:
-  adminLabel:
+  option:
 
 # livere (來必力)
 # https://www.livere.com/
@@ -358,41 +355,15 @@ artitalk:
   path: talk
   js: https://static.onmicrosoft.cn/zkeq/artitalk
   option:
-  front_matter:
-
-
-# HexoPlusPlus Talk
-# see https://hexoplusplus.js.org
-hpptalk:
-  enable: true 
-  domain: vercel.admin.icodeq.com
-  path: talk
-  limit: 12
-  start: 0
-  js: https://static.onmicrosoft.cn/zkeq/talk_user.js
-  css: https://static.onmicrosoft.cn/zkeq/talk.css
-  option:
-  front_matter:
-    title: 说说
-    top_img: https://img.onmicrosoft.cn/2022-03-30/1.png
-
 
 # valine
 # https://valine.js.org
 valine:
   appId: # leancloud application app id
   appKey: # leancloud application app key
-  pageSize: 10 # comment list page size
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
-  lang: en # i18n: zh-CN/zh-TW/en/ja
-  placeholder: Please leave your footprints # valine comment input placeholder (like: Please leave your footprints)
-  guest_info: nick,mail,link # valine comment header info (nick/mail/link)
-  recordIP: false # Record reviewer IP
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   bg: # valine background
-  emojiCDN: # emoji CDN
-  enableQQ: false # enable the Nickname box to automatically get QQ Nickname and QQ Avatar
-  requiredFields: nick,mail # required fields (nick/mail)
   visitor: false
   option:
 
@@ -403,13 +374,6 @@ waline:
   bg: # waline background
   pageview: false
   option:
-    emoji: [
-          "https://npm.onmicrosoft.cn/@waline/emojis@1.0.1/alus",
-          "https://npm.onmicrosoft.cn/@waline/emojis@1.0.1/bilibili",
-          "https://npm.onmicrosoft.cn/@waline/emojis@1.0.1/weibo",
-          "https://npm.onmicrosoft.cn/@waline/emojis@1.0.1/qq",
-          "https://npm.onmicrosoft.cn/@waline/emojis@1.0.1/tieba"
-        ]
 
 # utterances
 # https://utteranc.es/
@@ -428,7 +392,7 @@ facebook_comments:
   user_id: # optional
   pageSize: 10 # The number of comments to show
   order_by: social # social/time/reverse_time
-  lang: en_US # Language en_US/zh_CN/zh_TW and so on
+  lang: zh_TW # Language en_US/zh_CN/zh_TW and so on
 
 # Twikoo
 # https://github.com/imaegoo/twikoo
@@ -436,6 +400,21 @@ twikoo:
   envId:
   region:
   visitor: false
+  option:
+
+# Remark42
+# https://remark42.com/docs/configuration/frontend/
+remark42:
+  host: # Your Host URL
+  siteId: # Your Site ID
+  option:
+
+# Artalk
+# https://artalk.js.org/guide/frontend/config.html
+artalk:
+  server: https://artalk.onmicrosoft.cn/
+  site: https://icodeq.com
+  visitor: true
   option:
 
 # Chat Services
