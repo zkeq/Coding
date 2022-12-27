@@ -413,7 +413,7 @@ remark42:
 # https://artalk.js.org/guide/frontend/config.html
 artalk:
   server: https://artalk.onmicrosoft.cn/
-  site: https://icodeq.com
+  site: Zkeq-Blog
   visitor: true
   option:
 
