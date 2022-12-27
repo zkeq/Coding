@@ -414,7 +414,7 @@ remark42:
 artalk:
   server: https://artalk.onmicrosoft.cn/
   site: Zkeq-Blog
-  visitor: true
+  visitor: false
   option:
 
 # Chat Services
