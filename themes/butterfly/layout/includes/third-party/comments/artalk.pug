@@ -28,11 +28,12 @@ script.
     }
   }
 
-  document.getElementById('darkmode').addEventListener('click',()=> {
-    if (typeof window.artalkItem !== 'object') return
-    let isDark = document.documentElement.getAttribute('data-theme') === 'dark'
-    window.artalkItem.setDarkMode(!isDark)
-  })
+  
+  if (typeof window.artalkItem === 'object') {
+     window.artalkItem.setDarkMode(true)    
+  }
+ 
+  
 
   
   if ('!{theme.comments.use[0]}' === 'Artalk' || !!{theme.comments.lazyload}) {
