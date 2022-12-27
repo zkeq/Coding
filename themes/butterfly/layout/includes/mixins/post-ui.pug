@@ -70,24 +70,42 @@ mixin postUI(posts)
           if theme.comments.card_post_count
             case theme.comments.use[0]
               when 'Disqus'
-              when 'Disqusjs'
                 +countBlockInIndex
                   a(href=full_url_for(link) + '#disqus_thread')
+                    i.fa-solid.fa-spinner.fa-spin
+              when 'Disqusjs'
+                +countBlockInIndex
+                  a(href=full_url_for(link) + '#disqusjs')
+                    span.disqus-comment-count(data-disqus-url=full_url_for(link))
+                      i.fa-solid.fa-spinner.fa-spin
               when 'Valine'
                 +countBlockInIndex
-                  a(href=url_for(link) + '#post-comment' itemprop="discussionUrl")
-                    span.valine-comment-count(data-xid=url_for(link) itemprop="commentCount")
+                  a(href=url_for(link) + '#post-comment')
+                    span.valine-comment-count(data-xid=url_for(link))
+                      i.fa-solid.fa-spinner.fa-spin
               when 'Waline'
                 +countBlockInIndex
                   a(href=url_for(link) + '#post-comment')
                     span.waline-comment-count(id=url_for(link))
+                      i.fa-solid.fa-spinner.fa-spin
               when 'Twikoo'
                 +countBlockInIndex
                   a.twikoo-count(href=url_for(link) + '#post-comment')
+                    i.fa-solid.fa-spinner.fa-spin
               when 'Facebook Comments'
                 +countBlockInIndex
                   a(href=url_for(link) + '#post-comment')
                     span.fb-comments-count(data-href=urlNoIndex(article.permalink))
+              when 'Remark42'
+                +countBlockInIndex
+                  a(href=url_for(link) + '#post-comment')
+                    span.remark42__counter(data-url=urlNoIndex(article.permalink))
+                      i.fa-solid.fa-spinner.fa-spin
+              when 'Artalk'
+                +countBlockInIndex
+                  a(href=url_for(link) + '#post-comment')
+                    span.artalk-count(data-page-key=url_for(link))
+                      i.fa-solid.fa-spinner.fa-spin
 
         //- Display the article introduction on homepage
         case theme.index_post_content.method
