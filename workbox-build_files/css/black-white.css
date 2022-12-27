@@ -17,6 +17,7 @@ html {
     filter: gray;
     filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
 }
+
 body, html {
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
