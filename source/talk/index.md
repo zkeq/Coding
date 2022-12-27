@@ -3,7 +3,6 @@ title: talk
 date: 2022-12-27 20:20:10
 ---
 
-<style>iframe{width:100%}</style>
 <script data-pjax type="text/javascript" src="https://jsd.onmicrosoft.cn/gh/davidjbradshaw/iframe-resizer@master/js/iframeResizer.min.js"></script>
 
 
