@@ -141,10 +141,9 @@ snackbar:
   file: dist/snackbar.min.js
   version: 0.1.16
 fontawesomeV6:
-  name: '@fortawesome/fontawesome-free'
+  name: 'font6pro'
   file: css/all.min.css
-  other_name: font-awesome
-  version: 6.2.0
+  version: 6.0.1
 flickr_justified_gallery_js:
   name: flickr-justified-gallery
   file: dist/fjGallery.min.js
