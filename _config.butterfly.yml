@@ -893,7 +893,9 @@ lazyload:
 
 # Open graph meta tags
 # https://developers.facebook.com/docs/sharing/webmasters/
-Open_Graph_meta: true
+Open_Graph_meta:
+  enable: true
+  option:
 
 # Add the vendor prefixes to ensure compatibility
 css_prefix: true
