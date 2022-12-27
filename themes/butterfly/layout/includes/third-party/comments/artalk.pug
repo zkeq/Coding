@@ -29,8 +29,12 @@ script.
               headers: headers,
               body: formData,
             })
+            
+            console.log("fuck 1:", imgUrl)
 
-            return imgUrl.json().data.links.url
+            console.log("fuck 2:", imgUrl.json())
+
+            return "imgUrl.json().data.links.url"
           }
       },!{JSON.stringify(option)}))
     }
