@@ -16,7 +16,22 @@ script.
         site: '!{site}',
         pageKey: location.pathname,
         darkMode: document.documentElement.getAttribute('data-theme') === 'dark',
-        countEl: '.artalk-count'
+        countEl: '.artalk-count',
+        imgUploader: async (file) => {
+            const formData = new FormData()
+            let headers = new Headers();
+            formData.set('file', file)
+            headers.append('Authorization', 'Bearer 433|PuGR7pfzW8yRKGm3x44ROEwb13sD3JUii2exKd0r');
+            headers.append('Accept', 'application/json');
+
+            const imgUrl = await fetch("https://7bu.top/api/v1/upload", {
+              method: 'POST',
+              headers: headers,
+              body: formData,
+            })
+
+            return imgUrl.json().data.links.url
+          }
       },!{JSON.stringify(option)}))
     }
 
