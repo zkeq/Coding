@@ -10,6 +10,4 @@ date: 2022-12-27 20:20:10
 <iframe scrolling=no frameborder="0" src="https://memos.onmicrosoft.cn/explore"></iframe>
 
 
-<script>
-<script>iFrameResize({log:true})</script>
-</script>
+<script>iFrameResize({log:true})</scrip>
