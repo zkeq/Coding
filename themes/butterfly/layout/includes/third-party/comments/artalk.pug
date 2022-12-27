@@ -24,17 +24,13 @@ script.
             headers.append('Authorization', 'Bearer 433|PuGR7pfzW8yRKGm3x44ROEwb13sD3JUii2exKd0r');
             headers.append('Accept', 'application/json');
 
-            const imgUrl = await fetch("https://7bu.top/api/v1/upload", {
-              method: 'POST',
-              headers: headers,
-              body: formData,
-            })
-            
-            console.log("fuck 1:", imgUrl)
-
-            console.log("fuck 2:", imgUrl.json())
-
-            return "imgUrl.json().data.links.url"
+             return fetch('https://7bu.top/api/v1/upload', {
+                method: 'POST',
+                headers: headers,
+                body: formData,
+              })
+                .then((resp) => resp.json())
+                .then((resp) => resp.data.links.url);
           }
       },!{JSON.stringify(option)}))
     }
