@@ -582,10 +582,7 @@ date: 2022-12-28 16:24:40
       <div class="item right"></div>
       <div class="item right"></div>
     </div>
-  </div>
-
-</body>
-</html>`,
+  </div>`,
       }
     },
   })
@@ -713,10 +710,7 @@ date: 2022-12-28 16:24:40
       <div class="item">4</div>
       <div class="item">5</div>
     </div>
-  </div>
-
-</body>
-</html>`,
+  </div>`,
       }
     },
   })
