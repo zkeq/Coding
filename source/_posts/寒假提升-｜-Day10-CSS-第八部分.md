@@ -35,7 +35,7 @@ date: 2022-12-28 16:24:40
 
 ```
 
-![image-20220408012538662](https://tva1.sinaimg.cn/large/e6c9d24egy1h11o5003wxj20xf0djgpi.jpg)
+![image-20220408012538662](https://img.onmicrosoft.cn/2022-12-28/7rK4qwKpt.jpg)
 
 <!-- endtab -->
 
@@ -511,8 +511,7 @@ date: 2022-12-28 16:24:40
 {% raw %}
 
 <div id="code-1"></div>
-<script src="
-https://npm.onmicrosoft.cn/mini-sandbox@0.3.11"></script>
+<script src="https://npm.onmicrosoft.cn/mini-sandbox@0.3.11"></script>
 <script>
   new MiniSandbox({
     el: '#code-1',
@@ -654,11 +653,11 @@ https://npm.onmicrosoft.cn/mini-sandbox@0.3.11"></script>
 </html>
 ```
 
+
 {% raw %}
 
 <div id="code-2"></div>
-<script src="
-https://npm.onmicrosoft.cn/mini-sandbox@0.3.11"></script>
+<script src="https://npm.onmicrosoft.cn/mini-sandbox@0.3.11"></script>
 <script>
   new MiniSandbox({
     el: '#code-2',
