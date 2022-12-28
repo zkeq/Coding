@@ -516,6 +516,14 @@ date: 2022-12-28 16:24:40
 <script>
   new MiniSandbox({
     el: '#code-1',
+    defaultConfig: {
+      height: '500px',
+      autoRun: true,
+      autoRunInterval: 300,
+      editorRange: '55%',
+      draggable: true,
+      direction: 'column'
+    },
     files: {
       'index.html': {
         defaultValue: `<!DOCTYPE html>
@@ -660,6 +668,14 @@ date: 2022-12-28 16:24:40
 <script>
   new MiniSandbox({
     el: '#code-2',
+    defaultConfig: {
+      height: '500px',
+      autoRun: true,
+      autoRunInterval: 300,
+      editorRange: '55%',
+      draggable: true,
+      direction: 'column'
+    },
     files: {
       'index.html': {
         defaultValue: `<!DOCTYPE html>
