@@ -9,6 +9,8 @@ cover: https://img.onmicrosoft.cn/2022/12/12/11a013bd-6526-457f-80c4-a1d2204e0d5
 date: 2022-12-28 16:24:40
 ---
 
+<script  data-pjax  src="https://npm.onmicrosoft.cn/mini-sandbox@0.3.11"></script>
+
 {% tabs homework %}
 
 <!-- tab 今日打卡任务 -->
@@ -512,7 +514,7 @@ date: 2022-12-28 16:24:40
 {% raw %}
 
 <div id="code-1"></div>
-<script src="https://npm.onmicrosoft.cn/mini-sandbox@0.3.11"></script>
+<script  data-pjax  src="https://npm.onmicrosoft.cn/mini-sandbox@0.3.11"></script>
 <script>
   new MiniSandbox({
     el: '#code-1',
@@ -664,7 +666,7 @@ date: 2022-12-28 16:24:40
 {% raw %}
 
 <div id="code-2"></div>
-<script src="https://npm.onmicrosoft.cn/mini-sandbox@0.3.11"></script>
+<script  data-pjax  src="https://npm.onmicrosoft.cn/mini-sandbox@0.3.11"></script>
 <script>
   new MiniSandbox({
     el: '#code-2',
