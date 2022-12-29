@@ -288,7 +288,7 @@ date: 2022-12-28 16:24:40
 
 #### 五. 完成下面的案例练习
 
-![image-20220406230906517](https://img.onmicrosoft.cn/2022-12-28/vxNCMFHAP.jpg
+![image-20220406230906517](https://img.onmicrosoft.cn/2022-12-28/vxNCMFHAP.jpg)
 
 ~~~html
 <!DOCTYPE html>
