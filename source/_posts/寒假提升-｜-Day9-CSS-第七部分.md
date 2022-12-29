@@ -26,11 +26,11 @@ date: 2022-12-23 21:08:50
 
 ## 五. 完成下面的案例练习
 
-![image-20220406230906517](https://tva1.sinaimg.cn/large/e6c9d24egy1h10ekm9jenj207h06hq33.jpg)
+![image-20220406230906517](https://img.onmicrosoft.cn/2022-12-28/vxNCMFHAP.jpg
 
 ```
 
-![image-20220406230906517](https://tva1.sinaimg.cn/large/e6c9d24egy1h10ekm9jenj207h06hq33.jpg)
+![image-20220406230906517](https://img.onmicrosoft.cn/2022-12-28/vxNCMFHAP.jpg
 
 <!-- endtab -->
 
