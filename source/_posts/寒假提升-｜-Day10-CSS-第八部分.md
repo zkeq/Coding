@@ -24,7 +24,7 @@ date: 2022-12-28 16:24:40
 ## 二. 说出为什么需要清除浮动以及如何清除浮动
 
 ## 三. 利用浮动完成如下布局结构（完成结构即可）(选做)
-![image-20220408012538662](https://tva1.sinaimg.cn/large/e6c9d24egy1h11o5003wxj20xf0djgpi.jpg)
+![image-20220408012538662](https://img.onmicrosoft.cn/2022-12-28/9_6XuwkNR.jpg)
 
 ## 四. 总结flex布局container和item的属性以及作用（重要）
 
@@ -288,7 +288,7 @@ date: 2022-12-28 16:24:40
 
 #### 五. 完成下面的案例练习
 
-![image-20220406230906517](https://tva1.sinaimg.cn/large/e6c9d24egy1h10ekm9jenj207h06hq33.jpg)
+![image-20220406230906517](https://img.onmicrosoft.cn/2022-12-28/vxNCMFHAP.jpg
 
 ~~~html
 <!DOCTYPE html>
