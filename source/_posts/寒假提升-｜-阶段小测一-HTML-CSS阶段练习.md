@@ -2782,4 +2782,6 @@ date: 2022-12-29 14:53:30
 
 ### 03_网易云音乐
 
+- 在线此链接体验：https://img.onmicrosoft.cn/2022-12-28/day4-6/code/03_ncm/index.html
+
 <iframe width="100%" scrolling=no height="500" frameborder="0" src="https://code.onmicrosoft.cn/ex-3#/7182471838402871299"></iframe>
