@@ -14,7 +14,7 @@ script.
         el: '#artalk-wrap',
         server: '!{server}',
         site: '!{site}',
-        pageKey: location.pathname,
+        pageKey: location.pathname.replace(/\/[^/]*$/, '/').length===6?location.pathname +"/":location.pathname.replace(/\/[^/]*$/, '/'),
         darkMode: document.documentElement.getAttribute('data-theme') === 'dark',
         countEl: '.artalk-count',
         imgUploader: async (file) => {
