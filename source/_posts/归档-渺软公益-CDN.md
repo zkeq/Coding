@@ -11,7 +11,7 @@ date: 2022-12-31 12:17:22
 
 ### 项目官网
 
-- https://npm.onmicrosoft.cn
+- https://cdn.onmicrosoft.cn
 
 ### 项目宗旨和概述
 
