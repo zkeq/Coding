@@ -21,7 +21,7 @@ axios.get('/some/URL')
   .then(response => {
     // 在这里，this 指向你的组件
     console.log(this.data);
-  });
+  })
   .catch(error => {
     console.log(error);
   });
