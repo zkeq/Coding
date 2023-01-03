@@ -131,6 +131,11 @@
       descr: 永远相信美好的事情即将发生
       avatar: https://pic1.imgdb.cn/item/630c05de16f2c2beb1d86de2.jpg
       
+    - name: yiyun's Blog
+      link: https://moeci.com
+      descr: The stupid one is me
+      avatar: https://moeci.com/images/avatar.png
+      
 
 - class_name: 网站
   class_desc: 一些很有用处的网站.
