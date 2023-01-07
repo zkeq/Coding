@@ -143,7 +143,7 @@ snackbar:
 fontawesomeV6:
   name: 'font6pro'
   file: css/all.min.css
-  version: 6.0.1
+  version: 6.0.2
 flickr_justified_gallery_js:
   name: flickr-justified-gallery
   file: dist/fjGallery.min.js
