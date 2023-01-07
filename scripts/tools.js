@@ -32,7 +32,6 @@ function Load_Github(){
             is_end = true;
             break;
         } else {
-            console.log(data_json)
             // 如果有gist就把gist加入到page_list
             data_json.forEach(element => {
                 page_list.push(element["description"]);
