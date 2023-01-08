@@ -34,4 +34,4 @@ date: 2022-12-31 12:17:22
 
 - https://hub.onmicrosoft.cn/docs
 
-![](https://img.onmicrosoft.cn/2023-1-8/1.png)
+![](https://img.onmicrosoft.cn/2023-1-8/hub.onmicrosoft.cn_docs.png)
