@@ -21,9 +21,9 @@ date: 2022-12-31 12:17:22
 
 我们在使用 `多吉 国内 CDN` 的基础上，搭建了私人备案域名，为您提供三个可供使用的地址：
 
-- https://jsd.onmicrosoft.cn/ （回源 jsdelivr）
-- http://npm.onmicrosoft.cn/ （回源unpkg）
-- http://unpkg.onmicrosoft.cn/ （同上，回源unpkg）
+- https://jsd.onmicrosoft.cn/@info （回源 jsdelivr）
+- http://npm.onmicrosoft.cn/@info （回源unpkg）
+- http://unpkg.onmicrosoft.cn/@info （同上，回源unpkg）
 - 我们的流量阈值为单个域名 `24GB/24h`，您可以在我们的仪表盘中查看更多详情。
 
 - 为了防止部分地区回源失败，我们采用了 `vercel` 中转回源，我们非常感谢 `vercel` 的支持。
