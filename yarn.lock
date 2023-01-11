@@ -2,21 +2,21 @@
 # yarn lockfile v1
 
 
-"@algolia/autocomplete-core@1.7.1":
-  version "1.7.1"
-  resolved "https://registry.npmjs.org/@algolia/autocomplete-core/-/autocomplete-core-1.7.1.tgz"
+"@algolia/autocomplete-core@1.7.4":
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-core/-/autocomplete-core-1.7.4.tgz#85ff36b2673654a393c8c505345eaedd6eaa4f70"
   dependencies:
-    "@algolia/autocomplete-shared" "1.7.1"
+    "@algolia/autocomplete-shared" "1.7.4"
 
-"@algolia/autocomplete-preset-algolia@1.7.1":
-  version "1.7.1"
-  resolved "https://registry.npmjs.org/@algolia/autocomplete-preset-algolia/-/autocomplete-preset-algolia-1.7.1.tgz"
+"@algolia/autocomplete-preset-algolia@1.7.4":
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-preset-algolia/-/autocomplete-preset-algolia-1.7.4.tgz#610ee1d887962f230b987cba2fd6556478000bc3"
   dependencies:
-    "@algolia/autocomplete-shared" "1.7.1"
+    "@algolia/autocomplete-shared" "1.7.4"
 
-"@algolia/autocomplete-shared@1.7.1":
-  version "1.7.1"
-  resolved "https://registry.npmjs.org/@algolia/autocomplete-shared/-/autocomplete-shared-1.7.1.tgz"
+"@algolia/autocomplete-shared@1.7.4":
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-shared/-/autocomplete-shared-1.7.4.tgz#78aea1140a50c4d193e1f06a13b7f12c5e2cbeea"
 
 "@algolia/cache-browser-local-storage@4.14.2":
   version "4.14.2"
@@ -914,24 +914,24 @@
     "@babel/helper-validator-identifier" "^7.18.6"
     to-fast-properties "^2.0.0"
 
-"@docsearch/css@3.2.1":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@docsearch/css/-/css-3.2.1.tgz#c05d7818b0e43b42f9efa2d82a11c36606b37b27"
+"@docsearch/css@3.3.2":
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/@docsearch/css/-/css-3.3.2.tgz#2c49995e6fbc7834c75f317b277ed6e4019223a4"
 
-"@docsearch/js@^3.2.1":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@docsearch/js/-/js-3.2.1.tgz#d6856fb6223c7a47091640264d5144d59806bc30"
+"@docsearch/js@^3.3.2":
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/@docsearch/js/-/js-3.3.2.tgz#fd7d5dfdd79abfe2bc8011b119215e0b08e33138"
   dependencies:
-    "@docsearch/react" "3.2.1"
+    "@docsearch/react" "3.3.2"
     preact "^10.0.0"
 
-"@docsearch/react@3.2.1":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@docsearch/react/-/react-3.2.1.tgz#112ad88db07367fa6fd933d67d58421d8d8289aa"
+"@docsearch/react@3.3.2":
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/@docsearch/react/-/react-3.3.2.tgz#252b659c66682f24902bf6db257f63ee73ffe8fa"
   dependencies:
-    "@algolia/autocomplete-core" "1.7.1"
-    "@algolia/autocomplete-preset-algolia" "1.7.1"
-    "@docsearch/css" "3.2.1"
+    "@algolia/autocomplete-core" "1.7.4"
+    "@algolia/autocomplete-preset-algolia" "1.7.4"
+    "@docsearch/css" "3.3.2"
     algoliasearch "^4.0.0"
 
 "@jridgewell/gen-mapping@^0.1.0":
@@ -2913,9 +2913,9 @@ hexo-generator-tag@^1.0.0:
   dependencies:
     hexo-pagination "1.0.0"
 
-hexo-githubcalendar-just-home@^1.2.2:
+hexo-githubcalendar@^1.2.2:
   version "1.2.3"
-  resolved "https://registry.npmjs.org/hexo-githubcalendar-just-home/-/hexo-githubcalendar-just-home-1.2.3.tgz"
+  resolved "https://registry.yarnpkg.com/hexo-githubcalendar/-/hexo-githubcalendar-1.2.3.tgz#1274e236933ff5000691d80fc7e89206da1a64fe"
 
 hexo-i18n@^1.0.0:
   version "1.0.0"
