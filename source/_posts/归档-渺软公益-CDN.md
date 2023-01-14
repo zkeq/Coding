@@ -23,7 +23,7 @@ date: 2022-12-31 12:17:22
 
 - https://jsd.onmicrosoft.cn/@info （回源 jsdelivr）
 - http://npm.onmicrosoft.cn/@info （回源unpkg）
-- http://unpkg.onmicrosoft.cn/@info （同上，回源unpkg）
+- http://cdnjs.onmicrosoft.cn/@info （回源cdnjs）
 - 我们的流量阈值为单个域名 `24GB/24h`，您可以在我们的仪表盘中查看更多详情。
 
 - 为了防止部分地区回源失败，我们采用了 `vercel` 中转回源，我们非常感谢 `vercel` 的支持。
