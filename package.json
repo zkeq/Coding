@@ -28,7 +28,7 @@
     "hexo-generator-index": "^2.0.0",
     "hexo-generator-search": "^2.4.3",
     "hexo-generator-sitemap": "^3.0.1",
-    "hexo-generator-tag": "^1.0.0",
+    "hexo-generator-tag": "^2.0.0",
     "hexo-githubcalendar": "^1.2.2",
     "hexo-offline-zkeq": "^1.2.0",
     "hexo-renderer-ejs": "^2.0.0",
