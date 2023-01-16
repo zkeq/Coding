@@ -8,6 +8,59 @@ cover: https://img.onmicrosoft.cn/2022-06-15/5.png
 copyright_url: https://kapeli.com/cheat_sheets/Axios.docset/Contents/Resources/Documents/index
 ---
 
+在 `JavaScript` 中，使用 `this` 访问的是当前函数的上下文，它的值是在函数运行时动态绑定的。这意味着，如果你在一个函数内部使用 `this` ，那么它指向的是在运行该函数时，该函数所处的对象。
+
+因此，在 `Axios` 的 `.then()` 方法中使用 `this` 访问数据可能会出现问题，因为 `.then()` 方法可能不是在你的组件内部被调用的，所以 this 的值可能不是指向你的组件的。
+
+有几种解决方法：
+
+使用箭头函数来绑定 `this：`
+因为箭头函数不会创建新的作用域，所以它们会继承外部作用域中的 `this`。例如：
+```js
+axios.get('/some/URL')
+  .then(response => {
+    // 在这里，this 指向你的组件
+    console.log(this.data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+使用 `bind()` 方法绑定 `this` ：
+```js
+axios.get('/some/URL')
+  .then(function (response) {
+    // 在这里，this 指向你的组件
+    console.log(this.data);
+  }.bind(this))
+  .catch(function (error){
+    console.log(error);
+  });
+```
+使用结构赋值获取响应数据：
+```js
+axios.get('/some/URL')
+  .then(({ data }) => {
+    // 在这里，可以直接使用 data 访问响应数据
+    console.log(data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+使用 `then` 方法之前先将 `this` 存储到一个变量中，然后在 `then` 方法中使用这个变量。例如：
+```js
+let self = this;
+axios.get('/user?ID=12345')
+  .then(function (response){
+    self.data = response.data;
+  })
+  .catch(function (error){
+    console.log(error);
+  });
+```
+
+
 # GET 请求
 
 ```javascript

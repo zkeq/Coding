@@ -24,7 +24,7 @@ $hr-icon = $hrEnable && hexo-config('hr_icon.icon') ? hexo-config('hr_icon.icon'
 $hr-icon-top = $hrEnable && hexo-config('hr_icon.icon-top') ? convert(hexo-config('hr_icon.icon-top')) : -10px
 // page beatutify
 $beautifyEnable = hexo-config('beautify.enable')
-$title-prefix-icon = $beautifyEnable && hexo-config('beautify.title-prefix-icon') ? hexo-config('beautify.title-prefix-icon') : '\f890'
+$title-prefix-icon = $beautifyEnable && hexo-config('beautify.title-prefix-icon') ? hexo-config('beautify.title-prefix-icon') : '\f0c1'
 $title-prefix-icon-color = $beautifyEnable && hexo-config('beautify.title-prefix-icon-color') ? convert(hexo-config('beautify.title-prefix-icon-color')) : $light-red
 // Global Variables
 $font-size = hexo-config('font.global-font-size') ? convert(hexo-config('font.global-font-size')) : 14px
@@ -71,7 +71,7 @@ $button-hover-color = $themeColorEnable && hexo-config('theme_color.button_hover
 $button-bg = $theme-color
 $pseudo-hover = $button-hover-color
 // scrollbar
-$scrollbar-color= $themeColorEnable && hexo-config('theme_color.scrollbar_color') ? convert(hexo-config('theme_color.scrollbar_color')) : $theme-color
+$scrollbar-color = $themeColorEnable && hexo-config('theme_color.scrollbar_color') ? convert(hexo-config('theme_color.scrollbar_color')) : $theme-color
 // table
 $table-thead-bg = #99a9bf
 // reward
@@ -181,3 +181,5 @@ $tab-button-active-bg = $card-bg
 $tab-to-top-color = #99a9bf
 // Tag Plugins - timeline
 $timeline-default-color = $theme-color
+// archor
+$archor-button-icon = hexo-config('anchor.button.icon') ? hexo-config('anchor.button.icon') : '\f0c1'
