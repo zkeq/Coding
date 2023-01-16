@@ -3,9 +3,8 @@ title: Replit | 白嫖进行指北 [转载]
 tags: [笔记]
 description: 使用Replit白嫖各种语言项目<br>本文转载于：https://pighog.vercel.app/p/aa4a.html
 date: 2022-04-20 22:41:05
-categories: [其他]
+categories: [A置顶文章, 其他] 
 cover: https://img.onmicrosoft.cn/2022-04-20/02.png
-sticky: 2
 ---
 
 > 使用 Replit 白嫖各种语言项目[^1]

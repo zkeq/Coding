@@ -4,13 +4,12 @@ tags: [Vue]
 description: 本节课主要学习了<br>使用 SVG sprite loader 来引入 svg
 date: 2022-08-05 02:22:14
 updated: 2022-08-06 09:49:18
-categories: 饥人谷
+categories: [A置顶文章, 饥人谷] 
 cover: https://img.onmicrosoft.cn/2022-08-05/6.png
 copyright_author: 杭州饥人谷教育科技有限公司
 copyright_author_href: https://jirengu.com/
 copyright_url: https://xiedaimala.com
 copyright_info: 资料来源：饥人谷。任何组织或个人未经许可，禁止转载
-sticky: 2
 ---
 
 #### 首先安装

@@ -4,9 +4,8 @@ tags: [归档]
 description: 本篇文章讲了自建的不蒜子计数平台<br>以及搭建方法，项目由 Replit 驱动。
 date: 2022-04-12 19:13:11
 updated: 2022-04-26 11:09:00
-categories: [归档] 
+categories: [A置顶文章, 归档]
 cover: https://img.onmicrosoft.cn/2022-04-12/1.png
-sticky: 3
 ---
 
 ![2](https://img.onmicrosoft.cn/2022-04-26/01.png)

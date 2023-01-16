@@ -3,9 +3,8 @@ title: 归档 | 原生JS实现会动代码之哆啦A梦
 tags: [JS,CSS,归档]
 description: 使用 CSS 写一个的哆啦A梦
 date: 2022-07-09 18:35:46
-categories: 归档
+categories: [A置顶文章, 归档]
 cover: https://img.onmicrosoft.cn/2022-07-09/3.png
-sticky: 2
 ---
 
 ### TL;DR

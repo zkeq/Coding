@@ -101,6 +101,56 @@
       descr: 纪伯伦M4x 大佬 的博客
       avatar: https://q1.qlogo.cn/g?b=qq&nk=1821475872&s=5
 
+    - name: CtrlCVer
+      link: https://swhcyx.com/
+      descr: 掘金前端竞赛遇到的大佬
+      avatar: https://swhcyx.com/avatar.png
+      
+    - name: 邵佳成
+      link: https://blog.sjcblog.top/
+      descr: 掘金前端竞赛遇到的又 1 个大佬
+      avatar: https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/63e7c5a03f6e4fda9738328bccd4f6ba~tplv-k3u1fbpfcp-watermark.image
+      
+    - name: 心流
+      link: https://blog.panghai.top/
+      descr: 保持谨慎，保持乐观
+      avatar: https://blog.panghai.top/img/avatar.png
+      
+    - name: 今夕何夕兮
+      link: https://www.ginc.site/
+      descr: 今夕何夕，尽三千繁华，见此良人，皆虚梦一场
+      avatar: https://dog.ginc.site/wp/qtimg/logo1.png
+      
+    - name: 是非题
+      link: https://www.shifeiti.com/
+      descr: 记录生活，热爱跑步，学习 FPGA 中
+      avatar: https://other.shifeiti.com/logo/logo.png
+      
+    - name: 涛声依旧
+      link: https://weekdaycare.cn/
+      descr: 永远相信美好的事情即将发生
+      avatar: https://pic1.imgdb.cn/item/630c05de16f2c2beb1d86de2.jpg
+      
+    - name: yiyun's Blog
+      link: https://moeci.com
+      descr: The stupid one is me
+      avatar: https://moeci.com/images/avatar.png
+      
+    - name: Ryan's Blog
+      link: https://www.moezz.cn
+      descr: 脚踏实地,仰望星空
+      avatar: https://mcdn.moezz.cn/avatar.jpg
+      
+    - name: 小城故事
+      link: https://www.webxc.ml
+      descr: 欢迎光临小城故事
+      avatar: https://npm.elemecdn.com/webxc/logo/logo.jpg
+            
+    - name: bill
+      link: http://1703.site
+      descr: 分享网络干货和我的生活~
+      avatar: https://s2.232232.xyz/static/117/2022/12/27-63aad8a6af8d4.png
+      
 
 - class_name: 网站
   class_desc: 一些很有用处的网站.

@@ -18,7 +18,7 @@ aside: false
 date: {}
 ---
 
-> If the date you see is 2 days ago, press `Ctrl + F5` to force a refresh, Maybe because I have `workbox` enabled.
+> If the date you see is 2 days ago, press `Ctrl + F5` / `⇪ + ⌘ + R` to force a refresh, Maybe because I have `workbox` enabled.
 
 """.format(time))
 f.write(data.text)

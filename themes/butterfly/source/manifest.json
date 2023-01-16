@@ -1,0 +1,15 @@
+{
+    "name": "ZkeqのCoding日志",
+    "short_name": "Zkeq's Coding Blog",
+    "icons": [
+      {
+        "src": "https://img.onmicrosoft.cn/Avatar.jpg",
+        "sizes": "512x512",
+        "type": "image/webp"
+      }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#49b1f5"
+  }
