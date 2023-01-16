@@ -3,9 +3,8 @@ title: 归档 | 前后端均基于 vercel 的每日早报项目
 tags: [归档]
 description: 每日早报项目：https://news.icodeq.com
 date: 2022-07-09 17:35:20
-categories: 归档
+categories: [A置顶文章, 归档] 
 cover: https://img.onmicrosoft.cn/2022-07-09/1.png
-sticky: 5
 ---
 
 <script src="https://dream-plan.cn/dplayer/dplayer.js"></script>

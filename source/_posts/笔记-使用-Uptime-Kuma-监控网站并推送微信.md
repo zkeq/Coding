@@ -3,9 +3,8 @@ title: 笔记 | 使用 Uptime Kuma 监控网站并推送微信
 tags: [笔记 ]
 description: 本文主要记录实现<br>使用 Uptime Kuma 监控网站并推送微信
 date: 2022-04-24 00:30:31
-categories: 笔记 
+categories: [A置顶文章, 笔记]
 cover: https://img.onmicrosoft.cn/2022-04-24/9.png
-sticky: 3
 ---
 
 ## 前言
