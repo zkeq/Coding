@@ -3,10 +3,9 @@ title: 使用 Hexo 搭建博客 保姆式教程
 tags: [笔记]
 description: 这篇文章是自己使用Hexo这几个月自己总结出来的教程
 date: 2021-12-13 22:32:34
-categories: CMD
+categories: [A置顶文章, CMD] 
 cover: https://img.onmicrosoft.cn/2021-12-13/3.png
 toc: false
-sticky: 7
 ---
 
 > 本文方法仅提供思路，更多进阶请参阅文档或文末链接

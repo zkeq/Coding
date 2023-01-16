@@ -1,0 +1,61 @@
+- const { server, site, option } = theme.artalk
+
+script.
+  function addArtalkSource () {
+    const ele = document.createElement('link')
+    ele.rel = 'stylesheet'
+    ele.href= '!{theme.asset.artalk_css}'
+    document.getElementsByTagName('head')[0].appendChild(ele)
+  }
+
+  function loadArtalk () {
+    function initArtalk () {
+      window.artalkItem = new Artalk(Object.assign({
+        el: '#artalk-wrap',
+        server: '!{server}',
+        site: '!{site}',
+        pageKey: location.pathname.replace(/\/[^/]*$/, '/').length===6?location.pathname +"/":location.pathname.replace(/\/[^/]*$/, '/'),
+        darkMode: document.documentElement.getAttribute('data-theme') === 'dark',
+        countEl: '.artalk-count',
+        imgUploader: async (file) => {
+            const formData = new FormData()
+            let headers = new Headers();
+            formData.set('file', file)
+            headers.append('Authorization', 'Bearer 433|PuGR7pfzW8yRKGm3x44ROEwb13sD3JUii2exKd0r');
+            headers.append('Accept', 'application/json');
+
+             return fetch('https://7bu.top/api/v1/upload', {
+                method: 'POST',
+                headers: headers,
+                body: formData,
+              })
+                .then((resp) => resp.json())
+                .then((resp) => resp.data.links.url);
+          }
+      },!{JSON.stringify(option)}))
+    }
+
+    if (typeof window.artalkItem === 'object') setTimeout(()=>{initArtalk()},200)
+    else {
+      addArtalkSource()
+      typeof Artalk !== 'function' ? getScript('!{theme.asset.artalk_js}').then(initArtalk)
+                                  : setTimeout(()=>{initArtalk()},200)
+    }
+  }
+
+  
+  if (typeof window.artalkItem === 'object') {
+     window.artalkItem.setDarkMode(true)    
+  }
+ 
+  
+
+  
+  if ('!{theme.comments.use[0]}' === 'Artalk' || !!{theme.comments.lazyload}) {
+    if (!{theme.comments.lazyload}) btf.loadComment(document.getElementById('artalk-wrap'), loadArtalk)
+    else loadArtalk()
+  } else {
+    function loadOtherComment () {
+      loadArtalk()
+    }
+  }
