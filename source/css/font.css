@@ -529,3 +529,7 @@ blockquote {
 .layout > .recent-posts .pagination > *:not(.space) {
   border-radius: 12px;
 }
+
+.plyr {
+  margin-bottom: 16px;
+}
