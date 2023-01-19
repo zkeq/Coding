@@ -13,6 +13,10 @@ date: 2023-01-20 01:35:25
 
 > 本接口已收录入夏柔公益：https://api.aa1.cn/doc/weibo-mrv1.html
 
+<video id="p1" width="100%" height="100%" controls=""  data-poster="https://img.onmicrosoft.cn/2023-01-20/1.png">
+  <source src="https://hub.onmicrosoft.cn/public/video/weibo?uid=3908615569&cursor=4729250207239479&hd=2&raw=true" type="video/mp4" />
+</video>
+
 说明：
 
 此接口可以解析微博所有用户上传的视频直链，已稳定10个月，现开放使用。
@@ -83,6 +87,10 @@ https://hub.onmicrosoft.cn/public/video/weibo?uid=3908615569&cursor=472925020723
 
 > 本接口已收录入夏柔公益：https://api.aa1.cn/doc/weixin-mrv1.html
 
+<video id="p2" width="100%" height="100%" controls=""  data-poster="https://img.onmicrosoft.cn/2023-01-20/1.png">
+  <source src="https://hub.onmicrosoft.cn/public/video/wechat?wxv=wxv_2281669760981450761&raw=true" type="video/mp4" />
+</video>
+
 说明：
 
 此接口可以解析微信公共平台所有用户上传的视频直链，已稳定10个月，现开放使用。
@@ -147,6 +155,10 @@ https://hub.onmicrosoft.cn/public/video/wechat?wxv=wxv_2281669760981450761&raw=t
 
 ### 网易云MV直链解析接口
 
+<video id="p3" width="100%" height="100%" controls=""  data-poster="https://img.onmicrosoft.cn/2023-01-20/1.png">
+  <source src="https://hub.onmicrosoft.cn/public/video/ncm?vid=10882549&raw=true" type="video/mp4" />
+</video>
+
 说明：
 
 此接口可以解析网易云官网大部分 MV （非会员可看的都可），已稳定10个月，现开放使用。
@@ -202,3 +214,12 @@ https://hub.onmicrosoft.cn/public/video/ncm?vid=10882549&raw=true
 }
 ```
 
+<script>
+(
+function () {
+  const p_1 = new Plyr('#p1');
+  const p_2 = new Plyr('#p2');
+  const p_3 = new Plyr('#p3');
+}
+)()
+</script>
