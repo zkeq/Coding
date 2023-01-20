@@ -1,10 +1,10 @@
 ---
-title: 归档 ｜ weibo/wechat/ncm/douyin 视频直链 接口 升级再公开！
+title: 归档 ｜ weibo/ wechat/ ncm/ douyin/ haokan 视频直链 接口 升级再公开！
 tags:
   - 归档
 categories:
   - 归档
-description: 微博用户视频 / 微信公共平台 / 网易 MV 三个接口已稳定运行 10 个月，现开放使用。
+description: 微博用户视频 / 微信公共平台 / 网易 MV / 百度好看  三个接口已稳定运行 10 个月，现开放使用。
 cover: https://img.onmicrosoft.cn/2023-01-20/1.png
 date: 2023-01-20 01:35:25
 ---
@@ -291,6 +291,71 @@ https://hub.onmicrosoft.cn/public/video/tiktok?aweme_id=7184754304920620347&raw=
 ```
 
 
+### 百度好看视频解析接口
+
+<video id="p5" width="100%" height="100%" controls=""  data-poster="https://img.onmicrosoft.cn/2023-01-20/1.png">
+  <source src="https://hub.onmicrosoft.cn/public/video/haokan?vid=12891811088132952202&hd=0&raw=true&no_cache=false" type="video/mp4" />
+</video>
+
+#### 说明：
+
+- 此接口可以解析百度好看视频直链
+
+- 清晰度可自定义，默认最高，但有防盗链，外链引用需 `<meta name="referrer" content="no-referrer">`！
+
+#### 地址：
+
+- https://hub.onmicrosoft.cn/public/video/haokan
+
+#### 交互性文档地址：
+
+- https://hub.onmicrosoft.cn/docs#/MiaoRun_Free_API/haokan_public_video_haokan_get
+
+#### 示例地址：
+
+```python
+https://hub.onmicrosoft.cn/public/video/haokan?vid=12891811088132952202
+https://hub.onmicrosoft.cn/public/video/haokan?vid=12891811088132952202&raw=true
+```
+
+#### 参数：
+
+| 参数     | 类型   | 说明                       | 必填 | 默认值  |
+| -------- | ------ | -------------------------- | ---- | ------- |
+| vid    | `int`  | 好看视频 ID               | 是   |         |
+| hd       | `int`  | 清晰度，0为最高清晰度，1为高清，2为标清，3为流畅 | 否   | `0` |
+| raw      | `bool` | 是否直接跳转到真实地址     | 否   | `False` |
+| no_cache | `bool` | 是否不走缓存（推荐默认值） | 否   | `False` |
+
+#### 参数图解：
+
+![tiktok](https://img.onmicrosoft.cn/2023/01/20/6d280d10-2ec0-4ec8-9c14-e6de73fd3b57.png)
+
+#### 返回数据示例：
+
+| 参数                 |                |
+| -------------------- | -------------- |
+| video_url            | 视频直链       |
+| video_list           | 视频直链列表 |
+| detail               | 请求参数       |
+| detail -> cache_time | 剩余的缓存时间 |
+
+#### 返回体示例：
+
+```json
+{
+    "video_url":"https://vd4.bdstatic.com/mda-kaqx7vaambk80iu7/v1-cae/sc/mda-kaqx7vaambk80iu7.mp4?v_from_s=hkapp-haokan-hbf&auth_key=1674225958-0-0-1a4ea2ac66c14a6396358760247f70b9&bcevod_channel=searchbox_feed&cd=0&pd=1&pt=3&logid=0958579983&vid=12891811088132952202&abtest=",
+    "detail":{
+        "vid":"12891811088132952202",
+        "hd":0,
+        "cache":"缓存中已存在该视频, 直接返回",
+        "cache_time":2848,
+        "info":"在请求中添加参数 raw=true 可以直接跳转到视频地址(永久链接，可直接外链引用)"
+    }
+}
+```
+
+
 <script>
 (
 function () {
@@ -298,6 +363,7 @@ function () {
   const p_2 = new Plyr('#p2');
   const p_3 = new Plyr('#p3');
   const p_4 = new Plyr('#p4');
+  const p_5 = new Plyr('#p5');
 }
 )()
 </script>
