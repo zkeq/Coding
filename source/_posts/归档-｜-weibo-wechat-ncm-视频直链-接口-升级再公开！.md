@@ -218,7 +218,7 @@ https://hub.onmicrosoft.cn/public/video/ncm?vid=10882549&raw=true
 ```
 
 
-### 网易云MV直链解析接口
+### 抖音直链解析接口
 
 <video id="p4" width="100%" height="100%" controls=""  data-poster="https://img.onmicrosoft.cn/2023-01-20/1.png">
   <source src="https://hub.onmicrosoft.cn/public/video/tiktok?aweme_id=7188370071226551589&hd=0&raw=true&no_cache=false" type="video/mp4" />
