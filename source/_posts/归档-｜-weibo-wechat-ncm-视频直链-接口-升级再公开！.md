@@ -1,5 +1,5 @@
 ---
-title: 归档 ｜ weibo/wechat/ncm 视频直链 接口 升级再公开！
+title: 归档 ｜ weibo/wechat/ncm/douyin 视频直链 接口 升级再公开！
 tags:
   - 归档
 categories:
@@ -221,7 +221,7 @@ https://hub.onmicrosoft.cn/public/video/ncm?vid=10882549&raw=true
 ### 网易云MV直链解析接口
 
 <video id="p4" width="100%" height="100%" controls=""  data-poster="https://img.onmicrosoft.cn/2023-01-20/1.png">
-  <source src="https://hub.onmicrosoft.cn/public/video/tiktok?aweme_id=7184754304920620347&hd=0&raw=true&no_cache=false" type="video/mp4" />
+  <source src="https://hub.onmicrosoft.cn/public/video/tiktok?aweme_id=7188370071226551589&hd=0&raw=true&no_cache=false" type="video/mp4" />
 </video>
 
 #### 说明：
@@ -241,6 +241,8 @@ https://hub.onmicrosoft.cn/public/video/ncm?vid=10882549&raw=true
 #### 示例地址：
 
 ```python
+https://hub.onmicrosoft.cn/public/video/tiktok?aweme_id=7188370071226551589
+https://hub.onmicrosoft.cn/public/video/tiktok?aweme_id=7188370071226551589&raw=true
 https://hub.onmicrosoft.cn/public/video/tiktok?aweme_id=7184754304920620347
 https://hub.onmicrosoft.cn/public/video/tiktok?aweme_id=7184754304920620347&raw=true
 ```
