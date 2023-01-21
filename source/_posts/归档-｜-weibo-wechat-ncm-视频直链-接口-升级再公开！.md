@@ -356,6 +356,87 @@ https://hub.onmicrosoft.cn/public/video/haokan?vid=12891811088132952202&raw=true
 ```
 
 
+### 快手视频解析接口
+
+<video id="p6" width="100%" height="100%" controls=""  data-poster="https://img.onmicrosoft.cn/2023-01-20/1.png">
+  <source src="https://hub.onmicrosoft.cn/public/video/kuaishou?photo_id=3xet8vhefke3cg2&hd=0&raw=true&no_cache=false" type="video/mp4" />
+</video>
+
+#### 说明：
+
+- 此接口可以解析快手视频直链
+
+- 视频编码格式可选 `h264` / `h265` ，默认 `h264`，无防盗链，可直接外链引用。
+
+#### 地址：
+
+- https://hub.onmicrosoft.cn/public/video/kuaishou
+
+#### 交互性文档地址：
+
+- https://hub.onmicrosoft.cn/docs#/MiaoRun_Free_API/kuaishou_public_video_kuaishou_get
+
+#### 示例地址：
+
+```python
+https://hub.onmicrosoft.cn/public/video/kuaishou?photo_id=3xpwd6jthnivz52
+https://hub.onmicrosoft.cn/public/video/kuaishou?photo_id=3xpwd6jthnivz52&raw=true
+```
+
+#### 参数：
+
+| 参数     | 类型   | 说明                       | 必填 | 默认值  |
+| -------- | ------ | -------------------------- | ---- | ------- |
+| vid    | `int`  | 快手视频 ID               | 是   |         |
+| hd       | `int`  | 视频编码格式: `0` 为 `h264`, `1` 为 `h265` | 否   | `0` |
+| raw      | `bool` | 是否直接跳转到真实地址     | 否   | `False` |
+| no_cache | `bool` | 是否不走缓存（推荐默认值） | 否   | `False` |
+
+#### 参数图解：
+
+![tiktok](https://img.onmicrosoft.cn/2023/01/21/1fac8a74-0f28-4e69-9924-9be62c7bda7a.png)
+
+#### 返回数据示例：
+
+| 参数                 |                |
+| -------------------- | -------------- |
+| video_url            | 视频直链       |
+| h264_url            | `h264` 视频直链       |
+| h265_url            | `h265` 视频直链       |
+| data           | 视频详细元信息 |
+| detail               | 请求参数       |
+| detail -> cache_time | 剩余的缓存时间 |
+
+#### 返回体示例：
+
+```json
+{
+    "video_url": "https://v1.kwaicdn.com/upic/2023/01/19/16/BMjAyMzAxMTkxNjU1MDJfMTkwMDU1NDY2OV85NDAwMjcwODU2M18wXzM=_b_B22765d8f3247377b803799283fcd4d5a.mp4?pkey=AAX33uLdxUz7UwEeqpsxOnKmLtmiV4TPMGWBuvpdNAB4e2EXklFSftAe_IabLEnKRisEBiyJqAnabKz5hiT-33sKi2CbzB4kFVed_HueAneWMCwLS70BkmspbqARdfL2zPg&tag=1-1674307804-unknown-0-5a0hiawvdo-b43304ac379bdff0&clientCacheKey=3xet8vhefke3cg2_b.mp4&di=793e10c4&bp=10004&tt=b&ss=vp",
+    "h264_url": "https://v1.kwaicdn.com/upic/2023/01/19/16/BMjAyMzAxMTkxNjU1MDJfMTkwMDU1NDY2OV85NDAwMjcwODU2M18wXzM=_b_B22765d8f3247377b803799283fcd4d5a.mp4?pkey=AAX33uLdxUz7UwEeqpsxOnKmLtmiV4TPMGWBuvpdNAB4e2EXklFSftAe_IabLEnKRisEBiyJqAnabKz5hiT-33sKi2CbzB4kFVed_HueAneWMCwLS70BkmspbqARdfL2zPg&tag=1-1674307804-unknown-0-5a0hiawvdo-b43304ac379bdff0&clientCacheKey=3xet8vhefke3cg2_b.mp4&di=793e10c4&bp=10004&tt=b&ss=vp",
+    "h265_url": "https://v2.kwaicdn.com/upic/2023/01/19/16/BMjAyMzAxMTkxNjU1MDJfMTkwMDU1NDY2OV85NDAwMjcwODU2M18wXzM=_hd15_B81fe4167d480e9f14bad25fbb7189eaf.mp4?pkey=AAVKtyHOxyK9mKX4c9tJbT8-Ets8VcZlNMC_1SncX02ufbrGXqQawzlWkEpZnLHeWml5_OPxtmiGWkIchnilul2AFe5LqKMKoQJ9pqqy9rhDo88eeWfrWrHFRqp-AmNzZ8o&tag=1-1674307804-unknown-0-pzqmff6res-54dc755765c801b6&clientCacheKey=3xet8vhefke3cg2_hd15.mp4&di=793e10c4&bp=10004&tt=hd15&ss=vp",
+    "data": {
+        "id": "3xet8vhefke3cg2",
+        "duration": 27266,
+        "caption": "春节的仪式感，从这份祝福开始！（川展） #春节气氛组已就位  #火焰蓝守护平安  #召唤兔年 ",
+        "likeCount": "6735",
+        "realLikeCount": 6735,
+        "coverUrl": "https://p2.a.yximgs.com/upic/2023/01/19/16/BMjAyMzAxMTkxNjU1MDJfMTkwMDU1NDY2OV85NDAwMjcwODU2M18wXzM=_ccc_Bdfe5286494a8d0d5c9537f037f481dd9.jpg?tag=1-1674307804-xpcwebdetail-0-o1sh6vjujx-b7c125d6213299ab&clientCacheKey=3xet8vhefke3cg2_ccc.jpg&di=793e10c4&bp=10004",
+        "photoUrl": "https://v1.kwaicdn.com/upic/2023/01/19/16/BMjAyMzAxMTkxNjU1MDJfMTkwMDU1NDY2OV85NDAwMjcwODU2M18wXzM=_b_B22765d8f3247377b803799283fcd4d5a.mp4?pkey=AAX33uLdxUz7UwEeqpsxOnKmLtmiV4TPMGWBuvpdNAB4e2EXklFSftAe_IabLEnKRisEBiyJqAnabKz5hiT-33sKi2CbzB4kFVed_HueAneWMCwLS70BkmspbqARdfL2zPg&tag=1-1674307804-unknown-0-5a0hiawvdo-b43304ac379bdff0&clientCacheKey=3xet8vhefke3cg2_b.mp4&di=793e10c4&bp=10004&tt=b&ss=vp",
+        "timestamp": 1674119153791,
+        "viewCount": "22.2万",
+        "photoH265Url": "https://v2.kwaicdn.com/upic/2023/01/19/16/BMjAyMzAxMTkxNjU1MDJfMTkwMDU1NDY2OV85NDAwMjcwODU2M18wXzM=_hd15_B81fe4167d480e9f14bad25fbb7189eaf.mp4?pkey=AAVKtyHOxyK9mKX4c9tJbT8-Ets8VcZlNMC_1SncX02ufbrGXqQawzlWkEpZnLHeWml5_OPxtmiGWkIchnilul2AFe5LqKMKoQJ9pqqy9rhDo88eeWfrWrHFRqp-AmNzZ8o&tag=1-1674307804-unknown-0-pzqmff6res-54dc755765c801b6&clientCacheKey=3xet8vhefke3cg2_hd15.mp4&di=793e10c4&bp=10004&tt=hd15&ss=vp"
+    },
+    "detail": {
+        "photo_id": "3xet8vhefke3cg2",
+        "hd": 0,
+        "cache": "缓存中已存在该视频, 直接返回",
+        "cache_time": 3104,
+        "info": "在请求中添加参数 raw=true 可以直接跳转到视频地址(永久链接，可直接外链引用)"
+    }
+}
+```
+
+
 <script>
 (
 function () {
@@ -364,6 +445,7 @@ function () {
   const p_3 = new Plyr('#p3');
   const p_4 = new Plyr('#p4');
   const p_5 = new Plyr('#p5');
+  const p_6 = new Plyr('#p6');
 }
 )()
 </script>
