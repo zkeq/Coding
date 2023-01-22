@@ -1,10 +1,10 @@
 ---
-title: 归档 ｜ weibo/ wechat/ ncm/ douyin/ haokan/ kuaishou 视频直链 接口 升级再公开！
+title: 归档 ｜ weibo/ wechat/ ncm/ douyin/ haokan/ kuaishou/ pipix 视频直链 接口 升级再公开！
 tags:
   - 归档
 categories:
   - 归档
-description: 微博用户视频 / 微信公共平台 / 网易 MV / 抖音 / 百度好看 / 快手  三个接口已稳定运行 10 个月，现开放使用。
+description: 微博用户视频 / 微信公共平台 / 网易 MV / 抖音 / 百度好看 / 快手 / 皮皮虾  三个接口已稳定运行 10 个月，现开放使用。
 cover: https://img.onmicrosoft.cn/2023-01-20/1.png
 date: 2023-01-20 01:35:25
 ---
@@ -440,7 +440,7 @@ https://hub.onmicrosoft.cn/public/video/kuaishou?photo_id=3xpwd6jthnivz52&raw=tr
 ### 皮皮虾视频解析接口
 
 <video id="p7" width="100%" height="100%" controls=""  data-poster="https://img.onmicrosoft.cn/2023-01-20/1.png">
-  <source src="https://hub.onmicrosoft.cn/public/video/pipix?video_id=6747148162852460814&hd=0&raw=true" type="video/mp4" />
+  <source src="https://hub.onmicrosoft.cn/public/video/pipix?video_id=6586167484796115213&hd=0&raw=true" type="video/mp4" />
 </video>
 
 #### 说明：
@@ -469,7 +469,7 @@ https://hub.onmicrosoft.cn/public/video/pipix?video_id=6747148162852460814&raw=t
 | 参数     | 类型   | 说明                       | 必填 | 默认值  |
 | -------- | ------ | -------------------------- | ---- | ------- |
 | video_id    | `int`  | 皮皮虾视频作品 ID               | 是   |         |
-| hd       | `int`  | 清晰度，0为最高清晰度，以此类推 | 否   | `0` |
+| hd       | `int`  | 清晰度，0为主源，1为备用 | 否   | `0` |
 | raw      | `bool` | 是否直接跳转到真实地址     | 否   | `False` |
 | no_cache | `bool` | 是否不走缓存（推荐默认值） | 否   | `False` |
 
