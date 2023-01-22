@@ -437,6 +437,80 @@ https://hub.onmicrosoft.cn/public/video/kuaishou?photo_id=3xpwd6jthnivz52&raw=tr
 ```
 
 
+### 皮皮虾视频解析接口
+
+<video id="p7" width="100%" height="100%" controls=""  data-poster="https://img.onmicrosoft.cn/2023-01-20/1.png">
+  <source src="https://hub.onmicrosoft.cn/public/video/pipix?video_id=6747148162852460814&hd=0&raw=true" type="video/mp4" />
+</video>
+
+#### 说明：
+
+- 此接口可以解析皮皮虾视频直链
+
+- 清晰度可自定义，默认最高，但有防盗链，外链引用需 `<meta name="referrer" content="no-referrer">`！
+
+#### 地址：
+
+- https://hub.onmicrosoft.cn/public/video/pipix
+
+#### 交互性文档地址：
+
+- https://hub.onmicrosoft.cn/docs#/MiaoRun_Free_API/pipixia_public_video_pipix_get
+
+#### 示例地址：
+
+```python
+https://hub.onmicrosoft.cn/public/video/pipix?video_id=6747148162852460814
+https://hub.onmicrosoft.cn/public/video/pipix?video_id=6747148162852460814&raw=true
+```
+
+#### 参数：
+
+| 参数     | 类型   | 说明                       | 必填 | 默认值  |
+| -------- | ------ | -------------------------- | ---- | ------- |
+| video_id    | `int`  | 皮皮虾视频作品 ID               | 是   |         |
+| hd       | `int`  | 清晰度，0为最高清晰度，以此类推 | 否   | `0` |
+| raw      | `bool` | 是否直接跳转到真实地址     | 否   | `False` |
+| no_cache | `bool` | 是否不走缓存（推荐默认值） | 否   | `False` |
+
+#### 参数图解：
+
+![tiktok](https://tucdn.wpon.cn/2023/01/22/735024d81ed63.png)
+
+#### 返回数据示例：
+
+| 参数                 |                |
+| -------------------- | -------------- |
+| video_url            | 视频直链       |
+| video_list           | 视频直链列表 |
+| detail               | 请求参数       |
+| detail -> cache_time | 剩余的缓存时间 |
+
+#### 返回体示例：
+
+```json
+{
+    "video_url": "https://v6-cdn-tos.ppxvod.com/5ec2eec3dc13f43351c2f73ec3366ead/63cf28eb/video/tos/hxsy/tos-hxsy-ve-0076/ec916858f81f4bf5a1a34b1359194485/?a=1319&ch=0&cr=0&dr=3&lr=superb&cd=0%7C0%7C1%7C0&cv=1&br=1645&bt=1645&cs=0&ds=3&ft=k7FKQVVyw3nRKo8kmo~hFJ4YA0pih_qm~jKJ6~VOaG0P3-A&mime_type=video_mp4&qs=0&rc=OWU5ZztnZWdoPDo5aGY0Z0BpMzV5dmUzOnlkcDMzZ2YzM0AtX18yMzVfXjYxNi1eYjFjYSNxYi9xb3JecmVfLS0yMS9zcw%3D%3D&l=202301220840043E31E4B8EF52A3CA9916&btag=8000",
+    "data": {
+        "title": "红及一时的小黄车，落到这种程度，",
+        "video_url": "https://v6-cdn-tos.ppxvod.com/5ec2eec3dc13f43351c2f73ec3366ead/63cf28eb/video/tos/hxsy/tos-hxsy-ve-0076/ec916858f81f4bf5a1a34b1359194485/?a=1319&ch=0&cr=0&dr=3&lr=superb&cd=0%7C0%7C1%7C0&cv=1&br=1645&bt=1645&cs=0&ds=3&ft=k7FKQVVyw3nRKo8kmo~hFJ4YA0pih_qm~jKJ6~VOaG0P3-A&mime_type=video_mp4&qs=0&rc=OWU5ZztnZWdoPDo5aGY0Z0BpMzV5dmUzOnlkcDMzZ2YzM0AtX18yMzVfXjYxNi1eYjFjYSNxYi9xb3JecmVfLS0yMS9zcw%3D%3D&l=202301220840043E31E4B8EF52A3CA9916&btag=8000",
+        "duration": 7.918
+    },
+    "detail": {
+        "vid": "6747148162852460814",
+        "hd": 0,
+        "cache": "缓存中已存在该视频, 直接返回",
+        "cache_time": 2895,
+        "info": "在请求中添加参数 raw=true 可以直接跳转到视频地址(永久链接，可直接外链引用)"
+    }
+}
+```
+
+
+
+
+
+
 <script>
 (
 function () {
@@ -446,6 +520,7 @@ function () {
   const p_4 = new Plyr('#p4');
   const p_5 = new Plyr('#p5');
   const p_6 = new Plyr('#p6');
+  const p_7 = new Plyr('#p7'); 
 }
 )()
 </script>
