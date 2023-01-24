@@ -31,7 +31,14 @@ date: 2023-01-24 22:21:10
 
 可惜在国内无法访问，难得的是播放地址是使用的 ` akamaized.net` ，此地址在大陆可正常访问，所以只需要将控件加载成功即可实现播放功能。
 
-<div id="player" data-plyr-provider="vimeo" data-plyr-embed-id="76979871"></div>
+<div class="plyr__video-embed" id="player">
+  <iframe
+    src="https://vimeo.onmicrosoft.cn/video/76979871?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+    allowfullscreen
+    allowtransparency
+    allow="autoplay"
+  ></iframe>
+</div>
 
 <script>
 (
@@ -50,7 +57,7 @@ const player = new Plyr('#player');
 <script src="https://plyr.onmicrosoft.cn/3.6.12/plyr.js"></script>
 ```
 
-然后，可选用以下两种方式使用：
+然后，可选用以下方式使用：
 
 ```html
 <div class="plyr__video-embed" id="player">
@@ -62,10 +69,6 @@ const player = new Plyr('#player');
   ></iframe>
 </div>
 <!-- 和官网代码一样，只不过替换域名为 onmicrosoft.cn -->
-```
-
-```html
-<div id="player" data-plyr-provider="vimeo" data-plyr-embed-id="76979871"></div>
 ```
 
 ![](https://tucdn.wpon.cn/2023/01/24/c1bc335eb5cb0.png)
