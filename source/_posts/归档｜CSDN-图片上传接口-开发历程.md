@@ -38,7 +38,10 @@ date: 2023-01-27 21:05:59
 伴随着的 还有这个 报错提示
 
 ```
-CORSResponse: This CORS request is not allowed. This is usually because the evalution of Origin, request method / Access-Control-Request-Method or Access-Control-Requet-Headers are not whitelisted by the resource's CORS spec.
+CORSResponse: This CORS request is not allowed. 
+This is usually because the evalution of Origin, 
+request method / Access-Control-Request-Method or 
+Access-Control-Requet-Headers are not whitelisted by the resource's CORS spec.
 ```
 
 果然，是阿里云设置了白名单 Origin 么..
@@ -59,7 +62,7 @@ CORSResponse: This CORS request is not allowed. This is usually because the eval
 
 ![](https://img-blog.csdnimg.cn/c68b7d2925644f339b843f5e88a34d90.png)
 
-我就套了一层自己的域名，然后我直接往我的域名传东西，到字节，修改请求头 同时实时转发到 阿里服务器
+我就套了一层自己的域名，然后我直接往我的域名传东西，到字节 修改请求头 同时实时转发到 阿里服务器
 
 绕过 `Access-Control-Allow-Origin` 白名单，终于成功了
 
