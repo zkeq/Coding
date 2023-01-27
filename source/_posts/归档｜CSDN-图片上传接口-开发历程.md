@@ -86,37 +86,8 @@ CDN 平时都是转发源站的请求，那么可不可以尝试一下把他变�
 ![](https://img-blog.csdnimg.cn/68c69d16d8e841eebb573b1000824c1e.png)
 {% endgallery %}
 
-#### 粘贴图片上传
-
-```js
-    //FROM: https://blog.csdn.net/Wangyuan_wo/article/details/121354557
-    // 监听粘贴操作
-    handlePaste(event) {
-        setTimeout(() => {
-            this.$message.success("捕获粘贴行为 📋 成功！")
-        }, 0);
-        const items = (event.clipboardData || window.clipboardData).items;
-        let file = null;
-        if (!items || items.length === 0) {
-            this.$message.error("当前浏览器不支持本地");
-            return;
-        }
-        // 搜索剪切板items
-        for (let i = 0; i < items.length; i++) {
-            if (items[i].type.indexOf("image") !== -1) {
-                file = items[i].getAsFile();
-                break;
-            }
-        }
-        if (!file) {
-            this.$message.error("粘贴内容非图片");
-            return;
-        }
-        this.$message.success("图片上传中...");
-        this.$refs.oss_uploader.handleStart(file);// 将粘贴过来的图片加入预上传队列
-        this.$refs.oss_uploader.submit(); // 提交图片上传队列
-    },
-```
+- 记录一个粘贴图片上传代码
+- https://gist.github.com/zkeq/f87ed4d10d38babfa45f0b4cb14a69eb
 
 ### 项目地址
 
