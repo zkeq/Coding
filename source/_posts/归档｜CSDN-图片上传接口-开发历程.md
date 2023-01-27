@@ -73,6 +73,14 @@ CORSResponse: This CORS request is not allowed. This is usually because the eval
 
 ![](https://img-blog.csdnimg.cn/05bb03d0b65742e68d0f854f9547698a.png)
 
+我太高兴了，兴奋了一下午 好棒
+
+{% gallery %}
+![](https://img-blog.csdnimg.cn/791d2e9695d74a09a4add0f13c490cbf.jpg)
+![](https://img-blog.csdnimg.cn/6df96b6ae32748999e10e4573909fc81.png)
+![](https://img-blog.csdnimg.cn/68c69d16d8e841eebb573b1000824c1e.png)
+{% endgallery %}
+
 #### 粘贴图片上传
 
 ```js
