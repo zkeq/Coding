@@ -73,7 +73,7 @@ CORSResponse: This CORS request is not allowed. This is usually because the eval
 
 ![](https://img-blog.csdnimg.cn/05bb03d0b65742e68d0f854f9547698a.png)
 
-我太高兴了，兴奋了一下午 好棒
+我太高兴了，兴奋了一下午 好棒（本项目与其他图床不一样，其他图床都是服务器中转，~~有 Python 什么玩意不能传啊~~，本项目为直接传到 CSDN 的 `阿里云 OSS bucket` 里面！
 
 {% gallery %}
 ![](https://img-blog.csdnimg.cn/791d2e9695d74a09a4add0f13c490cbf.jpg)
