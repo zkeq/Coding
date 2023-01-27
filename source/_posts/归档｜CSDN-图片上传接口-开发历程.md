@@ -60,11 +60,13 @@ Access-Control-Requet-Headers are not whitelisted by the resource's CORS spec.
 
 于是...经过了一圈尝试，终于 `字节火山引擎` 支持修改回源 `Origin`。。于是..
 
+CDN 平时都是转发源站的请求，那么可不可以尝试一下把他变成转发用户请求的工具？
+
 ![](https://img-blog.csdnimg.cn/c68b7d2925644f339b843f5e88a34d90.png)
 
 我就套了一层自己的域名，然后我直接往我的域名传东西，到字节 修改请求头 同时实时转发到 阿里服务器
 
-绕过 `Access-Control-Allow-Origin` 白名单，终于成功了
+绕过 `Access-Control-Allow-Origin` 白名单，终于成功了(CDN不愧是是高性能的转发服务器hhhh)
 
 ![](https://img-blog.csdnimg.cn/8a75ac2e3ef343098d95d65c2a9fad70.png)
 
