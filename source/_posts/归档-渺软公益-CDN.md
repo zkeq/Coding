@@ -1,9 +1,7 @@
 ---
 title: 归档 | 渺软公益 CDN
-tags:
-  - 归档
-categories:
-  - 归档
+tags: [归档]
+categories: [A置顶文章, 归档]
 description: 感谢您使用渺软 CDN，我们为您提供了一个高速、简单、开箱即用的公益 CDN 服务。我们希望能为中国开发者提供一个更好的网站体验，让他们不必再受国外服务商提供的服务质量低下的困扰。
 cover: https://img.onmicrosoft.cn/2022-12-31/1.png
 date: 2022-12-31 12:17:22

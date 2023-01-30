@@ -1,9 +1,7 @@
 ---
 title: 归档 ｜ weibo wechat ncm douyin haokan kuaishou pipix 视频直链 接口 升级再公开！
-tags:
-  - 归档
-categories:
-  - 归档
+tags: [归档]
+categories: [A置顶文章, 归档]
 description: 微博用户视频 / 微信公共平台 / 网易 MV / 抖音 / 百度好看 / 快手 / 皮皮虾  三个接口已稳定运行 10 个月，现开放使用。
 cover: https://img.onmicrosoft.cn/2023-01-20/1.png
 date: 2023-01-20 01:35:25
