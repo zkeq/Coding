@@ -1,5 +1,5 @@
 ---
-title: 归档 ｜ weibo/ wechat/ ncm/ douyin/ haokan/ kuaishou/ pipix 视频直链 接口 升级再公开！
+title: 归档 ｜ weibo wechat ncm douyin haokan kuaishou pipix 视频直链 接口 升级再公开！
 tags:
   - 归档
 categories:
