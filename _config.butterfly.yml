@@ -907,6 +907,7 @@ css_prefix: true
 inject:
   head:
       # - <meta http-equiv="refresh" content="0;url=https://blog.xsot.cn/">
+      - <script async src="/service-worker.js"></script>
       - <link rel="manifest" href="/manifest.json">
       - <script crossorigin="anonymous" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" src="https://lib.baomitu.com/jquery/1.12.4/jquery.min.js"></script>
       - <script defer src="https://static.onmicrosoft.cn/zkeq/notiflix-notify-aio-3.2.5.min.js"></script>
