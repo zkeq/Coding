@@ -30,7 +30,6 @@
     "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^2.0.0",
     "hexo-githubcalendar": "^1.2.2",
-    "hexo-offline-zkeq": "^1.2.0",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-jade": "^0.5.0",
     "hexo-renderer-marked": "^6.0.0",
