@@ -101,10 +101,10 @@
       descr: 纪伯伦M4x 大佬 的博客
       avatar: https://q1.qlogo.cn/g?b=qq&nk=1821475872&s=5
 
-    - name: CtrlCVer
-      link: https://swhcyx.com/
-      descr: 掘金前端竞赛遇到的大佬
-      avatar: https://swhcyx.com/avatar.png
+#    - name: CtrlCVer
+#      link: https://swhcyx.com/
+#      descr: 掘金前端竞赛遇到的大佬
+#      avatar: https://swhcyx.com/avatar.png
       
     - name: 邵佳成
       link: https://blog.sjcblog.top/
@@ -119,7 +119,7 @@
     - name: 今夕何夕兮
       link: https://www.ginc.site/
       descr: 今夕何夕，尽三千繁华，见此良人，皆虚梦一场
-      avatar: https://dog.ginc.site/wp/qtimg/logo1.png
+      avatar: https://dog.ginc.site/wp/logo/logo1.png
       
     - name: 是非题
       link: https://www.shifeiti.com/
