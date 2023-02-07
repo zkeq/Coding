@@ -173,9 +173,9 @@ Replit的应用在一段时间不访问后会自动休眠减少资源消耗，�
 
 ---------------
 
-> 使用 Replit 白嫖各种语言项目[^2]
+> 在Replit中配置Nix环境[^2]
 >
-> 本文转载于：https://pighog.vercel.app/p/aa4a.html
+> 本文转载于：https://pighog.vercel.app/p/1849.html
 >
 > 已经过原作者授权，转载时有部分内容变动！
 
