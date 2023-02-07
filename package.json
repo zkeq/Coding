@@ -12,7 +12,7 @@
     "version": "6.3.0"
   },
   "dependencies": {
-    "@docsearch/js": "^3.3.2",
+    "@docsearch/js": "^3.3.3",
     "aplayer": "^1.10.1",
     "crypto": "^1.0.1",
     "hexo": "^6.3.0",
