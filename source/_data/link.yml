@@ -163,9 +163,13 @@
       
     - name: 卓越笔记
       link: https://xieboke.net/
-      descr: 分享所学技能，记录点滴生活。
+      descr: 十年之约群友。
       avatar: http://pic.xieboke.net/joyoblog.png
-      
+    
+    - name: Pil0tXia
+      link: https://www.pil0txia.com/
+      descr: 十年之约群友。
+      avatar: https://static.pil0txia.com/assets/03_3_600p.webp
 
 - class_name: 网站
   class_desc: 一些很有用处的网站.
