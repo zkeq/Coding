@@ -161,6 +161,10 @@
       descr: SKYRE的笔记空间
       avatar: https://webstatic.cdn.xlab.top/?r=/Universal/img/avatar.webp
       
+    - name: 卓越笔记
+      link: https://xieboke.net/
+      descr: 分享所学技能，记录点滴生活。
+      avatar: http://pic.xieboke.net/joyoblog.png
       
 
 - class_name: 网站
