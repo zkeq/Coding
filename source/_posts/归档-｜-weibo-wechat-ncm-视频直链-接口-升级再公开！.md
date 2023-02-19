@@ -120,9 +120,22 @@ https://hub.onmicrosoft.cn/public/video/wechat?wxv=wxv_2281669760981450761&raw=t
 | 参数     | 类型   | 说明                                | 必填 | 默认值  |
 | -------- | ------ | ----------------------------------- | ---- | ------- |
 | wxv      | `int`  | 微信视频 ID                         | 是   |         |
-| hd       | `int`  | 清晰度 最高清 为 `0` 第二高清为 `1` | 否   | `0`     |
+| hd       | `int`  | 【部分视频 `默认` 为 h265，详情见下表】 | 否   | `0`     |
 | raw      | `bool` | 是否直接跳转到真实地址              | 否   | `False` |
 | no_cache | `bool` | 是否不走缓存（推荐默认值）          | 否   | `False` |
+
+
+#### hd 详情参数：
+
+> 使用此接口前请先请求一次，查看返回的 `format_id` 参数，然后再根据 `format_id` 参数来选择 `hd` 参数
+> 部分视频默认为 `h265` 编码，此时加上对应的 `h264` 参数接口 如 `hd=2` 即可（这个 `hd` 即为返回的列表）
+
+| format_id  | 编码 | 清晰度 |
+| ---- | ---- | ---- |
+|10102|h265/hevc| 超清|
+|10104|h265/hevc| 流畅|
+|10002|h264| 超清|
+|10004|h264| 流畅|
 
 #### 参数图解：
 
@@ -142,13 +155,74 @@ https://hub.onmicrosoft.cn/public/video/wechat?wxv=wxv_2281669760981450761&raw=t
 
 ```json
 {
-    "video_url":"https://mpvideo.qpic.cn/0bc3vqaasaaa3yal5wyvkfrfblgdbgwaacia.f10002.mp4?dis_k=e7df684c1fc3b4c52386cf6d6639c621&dis_t=1674117856&play_scene=10400",
-    "detail":{
-        "wxv":"wxv_2281669760981450761",
-        "hd":0,
-        "cache":"缓存中已存在该视频, 直接返回",
-        "cache_time":228,
-        "info":"在请求中添加参数 raw=true 可以直接跳转到视频地址(永久链接，可直接外链引用)"
+    "video_url": "https://mpvideo.qpic.cn/0b2efeabeaaadmacwyw2q5rvakodciuqaeqa.f10102.mp4?dis_k=c724237f01106611e5db742990751ae0&dis_t=1676797673&play_scene=10400",
+    "detail": {
+        "wxv": "wxv_2779206293909405698",
+        "hd": 0,
+        "cache": "缓存中已存在该视频, 直接返回",
+        "cache_time": 3197,
+        "info": "在请求中添加参数 raw=true 可以直接跳转到视频地址(永久链接，可直接外链引用)"
+    },
+    "data": {
+        "base_resp": {
+            "ret": 0
+        },
+        "url_info": [
+            {
+                "url": "http://mpvideo.qpic.cn/0b2efeabeaaadmacwyw2q5rvakodciuqaeqa.f10102.mp4?dis_k=c724237f01106611e5db742990751ae0&dis_t=1676797673&play_scene=10400",
+                "format_id": 10102,
+                "duration_ms": 1420109,
+                "filesize": 96246902,
+                "width": 1920,
+                "height": 1080,
+                "video_quality_level": 3,
+                "video_quality_wording": "超清"
+            },
+            {
+                "url": "http://mpvideo.qpic.cn/0b2efeabeaaadmacwyw2q5rvakodciuqaeqa.f10104.mp4?dis_k=95bc4d28e604087bc4c2a2dea593230a&dis_t=1676797673&play_scene=10400",
+                "format_id": 10104,
+                "duration_ms": 1420109,
+                "filesize": 32431976,
+                "width": 854,
+                "height": 480,
+                "video_quality_level": 1,
+                "video_quality_wording": "流畅"
+            },
+            {
+                "url": "http://mpvideo.qpic.cn/0b2efeabeaaadmacwyw2q5rvakodciuqaeqa.f10002.mp4?dis_k=6cb67eabdfca93c774f496d746c681c2&dis_t=1676797673&play_scene=10400",
+                "format_id": 10002,
+                "duration_ms": 1420109,
+                "filesize": 282912856,
+                "width": 1920,
+                "height": 1080,
+                "video_quality_level": 3,
+                "video_quality_wording": "超清"
+            },
+            {
+                "url": "http://mpvideo.qpic.cn/0b2efeabeaaadmacwyw2q5rvakodciuqaeqa.f10004.mp4?dis_k=581b868630de7ab7b182dff830164fb3&dis_t=1676797673&play_scene=10400",
+                "format_id": 10004,
+                "duration_ms": 1420109,
+                "filesize": 59072295,
+                "width": 854,
+                "height": 480,
+                "video_quality_level": 1,
+                "video_quality_wording": "流畅"
+            }
+        ],
+        "is_mp_video_delete": 0,
+        "is_mp_video_forbid": 0,
+        "is_mp_video_urgent_state": 0,
+        "title": "Nerver give you up",
+        "is_mp_video_checking": 0,
+        "is_mp_video_check_fail": 0,
+        "is_appmsg_unauthorized": 0,
+        "is_mp_video_transing": 0,
+        "src_vid": "wxv_2779206293909405698",
+        "src_bizuin": 3886865347,
+        "src_vid_uploadtime": 1675245875,
+        "hit_vid": "",
+        "hit_bizuin": 0,
+        "hit_vid_uploadtime": 0
     }
 }
 ```
