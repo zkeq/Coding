@@ -170,6 +170,11 @@
       link: https://www.pil0txia.com/
       descr: 十年之约群友。
       avatar: https://static.pil0txia.com/assets/03_3_600p.webp
+      
+    - name: 大蛋糕的烘焙坊
+      link: https://lihaoyu.cn
+      descr: 也许我们会分别，但我们将永远不会忘记彼此
+      avatar: https://blog-api.lihaoyu.cn/avatar
 
 - class_name: 网站
   class_desc: 一些很有用处的网站.
