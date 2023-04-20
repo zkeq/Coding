@@ -4,7 +4,7 @@ tags:
   - Kubernetes
 categories:
   - Kubernetes
-description: 这是一系列关于 Kubernetes 的文章，主要介绍 Kubernetes 的概念、原理、使用方法等方面的内容。
+description: 该文档介绍了 Kubernetes，一个可移植、可扩展的开源平台，用于管理容器化的工作负载和服务，可促进声明式配置和自动化。文档包括 Kubernetes 的优势和与传统 PaaS 系统的不同之处，以及介绍了一些 Kubernetes 安装工具，如 kubectl、kind 和 minikube 等，以及 Kubernetes 的一些基础概念和相关的操作和技术。
 cover: https://img.onmicrosoft.cn/2023-04-20/eb4cf60047dee8c0c2786e95fc0f96ca0f2e666b.jpeg
 date: 2023-04-20 01:51:08
 ---
