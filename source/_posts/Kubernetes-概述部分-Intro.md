@@ -20,30 +20,27 @@ date: 2023-04-20 01:51:08
 Kubernetes 不是传统的、包罗万象的 PaaS（平台即服务）系统。 由于 Kubernetes 是在容器级别运行，而非在硬件级别，它提供了 PaaS 产品共有的一些普遍适用的功能， 例如部署、扩展、负载均衡，允许用户集成他们的日志记录、监控和警报方案。 但是，Kubernetes 不是单体式（monolithic）系统，那些默认解决方案都是可选、可插拔的。 Kubernetes 为构建开发人员平台提供了基础，但是在重要的地方保留了用户选择权，能有更高的灵活性。
 
 
+## **引子 - 安装工具**
 
-## 引子 - 安装工具
-
-### kubectl
+### **kubectl**
 
 Kubernetes 命令行工具 [kubectl](https://kubernetes.io/zh-cn/docs/reference/kubectl/kubectl/)， 让你可以对 Kubernetes 集群运行命令。 你可以使用 kubectl 来部署应用、监测和管理集群资源以及查看日志。
 
-### kind
+### **kind**
 
-[`kind`](https://kind.sigs.k8s.io/) 让你能够在本地计算机上运行 Kubernetes。 `kind` 要求你安装并配置好 [Docker](https://docs.docker.com/get-docker/)。
+`[kind](<https://kind.sigs.k8s.io/>)` 让你能够在本地计算机上运行 Kubernetes。 `kind` 要求你安装并配置好 [Docker](https://docs.docker.com/get-docker/)。
 
 kind 的 [Quick Start](https://kind.sigs.k8s.io/docs/user/quick-start/) 页面展示开始使用 `kind` 所需要完成的操作。
 
-### minikube
+### **minikube**
 
-与 `kind` 类似，[`minikube`](https://minikube.sigs.k8s.io/) 是一个工具， 能让你在本地运行 Kubernetes。 `minikube` 在你的个人计算机（包括 Windows、macOS 和 Linux PC）上运行一个一体化（all-in-one） 或多节点的本地 Kubernetes 集群，以便你来尝试 Kubernetes 或者开展每天的开发工作。
+与 `kind` 类似，`[minikube](<https://minikube.sigs.k8s.io/>)` 是一个工具， 能让你在本地运行 Kubernetes。 `minikube` 在你的个人计算机（包括 Windows、macOS 和 Linux PC）上运行一个一体化（all-in-one） 或多节点的本地 Kubernetes 集群，以便你来尝试 Kubernetes 或者开展每天的开发工作。
 
-# 概述
+# **概述**
 
 Kubernetes 是一个可移植、可扩展的开源平台，用于管理容器化的工作负载和服务，可促进声明式配置和自动化。 Kubernetes 拥有一个庞大且快速增长的生态，其服务、支持和工具的使用范围相当广泛。
 
-**Kubernetes** 这个名字源于希腊语，意为“舵手”或“飞行员”。k8s 这个缩写是因为 k 和 s 之间有八个字符的关系。 Google 在 2014 年开源了 Kubernetes 项目。 Kubernetes 建立在 [Google 大规模运行生产工作负载十几年经验](https://research.google/pubs/pub43438)的基础上， 结合了社区中最优秀的想法和实践。
-
-
+**Kubernetes** 这个名字源于希腊语，意为 “舵手” 或 “飞行员”。k8s 这个缩写是因为 k 和 s 之间有八个字符的关系。 Google 在 2014 年开源了 Kubernetes 项目。 Kubernetes 建立在 [Google 大规模运行生产工作负载十几年经验](https://research.google/pubs/pub43438)的基础上， 结合了社区中最优秀的想法和实践。
 
 容器因为其许多优势而变得流行，例如：
 
@@ -58,8 +55,6 @@ Kubernetes 是一个可移植、可扩展的开源平台，用于管理容器化
 - 资源隔离
 - 资源利用
 
-
-
 Kubernetes 为你提供：
 
 - **服务发现和负载均衡**
@@ -69,9 +64,7 @@ Kubernetes 为你提供：
 - **自我修复**
 - **密钥与配置管理**
 
-
-
-## Kubernetes 不是什么
+## **Kubernetes 不是什么**
 
 Kubernetes 不是传统的、包罗万象的 PaaS（平台即服务）系统。 由于 Kubernetes 是在容器级别运行，而非在硬件级别，它提供了 PaaS 产品共有的一些普遍适用的功能， 例如部署、扩展、负载均衡，允许用户集成他们的日志记录、监控和警报方案。 但是，Kubernetes 不是单体式（monolithic）系统，那些默认解决方案都是可选、可插拔的。 Kubernetes 为构建开发人员平台提供了基础，但是在重要的地方保留了用户选择权，能有更高的灵活性。
 
@@ -84,53 +77,44 @@ Kubernetes 不是传统的、包罗万象的 PaaS（平台即服务）系统。 
   - 不提供也不采用任何全面的机器配置、维护、管理或自我修复系统。
   - 此外，Kubernetes 不仅仅是一个编排系统，实际上它消除了编排的需要。
 
-
-
-> SWARM 在大规模集群下也是可用的 但是功能并不强大 
+> SWARM 在大规模集群下也是可用的 但是功能并不强大
 >
 > 很多需要自己配置 Kubernetes 则弥补了这个缺点
 >
 > Kubernetes 功能全面 稳定 适合企业运行
 
-> MESOS  APACHE  分布式资源管理框架
+> MESOS APACHE 分布式资源管理框架
 >
-> 2019-5  Twitter  --> Kubernetes
+> 2019-5 Twitter –> Kubernetes
 >
-> Docker Swarm  2019-07   阿里云宣布  Docker Swarm  剔除
+> Docker Swarm 2019-07 阿里云宣布 Docker Swarm 剔除
 >
-> Kubernetes  Google    10年容器化基础架构  borg   GO 语言   Borg 
-> 	特点：
-> 		轻量级：消耗资源小
-> 		开源
-> 		弹性伸缩: 平滑升级, 可以随时释放无用资源
-> 		负载均衡：IPVS
+> Kubernetes Google 10 年容器化基础架构 borg GO 语言 Borg特点：轻量级：消耗资源小开源弹性伸缩：平滑升级，可以随时释放无用资源负载均衡：IPVS
 
->介绍说明：  前世今生   KUbernetes 框架  KUbernetes关键字含义
+> 介绍说明： 前世今生 KUbernetes 框架 KUbernetes 关键字含义
 >
->基础概念： 什么是 Pod   控制器类型  K8S 网络通讯模式 
+> 基础概念： 什么是 Pod 控制器类型 K8S 网络通讯模式
 >
->Kubernetes：  构建 K8S 集群
+> Kubernetes： 构建 K8S 集群
 >
->资源清单：资源   掌握资源清单的语法   编写 Pod   掌握 Pod 的生命周期***
+> 资源清单：资源 掌握资源清单的语法 编写 Pod 掌握 Pod 的生命周期 ***
 >
->Pod 控制器：掌握各种控制器的特点以及使用定义方式
+> Pod 控制器：掌握各种控制器的特点以及使用定义方式
 >
->服务发现：掌握 SVC 原理及其构建方式
+> 服务发现：掌握 SVC 原理及其构建方式
 >
->存储：掌握多种存储类型的特点 并且能够在不同环境中选择合适的存储方案（有自己的简介）
+> 存储：掌握多种存储类型的特点 并且能够在不同环境中选择合适的存储方案（有自己的简介）
 >
->调度器：掌握调度器原理   能够根据要求把Pod 定义到想要的节点运行
+> 调度器：掌握调度器原理 能够根据要求把 Pod 定义到想要的节点运行
 >
->安全：集群的认证  鉴权   访问控制 原理及其流程 
+> 安全：集群的认证 鉴权 访问控制 原理及其流程
 >
->HELM：Linux yum    掌握 HELM 原理   HELM 模板自定义  HELM 部署一些常用插件
+> HELM：Linux yum 掌握 HELM 原理 HELM 模板自定义 HELM 部署一些常用插件
 >
->运维：修改Kubeadm 达到证书可用期限为 10年     能够构建高可用的 Kubernetes 集群
+> 运维：修改 Kubeadm 达到证书可用期限为 10 年 能够构建高可用的 Kubernetes 集群
 
-> 服务分类
-> 	有状态服务：DBMS 
-> 	无状态服务：LVS APACHE
-> 	
+> 服务分类有状态服务：DBMS无状态服务：LVS APACHE
+>
 > 高可用集群副本数据最好是 >= 3 奇数个
 
 ## 前世今生
