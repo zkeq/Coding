@@ -17,8 +17,8 @@ date: 2023-04-22 01:36:24
 - 使用 Centos 7 来安装(内核 4.4 以上)
 - 需要4台 Centos7 + 1台软路由
 
-<embed src="https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/k8s/Harbor%20-%20%E4%BC%81%E4%B8%9A%E7%BA%A7%20Docker%20%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.pdf" type="application/pdf" width="100%"  height="500" />
+<iframe width="100%" scrolling=no height="500" frameborder="0" src="https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/k8s/Harbor%20-%20%E4%BC%81%E4%B8%9A%E7%BA%A7%20Docker%20%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.pdf"></iframe>
 
-<embed src="https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/k8s/1%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96.pdf" type="application/pdf" width="100%"  height="500" />
+<iframe width="100%" scrolling=no height="500" frameborder="0" src="https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/k8s/1%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96.pdf"></iframe>
 
-<embed src="https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/k8s/2%E3%80%81Kubeadm%20%E9%83%A8%E7%BD%B2%E5%AE%89%E8%A3%85.pdf" type="application/pdf" width="100%"  height="500"  />
+<iframe width="100%" scrolling=no height="500" frameborder="0" src="https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/k8s/2%E3%80%81Kubeadm%20%E9%83%A8%E7%BD%B2%E5%AE%89%E8%A3%85.pdf"></iframe>
