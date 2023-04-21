@@ -29,3 +29,6 @@ date: 2023-04-22 01:36:24
 ### 2、Kubeadm 部署安装
 
 <embed src="https://media.onmicrosoft.cn/k8s/2%E3%80%81Kubeadm%20%E9%83%A8%E7%BD%B2%E5%AE%89%E8%A3%85.pdf" type="application/pdf" width="100%" height="500" />
+
+
+Waiting for update...
