@@ -13,7 +13,7 @@ date: 2023-04-22 01:36:24
 
 ![image-20230422033943863](https://img.onmicrosoft.cn/k8s/202304220339885.png)
 
-- 使用 KubeAdmin 安装集群
+- 使用 KubeAdm 安装集群
 - 使用 Centos 7 来安装(内核 4.4 以上)
 - 需要4台 Centos7 + 1台软路由
 - 软路由使用 KoolShare 来构建
