@@ -123,8 +123,6 @@ Kubernetes 的网络模型假定所有 `Pod` 都在一个 `可以直接连通的
 
 ![image-20230422003641712](https://img.onmicrosoft.cn/k8s/202304220036734.png)
 
-# `Kubernetes | 基础概念 - BasicConcept`
-
 ## 网络通讯方式
 
 ### 网络通讯模式
