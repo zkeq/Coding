@@ -25,7 +25,7 @@ date: 2023-04-21 21:49:20
 
 #### ReplicationController 
 
-ReplicationController 用来确保容器应用的副本数始终保持在用户定义的副本数。即如果有容器异常退出，会自动创建新的 Pod 来替代，而如果异常多出来的容器也会自动回收。在新版本的 Kubernetes 中建议使用 ReplicaSet 来取代 ReplicationController。
+`ReplicationController` 用来确保容器应用的副本数始终保持在用户定义的副本数。即如果有容器异常退出，会自动创建新的 `Pod` 来替代，而如果异常多出来的容器也会自动回收。在新版本的 `Kubernetes` 中建议使用 `ReplicaSet` 来取代 `ReplicationController。`
 
 - 新版本中官方抛弃 RC，全部转向 RS。
 
