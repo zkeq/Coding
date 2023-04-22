@@ -136,6 +136,7 @@ grub2-set-default 'CentOS Linux (4.4.189-1.el7.elrepo.x86_64) 7 (Core)'
 
 # 2023-04-22: 升级内核之后 我得到的是 5.4 (因为是最新版的)
 # 如果用的是 Centos7.9 的话 默认的内核也能用
+# 这一行命令其实没生效 到下文会再修改执行一次
 ```
 
 <embed src="https://media.onmicrosoft.cn/k8s/1%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96.pdf" type="application/pdf" width="100%" height="500" />
@@ -449,7 +450,7 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documen
 
 # 已经过去4年了 上述命令已经不可用了 查阅 Commit 历史 得到可用链接
 
-[root@k8s-master01 ~]#  kubectl apply -f https://raw.githubusercontent.com/flannel-io/flannel/d893bcbfe6b04791054aea6c7569dea4080cc289/Documentation/kube-flannel.yml
+[root@k8s-master01 ~]# kubectl apply -f https://raw.githubusercontent.com/flannel-io/flannel/d893bcbfe6b04791054aea6c7569dea4080cc289/Documentation/kube-flannel.yml
 podsecuritypolicy.policy/psp.flannel.unprivileged created
 clusterrole.rbac.authorization.k8s.io/flannel created
 clusterrolebinding.rbac.authorization.k8s.io/flannel created
@@ -462,16 +463,16 @@ daemonset.apps/kube-flannel-ds-ppc64le created
 daemonset.apps/kube-flannel-ds-s390x created
 
 
-[root@k8s-master01 ~]# kubectl get pod -n kube-system
-NAME                                   READY   STATUS              RESTARTS   AGE
-coredns-5c98db65d4-gjnpg               0/1     ContainerCreating   0          16m
-coredns-5c98db65d4-v89m2               0/1     ContainerCreating   0          16m
-etcd-k8s-master01                      1/1     Running             0          15m
-kube-apiserver-k8s-master01            1/1     Running             0          15m
-kube-controller-manager-k8s-master01   1/1     Running             0          15m
-kube-flannel-ds-amd64-qmksn            1/1     Running             0          2m29s
-kube-proxy-445g7                       1/1     Running             0          16m
-kube-scheduler-k8s-master01            1/1     Running             0          15m
+[root@k8s-master01 ~]# kubectl get pod  -n kube-system
+NAME                                       READY   STATUS    RESTARTS   AGE
+coredns-5c98db65d4-f5hfc                   1/1     Running   0          8m6s
+coredns-5c98db65d4-pn98l                   1/1     Running   0          8m12s
+etcd-k8s-master01                          1/1     Running   2          3h24m
+kube-apiserver-k8s-master01                1/1     Running   1          3h25m
+kube-controller-manager-k8s-master01       1/1     Running   2          3h25m
+kube-flannel-ds-amd64-247rb                1/1     Running   0          74s
+kube-proxy-445g7                           1/1     Running   1          3h25m
+kube-scheduler-k8s-master01                1/1     Running   1          3h25m
 
 [root@k8s-master01 ~]# kubectl get node
 NAME           STATUS   ROLES    AGE   VERSION
