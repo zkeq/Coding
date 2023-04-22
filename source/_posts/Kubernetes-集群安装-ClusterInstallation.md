@@ -139,7 +139,7 @@ grub2-set-default 'CentOS Linux (4.4.189-1.el7.elrepo.x86_64) 7 (Core)'
 
 #### kube-proxy开启ipvs的前置条件
 
-```shell
+```sh
 modprobe br_netfilter
 
 cat > /etc/sysconfig/modules/ipvs.modules <<EOF
@@ -156,7 +156,7 @@ lsmod | grep -e ip_vs -e nf_conntrack_ipv4
 
 #### 安装 Docker 软件
 
-```shell
+```sh
 yum install -y yum-utils device-mapper-persistent-data lvm2
 
 yum-config-manager \
@@ -204,7 +204,7 @@ systemctl enable kubelet.service
 
 #### 初始化主节点
 
-```shell
+```sh
 kubeadm config print init-defaults > kubeadm-config.yaml
   localAPIEndpoint:
   	advertiseAddress: 192.168.66.10
