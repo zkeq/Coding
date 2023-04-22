@@ -148,13 +148,16 @@ modprobe -- ip_vs
 modprobe -- ip_vs_rr
 modprobe -- ip_vs_wrr
 modprobe -- ip_vs_sh
-modprobe -- nf_conntrack_ipv4
-EOF
-chmod 755 /etc/sysconfig/modules/ipvs.modules && bash /etc/sysconfig/modules/ipvs.modules &&
-lsmod | grep -e ip_vs -e nf_conntrack_ipv4
+modprobe -- nf_conntrack
+EOF 
+chmod 755 /etc/sysconfig/modules/ipvs.modules && bash /etc/sysconfig/modules/ipvs.modules && lsmod | grep -e ip_vs -e nf_conntrack
+
+# modprobe: FATAL: Module nf_conntrack_ipv4 not found.
+# 在高版本内核已经把nf_conntrack_ipv4替换为nf_conntrack了  
+# https://blog.csdn.net/weixin_45387943/article/details/123225090
 ```
 
-#### 安装 Docker 软件
+####  安装 Docker 软件
 
 ```sh
 yum install -y yum-utils device-mapper-persistent-data lvm2
@@ -182,6 +185,81 @@ mkdir -p /etc/systemd/system/docker.service.d
 
 # 重启docker服务
 systemctl daemon-reload && systemctl restart docker && systemctl enable docker
+```
+
+```sh
+# 解决一个 yum 报错
+[root@k8s-master01 ~]#  yum install -y docker-ce
+...
+...
+Downloading packages:
+(1/10): container-selinux-2.119.2-1.911c772.el7_8.noarch.rpm                                                                               |  40 kB  00:00:00     
+warning: /var/cache/yum/x86_64/7/docker-ce-stable/packages/docker-buildx-plugin-0.10.4-1.el7.x86_64.rpm: Header V4 RSA/SHA512 Signature, key ID 621e9f35: NOKEYTA 
+Public key for docker-buildx-plugin-0.10.4-1.el7.x86_64.rpm is not installed
+(2/10): docker-buildx-plugin-0.10.4-1.el7.x86_64.rpm                                                                                       |  12 MB  00:00:04     
+docker-ce-23.0.4-1.el7.x86_64. FAILED                                          
+https://mirrors.aliyun.com/docker-ce/linux/centos/7/x86_64/stable/Packages/docker-ce-23.0.4-1.el7.x86_64.rpm: [Errno -1] Package does not match intended download. Suggestion: run yum --enablerepo=docker-ce-stable clean metadata
+Trying other mirror.
+(3/10): docker-ce-cli-23.0.4-1.el7.x86_64.rpm                                                                                              |  13 MB  00:00:04     
+(4/10): containerd.io-1.6.20-3.1.el7.x86_64.rpm                                                                                            |  34 MB  00:00:11     
+(5/10): fuse-overlayfs-0.7.2-6.el7_8.x86_64.rpm                                                                                            |  54 kB  00:00:00     
+(6/10): fuse3-libs-3.6.1-4.el7.x86_64.rpm                                                                                                  |  82 kB  00:00:00     
+(7/10): slirp4netns-0.4.3-4.el7_8.x86_64.rpm                                                                                               |  81 kB  00:00:00     
+(8/10): docker-ce-rootless-extras-23.0.4-1.el7.x86_64.rpm                                                                                  | 8.8 MB  00:00:03     
+(9/10): docker-compose-plugin-2.17.2-1.el7.x86_64.rpm                                                                                      |  12 MB  00:00:04     
+
+
+Error downloading packages:
+  3:docker-ce-23.0.4-1.el7.x86_64: [Errno 256] No more mirrors to try.
+
+[root@k8s-master01 ~]# sudo yum clean all
+Loaded plugins: fastestmirror
+Cleaning repos: base docker-ce-stable elrepo extras updates
+Cleaning up list of fastest mirrors
+Other repos take up 11 M of disk space (use --verbose for details)
+
+[root@k8s-master01 ~]# yum --enablerepo=docker-ce-stable clean metadata
+Loaded plugins: fastestmirror
+Cleaning repos: base docker-ce-stable elrepo extras updates
+16 metadata files removed
+10 sqlite files removed
+0 metadata files removed
+
+[root@k8s-master01 ~]#  yum install -y docker-ce
+...
+...
+Dependency Installed:
+  container-selinux.noarch 2:2.119.2-1.911c772.el7_8       containerd.io.x86_64 0:1.6.20-3.1.el7                 docker-buildx-plugin.x86_64 0:0.10.4-1.el7       
+  docker-ce-cli.x86_64 1:23.0.4-1.el7                      docker-ce-rootless-extras.x86_64 0:23.0.4-1.el7       docker-compose-plugin.x86_64 0:2.17.2-1.el7      
+  fuse-overlayfs.x86_64 0:0.7.2-6.el7_8                    fuse3-libs.x86_64 0:3.6.1-4.el7                       slirp4netns.x86_64 0:0.4.3-4.el7_8               
+
+Complete!
+```
+
+```sh
+# liunx 查看有哪些内核
+cat /boot/grub2/grub.cfg | grep menuentry
+
+[root@k8s-master01 ~]# cat /boot/grub2/grub.cfg | grep menuentry
+if [ x"${feature_menuentry_id}" = xy ]; then
+  menuentry_id_option="--id"
+  menuentry_id_option=""
+export menuentry_id_option
+menuentry 'CentOS Linux (3.10.0-1160.88.1.el7.x86_64) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-3.10.0-1160.el7.x86_64-advanced-9cff3d69-3769-4ad9-8460-9c54050583f9' {
+menuentry 'CentOS Linux (5.4.241-1.el7.elrepo.x86_64) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-3.10.0-1160.el7.x86_64-advanced-9cff3d69-3769-4ad9-8460-9c54050583f9' {
+menuentry 'CentOS Linux (3.10.0-1160.el7.x86_64) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-3.10.0-1160.el7.x86_64-advanced-9cff3d69-3769-4ad9-8460-9c54050583f9' {
+menuentry 'CentOS Linux (0-rescue-cc2c86fe566741e6a2ff6d399c5d5daa) 7 (Core)' --class centos --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-0-rescue-cc2c86fe566741e6a2ff6d399c5d5daa-advanced-9cff3d69-3769-4ad9-8460-9c54050583f9' {
+[root@k8s-master01 ~]# grub2-set-default 'CentOS Linux (5.4.241-1.el7.elrepo.x86_64) 7 (Core)' && reboot
+
+[root@k8s-master01 ~]# uname -r
+5.4.241-1.el7.elrepo.x86_64 
+```
+
+```sh
+# 安装完 docker  启动
+[root@k8s-master01 ~]# systemctl start docker
+[root@k8s-master01 ~]# systemctl enable docker
+Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service to /usr/lib/systemd/system/docker.service.
 ```
 
 #### 安装 Kubeadm （主从配置）
@@ -222,6 +300,136 @@ kubeadm config print init-defaults > kubeadm-config.yaml
 kubeadm init --config=kubeadm-config.yaml --experimental-upload-certs | tee kubeadm-init.log
 ```
 
+```yaml
+apiVersion: kubeadm.k8s.io/v1beta2
+bootstrapTokens:
+- groups:
+  - system:bootstrappers:kubeadm:default-node-token
+  token: abcdef.0123456789abcdef
+  ttl: 24h0m0s
+  usages:
+  - signing
+  - authentication
+kind: InitConfiguration
+localAPIEndpoint:
+  advertiseAddress: 172.129.78.136
+  bindPort: 6443
+nodeRegistration:
+  criSocket: /var/run/dockershim.sock
+  name: k8s-master01
+  taints:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+---
+apiServer:
+  timeoutForControlPlane: 4m0s
+apiVersion: kubeadm.k8s.io/v1beta2
+certificatesDir: /etc/kubernetes/pki
+clusterName: kubernetes
+controllerManager: {}
+dns:
+  type: CoreDNS
+etcd:
+  local:
+    dataDir: /var/lib/etcd
+imageRepository: k8s.gcr.io
+kind: ClusterConfiguration
+kubernetesVersion: v1.15.1
+networking:
+  dnsDomain: cluster.local
+  podSubnet: "10.244.0.0/16"
+  serviceSubnet: 10.96.0.0/12
+scheduler: {}
+---
+apiVersion: kubeproxy.config.k8s.io/v1alpha1
+kind: KubeProxyConfiguration
+featureGates:       
+  SupportIPVSProxyMode: true
+mode: ipvs
+```
+
+```sh
+[root@k8s-master01 ~]# kubeadm init --config=kubeadm-config.yaml --experimental-upload-certs | tee kubeadm-init.log
+Flag --experimental-upload-certs has been deprecated, use --upload-certs instead
+[init] Using Kubernetes version: v1.15.1
+[preflight] Running pre-flight checks
+        [WARNING SystemVerification]: this Docker version is not on the list of validated versions: 23.0.4. Latest validated version: 18.09
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of your internet connection
+[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+[kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+[kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+[kubelet-start] Activating the kubelet service
+[certs] Using certificateDir folder "/etc/kubernetes/pki"
+[certs] Generating "ca" certificate and key
+[certs] Generating "apiserver" certificate and key
+[certs] apiserver serving cert is signed for DNS names [k8s-master01 kubernetes kubernetes.default kubernetes.default.svc kubernetes.default.svc.cluster.local] and IPs [10.96.0.1 172.129.78.136]
+[certs] Generating "apiserver-kubelet-client" certificate and key
+[certs] Generating "etcd/ca" certificate and key
+[certs] Generating "etcd/healthcheck-client" certificate and key
+[certs] Generating "apiserver-etcd-client" certificate and key
+[certs] Generating "etcd/server" certificate and key
+[certs] etcd/server serving cert is signed for DNS names [k8s-master01 localhost] and IPs [172.129.78.136 127.0.0.1 ::1]
+[certs] Generating "etcd/peer" certificate and key
+[certs] etcd/peer serving cert is signed for DNS names [k8s-master01 localhost] and IPs [172.129.78.136 127.0.0.1 ::1]
+[certs] Generating "front-proxy-ca" certificate and key
+[certs] Generating "front-proxy-client" certificate and key
+[certs] Generating "sa" key and public key
+[kubeconfig] Using kubeconfig folder "/etc/kubernetes"
+[kubeconfig] Writing "admin.conf" kubeconfig file
+[kubeconfig] Writing "kubelet.conf" kubeconfig file
+[kubeconfig] Writing "controller-manager.conf" kubeconfig file
+[kubeconfig] Writing "scheduler.conf" kubeconfig file
+[control-plane] Using manifest folder "/etc/kubernetes/manifests"
+[control-plane] Creating static Pod manifest for "kube-apiserver"
+[control-plane] Creating static Pod manifest for "kube-controller-manager"
+[control-plane] Creating static Pod manifest for "kube-scheduler"
+[etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"
+[wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests". This can take up to 4m0s
+[apiclient] All control plane components are healthy after 17.002118 seconds
+[upload-config] Storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
+[kubelet] Creating a ConfigMap "kubelet-config-1.15" in namespace kube-system with the configuration for the kubelets in the cluster
+[upload-certs] Storing the certificates in Secret "kubeadm-certs" in the "kube-system" Namespace
+[upload-certs] Using certificate key:
+9280d519bb53c33fec7149b1ac2e6f0385b863dcee2ff7bf901d07d715de4dea
+[mark-control-plane] Marking the node k8s-master01 as control-plane by adding the label "node-role.kubernetes.io/master=''"
+[mark-control-plane] Marking the node k8s-master01 as control-plane by adding the taints [node-role.kubernetes.io/master:NoSchedule]
+[bootstrap-token] Using token: abcdef.0123456789abcdef
+[bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
+[bootstrap-token] configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
+[bootstrap-token] configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token
+[bootstrap-token] configured RBAC rules to allow certificate rotation for all node client certificates in the cluster
+[bootstrap-token] Creating the "cluster-info" ConfigMap in the "kube-public" namespace
+[addons] Applied essential addon: CoreDNS
+[addons] Applied essential addon: kube-proxy
+
+Your Kubernetes control-plane has initialized successfully!
+
+To start using your cluster, you need to run the following as a regular user:
+
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+You should now deploy a pod network to the cluster.
+Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+Then you can join any number of worker nodes by running the following on each as root:
+
+kubeadm join 172.129.78.136:6443 --token abcdef.0123456789abcdef \
+    --discovery-token-ca-cert-hash sha256:a93684cdb29000b025a9ed35054b9611bc913fe1ddbf880f8e9077b812704396 
+```
+
+```sh
+[root@k8s-master01 ~]#  mkdir -p $HOME/.kube
+[root@k8s-master01 ~]#  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+[root@k8s-master01 ~]#  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+[root@k8s-master01 ~]# kubectl get node
+NAME           STATUS     ROLES    AGE     VERSION
+k8s-master01   NotReady   master   2m53s   v1.15.1
+```
+
 #### 加入主节点以及其余工作节点
 
 ```sh
@@ -232,6 +440,118 @@ kubeadm init --config=kubeadm-config.yaml --experimental-upload-certs | tee kube
 
 ```sh
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+
+# 已经过去4年了 上述命令已经不可用了 查阅 Commit 历史 得到可用链接
+
+[root@k8s-master01 ~]#  kubectl apply -f https://raw.githubusercontent.com/flannel-io/flannel/d893bcbfe6b04791054aea6c7569dea4080cc289/Documentation/kube-flannel.yml
+podsecuritypolicy.policy/psp.flannel.unprivileged created
+clusterrole.rbac.authorization.k8s.io/flannel created
+clusterrolebinding.rbac.authorization.k8s.io/flannel created
+serviceaccount/flannel created
+configmap/kube-flannel-cfg created
+daemonset.apps/kube-flannel-ds-amd64 created
+daemonset.apps/kube-flannel-ds-arm64 created
+daemonset.apps/kube-flannel-ds-arm created
+daemonset.apps/kube-flannel-ds-ppc64le created
+daemonset.apps/kube-flannel-ds-s390x created
+
+
+[root@k8s-master01 ~]# kubectl get pod -n kube-system
+NAME                                   READY   STATUS              RESTARTS   AGE
+coredns-5c98db65d4-gjnpg               0/1     ContainerCreating   0          16m
+coredns-5c98db65d4-v89m2               0/1     ContainerCreating   0          16m
+etcd-k8s-master01                      1/1     Running             0          15m
+kube-apiserver-k8s-master01            1/1     Running             0          15m
+kube-controller-manager-k8s-master01   1/1     Running             0          15m
+kube-flannel-ds-amd64-qmksn            1/1     Running             0          2m29s
+kube-proxy-445g7                       1/1     Running             0          16m
+kube-scheduler-k8s-master01            1/1     Running             0          15m
+
+[root@k8s-master01 ~]# kubectl get node
+NAME           STATUS   ROLES    AGE   VERSION
+k8s-master01   Ready    master   15m   v1.15.1
+
+
+[root@k8s-master01 ~]# ifconfig 
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:d3:2f:dc:ce  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.129.78.136  netmask 255.255.255.0  broadcast 172.129.78.255
+        ether fa:16:3e:36:5c:71  txqueuelen 1000  (Ethernet)
+        RX packets 169718  bytes 339692579 (323.9 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 83371  bytes 1680809729 (1.5 GiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+flannel.1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1450
+        inet 10.244.0.0  netmask 255.255.255.255  broadcast 0.0.0.0
+        ether ba:df:2f:da:90:4c  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 141284  bytes 26146180 (24.9 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 141284  bytes 26146180 (24.9 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```
+
+```sh
+# 配好网络之后 就可以加入子节点
+[root@k8s-node01 ~]# kubeadm join 172.129.78.136:6443 --token abcdef.0123456789abcdef \
+>     --discovery-token-ca-cert-hash sha256:a93684cdb29000b025a9ed35054b9611bc913fe1ddbf880f8e9077b812704396 
+[preflight] Running pre-flight checks
+        [WARNING SystemVerification]: this Docker version is not on the list of validated versions: 23.0.4. Latest validated version: 18.09
+        [WARNING Hostname]: hostname "k8s-node01.novalocal" could not be reached
+        [WARNING Hostname]: hostname "k8s-node01.novalocal": lookup k8s-node01.novalocal on 223.5.5.5:53: no such host
+[preflight] Reading configuration from the cluster...
+[preflight] FYI: You can look at this config file with 'kubectl -n kube-system get cm kubeadm-config -oyaml'
+[kubelet-start] Downloading configuration for the kubelet from the "kubelet-config-1.15" ConfigMap in the kube-system namespace
+[kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+[kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+[kubelet-start] Activating the kubelet service
+[kubelet-start] Waiting for the kubelet to perform the TLS Bootstrap...
+
+This node has joined the cluster:
+* Certificate signing request was sent to apiserver and a response was received.
+* The Kubelet was informed of the new secure connection details.
+
+Run 'kubectl get nodes' on the control-plane to see this node join the cluster.
+
+[root@k8s-master01 ~]# kubectl get nodes
+NAME                   STATUS     ROLES    AGE   VERSION
+k8s-master01           Ready      master   19m   v1.15.1
+k8s-node01.novalocal   NotReady   <none>   13s   v1.15.1
+k8s-node02.novalocal   NotReady   <none>   6s    v1.15.1
+[root@k8s-master01 ~]# kubectl get pod -n kube-system -o wide
+NAME                                   READY   STATUS              RESTARTS   AGE     IP               NODE                   NOMINATED NODE   READINESS GATES
+coredns-5c98db65d4-gjnpg               0/1     ContainerCreating   0          19m     <none>           k8s-master01           <none>           <none>
+coredns-5c98db65d4-v89m2               0/1     ContainerCreating   0          19m     <none>           k8s-master01           <none>           <none>
+etcd-k8s-master01                      1/1     Running             0          18m     172.129.78.136   k8s-master01           <none>           <none>
+kube-apiserver-k8s-master01            1/1     Running             0          18m     172.129.78.136   k8s-master01           <none>           <none>
+kube-controller-manager-k8s-master01   1/1     Running             0          18m     172.129.78.136   k8s-master01           <none>           <none>
+kube-flannel-ds-amd64-fcgkv            1/1     Running             0          35s     172.129.78.105   k8s-node01.novalocal   <none>           <none>
+kube-flannel-ds-amd64-qmksn            1/1     Running             0          5m17s   172.129.78.136   k8s-master01           <none>           <none>
+kube-flannel-ds-amd64-wgjmq            1/1     Running             0          28s     172.129.78.104   k8s-node02.novalocal   <none>           <none>
+kube-proxy-445g7                       1/1     Running             0          19m     172.129.78.136   k8s-master01           <none>           <none>
+kube-proxy-dwljn                       1/1     Running             0          35s     172.129.78.105   k8s-node01.novalocal   <none>           <none>
+kube-proxy-wfx4j                       1/1     Running             0          28s     172.129.78.104   k8s-node02.novalocal   <none>           <none>
+kube-scheduler-k8s-master01            1/1     Running             0          18m     172.129.78.136   k8s-master01           <none>           <none>
+[root@k8s-master01 ~]# kubectl get nodes
+NAME                   STATUS   ROLES    AGE   VERSION
+k8s-master01           Ready    master   19m   v1.15.1
+k8s-node01.novalocal   Ready    <none>   38s   v1.15.1
+k8s-node02.novalocal   Ready    <none>   31s   v1.15.1
 ```
 
 <embed src="https://media.onmicrosoft.cn/k8s/2%E3%80%81Kubeadm%20%E9%83%A8%E7%BD%B2%E5%AE%89%E8%A3%85.pdf" type="application/pdf" width="100%" height="500" />
