@@ -16,8 +16,8 @@ Code_016---2019 尚硅谷Kubernetes教程
 ```
 
 
-```
-请注意 由于版本过旧： 1.15.1 本篇文章的部分操作已不可复现！
+```sh
+请注意 由于版本过旧： 1.15.1 在此篇文章遇到了ContainerCreating无法启动的报错, 已寻找到解决办法 请移步 解决报错章节查看 
 ```
 
 
@@ -469,16 +469,16 @@ daemonset.apps/kube-flannel-ds-ppc64le created
 daemonset.apps/kube-flannel-ds-s390x created
 
 
-[root@k8s-master01 ~]# kubectl get pod  -n kube-system
-NAME                                       READY   STATUS    RESTARTS   AGE
-coredns-5c98db65d4-f5hfc                   1/1     Running   0          8m6s
-coredns-5c98db65d4-pn98l                   1/1     Running   0          8m12s
-etcd-k8s-master01                          1/1     Running   2          3h24m
-kube-apiserver-k8s-master01                1/1     Running   1          3h25m
-kube-controller-manager-k8s-master01       1/1     Running   2          3h25m
-kube-flannel-ds-amd64-247rb                1/1     Running   0          74s
-kube-proxy-445g7                           1/1     Running   1          3h25m
-kube-scheduler-k8s-master01                1/1     Running   1          3h25m
+[root@k8s-master01 ~]# kubectl get pod -n kube-system
+NAME                                   READY   STATUS              RESTARTS   AGE
+coredns-5c98db65d4-gjnpg               0/1     ContainerCreating   0          16m
+coredns-5c98db65d4-v89m2               0/1     ContainerCreating   0          16m
+etcd-k8s-master01                      1/1     Running             0          15m
+kube-apiserver-k8s-master01            1/1     Running             0          15m
+kube-controller-manager-k8s-master01   1/1     Running             0          15m
+kube-flannel-ds-amd64-qmksn            1/1     Running             0          2m29s
+kube-proxy-445g7                       1/1     Running             0          16m
+kube-scheduler-k8s-master01            1/1     Running             0          15m
 
 [root@k8s-master01 ~]# kubectl get node
 NAME           STATUS   ROLES    AGE   VERSION
@@ -547,6 +547,7 @@ k8s-master01           Ready      master   19m   v1.15.1
 k8s-node01.novalocal   NotReady   <none>   13s   v1.15.1
 k8s-node02.novalocal   NotReady   <none>   6s    v1.15.1
 [root@k8s-master01 ~]# kubectl get pod -n kube-system -o wide
+// 此处不可用为期望状态 下文提供了解决办法
 NAME                                   READY   STATUS              RESTARTS   AGE     IP               NODE                   NOMINATED NODE   READINESS GATES
 coredns-5c98db65d4-gjnpg               0/1     ContainerCreating   0          19m     <none>           k8s-master01           <none>           <none>
 coredns-5c98db65d4-v89m2               0/1     ContainerCreating   0          19m     <none>           k8s-master01           <none>           <none>
@@ -566,6 +567,160 @@ k8s-master01           Ready    master   19m   v1.15.1
 k8s-node01.novalocal   Ready    <none>   38s   v1.15.1
 k8s-node02.novalocal   Ready    <none>   31s   v1.15.1
 ```
+
+### 解决报错
+
+CoreDNS / flannel 一直处于 `ContainerCreating` 状态
+
+```sh
+[root@k8s-master01 ~]# kubectl get pod -n kube-system -o wide
+NAME                                   READY   STATUS              RESTARTS   AGE     IP               NODE                   NOMINATED NODE   READINESS GATES
+coredns-5c98db65d4-gjnpg               0/1     ContainerCreating   0          19m     <none>           k8s-master01           <none>           <none>
+coredns-5c98db65d4-v89m2               0/1     ContainerCreating   0          19m     <none>           k8s-master01           <none>           <none>
+  
+[root@k8s-master01 ~]# kubectl describe pods -n kube-system  coredns-5c98db65d4-dhv4
+...
+Events:
+  Type    Reason          Age                     From                             Message
+  ----    ------          ----                    ----                             -------
+  Normal  SandboxChanged  32m (x1132 over 4h37m)  kubelet, k8s-master01.novalocal  Pod sandbox changed, it will be killed and re-created.
+
+# 无报错信息 所以去看系统日志来排错
+[root@k8s-master01 ~]# journalctl -u kubelet
+Apr 22 23:06:49 k8s-master01.novalocal kubelet[29592]: E0422 23:06:49.663339   29592 kuberuntime_gc.go:170] Failed to stop sandbox "5924b44e76f68d801163e3e53762cd85f25692821690fc0f5f11c58d640e65ed" before removing: rpc error: code = Unknown desc = NetworkPlugin cni failed to teardown pod "coredns-5c98db65d4-sx9z5_kube-system" network: failed to find plugin "flannel" in path [/opt/cni/bin]
+Apr 22 23:06:54 k8s-master01.novalocal kubelet[29592]: W0422 23:06:54.472770   29592 cni.go:309] CNI failed to retrieve network namespace path: cannot find network namespace for the terminated container "81f56d50bac714133bbbc0132b378d5a57383203050febb5ad36c8a7d5cf022f"
+Apr 22 23:06:54 k8s-master01.novalocal kubelet[29592]: E0422 23:06:54.478568   29592 cni.go:352] Error deleting kube-system_coredns-5c98db65d4-nf2xb/81f56d50bac714133bbbc0132b378d5a57383203050febb5ad36c8a7d5cf022f from network flannel/cbr0: failed to find plugin "flannel" in path [/opt/cni/bin]
+Apr 22 23:06:54 k8s-master01.novalocal kubelet[29592]: E0422 23:06:54.479098   29592 remote_runtime.go:128] StopPodSandbox "81f56d50bac714133bbbc0132b378d5a57383203050febb5ad36c8a7d5cf022f" from runtime service failed: rpc error: code = Unknown desc = NetworkPlugin cni failed to teardown pod "coredns-5c98db65d4-nf2xb_kube-system" network: failed to find plugin "flannel" in path [/opt/cni/bin]
+Apr 22 23:06:54 k8s-master01.novalocal kubelet[29592]: E0422 23:06:54.479146   29592 kuberuntime_manager.go:845] Failed to stop sandbox {"docker" "81f56d50bac714133bbbc0132b378d5a57383203050febb5ad36c8a7d5cf022f"}
+Apr 22 23:06:54 k8s-master01.novalocal kubelet[29592]: E0422 23:06:54.479200   29592 kuberuntime_manager.go:640] killPodWithSyncResult failed: failed to "KillPodSandbox" for "db56e197-6d03-4628-984b-2694f5da5edc" with KillPodSandboxError: "rpc error: code = Unknown desc = NetworkPlugin cni failed to teardown pod \"coredns-5c98db65d4-nf2xb_kube-system\" network: failed to find plugin \"flannel\" in path [/opt/cni/bin]"
+Apr 22 23:06:54 k8s-master01.novalocal kubelet[29592]: E0422 23:06:54.479222   29592 pod_workers.go:190] Error syncing pod db56e197-6d03-4628-984b-2694f5da5edc ("coredns-5c98db65d4-nf2xb_kube-system(db56e197-6d03-4628-984b-2694f5da5edc)"), skipping: failed to "KillPodSandbox" for "db56e197-6d03-4628-984b-2694f5da5edc" with KillPodSandboxError: "rpc error: code = Unknown desc = NetworkPlugin cni failed to teardown pod \"coredns-5c98db65d4-nf2xb_kube-system\" network: failed to find plugin \"flannel\" in path [/opt/cni/bin]"
+Apr 22 23:07:01 k8s-master01.novalocal kubelet[29592]: W0422 23:07:01.472361   29592 cni.go:309] CNI failed to retrieve network namespace path: cannot find network namespace for the terminated container "3d132d33ad7a6256158167561dcfc2ffbd76398ec61daadecae244d9ff80d73e"
+Apr 22 23:07:01 k8s-master01.novalocal kubelet[29592]: E0422 23:07:01.477122   29592 cni.go:352] Error deleting kube-system_coredns-5c98db65d4-dhv45/3d132d33ad7a6256158167561dcfc2ffbd76398ec61daadecae244d9ff80d73e from network flannel/cbr0: failed to find plugin "flannel" in path [/opt/cni/bin]
+Apr 22 23:07:01 k8s-master01.novalocal kubelet[29592]: E0422 23:07:01.477687   29592 remote_runtime.go:128] StopPodSandbox "3d132d33ad7a6256158167561dcfc2ffbd76398ec61daadecae244d9ff80d73e" from runtime service failed: rpc error: code = Unknown desc = NetworkPlugin cni failed to teardown pod "coredns-5c98db65d4-dhv45_kube-system" network: failed to find plugin "flannel" in path [/opt/cni/bin]
+Apr 22 23:07:01 k8s-master01.novalocal kubelet[29592]: E0422 23:07:01.477733   29592 kuberuntime_manager.go:845] Failed to stop sandbox {"docker" "3d132d33ad7a6256158167561dcfc2ffbd76398ec61daadecae244d9ff80d73e"}
+Apr 22 23:07:01 k8s-master01.novalocal kubelet[29592]: E0422 23:07:01.477805   29592 kuberuntime_manager.go:640] killPodWithSyncResult failed: failed to "KillPodSandbox" for "d70ce214-46c7-4d89-aa39-7c437e430ec4" with KillPodSandboxError: "rpc error: code = Unknown desc = NetworkPlugin cni failed to teardown pod \"coredns-5c98db65d4-dhv45_kube-system\" network: failed to find plugin \"flannel\" in path [/opt/cni/bin]"
+Apr 22 23:07:01 k8s-master01.novalocal kubelet[29592]: E0422 23:07:01.478155   29592 pod_workers.go:190] Error syncing pod d70ce214-46c7-4d89-aa39-7c437e430ec4 ("coredns-5c98db65d4-dhv45_kube-system(d70ce214-46c7-4d89-aa39-7c437e430ec4)"), skipping: failed to "KillPodSandbox" for "d70ce214-46c7-4d89-aa39-7c437e430ec4" with KillPodSandboxError: "rpc error: code = Unknown desc = NetworkPlugin cni failed to teardown pod \"coredns-5c98db65d4-dhv45_kube-system\" network: failed to find plugin \"flannel\" in path [/opt/cni/bin]"
+
+# 提示 /opt/cni/bin 没有 flannel
+# 所以是需要安装一个 CNI 插件来解决此问题
+// https://github.com/containernetworking/plugins/releases/tag/v0.8.6
+// https://blog.csdn.net/qq_29385297/article/details/127682552
+[root@k8s-master01 ~]# cd /opt/cni/bin
+[root@k8s-master01 bin]# ls -al
+total 52828
+drwxr-xr-x. 2 root root     263 Apr 22 23:07 .
+drwxr-xr-x. 3 root root      17 Apr 22 18:39 ..
+-rwxr-xr-x. 1 root root 2782728 Jan 19 05:09 bandwidth
+-rwxr-xr-x. 1 root root 3104192 Jan 19 05:09 bridge
+-rwxr-xr-x. 1 root root 7607056 Jan 19 05:09 dhcp
+-rwxr-xr-x. 1 root root 2863024 Jan 19 05:09 dummy
+-rwxr-xr-x. 1 root root 3165352 Jan 19 05:09 firewall
+-rwxr-xr-x. 1 root root 2775224 Jan 19 05:09 host-device
+-rwxr-xr-x. 1 root root 2332792 Jan 19 05:09 host-local
+-rwxr-xr-x. 1 root root 2871792 Jan 19 05:09 ipvlan
+-rwxr-xr-x. 1 root root 2396976 Jan 19 05:09 loopback
+-rwxr-xr-x. 1 root root 2893624 Jan 19 05:09 macvlan
+-rwxr-xr-x. 1 root root 2689440 Jan 19 05:09 portmap
+-rwxr-xr-x. 1 root root 3000032 Jan 19 05:09 ptp
+-rwxr-xr-x. 1 root root 2542400 Jan 19 05:09 sbr
+-rwxr-xr-x. 1 root root 2074072 Jan 19 05:09 static
+-rwxr-xr-x. 1 root root 2456920 Jan 19 05:09 tuning
+-rwxr-xr-x. 1 root root 2867512 Jan 19 05:09 vlan
+-rwxr-xr-x. 1 root root 2566424 Jan 19 05:09 vrf
+[root@k8s-master01 ~]# wget https://github.com/containernetworking/plugins/releases/download/v0.8.6/cni-plugins-linux-amd64-v0.8.6.tgz
+[root@k8s-master01 ~]# tar -zxvf cni-plugins-linux-amd64-v0.8.6.tgz 
+
+// 再次查看即正常!
+[root@k8s-master01 bin]#  kubectl get pod -A
+NAMESPACE     NAME                                             READY   STATUS    RESTARTS   AGE
+default       nginx-deployment-68c7f5464c-5722g                1/1     Running   0          26m
+kube-system   coredns-5c98db65d4-dhv45                         1/1     Running   0          4h41m
+kube-system   coredns-5c98db65d4-nf2xb                         1/1     Running   0          4h42m
+kube-system   etcd-k8s-master01.novalocal                      1/1     Running   0          4h49m
+kube-system   kube-apiserver-k8s-master01.novalocal            1/1     Running   0          4h49m
+kube-system   kube-controller-manager-k8s-master01.novalocal   1/1     Running   0          4h49m
+kube-system   kube-flannel-ds-amd64-4whrn                      1/1     Running   0          30m
+kube-system   kube-flannel-ds-amd64-sdhf9                      1/1     Running   0          30m
+kube-system   kube-flannel-ds-amd64-xm267                      1/1     Running   0          150m
+kube-system   kube-proxy-cmpjd                                 1/1     Running   0          4h50m
+kube-system   kube-proxy-qcwzl                                 1/1     Running   0          30m
+kube-system   kube-proxy-sj5cm                                 1/1     Running   0          30m
+kube-system   kube-scheduler-k8s-master01.novalocal            1/1     Running   0          4h49m
+```
+
+### 部署测试
+
+```sh
+[root@k8s-master01 ~]# vim nginx.yaml 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx
+  type: NodePort
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+
+[root@k8s-master01 ~]# kubectl apply -f nginx.yaml 
+[root@k8s-master01 ~]# watch kubectl get pod -A
+NAMESPACE     NAME                                             READY   STATUS    RESTARTS   AGE
+default       nginx-deployment-68c7f5464c-5722g                1/1     Running   0          30m
+kube-system   coredns-5c98db65d4-dhv45                         1/1     Running   0          4h46m
+kube-system   coredns-5c98db65d4-nf2xb                         1/1     Running   0          4h46m
+kube-system   etcd-k8s-master01.novalocal                      1/1     Running   0          4h53m
+kube-system   kube-apiserver-k8s-master01.novalocal            1/1     Running   0          4h53m
+kube-system   kube-controller-manager-k8s-master01.novalocal   1/1     Running   0          4h53m
+kube-system   kube-flannel-ds-amd64-4whrn                      1/1     Running   0          35m
+kube-system   kube-flannel-ds-amd64-sdhf9                      1/1     Running   0          35m
+kube-system   kube-flannel-ds-amd64-xm267                      1/1     Running   0          154m
+kube-system   kube-proxy-cmpjd                                 1/1     Running   0          4h54m
+kube-system   kube-proxy-qcwzl                                 1/1     Running   0          35m
+kube-system   kube-proxy-sj5cm                                 1/1     Running   0          35m
+kube-system   kube-scheduler-k8s-master01.novalocal            1/1     Running   0          4h53m
+
+[root@k8s-master01 ~]# kubectl get pod nginx-deployment-68c7f5464c-5722g 
+Events:
+  Type    Reason     Age   From                           Message
+  ----    ------     ----  ----                           -------
+  Normal  Scheduled  31m   default-scheduler              Successfully assigned default/nginx-deployment-68c7f5464c-5722g to k8s-node02.novalocal
+  Normal  Pulling    31m   kubelet, k8s-node02.novalocal  Pulling image "nginx:latest"
+  Normal  Pulled     30m   kubelet, k8s-node02.novalocal  Successfully pulled image "nginx:latest"
+  Normal  Created    30m   kubelet, k8s-node02.novalocal  Created container nginx
+  Normal  Started    30m   kubelet, k8s-node02.novalocal  Started container nginx
+  
+[root@k8s-master01 ~]# kubectl get svc
+NAME            TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+kubernetes      ClusterIP   10.96.0.1       <none>        443/TCP        4h55m
+nginx-service   NodePort    10.96.196.183   <none>        80:32750/TCP   31m
+
+[root@k8s-master01 ~]# 见下图 浏览器可烦我跟
+```
+
+![image-20230422234726371](https://img.onmicrosoft.cn/k8s/202304222347448.png)
 
 <embed src="https://media.onmicrosoft.cn/k8s/2%E3%80%81Kubeadm%20%E9%83%A8%E7%BD%B2%E5%AE%89%E8%A3%85.pdf" type="application/pdf" width="100%" height="500" />
 
