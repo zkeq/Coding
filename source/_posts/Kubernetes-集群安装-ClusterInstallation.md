@@ -31,22 +31,21 @@ hostnamectl set-hostname k8s-master01
 #### 安装依赖包
 
 ```sh
-yum install -y conntrack ntpdate ntp ipvsadm ipset jq iptables curl sysstat libseccomp wget vim
-net-tools git
+yum install -y conntrack ntpdate ntp ipvsadm ipset jq iptables curl sysstat libseccomp wget vim net-tools git
 ```
 
-#### 设置防火墙为 Iptables 并设置空规则
+####  设置防火墙为 Iptables 并设置空规则
 
 ```sh
 systemctl stop firewalld && systemctl disable firewalld
-yum -y install iptables-services && systemctl start iptables && systemctl enable iptables
-&& iptables -F && service iptables save
+yum -y install iptables-services && systemctl start iptables && systemctl enable iptables   && iptables -F && service iptables save
 ```
 
 #### 关闭 SELINUX
 
 ```sh
 swapoff -a && sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+# 为了性能, k8s 集群在安装的时候会去检测虚拟内存是否关闭 可制定 ingress 参数使其不检测 但是一般不指定
 setenforce 0 && sed -i 's/^SELINUX=.*/SELINUX=disabled/' /etc/selinux/config
 ```
 
@@ -128,16 +127,116 @@ rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
 yum --enablerepo=elrepo-kernel install -y kernel-lt
 # 设置开机从新内核启动
 grub2-set-default 'CentOS Linux (4.4.189-1.el7.elrepo.x86_64) 7 (Core)'
+
+# 2023-04-22: 升级内核之后 我得到的是 5.4 (因为是最新版的)
+# 如果用的是 Centos7.9 的话 默认的内核也能用
 ```
 
 <embed src="https://media.onmicrosoft.cn/k8s/1%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96.pdf" type="application/pdf" width="100%" height="500" />
+
+
+### 2、Kubeadm 部署安装
+
+#### kube-proxy开启ipvs的前置条件
+
+```shell
+modprobe br_netfilter
+
+cat > /etc/sysconfig/modules/ipvs.modules <<EOF
+#!/bin/bash
+modprobe -- ip_vs
+modprobe -- ip_vs_rr
+modprobe -- ip_vs_wrr
+modprobe -- ip_vs_sh
+modprobe -- nf_conntrack_ipv4
+EOF
+chmod 755 /etc/sysconfig/modules/ipvs.modules && bash /etc/sysconfig/modules/ipvs.modules &&
+lsmod | grep -e ip_vs -e nf_conntrack_ipv4
+```
+
+#### 安装 Docker 软件
+
+```shell
+yum install -y yum-utils device-mapper-persistent-data lvm2
+
+yum-config-manager \
+	--add-repo \
+	http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+
+yum update -y && yum install -y docker-ce
+
+## 创建 /etc/docker 目录
+mkdir /etc/docker
+
+# 配置 daemon.
+cat > /etc/docker/daemon.json <<EOF
+{
+  "exec-opts": ["native.cgroupdriver=systemd"],
+  "log-driver": "json-file",
+  "log-opts": {
+  	"max-size": "100m"
+  }
+}
+EOF
+mkdir -p /etc/systemd/system/docker.service.d
+
+# 重启docker服务
+systemctl daemon-reload && systemctl restart docker && systemctl enable docker
+```
+
+#### 安装 Kubeadm （主从配置）
+
+```sh
+cat <<EOF > /etc/yum.repos.d/kubernetes.repo
+[kubernetes]
+name=Kubernetes
+baseurl=http://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64
+enabled=1
+gpgcheck=0
+repo_gpgcheck=0
+gpgkey=http://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg
+http://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
+EOF
+
+yum -y install kubeadm-1.15.1 kubectl-1.15.1 kubelet-1.15.1
+systemctl enable kubelet.service
+```
+
+#### 初始化主节点
+
+```shell
+kubeadm config print init-defaults > kubeadm-config.yaml
+  localAPIEndpoint:
+  	advertiseAddress: 192.168.66.10
+  kubernetesVersion: v1.15.1
+  networking:
+    podSubnet: "10.244.0.0/16"
+    serviceSubnet: 10.96.0.0/12
+  ---
+  apiVersion: kubeproxy.config.k8s.io/v1alpha1
+  kind: KubeProxyConfiguration
+  featureGates:
+  	SupportIPVSProxyMode: true
+  mode: ipvs
+
+kubeadm init --config=kubeadm-config.yaml --experimental-upload-certs | tee kubeadm-init.log
+```
+
+#### 加入主节点以及其余工作节点
+
+```sh
+执行安装日志中的加入命令即可
+```
+
+#### 部署网络
+
+```sh
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+```
+
+<embed src="https://media.onmicrosoft.cn/k8s/2%E3%80%81Kubeadm%20%E9%83%A8%E7%BD%B2%E5%AE%89%E8%A3%85.pdf" type="application/pdf" width="100%" height="500" />
 
 ### Harbor - 企业级 Docker 私有仓库
 
 <embed src="https://media.onmicrosoft.cn/k8s/Harbor%20-%20%E4%BC%81%E4%B8%9A%E7%BA%A7%20Docker%20%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.pdf" type="application/pdf" width="100%" height="500" />
 
-
-
-### 2、Kubeadm 部署安装
-
-<embed src="https://media.onmicrosoft.cn/k8s/2%E3%80%81Kubeadm%20%E9%83%A8%E7%BD%B2%E5%AE%89%E8%A3%85.pdf" type="application/pdf" width="100%" height="500" />
