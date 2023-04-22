@@ -558,5 +558,142 @@ k8s-node02.novalocal   Ready    <none>   31s   v1.15.1
 
 ### Harbor - 企业级 Docker 私有仓库
 
+```sh
+/[root@harbor harbor]# vi harbor.cfg
+## Configuration file of Harbor
+
+#The IP address or hostname to access admin UI and registry service.
+#DO NOT use localhost or 127.0.0.1, because Harbor needs to be accessed by external clients.
+hostname = 172.129.78.187
+// 只修改这个即可 使用 http 不实用证书
+
+[root@harbor harbor]# ./install.sh
+...
+[Step 4]: starting Harbor ...
+Creating network "harbor_harbor" with the default driver
+Creating harbor-log ... done
+Creating harbor-adminserver ... done
+Creating registry           ... done
+Creating harbor-db          ... done
+Creating harbor-ui          ... done
+Creating harbor-jobservice  ... done
+Creating nginx              ... done
+
+✔ ----Harbor has been installed and started successfully.----
+
+Now you should be able to visit the admin portal at http://172.129.78.187. 
+For more details, please visit https://github.com/vmware/harbor .
+
+Harbor Login
+User: admin
+Pass: Harbor12345
+```
+
+#### 配置 HTTP 仓库
+
+要在 Docker 中使用 HTTP 仓库，需要在 `daemon.json` 文件中进行配置。以下是实现方法：
+
+1. 首先，打开终端并输入以下命令：
+
+```sh
+vi /etc/docker/daemon.json
+```
+
+1. 在打开的文件中，添加以下内容：
+
+```sh
+{
+  "insecure-registries": ["<http://example.com:5000>"]
+}
+```
+
+其中，`http://example.com:5000` 是你所使用的 HTTP 仓库的地址。
+
+1. 保存并退出文件。
+2. 重启 Docker 服务：
+
+```sh
+systemctl restart docker
+```
+
+现在，你已经成功地配置了 Docker 使用 HTTP 仓库。可以使用以下命令检查是否已成功配置：
+
+```sh
+docker info
+```
+
+在输出的结果中，应该能看到配置的 HTTP 仓库地址。
+
+```sh
+[root@k8s-node02 ~]# vim /etc/docker/daemon.json 
+{
+  "exec-opts": ["native.cgroupdriver=systemd"],
+  "log-driver": "json-file",
+  "log-opts": {
+  "max-size": "100m"
+  },
+  "insecure-registries": ["http://172.129.78.187"]
+}
+
+[root@k8s-node02 ~]# systemctl restart docker
+[root@k8s-node02 ~]# docker info
+...
+ Insecure Registries:
+  172.129.78.187
+  127.0.0.0/8
+...
+
+[root@k8s-node02 ~]# docker login http://172.129.78.187
+Username: admin
+Password: 
+Error response from daemon: Get "http://172.129.78.187/v2/": unauthorized: authentication required
+[root@k8s-node02 ~]# docker login http://172.129.78.187
+Username: admin
+Password: 
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+
+[root@k8s-node02 ~]# docker pull hello-world
+Using default tag: latest
+latest: Pulling from library/hello-world
+2db29710123e: Pull complete 
+Digest: sha256:4e83453afed1b4fa1a3500525091dbfca6ce1e66903fd4c01ff015dbcb1ba33e
+Status: Downloaded newer image for hello-world:latest
+docker.io/library/hello-world:latest
+[root@k8s-node02 ~]# docker run hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+[root@k8s-node02 ~]# docker tag  hello-world:latest 172.129.78.187/library/hello-world-local:latest
+[root@k8s-node02 ~]# docker push 172.129.78.187/library/hello-world-local:latest
+The push refers to repository [172.129.78.187/library/hello-world-local]
+e07ee1baac5f: Pushed 
+latest: digest: sha256:f54a58bc1aac5ea1a25d796ae155dc228b3f0e11d046ae276b39c4bf2f13d8c4 size: 525
+
+# 在网页中查看已经可以看到
+```
+
 <embed src="https://media.onmicrosoft.cn/k8s/Harbor%20-%20%E4%BC%81%E4%B8%9A%E7%BA%A7%20Docker%20%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.pdf" type="application/pdf" width="100%" height="500" />
 
