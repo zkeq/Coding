@@ -863,5 +863,7 @@ latest: digest: sha256:f54a58bc1aac5ea1a25d796ae155dc228b3f0e11d046ae276b39c4bf2
 # 在网页中查看已经可以看到
 ```
 
+![image-20230423011255633](https://img.onmicrosoft.cn/k8s/202304230112705.png)
+
 <embed src="https://media.onmicrosoft.cn/k8s/Harbor%20-%20%E4%BC%81%E4%B8%9A%E7%BA%A7%20Docker%20%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.pdf" type="application/pdf" width="100%" height="500" />
 
