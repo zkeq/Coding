@@ -9,6 +9,12 @@ cover: https://img.onmicrosoft.cn/2023-04-20/eb4cf60047dee8c0c2786e95fc0f96ca0f2
 date: 2023-04-20 01:51:08
 ---
 
+```
+Code_016---2019 尚硅谷Kubernetes教程
+链接: https://pan.baidu.com/s/1iYMUBaCq5fq6i4nnMD8V-Q
+提取码: zkeq
+```
+
 ![Kubernetes.png (7634×5646) (onmicrosoft.cn)](https://img.onmicrosoft.cn/2023-04-20/Kubernetes.png)
 
 - [Kubernetes 文档 | Kubernetes](https://kubernetes.io/zh-cn/docs/home/)

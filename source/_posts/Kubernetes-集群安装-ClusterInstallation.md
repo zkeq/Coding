@@ -9,6 +9,12 @@ cover: https://img.onmicrosoft.cn/2023-04-20/eb4cf60047dee8c0c2786e95fc0f96ca0f2
 date: 2023-04-22 01:36:24
 ---
 
+```
+Code_016---2019 尚硅谷Kubernetes教程
+链接: https://pan.baidu.com/s/1iYMUBaCq5fq6i4nnMD8V-Q
+提取码: zkeq
+```
+
 ## 前期准备
 
 ![image-20230422033943863](https://img.onmicrosoft.cn/k8s/202304220339885.png)
