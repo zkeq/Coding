@@ -724,7 +724,7 @@ nginx-service   NodePort    10.96.196.183   <none>        80:32750/TCP   31m
 
 ![image-20230422234726371](https://img.onmicrosoft.cn/k8s/202304222347448.png)
 
-- 若无法正常加载, 请点击查看 PDF 网页版本: [2、Kubeadm 部署安装.pdf (ezviz.com)](https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/k8s/2、Kubeadm 部署安装.pdf)
+- 若无法正常加载, 请点击查看 PDF 网页版本: [2、Kubeadm 部署安装.pdf (ezviz.com)](https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/k8s/2%E3%80%81Kubeadm%20%E9%83%A8%E7%BD%B2%E5%AE%89%E8%A3%85.pdf)
 
 <embed src="https://media.onmicrosoft.cn/k8s/2%E3%80%81Kubeadm%20%E9%83%A8%E7%BD%B2%E5%AE%89%E8%A3%85.pdf" type="application/pdf" width="100%" height="500" />
 
@@ -869,7 +869,7 @@ latest: digest: sha256:f54a58bc1aac5ea1a25d796ae155dc228b3f0e11d046ae276b39c4bf2
 
 ![image-20230423011255633](https://img.onmicrosoft.cn/k8s/202304230112705.png)
 
-- 若无法正常加载, 请点击查看 PDF 网页版本: [Harbor - 企业级 Docker 私有仓库.pdf (ezviz.com)](https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/k8s/Harbor - 企业级 Docker 私有仓库.pdf)
+- 若无法正常加载, 请点击查看 PDF 网页版本: [Harbor - 企业级 Docker 私有仓库.pdf (ezviz.com)](https://media.onmicrosoft.cn/k8s/Harbor%20-%20%E4%BC%81%E4%B8%9A%E7%BA%A7%20Docker%20%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.pdf)
 
 <embed src="https://media.onmicrosoft.cn/k8s/Harbor%20-%20%E4%BC%81%E4%B8%9A%E7%BA%A7%20Docker%20%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.pdf" type="application/pdf" width="100%" height="500" />
 
