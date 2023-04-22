@@ -4,7 +4,7 @@ tags:
   - Kubernetes
 categories:
   - Kubernetes
-description: 此文档介绍了如何安装 Kubernetes 集群，包括节点加入和部署网络。此外，还介绍了如何使用 Harbor 企业级 Docker 私有仓库，并配置 HTTP 仓库。最后，提供了一些 Docker 命令的示例。
+description: "此文档介绍了如何安装 Kubernetes 集群，包括节点加入和部署网络。此外，还介绍了如何使用 Harbor 企业级 Docker 私有仓库，并配置 HTTP 仓库。最后，提供了一些 Docker 命令的示例。"
 cover: https://img.onmicrosoft.cn/2023-04-20/eb4cf60047dee8c0c2786e95fc0f96ca0f2e666b.jpeg
 date: 2023-04-22 01:36:24
 ---
