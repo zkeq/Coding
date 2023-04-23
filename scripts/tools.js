@@ -120,6 +120,8 @@ srcdoc='<meta name="description" content="Instantly share code, notes, and snipp
 `;
     });
 }, 9);
+// 2023-04-23 11:13:30 Remove Safari BUG
+// https://github.com/zkeq/Coding/commit/259de5270066d4ea2799c59b3481f5415138ff9f
 
 function createGist (md5, gh_content, lang){
     let response = ''
