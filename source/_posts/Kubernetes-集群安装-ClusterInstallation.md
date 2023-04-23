@@ -472,6 +472,7 @@ daemonset.apps/kube-flannel-ds-s390x created
 
 
 [root@k8s-master01 ~]# kubectl get pod -n kube-system
+// 此处不可用为预期状态 下文提供了解决办法
 NAME                                   READY   STATUS              RESTARTS   AGE
 coredns-5c98db65d4-gjnpg               0/1     ContainerCreating   0          16m
 coredns-5c98db65d4-v89m2               0/1     ContainerCreating   0          16m
@@ -549,7 +550,7 @@ k8s-master01           Ready      master   19m   v1.15.1
 k8s-node01.novalocal   NotReady   <none>   13s   v1.15.1
 k8s-node02.novalocal   NotReady   <none>   6s    v1.15.1
 [root@k8s-master01 ~]# kubectl get pod -n kube-system -o wide
-// 此处不可用为期望状态 下文提供了解决办法
+// 此处不可用为预期状态 下文提供了解决办法
 NAME                                   READY   STATUS              RESTARTS   AGE     IP               NODE                   NOMINATED NODE   READINESS GATES
 coredns-5c98db65d4-gjnpg               0/1     ContainerCreating   0          19m     <none>           k8s-master01           <none>           <none>
 coredns-5c98db65d4-v89m2               0/1     ContainerCreating   0          19m     <none>           k8s-master01           <none>           <none>
