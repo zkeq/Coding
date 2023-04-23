@@ -33,8 +33,7 @@ Code_016---2019 尚硅谷Kubernetes教程
 #### 名称空间级别 
 
 - 工作负载型资源 ( workload )： 
-  - `Pod`、`ReplicaSet`、`Deployment`、`StatefulSet`、
-  - `DaemonSet`、`Job`、  `CronJob` ( ReplicationController 在 v1.11 版本被废弃 ) 
+  - `Pod`、`ReplicaSet`、`Deployment`、`StatefulSet`、`DaemonSet`、`Job`、  `CronJob` ( ReplicationController 在 v1.11 版本被废弃 ) 
 
 - 服务发现及负载均衡型资源 ( ServiceDiscovery LoadBalance ): 
   - `Service`、`Ingress`、... 
@@ -46,8 +45,8 @@ Code_016---2019 尚硅谷Kubernetes教程
   - `ConfigMap `( 当配置中心来使用的资源类型 )、`Secret` (保存敏感数据)、 `DownwardAPI` (把外部环境中的信息输出给容器)
 
 - 集群级资源：
-  - `Namespace`、`Node`、`Role`、`ClusterRole`、
-  - `RoleBinding`、`ClusterRoleBinding` 
+  - `Namespace`、`Node`、`Role`、`ClusterRole`、`RoleBinding`、`ClusterRoleBinding` 
+  
 - 元数据型资源：`HPA`、`PodTemplate`、`LimitRange`
 
 ## 资源清单
