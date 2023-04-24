@@ -4,7 +4,7 @@ tags:
   - Kubernetes
 categories:
   - Kubernetes
-description: Kubernetes | 资源清单 - ResourceList
+description: 本文介绍了 Kubernetes 中的 ResourceList、Init 容器、容器探针、Pod hook、重启策略和 Pod phase 等概念。其中，Init 容器可以在应用程序容器启动之前运行，具有访问 Secret 的权限；容器探针可以定期诊断容器的状态；Pod hook 可以在容器启动前或终止后运行；Pod phase 描述了 Pod 在其生命周期中的简单宏观概述。
 cover: https://img.onmicrosoft.cn/2023-04-20/eb4cf60047dee8c0c2786e95fc0f96ca0f2e666b.jpeg
 date: 2023-04-22 14:27:56
 ---
