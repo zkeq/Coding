@@ -40,6 +40,24 @@ date: 2023-05-01 20:12:29
 
    升级版接口, 支持流式返回 下面提供一个简单的 demo 代码供演示
 
+
+
+<!-- iframe iframe.html -->
+<iframe id="catGPT_iframe" frameborder=0 height="0" marginwidth=0  src="./iframe.html"></iframe>
+<script>
+  function resizeIframe() {
+    const iframe = document.getElementById('catGPT_iframe');
+    iframe.style.height = ( iframe.contentWindow.document.body.offsetHeight + 16)+ 'px';
+    // iframe.contentWindow.document.body.scrollHeight 和
+  }
+
+  setInterval(() => {
+    resizeIframe();
+  }, 200);
+</script>
+
+
+
 ```html
 <script src="https://jsd.onmicrosoft.cn/npm/marked/marked.min.js"></script>
 <link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/highlight.js@11.7.0/styles/night-owl.css">
