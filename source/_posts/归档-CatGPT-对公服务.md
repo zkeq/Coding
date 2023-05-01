@@ -45,15 +45,14 @@ date: 2023-05-01 20:12:29
 <!-- iframe iframe.html -->
 <iframe id="catGPT_iframe" frameborder=0 height="0" marginwidth=0  src="https://catgpt.miaorun.dev/iframe.html"></iframe>
 <script>
-  function resizeIframe() {
-    const iframe = document.getElementById('catGPT_iframe');
-    iframe.style.height = ( iframe.contentWindow.document.body.offsetHeight + 16)+ 'px';
-    // iframe.contentWindow.document.body.scrollHeight 和
-  }
-
-  setInterval(() => {
-    resizeIframe();
-  }, 200);
+function resizeIframe() {
+  const iframe = document.getElementById('catGPT_iframe');
+  iframe.style.height = ( iframe.contentWindow.document.body.offsetHeight + 16)+ 'px';
+  // iframe.contentWindow.document.body.scrollHeight 和
+}
+setInterval(() => {
+  resizeIframe();
+}, 200);
 </script>
 
 
