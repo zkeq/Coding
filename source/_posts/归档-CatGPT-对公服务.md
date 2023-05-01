@@ -41,6 +41,8 @@ date: 2023-05-01 20:12:29
    升级版接口, 支持流式返回 下面提供一个简单的 demo 代码供演示
 
 
+---
+
 
 <!-- iframe iframe.html -->
 <iframe width="100%" id="catGPT_iframe" frameborder=0 height="0" marginwidth=0  src="/html/catgpt_iframe.html"></iframe>
@@ -54,6 +56,10 @@ setInterval(() => {
   resizeIframe();
 }, 200);
 </script>
+
+
+
+---
 
 
 
