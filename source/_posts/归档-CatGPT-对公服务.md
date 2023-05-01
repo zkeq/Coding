@@ -5,7 +5,7 @@ tags:
 categories:
   - 归档
 description: CatGPT是一个提供对话生成API的项目，提供了多个应用网站布局和API开发者布局。
-cover: https://img.onmicrosoft.cn/k8s/202305012017197.png
+cover: https://img.onmicrosoft.cn/k8s/202305012036398.png
 date: 2023-05-01 20:12:29
 ---
 
@@ -14,7 +14,7 @@ date: 2023-05-01 20:12:29
 
 ## CatGPT 对公服务
 
-> <center>Haorwen 提供本项目的所有接口(Interface)</center>
+> [Haorwen](https://github.com/Haorwen) 提供本项目的所有接口(Interface)
 
 ### 应用网站布局(成品可直接使用):
 
@@ -63,7 +63,7 @@ function CatGPT_GetSteam(){
         this.Steam = JSON.parse(event.data).message.content.parts[0]
         document.getElementById('CatGPT_markdown').innerHTML = marked.parse(this.Steam)
         hljs.highlightAll();
-    // 在此处将接收到的数据分段渲染到浏览器中
+        // 在此处将接收到的数据分段渲染到浏览器中
     });
 
     eventSource.addEventListener('error', function(event) {
