@@ -1,0 +1,91 @@
+
+<script src="https://jsd.onmicrosoft.cn/npm/marked/marked.min.js"></script>
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/highlight.js@11.7.0/styles/night-owl.css">
+<script src="https://cdnjs.onmicrosoft.cn/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+   
+<center>
+  <input type="text" id="CatGPT_input" value="用Vue2+element写一个简单的表格">
+  <button class="btn-next" onclick="CatGPT_GetSteam()">Get_Steam</button>
+ 
+</center>
+<div id="CatGPT_markdown">CatGPT内容展示区域</div>
+
+
+    
+<script>
+function CatGPT_GetSteam(){
+    var q = document.getElementById("CatGPT_input").value;
+    document.getElementById('CatGPT_markdown').innerHTML = "Loading..."
+    const eventSource = new EventSource('https://hub.onmicrosoft.cn/chat/stream?q=' + q);
+
+    
+    eventSource.addEventListener('message',  (event) => {
+        if ("[DONE]" == event.data) {
+            eventSource.close();
+            return;
+        }
+        this.Steam = JSON.parse(event.data).message.content.parts[0]
+        document.getElementById('CatGPT_markdown').innerHTML = marked.parse(this.Steam)
+        hljs.highlightAll();
+    // 在此处将接收到的数据分段渲染到浏览器中
+    });
+
+    
+    eventSource.addEventListener('error', function(event) {
+        // 停止接收数据
+        eventSource.close();
+    });
+}
+</script>
+
+<style>
+input{
+  outline-style: none ;
+  border: 1px solid #ccc; 
+  border-radius: 3px;
+  padding: 6px;
+  width: 300px;
+  font-size: 14px;
+  font-family: "Microsoft soft";
+}
+input:focus{
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+.btn-next {
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: hsla(194 100% 69% / 1);
+  --btn-bg-2: hsla(217 100% 56% / 1);
+  --btn-bg-color: hsla(360 100% 100% / 1);
+  --radii: 0.5em;
+  cursor: pointer;
+  padding: 0.3em 1.3em;
+  margin-bottom: 10px;
+  zoom: 0.8;
+  min-width: 60px;
+  min-height: 44px;
+  font-size: var(--size, 1rem);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+}
+
+.btn-next:hover {
+  background-position: right top;
+}
+
+.btn-next:is(:focus, :focus-within,:active) {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+}
+
+</style>

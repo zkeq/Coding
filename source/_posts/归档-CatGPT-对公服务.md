@@ -43,7 +43,7 @@ date: 2023-05-01 20:12:29
 
 
 <!-- iframe iframe.html -->
-<iframe id="catGPT_iframe" frameborder=0 height="0" marginwidth=0  src="https://catgpt.miaorun.dev/iframe.html"></iframe>
+<iframe id="catGPT_iframe" frameborder=0 height="0" marginwidth=0  src="/html/catgpt_iframe.html"></iframe>
 <script>
 function resizeIframe() {
   const iframe = document.getElementById('catGPT_iframe');
