@@ -84,7 +84,7 @@ date: 2023-04-24 22:20:51
 
 ![image-20230428163055859](https://img.onmicrosoft.cn/k8s/202304281630094.png)
 
-- 部署顺序和终止顺序是相反的.
+- 部署顺序和终止顺序是相反的
 
 ### Horizontal Pod Autoscaling
 
