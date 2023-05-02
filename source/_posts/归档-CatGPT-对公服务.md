@@ -30,6 +30,12 @@ date: 2023-05-01 20:12:29
 
    本网站为备用站点, 其使用的 API Key 不大稳定 但是速度相对第一个来说略快
 
+3. https://github.com/zkeq/Cat-Abstract-AI
+
+   [tianliGPT](https://github.com/zhheo/Post-Abstract-AI) 开源项目衍生产品, 对接至CatGPT 无限制调用 可直接引用
+   
+   所有文章实时返回摘要, 但是不保证稳定性, 推荐使用原项目
+
 ### API开发者布局:
 
 1. https://hub.onmicrosoft.cn/docs#/default/chat_chat_get
