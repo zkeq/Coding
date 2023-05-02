@@ -923,7 +923,7 @@ inject:
       - <script src="https://static.onmicrosoft.cn/zkeq/spacing.js" defer></script>
       - <script async type="text/javascript" src="https://player.dogecloud.com/js/loader"></script>
       - <script async src="https://npm.onmicrosoft.cn/mini-sandbox@0.3.11"></script>
-      - <link rel="stylesheet" href="https://jsd.onmicrosoft.cn/gh/zkeq/Cat-Abstract-AI@eb783b5/tianli_gpt.css">
+      - <link rel="stylesheet" href="https://jsd.onmicrosoft.cn/gh/zkeq/Cat-Abstract-AI@b22410f/tianli_gpt.css">
       # - <link rel="stylesheet" href="/css/black-white.css">
   bottom:
       - <div class=" aplayer no-destroy " data-id="1050282" data-server="netease" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="true" data-autoplay="false" muted></div>
@@ -931,7 +931,7 @@ inject:
       - <link href="/css/nprogress.css" rel="stylesheet">
       - <script src="/js/index_music.js"></script>
       - <script>let tianliGPT_postSelector = '\#post \#article-container';</script>
-      - <script data-pjax src="https://jsd.onmicrosoft.cn/gh/zkeq/Cat-Abstract-AI@eb783b5/tianli_gpt.js"></script>
+      - <script data-pjax src="https://jsd.onmicrosoft.cn/gh/zkeq/Cat-Abstract-AI@b22410f/tianli_gpt.js"></script>
     # - <script src="xxxx"></script>
 
 # # CDN
