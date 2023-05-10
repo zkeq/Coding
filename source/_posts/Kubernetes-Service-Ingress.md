@@ -4,7 +4,7 @@ tags:
   - Kubernetes
 categories:
   - Kubernetes
-description: 本系列文章将会记录寒假期间的学习计划，主要是知识点和同学们当前进度的检查。
+description: Kubernetes中的Service和Ingress是用于管理网络流量的重要组件。Service负责将流量路由到Pod，而Ingress则负责将流量路由到不同的Service。此外，本文还介绍了Kubernetes中的不同代理模式、ClusterIP、Headless Service、NodePort、LoadBalancer和ExternalName，并提供了相关的YAML文件示例。
 cover: https://img.onmicrosoft.cn/2023-04-20/eb4cf60047dee8c0c2786e95fc0f96ca0f2e666b.jpeg
 date: 2023-05-10 23:21:32
 ---
