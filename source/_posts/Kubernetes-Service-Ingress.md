@@ -245,12 +245,18 @@ Ingress-Nginx github 地址：https://github.com/kubernetes/ingress-nginx
 
 Ingress-Nginx 官方网站：https://kubernetes.github.io/ingress-nginx/
 
+![image-20230511043020092](https://img.onmicrosoft.cn/k8s/202305110430138.png)
+
+![image-20230511043050051](https://img.onmicrosoft.cn/k8s/202305110430086.png)
+
 ## 部署 Ingress-Nginx
 
 ```bash
 kubectl apply -f mandatory.yaml
 kubectl apply -f service-nodeport.yaml
 ```
+
+![image-20230511044013564](https://img.onmicrosoft.cn/k8s/202305110440337.png)
 
 ## Ingress HTTP 代理访问
 
@@ -302,6 +308,8 @@ spec:
           servicePort: 80
 ```
 
+![image-20230511044348195](https://img.onmicrosoft.cn/k8s/202305110443227.png)
+
 ## Ingress HTTPS 代理访问
 
 创建证书，以及 cert 存储方式
@@ -337,7 +345,7 @@ spec:
 
 ```bash
 yum -y install httpd
-htpasswd -c auth foo
+htpasswd -c auth foo # 在这里会让输入你的密码
 kubectl create secret generic basic-auth --from-file=auth
 ```
 
@@ -388,6 +396,8 @@ spec:
           serviceName: nginx-svc
           servicePort: 80
 ```
+
+![image-20230511045609965](https://img.onmicrosoft.cn/k8s/202305110456993.png)
 
 - 若无法正常加载, 请点击查看 PDF 网页版本: [Kubernetes Service.pdf](https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/k8s/1%E3%80%81Kubernetes%20Service.pdf)
 
