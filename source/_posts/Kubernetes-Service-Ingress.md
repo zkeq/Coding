@@ -4,16 +4,25 @@ tags:
   - Kubernetes
 categories:
   - Kubernetes
-description: Kubernetes中的Service和Ingress是用于管理网络流量的重要组件。Service负责将流量路由到Pod，而Ingress则负责将流量路由到不同的Service。此外，本文还介绍了Kubernetes中的不同代理模式、ClusterIP、Headless Service、NodePort、LoadBalancer和ExternalName，并提供了相关的YAML文件示例。
+description: 本系列文章将会记录寒假期间的学习计划，主要是知识点和同学们当前进度的检查。
 cover: https://img.onmicrosoft.cn/2023-04-20/eb4cf60047dee8c0c2786e95fc0f96ca0f2e666b.jpeg
 date: 2023-05-10 23:21:32
 ---
 
 ## Kubernetes | Service 的概念
 
+- `SVC` 负责监测他所匹配的 `Pod` 的信息, 并且把他加入到 `SVC` 的 `Endpoints` 中, 从而实现负载均衡的功能,
+- 如何后期有变化的话, `SVC` 会进行信息同步, `Nginx` 指向这个 `SVC`, 会将请求转发至正常工作的 `Pod`, 不需要我们在 `Nginx` 做任何的修改. 这就是 `SVC` 的机制.
+- 引入 `SVC` 之后, 如果服务有 `扩容、伸缩` 等操作 都不会对上一层的服务造成影响.
+- `SVC` 也叫做 服务发现.
+
+![image-20230510235318134](https://img.onmicrosoft.cn/k8s/202305102353167.png)
+
 Kubernetes `Service` 定义了这样一种抽象：一个 `Pod` 的逻辑分组，一种可以访问它们的策略——通常称为微服务。这一组 `Pod` 能够被 `Service` 访问到，通常是通过 `Label Selector`。
 
 ![image-20230510232951797](https://img.onmicrosoft.cn/k8s/202305102329932.png)
+
+- 多标签没问题 只要不少 标签就可以了 
 
 `Service` 能够提供负载均衡的能力，但是在使用上有以下限制：
 
@@ -38,6 +47,8 @@ Kubernetes `Service` 定义了这样一种抽象：一个 `Pod` 的逻辑分组�
 
 **为何不使用 round-robin DNS？**
 
+- DNS 有缓存，DNS 服务器可能会缓存 `Service` 的 IP 地址，这样会导致 `Service` 的负载均衡失效。
+
 ## 代理模式的分类
 
 ### Ⅰ、userspace 代理模式
@@ -59,19 +70,27 @@ Kubernetes `Service` 定义了这样一种抽象：一个 `Pod` 的逻辑分组�
 - `sed`：最短期望延迟
 - `nq`：不排队调度
 
+> 注意: ipvs 模式假定在运行 kube-proxy 之前在节点上都已经安装了 IPVS 内核模块. 当 kube-proxy 以 ipvs 代理模式启动时, kube-proxy 将验证节点上是否安装了 IPVS 模块, 如果未安装, 则 kube-proxy 将回退到 iptables 模式.
+> 
+> ipvs 模式现在已经成为了一个标准.
+
 ![image-20230510233050609](https://img.onmicrosoft.cn/k8s/202305102330634.png)
 
 ## ClusterIP
 
-`clusterIP` 主要在每个 node 节点使用 iptables，将发向 `clusterIP` 对应端口的数据，转发到 `kube-proxy` 中。然后 `kube-proxy` 自己内部实现有负载均衡的方法，并可以查询到这个 `service` 下对应 `pod` 的地址和端口，进而把数据转发给对应的 `pod` 的地址和端口。
+![image-20230511000740533](https://img.onmicrosoft.cn/k8s/202305110007586.png)
+
+- 集群内部访问的 IP
+
+`clusterIP` 主要在每个 node 节点使用 iptables / `ipvs`，将发向 `clusterIP` 对应端口的数据，转发到 `kube-proxy` 中。然后 `kube-proxy` 自己内部实现有负载均衡的方法，并可以查询到这个 `service` 下对应 `pod` 的地址和端口，进而把数据转发给对应的 `pod` 的地址和端口。
 
 ![image-20230510233109568](https://img.onmicrosoft.cn/k8s/202305102331593.png)
 
 为了实现图上的功能，主要需要以下几个组件的协同工作：
 
 - `apiserver`：用户通过 `kubectl` 命令向 `apiserver` 发送创建 `service` 的命令，`apiserver` 接收到请求后将数据存储到 `etcd` 中。
-- `kube-proxy`：Kubernetes 的每个节点中都有一个叫做 `kube-proxy` 的进程，这个进程负责感知 `service`、`pod` 的变化，并将变化的信息写入本地的 iptables 规则中。
-- `iptables`：使用 `NAT` 等技术将 `virtualIP` 的流量转至 `endpoint` 中。
+- `kube-proxy`：Kubernetes 的每个节点中都有一个叫做 `kube-proxy` 的进程，这个进程负责感知 `service`、`pod` 的变化，并将变化的信息写入本地的 iptables / `ipvs` 规则中。
+- `iptables` / `ipvs`：使用 `NAT` 等技术将 `virtualIP` 的流量转至 `endpoint` 中。
 
 创建 `myapp-deploy.yaml` 文件
 
@@ -122,6 +141,8 @@ spec:
     targetPort: 80
 ```
 
+![image-20230511041224191](https://img.onmicrosoft.cn/k8s/202305110412248.png)
+
 ## Headless Service
 
 有时不需要或不想要负载均衡，以及单独的 `Service IP`。遇到这种情况，可以通过指定 `ClusterIP(spec.clusterIP)` 的值为 “None” 来创建 `Headless Service`。这类 `Service` 并不会分配 `Cluster IP`，`kube-proxy` 不会处理它们，而且平台也不会为它们进行负载均衡和路由。
@@ -139,9 +160,32 @@ spec:
   ports:
   - port: 80
     targetPort: 80
+
+[root@k8s-master mainfests]# dig -t A myapp-headless.default.svc.cluster.local. @10.96.0.10
 ```
 
+> 举个例子，假设您有一个 StatefulSet，需要每个 Pod 的 IP 地址，您可以使用 Headless Service 以便查询每个 Pod 的 DNS 记录，而无需使用 Service 的负载均衡功能。
+>
+> 另一个例子是，如果您使用外部负载均衡器，您可能希望将请求直接路由到每个 `Pod` 的 `IP`，而不是通过 `Service` 的 `Cluster IP`。这时你可以使用 `Headless Service`，而不需要为每个 `Pod` 配置单独的负载均衡规则。
+> 
+> 要查询 `Headless Service` 中每个 `Pod` 的 `DNS` 记录，可以使用以下命令：
+> 
+> ```
+> dig -t A <headless-service-name>.<namespace>.svc.cluster.local
+> ```
+> 
+> 例如，在上述示例中，要查询 `myapp-headless` 服务中的每个 `Pod` 的 `DNS` 记录，可以使用以下命令：
+> 
+> ```
+> dig -t A myapp-headless.default.svc.cluster.local
+> ```
+> 
+
 ## NodePort
+
+![image-20230511035239296](https://img.onmicrosoft.cn/k8s/202305110352373.png)
+
+![image-20230511035431576](https://img.onmicrosoft.cn/k8s/202305110354610.png)
 
 `nodePort` 的原理在于在 node 上开了一个端口，将向该端口的流量导入到 `kube-proxy`，然后由 `kube-proxy` 进一步到给对应的 `pod`。
 
@@ -164,11 +208,15 @@ spec:
 
 ## LoadBalancer
 
+![image-20230511035706076](https://img.onmicrosoft.cn/k8s/202305110357120.png)
+
 `loadBalancer` 和 `nodePort` 其实是同一种方式。区别在于 `loadBalancer` 比 `nodePort` 多了一步，就是可以调用 `cloud provider` 去创建 `LB` 来向节点导流。
 
 ![image-20230510233122608](https://img.onmicrosoft.cn/k8s/202305102331631.png)
 
 ## ExternalName
+
+![image-20230511035826303](https://img.onmicrosoft.cn/k8s/202305110358336.png)
 
 这种类型的 Service 通过返回 CNAME 和它的值，可以将服务映射到 externalName 字段的内容（例如：hub.atguigu.com）。ExternalName Service 是 Service 的特例，它没有 selector，也没有定义任何的端口和 Endpoint。相反的，对于运行在集群外部的服务，它通过返回该外部服务的别名这种方式来提供服务。
 
@@ -199,7 +247,7 @@ Ingress-Nginx 官方网站：https://kubernetes.github.io/ingress-nginx/
 
 ## 部署 Ingress-Nginx
 
-```
+```bash
 kubectl apply -f mandatory.yaml
 kubectl apply -f service-nodeport.yaml
 ```
@@ -208,7 +256,7 @@ kubectl apply -f service-nodeport.yaml
 
 deployment、Service、Ingress Yaml 文件
 
-```
+```yaml
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
@@ -258,14 +306,14 @@ spec:
 
 创建证书，以及 cert 存储方式
 
-```
+```bash
 openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/CN=nginxsvc/O=nginxsvc"
 kubectl create secret tls tls-secret --key tls.key --cert tls.crt
 ```
 
 deployment、Service、Ingress Yaml 文件
 
-```
+```yaml
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -287,10 +335,13 @@ spec:
 
 ## Nginx 进行 BasicAuth
 
-```
+```bash
 yum -y install httpd
 htpasswd -c auth foo
 kubectl create secret generic basic-auth --from-file=auth
+```
+
+```yaml
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -320,7 +371,7 @@ spec:
 | http://nginx.ingress.kubernetes.io/app-root           | 定义Controller必须重定向的应用程序根，如果它在'/'上下文中    | 串   |
 | http://nginx.ingress.kubernetes.io/use-regex          | 指示Ingress上定义的路径是否使用正则表达式                    | 布尔 |
 
-```
+```yaml
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -338,6 +389,6 @@ spec:
           servicePort: 80
 ```
 
-- 若无法正常加载, 请点击查看 PDF 网页版本: [Kubernetes Ingress.pdf](https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/k8s/2%E3%80%81Kubernetes%20Ingress.pdf)
+- 若无法正常加载, 请点击查看 PDF 网页版本: [Kubernetes Service.pdf](https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/k8s/1%E3%80%81Kubernetes%20Service.pdf)
 
 <embed src="https://media.onmicrosoft.cn/k8s/2%E3%80%81Kubernetes%20Ingress.pdf" type="application/pdf" width="100%" height="500" />
