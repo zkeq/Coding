@@ -402,3 +402,8 @@ spec:
 - 若无法正常加载, 请点击查看 PDF 网页版本: [Kubernetes Service.pdf](https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/k8s/1%E3%80%81Kubernetes%20Service.pdf)
 
 <embed src="https://media.onmicrosoft.cn/k8s/2%E3%80%81Kubernetes%20Ingress.pdf" type="application/pdf" width="100%" height="500" />
+
+
+#### 参考资料
+- https://blog.csdn.net/cloudUncle/article/details/82937342
+- https://blog.csdn.net/cloudUncle/article/details/82940598

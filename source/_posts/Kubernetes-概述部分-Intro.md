@@ -224,3 +224,8 @@ Kubernetes 不是传统的、包罗万象的 PaaS（平台即服务）系统。 
   `ELK`是`Kubernetes`的一个核心组件，是一个开源的日志分析平台，可以帮助用户对`Kubernetes`集群中的各种日志进行收集、存储、分析和可视化。它提供了灵活的查询语言和可视化界面，支持多种数据源和告警方式，可以帮助用户快速发现和解决`Kubernetes`集群中的各种日志问题。
 
 以上是Kubernetes概述部分的各个服务功能的详细说明。这些服务组件构成了一个完整的Kubernetes集群，为云原生应用程序的部署和管理提供了完整的解决方案。
+
+
+#### 参考资料:
+- https://blog.csdn.net/cloudUncle/article/details/82891510
+- 

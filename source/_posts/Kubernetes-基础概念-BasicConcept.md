@@ -179,3 +179,6 @@ Kubernetes 的网络模型假定所有 `Pod` 都在一个 `可以直接连通的
 - 它侧重于定义想要什么，然后告诉计算机/引擎，让它帮你去实现。
 
 
+#### 参考资料
+- https://blog.csdn.net/cloudUncle/article/details/82919684
+- https://blog.csdn.net/cloudUncle/article/details/82929613
