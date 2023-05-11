@@ -15,5 +15,5 @@ top_img: https://bing.icodeq.com
     apiurl: 'https://fcircle.icodeq.com/'
   }
 </script>
-<link rel="stylesheet" href="https://static.onmicrosoft.cn/zkeq/fcircle-beta.css">
-<script type="text/javascript" src="https://static.onmicrosoft.cn/zkeq/fcircle-beta.js"></script>
+<link rel="stylesheet" href="https://static.iirose.cn/zkeq/fcircle-beta.css">
+<script type="text/javascript" src="https://static.iirose.cn/zkeq/fcircle-beta.js"></script>

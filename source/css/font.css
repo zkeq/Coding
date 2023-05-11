@@ -489,7 +489,7 @@
 @font-face{
   font-family: 'Hack';
   src: local('Hack'),
-  url('https://static.onmicrosoft.cn/zkeq/hack-regular-webfont.woff2') format('truetype');
+  url('https://static.iirose.cn/zkeq/hack-regular-webfont.woff2') format('truetype');
   font-display: swap;
   font-weight: bold;
   font-style: normal;
@@ -501,12 +501,12 @@
 
 /* 鼠标样式 */
 body {
-  cursor: url("https://static.onmicrosoft.cn/zkeq/cursor/normal.cur"), default;
+  cursor: url("https://static.iirose.cn/zkeq/cursor/normal.cur"), default;
 }
 a,
 img,
 button {
-  cursor: url("https://static.onmicrosoft.cn/zkeq/cursor/link.cur"), default !important;
+  cursor: url("https://static.iirose.cn/zkeq/cursor/link.cur"), default !important;
 }
 
 #page-header {
