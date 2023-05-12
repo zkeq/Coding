@@ -9,7 +9,7 @@ cover: https://img.onmicrosoft.cn/2023-04-20/eb4cf60047dee8c0c2786e95fc0f96ca0f2
 date: 2023-05-11 23:50:15
 ---
 
-## ConfigMap 描述信息
+## 1. ConfigMap 描述信息
 
 ![image-20230512004313438](https://img.onmicrosoft.cn/k8s/202305120043515.png)
 
@@ -262,7 +262,7 @@ $ kubectl patch deployment my-nginx --patch '{"spec": {"template": {"metadata": 
 - 使用该 ConfigMap 挂载的 Env 不会同步更新
 - 使用该 ConfigMap 挂载的 Volume 中的数据需要一段时间（实测大概10秒）才能同步更新
 
-## `Secret` 的作用
+## 2. `Secret` 的作用
 
 `Secret` 解决了密码、token、密钥等敏感数据的配置问题，而不需要把这些敏感数据暴露到镜像或者 `Pod Spec` 中。`Secret` 可以以 `Volume` 或者环境变量的方式使用.
 
@@ -391,6 +391,10 @@ spec:
     - name: myregistrykey
 ```
 
+## 3. Volume
+
+![image-20230512163019935](https://img.onmicrosoft.cn/k8s/202305121630023.png)
+
 容器磁盘上的文件的生命周期是短暂的，这就使得在容器中运行重要应用时会出现一些问题。首先，当容器崩溃时，kubelet 会重启它，但是容器中的文件将丢失——容器以干净的状态（镜像最初的状态）重新启动。其次，在 Pod 中同时运行多个容器时，这些容器之间通常需要共享文件。Kubernetes 中的 `Volume` 抽象就很好的解决了这些问题。
 
 ## 背景
@@ -408,7 +412,11 @@ Kubernetes 支持以下类型的卷：
 
 ### `emptyDir`
 
+![image-20230512164339988](https://img.onmicrosoft.cn/k8s/202305121643048.png)
+
 当 Pod 被分配给节点时，首先创建 `emptyDir` 卷，并且只要该 Pod 在该节点上运行，该卷就会存在。正如卷的名字所述，它最初是空的。Pod 中的容器可以读取和写入 `emptyDir` 卷中的相同文件，尽管该卷可以挂载到每个容器中的相同或不同路径上。当出于任何原因从节点中删除 Pod 时， `emptyDir` 中的数据将被永久删除。
+
+> 注意: 容器崩溃不会从节点中移除 pod, 因此 `emptyDir` 卷中的数据在容器崩溃时是安全的.
 
 `emptyDir` 的用法有：
 
@@ -434,6 +442,8 @@ spec:
 ```
 
 ### `hostPath`
+
+![image-20230512164457482](https://img.onmicrosoft.cn/k8s/202305121644543.png)
 
 `hostPath` 卷将主机节点的文件系统中的文件或目录挂载到集群中。
 
@@ -483,7 +493,7 @@ spec:
         type: Directory
 ```
 
-## 概念
+## 4. 存储 PV - PVC 概念
 
 ### `PersistentVolume (PV)` 
 
