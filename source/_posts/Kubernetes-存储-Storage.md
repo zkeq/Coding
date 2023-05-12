@@ -70,6 +70,7 @@ $ kubectl get configmaps special-config -o yaml
 
 ### 使用 ConfigMap 来替代环境变量
 
+
 ```yaml
 apiVersion: v1
 kind: ConfigMap
