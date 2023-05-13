@@ -262,6 +262,10 @@ $ kubectl patch deployment my-nginx --patch '{"spec": {"template": {"metadata": 
 - 使用该 ConfigMap 挂载的 Env 不会同步更新
 - 使用该 ConfigMap 挂载的 Volume 中的数据需要一段时间（实测大概10秒）才能同步更新
 
+- 若无法正常加载, 请点击查看 PDF 网页版本: [Kubernetes - configMap.pdf](https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/k8s/1%E3%80%81Kubernetes%20-%20configMap.pdf)
+
+<embed src="https://media.onmicrosoft.cn/k8s/1%E3%80%81Kubernetes%20-%20configMap.pdf" type="application/pdf" width="100%" height="500" />
+
 ## 2. `Secret` 的作用
 
 `Secret` 解决了密码、token、密钥等敏感数据的配置问题，而不需要把这些敏感数据暴露到镜像或者 `Pod Spec` 中。`Secret` 可以以 `Volume` 或者环境变量的方式使用.
@@ -391,6 +395,10 @@ spec:
     - name: myregistrykey
 ```
 
+- 若无法正常加载, 请点击查看 PDF 网页版本: [Kubernetes - Secret.pdf](https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/k8s/2%E3%80%81Kubernetes%20-%20Secret.pdf)
+
+<embed src="https://media.onmicrosoft.cn/k8s/2%E3%80%81Kubernetes%20-%20Secret.pdf" type="application/pdf" width="100%" height="500" />
+
 ## 3. Volume
 
 ![image-20230512163019935](https://img.onmicrosoft.cn/k8s/202305121630023.png)
@@ -492,6 +500,10 @@ spec:
         # this field is optional
         type: Directory
 ```
+
+- 若无法正常加载, 请点击查看 PDF 网页版本: [Kubernetes - volume.pdf](https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/k8s/3%E3%80%81Kubernetes%20-%20volume.pdf)
+
+<embed src="https://media.onmicrosoft.cn/k8s/3%E3%80%81Kubernetes%20-%20volume.pdf" type="application/pdf" width="100%" height="500" />
 
 ## 4. 存储 PV - PVC 概念
 
@@ -725,3 +737,7 @@ spec:
 - 有序收缩。
 
 ![image-20230513233530841](https://img.onmicrosoft.cn/k8s/202305132335932.png)
+
+- 若无法正常加载, 请点击查看 PDF 网页版本: [Kubernetes - Persistent Volume.pdf](https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/k8s/4%E3%80%81Kubernetes%20-%20Persistent%20Volume.pdf)
+
+<embed src="https://media.onmicrosoft.cn/k8s/4%E3%80%81Kubernetes%20-%20Persistent%20Volume.pdf" type="application/pdf" width="100%" height="500" />
