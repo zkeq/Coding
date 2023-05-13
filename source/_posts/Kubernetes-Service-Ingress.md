@@ -9,6 +9,12 @@ cover: https://img.onmicrosoft.cn/2023-04-20/eb4cf60047dee8c0c2786e95fc0f96ca0f2
 date: 2023-05-10 23:21:32
 ---
 
+```
+Code_016---2019 尚硅谷Kubernetes教程
+链接: https://pan.baidu.com/s/1iYMUBaCq5fq6i4nnMD8V-Q
+提取码: zkeq
+```
+
 ## Kubernetes | Service 的概念
 
 - `SVC` 负责监测他所匹配的 `Pod` 的信息, 并且把他加入到 `SVC` 的 `Endpoints` 中, 从而实现负载均衡的功能,

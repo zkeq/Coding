@@ -9,6 +9,12 @@ cover: https://img.onmicrosoft.cn/2023-04-20/eb4cf60047dee8c0c2786e95fc0f96ca0f2
 date: 2023-05-11 23:50:15
 ---
 
+```
+Code_016---2019 尚硅谷Kubernetes教程
+链接: https://pan.baidu.com/s/1iYMUBaCq5fq6i4nnMD8V-Q
+提取码: zkeq
+```
+
 ## 1. ConfigMap 描述信息
 
 ![image-20230512004313438](https://img.onmicrosoft.cn/k8s/202305120043515.png)
