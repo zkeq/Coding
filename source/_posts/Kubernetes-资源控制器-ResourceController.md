@@ -4,7 +4,7 @@ tags:
   - Kubernetes
 categories:
   - Kubernetes
-description: 本系列文章将会记录寒假期间的学习计划，主要是知识点和同学们当前进度的检查。
+description: 本文介绍了 Kubernetes 中的资源控制器，包括 ReplicationController、ReplicaSet、Deployment、DaemonSet、Job/CronJob、StatefulSet 和 Horizontal Pod Autoscaling 等类型。此外，还介绍了 Pod 的分类，包括自主式 Pod、控制器管理的 Pod 和声明式编程/命令式编程等方式。
 cover: https://img.onmicrosoft.cn/2023-04-20/eb4cf60047dee8c0c2786e95fc0f96ca0f2e666b.jpeg
 date: 2023-04-24 22:20:51
 ---

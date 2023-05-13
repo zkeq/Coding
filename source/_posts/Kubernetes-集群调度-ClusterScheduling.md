@@ -4,7 +4,7 @@ tags:
   - Kubernetes
 categories:
   - Kubernetes
-description: 本系列文章将会记录寒假期间的学习计划，主要是知识点和同学们当前进度的检查。
+description: 该文档讨论了Kubernetes调度策略，包括节点亲和性、Pod亲和性/反亲和性、污点和容忍以及指定调度节点。为每种策略提供了实例和YAML配置。
 cover: https://img.onmicrosoft.cn/2023-04-20/eb4cf60047dee8c0c2786e95fc0f96ca0f2e666b.jpeg
 date: 2023-05-13 23:47:25 
 ---
