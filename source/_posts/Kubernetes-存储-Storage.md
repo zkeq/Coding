@@ -4,7 +4,7 @@ tags:
   - Kubernetes
 categories:
   - Kubernetes
-description: 
+description: 本文介绍了 Kubernetes 中的存储机制，包括动态存储、绑定、持久化卷声明的保护、持久卷类型、PV 访问模式、回收策略、状态以及持久化演示说明。此外，还介绍了 StatefulSet 的启停顺序和使用场景。
 cover: https://img.onmicrosoft.cn/2023-04-20/eb4cf60047dee8c0c2786e95fc0f96ca0f2e666b.jpeg
 date: 2023-05-11 23:50:15
 ---
