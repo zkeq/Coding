@@ -521,7 +521,11 @@ spec:
 
 `PVC` 保护的目的是确保由 `pod` 正在使用的 `PVC` 不会从系统中移除，因为如果被移除的话可能会导致数据丢失。
 
+> 注意: 当 pod 状态为 `Pending` 并且 pod 已经分配给节点或 pod 为 `Running` 状态时, PVC 处于活动状态.
+
 当启用 `PVC` 保护 `alpha` 功能时，如果用户删除了一个 `pod` 正在使用的 `PVC`，则该 `PVC` 不会被立即删除。`PVC` 的删除将被推迟，直到 `PVC` 不再被任何 `pod` 使用。
+
+![image-20230512205026211](https://img.onmicrosoft.cn/k8s/202305122050296.png)
 
 ## 持久化卷类型
 
@@ -571,6 +575,8 @@ spec:
 - `ROX` - `ReadOnlyMany`
 - `RWX` - `ReadWriteMany`
 
+> 一个卷一次只能使用一种访问模式挂载, 即使它支持很多访问模式. 例如, GCEPersistentDisk 可以由单个节点作为 ReadWriteOnce 模式挂载, 或由多个节点以 ReadOnlyMany 模式挂载, 但不能同时挂载.
+
 | 存储插件 | ReadWriteOnce | ReadOnlyMany | ReadWriteMany |
 | --- | --- | --- | --- |
 | AWSElasticBlockStore | ✓ | - | - |
@@ -597,7 +603,7 @@ spec:
 ### 回收策略
 
 - Retain（保留）——手动回收
-- Recycle（回收）——基本擦除（ `rm -rf /thevolume/*` ）
+- Recycle（回收）——基本擦除（ `rm -rf /thevolume/*` ）[官方似乎在最新版已废弃⚠️]
 - Delete（删除）——关联的存储资产（例如 AWS EBS、GCE PD、Azure Disk 和 OpenStack Cinder 卷）将被删除
 
 当前，只有 NFS 和 HostPath 支持回收策略。AWS EBS、GCE PD、Azure Disk 和 Cinder 卷支持删除策略。
@@ -697,23 +703,25 @@ spec:
                 storage: 1Gi
 ```
 
-- ### 关于 `StatefulSet`
+### 关于 `StatefulSet`
 
-  - 匹配 `Pod` name ( 网络标识 ) 的模式为：`$(statefulset名称)-$(序号)`，比如上面的示例：`web-0`，`web-1`，`web-2`。
-  - `StatefulSet` 为每个 `Pod` 副本创建了一个 `DNS` 域名，这个域名的格式为： `$(podname).(headless server name)`，也就意味着服务间是通过 `Pod` 域名来通信而非 `Pod IP`，因为当 `Pod` 所在 `Node` 发生故障时， `Pod` 会被飘移到其它 `Node` 上，`Pod IP` 会发生变化，但是 `Pod` 域名不会有变化。
-  - `StatefulSet` 使用 `Headless` 服务来控制 `Pod` 的域名，这个域名的 `FQDN` 为：`$(service name).$(namespace).svc.cluster.local`，其中，“`cluster.local`” 指的是集群的域名。
-  - 根据 `volumeClaimTemplates`，为每个 `Pod` 创建一个 `pvc`，`pvc` 的命名规则匹配模式：`([volumeClaimTemplates.name](<http://volumeclaimtemplates.name/>))-`(pod_name)，比如上面的 `volumeMounts.name=www`， `Pod name=web-[0-2]`，因此创建出来的 `PVC` 是 `www-web-0`、`www-web-1`、`www-web-2`。
-  - 删除 `Pod` 不会删除其 `pvc`，手动删除 `pvc` 将自动释放 `pv`。
+- 匹配 `Pod` name ( 网络标识 ) 的模式为：`$(statefulset名称)-$(序号)`，比如上面的示例：`web-0`，`web-1`，`web-2`。
+- `StatefulSet` 为每个 `Pod` 副本创建了一个 `DNS` 域名，这个域名的格式为： `$(podname).(headless server name)`，也就意味着服务间是通过 `Pod` 域名来通信而非 `Pod IP`，因为当 `Pod` 所在 `Node` 发生故障时， `Pod` 会被飘移到其它 `Node` 上，`Pod IP` 会发生变化，但是 `Pod` 域名不会有变化。
+- `StatefulSet` 使用 `Headless` 服务来控制 `Pod` 的域名，这个域名的 `FQDN` 为：`$(service name).$(namespace).svc.cluster.local`，其中，“`cluster.local`” 指的是集群的域名。
+- 根据 `volumeClaimTemplates`，为每个 `Pod` 创建一个 `pvc`，`pvc` 的命名规则匹配模式：`([volumeClaimTemplates.name](<http://volumeclaimtemplates.name/>))-`(pod_name)，比如上面的 `volumeMounts.name=www`， `Pod name=web-[0-2]`，因此创建出来的 `PVC` 是 `www-web-0`、`www-web-1`、`www-web-2`。
+- 删除 `Pod` 不会删除其 `pvc`，手动删除 `pvc` 将自动释放 `pv`。
 
-  ### `StatefulSet` 的启停顺序：
+### `StatefulSet` 的启停顺序：
 
-  - 有序部署：部署 `StatefulSet` 时，如果有多个 `Pod` 副本，它们会被顺序地创建（从 `0` 到 `N-1`），在下一个 `Pod` 运行之前所有之前的 `Pod` 必须都是 `Running` 和 `Ready` 状态。
-  - 有序删除：当 `Pod` 被删除时，它们被终止的顺序是从 `N-1` 到 `0`。
-  - 有序扩展：当对 `Pod` 执行扩展操作时，与部署一样，它前面的 `Pod` 必须都处于 `Running` 和 `Ready` 状态。
+- 有序部署：部署 `StatefulSet` 时，如果有多个 `Pod` 副本，它们会被顺序地创建（从 `0` 到 `N-1`），在下一个 `Pod` 运行之前所有之前的 `Pod` 必须都是 `Running` 和 `Ready` 状态。
+- 有序删除：当 `Pod` 被删除时，它们被终止的顺序是从 `N-1` 到 `0`。
+- 有序扩展：当对 `Pod` 执行扩展操作时，与部署一样，它前面的 `Pod` 必须都处于 `Running` 和 `Ready` 状态。
 
-  ### `StatefulSet` 使用场景：
+### `StatefulSet` 使用场景：
 
-  - 稳定的持久化存储，即 `Pod` 重新调度后还是能访问到相同的持久化数据，基于 `PVC` 来实现。
-  - 稳定的网络标识符，即 `Pod` 重新调度后其 `PodName` 和 `HostName` 不变。
-  - 有序部署，有序扩展，基于 `init containers` 来实现。
-  - 有序收缩。
+- 稳定的持久化存储，即 `Pod` 重新调度后还是能访问到相同的持久化数据，基于 `PVC` 来实现。
+- 稳定的网络标识符，即 `Pod` 重新调度后其 `PodName` 和 `HostName` 不变。
+- 有序部署，有序扩展，基于 `init containers` 来实现。
+- 有序收缩。
+
+![image-20230513233530841](https://img.onmicrosoft.cn/k8s/202305132335932.png)
