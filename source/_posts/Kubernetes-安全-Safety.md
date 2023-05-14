@@ -307,7 +307,7 @@ RoleBinding 和 ClusterRoleBinding 可以将 Role 绑定到 `Subjects`；`Subjec
 
 `Groups` 书写格式与 `Users` 相同，都为一个字符串，并且没有特定的格式要求；同样 `system:` 前缀为系统保留。
 
-![image-20230514041233196](../../../../../../Library/Application%20Support/typora-user-images/image-20230514041233196.png)
+![image-20230514041233196](https://img.onmicrosoft.cn/k8s/202305141527282.png)
 
 ## 实践：创建一个用户只能管理 `dev` 空间
 
