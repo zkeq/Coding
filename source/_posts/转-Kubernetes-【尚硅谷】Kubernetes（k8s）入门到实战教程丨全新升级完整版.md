@@ -4,7 +4,7 @@ tags:
   - Kubernetes
 categories:
   - Kubernetes
-description: 本文全文为转载 自 🐾 B 站视频学习整理：Kubernetes（k8s）入门到实战教程丨全新升级完整版,这篇文章介绍了 Kubernetes 的一些基本概念和操作，包括 ConfigMap 的使用方法、Kubernetes 集群的安全机制、TLS 认证、RBAC 授权方式、容器交付流程、Python 项目的部署等。文章提供了一些代码示例和操作步骤，适合初学者学习。
+description: 本文介绍了 Kubernetes（k8s）的入门到实战教程，包括 Linux 系统介绍、系统安装、目录介绍、常用命令介绍、Docker 的安装、概述及使用、Dokcerfile、k8s 集群部署（CentOS 和 Ubuntu）等内容。其中包括了如何确保每个节点上 MAC 地址和 product_uuid 的唯一性、检查网络适配器、允许 iptables 检查桥接流量，安装 runtime 配置 Docker 守护程序，初始化控制平面节点等内容。本教程帮助读者快速了解和掌握 k8s 的相关知识。
 cover: https://img.onmicrosoft.cn/2023-04-20/eb4cf60047dee8c0c2786e95fc0f96ca0f2e666b.jpeg
 date: 2023-05-15 05:41:48
 ---
