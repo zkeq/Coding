@@ -26,7 +26,7 @@ date: 2023-05-15 05:41:48
 
 <!-- tab Linux 操作系统 -->
 
-#### 简单学下 Linux
+### 简单学下 Linux
 
 > 参考资料：https://www.runoob.com/linux/linux-tutorial.html
 
@@ -297,7 +297,7 @@ hello linux
 
 <!-- tab Docker -->
 
-#### 简单学下 Docker 
+### 简单学下 Docker 
 
 
 > 参考资料：https://www.runoob.com/docker/docker-tutorial.html
@@ -620,7 +620,7 @@ docker -v
 
 <!-- tab k8s 集群部署 | CentOS -->
 
-#### k8s 集群部署 | CentOS
+### k8s 集群部署 | CentOS
 
 
 ##### 安装 Kubeadm
@@ -932,7 +932,7 @@ EOF
 
 <!-- tab k8s 集群部署 | Ubuntu -->
 
-#### k8s 集群部署 | Ubuntu
+### k8s 集群部署 | Ubuntu
 
 
 
