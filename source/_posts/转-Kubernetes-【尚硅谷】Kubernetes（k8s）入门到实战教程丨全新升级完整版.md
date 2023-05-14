@@ -819,7 +819,7 @@ sudo systemctl enable --now kubelet
 相关细节可参见[配置 cgroup 驱动](https://kubernetes.io/zh/docs/tasks/administer-cluster/kubeadm/configure-cgroup-driver/)。
 
 
-#### Kubeadm 启动 k8s 集群
+##### Kubeadm 启动 k8s 集群
 
 
 
@@ -873,14 +873,14 @@ NAME                    STATUS   ROLES    AGE     VERSION
 localhost.localdomain   Ready    master   3m18s   v1.18.0
 ```
 
-#### Kubeadm 加入集群
+##### Kubeadm 加入集群
 
 ```sh
 kubeadm token create --print-join-command
 ```
 
 
-#### Kubeadm 删除集群
+##### Kubeadm 删除集群
 
 
 删除 node 节点
@@ -901,7 +901,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
 
-#### 集群无法启动
+##### 集群无法启动
 
 报错信息：
 
