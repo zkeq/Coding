@@ -4067,7 +4067,4 @@ kubernetes   ClusterIP   10.96.0.1        <none>        443/TCP          6d
 
 ## 写在最后
 
-恭喜你完成了 Kubernetes 的学习，下一步是不是该考个证书验证一下？
-
-1. [cka 考试指南](k8s-cka.md)
-2. [cks 考试指南](k8s-cks.md)
+恭喜你完成了 Kubernetes 的学习.
