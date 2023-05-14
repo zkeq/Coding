@@ -1215,6 +1215,12 @@ ubuntu-virtual-machine   Ready    control-plane,master   15h   v1.23.5
 
 {% endtabs %}
 
+- 相关总结图: https://kubernetes-study-notes.icodeq.com/intro
+
+- 完整讲义: 若无法正常加载, 请点击查看 PDF 网页版本: [Kubernetes 调度器 - 固定节点.pdf](https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/k8s/kubernetes(k8s)%E8%AF%BE%E7%A8%8B.pdf)
+
+<embed src="https://media.onmicrosoft.cn/k8s/kubernetes(k8s)%E8%AF%BE%E7%A8%8B.pdf" type="application/pdf" width="100%" height="500" />
+
 ## Kubernetes Study First
 
 > B 站视频学习：【尚硅谷】Kubernetes（k8s）入门到实战教程丨全新升级完整版
