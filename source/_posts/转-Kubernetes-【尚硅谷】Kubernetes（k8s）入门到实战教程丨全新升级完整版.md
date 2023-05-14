@@ -15,7 +15,7 @@ date: 2023-05-15 05:41:48
 
 > 转自仓库: https://gitee.com/bbigsun/kubernetes-study-notes
 > 
-> 在线阅读: https://kubernetes-study-notes.icodeq.com
+> 在线阅读: https://img.onmicrosoft.cn/kubernetes-study-notes-master/index.html
 >
 > 相关视频: https://www.bilibili.com/video/BV1GT4y1A756/
 > 
@@ -1284,11 +1284,11 @@ Kubernetes，首字母 K，尾字母 s，中间 8 个字母，简称 K8s。
 
 - Kubernetes 架构主要包含两部分：Master（主控节点）和 Work node（工作节点）。
 
-![](_media/k8s-architecture01.png)
+![](https://img.onmicrosoft.cn/kubernetes-study-notes-master/_media/k8s-architecture01.png)
 
-![](_media/k8s-architecture02.png)
+![](https://img.onmicrosoft.cn/kubernetes-study-notes-master/_media/k8s-architecture02.png)
 
-![](_media/k8s-architecture03.png)
+![](https://img.onmicrosoft.cn/kubernetes-study-notes-master/_media/k8s-architecture03.png)
 
 
 
@@ -1370,7 +1370,7 @@ Kubernetes，首字母 K，尾字母 s，中间 8 个字母，简称 K8s。
 
 ### Kubernetes 工作原理
 
-![](_media/k8s-principle01.png)
+![](https://img.onmicrosoft.cn/kubernetes-study-notes-master/_media/k8s-principle01.png)
 
 
 
@@ -3305,7 +3305,7 @@ service/web1         NodePort    10.111.61.143   <none>        80:30344/TCP   6s
 
 然后我们访问对应的 url，即可看到 nginx 了 `http://192.168.60.151:30344/`
 
-![](_media/k8s-nginx.png)
+![](https://img.onmicrosoft.cn/kubernetes-study-notes-master/_media/k8s-nginx.png)
 
 ####  升级回滚和弹性收缩
 
@@ -3779,7 +3779,7 @@ root@cm-pod-test004:/usr/local/tomcat# ls /conf
 - 访问过程中，需要证书、token、或者用户名和密码
 - 如果访问 pod 需要 serviceAccount
 
-![](_media/k8s-api-server.png)
+![](https://img.onmicrosoft.cn/kubernetes-study-notes-master/_media/k8s-api-server.png)
 
 **1、认证**
 
@@ -4017,7 +4017,7 @@ docker start my_registry  # 主节点上执行（因为私人仓库在主节点�
 
 访问：`ip:5000/v2/_catalog`查看本地仓库镜像
 
-<img src="_media/dockerregistry.png">
+<img src="https://img.onmicrosoft.cn/kubernetes-study-notes-master/_media/dockerregistry.png">
 
 测试本地私有仓库：
 
