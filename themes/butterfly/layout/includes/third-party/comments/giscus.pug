@@ -9,12 +9,12 @@ script.
 
   function loadGiscus () {
     const config = Object.assign({
-      src: 'https://giscus.onmicrosoft.cn/client.js',
+      src: '!{giscusUrl}',
       'data-repo': '!{repo}',
       'data-repo-id': '!{repo_id}',
       'data-category-id': '!{category_id}',
       'data-mapping': 'og:title',
-      'data-theme': nowTheme,
+      'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
       'data-reactions-enabled': '1',
       'data-input-position': 'top',
       crossorigin: 'anonymous',
