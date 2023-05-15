@@ -140,7 +140,7 @@ snackbar:
   name: node-snackbar
   file: dist/snackbar.min.js
   version: 0.1.16
-fontawesomeV6:
+fontawesome:
   name: 'font6pro'
   file: css/all.min.css
   version: 6.2.0
