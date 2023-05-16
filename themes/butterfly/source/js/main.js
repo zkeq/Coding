@@ -458,10 +458,14 @@ document.addEventListener('DOMContentLoaded', function () {
         if (isExpand) return
         let parent = currentActive.parentNode
 
-        if (typeof parent.matches !== "function") return
-
-        for (; !parent.matches('.toc'); parent = parent.parentNode) {
-          if (parent.matches('li')) parent.classList.add('active')
+        for (; parent && parent !== document; parent = parent.parentNode) {
+          if (parent.matches && parent.matches('.toc')) {
+            // 执行相关操作
+            break;
+          }
+          if (parent.tagName === 'LI') {
+            parent.classList.add('active');
+          }
         }
       }
     }
