@@ -456,11 +456,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 0)
 
         if (isExpand) return
-        // let parent = currentActive.parentNode
+        let parent = currentActive.parentNode
+        if (!parent) return
 
-        // for (; !parent.matches('.toc'); parent = parent.parentNode) {
-        //   if (parent.matches('li')) parent.classList.add('active')
-        // }
+        for (; !parent.matches('.toc'); parent = parent.parentNode) {
+          if (parent.matches('li')) parent.classList.add('active')
+        }
       }
     }
 
