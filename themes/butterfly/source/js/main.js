@@ -457,8 +457,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (isExpand) return
         let parent = currentActive.parentNode
-        
-        if (!parent.matches) return
+
+        if (typeof parent.matches !== "function") return
 
         for (; !parent.matches('.toc'); parent = parent.parentNode) {
           if (parent.matches('li')) parent.classList.add('active')
