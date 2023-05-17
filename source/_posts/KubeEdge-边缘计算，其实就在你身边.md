@@ -5,7 +5,7 @@ tags:
 categories:
   - Kubernetes
 description: KubeEdge 是一种边缘计算解决方案，可为智能边缘管理平台提供支持。本课程将教你如何使用 KubeEdge，通过使用 WebSocket 协议连接云端和边缘侧，解决多种问题。本课程涵盖课程知识体系，包括认知篇、技能篇和实战篇。无论你是初学者还是有经验的开发人员，你都可以从中获益。
-cover: https://img.onmicrosoft.cn/ke/202305172356017.png
+cover: https://img.onmicrosoft.cn/ke/202305180000661.png
 date: 2023-05-17 22:51:16
 ---
 
