@@ -1006,3 +1006,58 @@ $ vim bookinfo-gateway.yaml
   - 3. 路由规则作用: 路由规则用于定义流量的路由规则, 用于流量控制、流量管理、流量监控、流量安全等 
   - 4. 路由规则实践: 通过 YAML 文件定义路由规则, 通过 istioctl 命令行工具管理路由规则
 - 与 SpringCloud 对比: 可以通过 Prometheus 和 Grafana 进行监控, 可以通过 Jaeger 进行链路追踪, 可以通过 Kiali 进行流量监控, 可以通过 Kiali 进行流量安全
+
+## 【附录】K8S入门你至少需要会这些
+
+K8S是云原生技术的典型代表，后续的课程当中我们也会大量用到 K8S 技术，如果对 K8S 基础比较弱的同学，切记盲目的去花大量的时间学习 K8S，先掌握以下基本内容，然后其余的部分跟着课程学习即可：
+
+- Docker的使用
+- K8S架构设计及其环境搭建
+- Deployment的使用
+- Service的使用
+- ConfigMap的使用
+
+限于篇幅，这里不会对技术的细节做说明，小伙伴们根据知识点去查询相关的资料即可。
+
+### Docker的使用
+
+Docker的使用需要同学掌握以下内容：
+
+- Dockerfile编写
+- 常用的docker命令
+- docker-compose的使用
+
+### K8S架构设计及其环境搭建
+
+K8S架构设计及其环境搭建需要同学会以下内容：
+
+- K8S由哪些组件构成，组件之间是如何协同工作的
+- minikube搭建 K8S 学习或测试环境
+- kubeadm搭建生产环境
+
+### Deployment的使用
+
+Deployment是 K8S 下用的最多资源定义，同学需要掌握以下内容：
+
+- 创建Deployment，并且了解常用的Deployment定义参数
+- Deployment版本回滚操作
+- 了解Deployment的什么周期
+
+[推荐阅读：K8S官方文档Deployment部分]([]())
+
+### Service的使用
+
+Service是一种可以访问 Pod 逻辑分组的策略， Service通常是通过 LabelSelector 访问 Pod 组。利用 Service 就能对外暴露服务。
+
+同学需要知道 Service 的常用操作：
+
+- （必学）ClusterIp <只能是集群内部访问，可以通过proxy让外部访问>
+- （必学）NodePort <NodePort来暴露服务让外部访问>
+- （选学）LoadBalancer <生产环境一般都是使用LoadBalancer的方式>
+- （选学）Ingress <通过域名访问的方式>
+
+### ConfigMap的使用
+
+ConfigMap 就是为了让镜像和配置文件解耦。好比一个动态的数据源，创建后可以在创建 `Deployment` 的时候指定用它。然后你想要动态更新，容器内也能监听到文件内容更改，进行热重载。
+
+K8S的另外一个类似的功能叫 `Secret`，`Secret`类似于 `ConfigMap`，数据是用Base64加密，密文显示，一般存放敏感数据。
