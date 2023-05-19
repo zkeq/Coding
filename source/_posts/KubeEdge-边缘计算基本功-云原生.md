@@ -1043,7 +1043,7 @@ Deployment是 K8S 下用的最多资源定义，同学需要掌握以下内容�
 - Deployment版本回滚操作
 - 了解Deployment的什么周期
 
-[推荐阅读：K8S官方文档Deployment部分]([]())
+[推荐阅读：K8S官方文档Deployment部分](https://kubernetes.io/zh-cn/docs/concepts/workloads/controllers/deployment/)
 
 ### Service的使用
 
