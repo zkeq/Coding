@@ -7,7 +7,7 @@ categories:
   - KubeEdge
 cover: https://img.onmicrosoft.cn/ke/202305180000661.png
 date: 2023-05-18 23:15:44
-description:
+description: 本文介绍了边缘计算基本功-云原生，包括KubeEdge、声明式API、不可变基础设施、微服务和服务网格。同时，还介绍了Bookinfo应用程序、istio的路由规则和istio的可视化工具Dashboard。
 ---
 
 ```
