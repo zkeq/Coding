@@ -957,7 +957,7 @@ $ vim bookinfo-gateway.yaml
 - 生态: 云原生技术的生态系统包括开源项目、云服务提供商、云原生计算基金会
 
 ### 容器
-- 容器调用链路: 容器运行时 -> 容器镜像
+- 容器调用链路: 运行容器的工具 -> Kubernetes 的 API -> 容器运行时 -> 容器运行规范 -> 容器镜像
 - K8s与Docker: K8s 是一个容器编排工具, Docker 是一个容器运行时, K8s 可以管理多个 Docker 容器, Dockershim 是 K8s 与 Docker 之间的桥梁, 后续 K8s 会使用 CRI 替代 Dockershim, CRI 是容器运行时接口, 用于定义容器运行时与 K8s 之间的接口, 因为 Docker 和 K8s 之间的功能重叠
 
 ### 不可变基础设施
