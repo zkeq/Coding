@@ -464,7 +464,7 @@ footer:
   owner:
     enable: true
     since: 2021
-  custom_text:   <a href="https://icp.gov.moe/?keyword=20202121" target="_blank">萌ICP备 20202121号</a><br><a href="https://travellings.link/" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="120"></a>
+  custom_text:   <a href="https://icp.gov.moe/?keyword=20202121" target="_blank">萌ICP备 20202121号</a><br><a href="https://travellings.link/" target="_blank" rel="noopener" title="开往-友链接力"><img src="https://www.travellings.cn/assets/logo.gif" alt="开往-友链接力" width="120"></a><a href="https://www.foreverblog.cn/" target="_blank" > <img src="https://img.foreverblog.cn/logo_en_default.png" alt="" style="width:auto;height:30px;"> </a>
   # <a href="https://evolution-host.com" target="_blank" rel="noopener" title="hosted by evolution-host"><img src="https://img.onmicrosoft.cn/host.png" alt="Hosted by evolution-host" width="120"></a>
   copyright: true # Copyright of theme and framework
 
