@@ -395,7 +395,7 @@ function install_docker(){
 EOF
 
   info "4.重新启动服务..."
-  sudo gpasswd -a ${USER} docker && newgrp - docker # 将当前用户加入到docker组(获取执行docker的权限)
+  # sudo gpasswd -a ${USER} docker && newgrp - docker # 将当前用户加入到docker组(获取执行docker的权限)
   sudo systemctl daemon-reload
   sudo systemctl restart docker
 
