@@ -895,6 +895,10 @@ kiali   NodePort   10.106.35.16   <none>        20001:30715/TCP,9090:32042/TCP  
 
 ![image-20230519173519935](https://img.onmicrosoft.cn/ke/202305191735015.png)
 
+可以看到流量的详细走势和相关请求数据
+
+![image-20230520034554383](https://img.onmicrosoft.cn/ke/202305200345471.png)
+
 ```bash
 # 查看网络是如何配置的
 $ kubectl get gateway
