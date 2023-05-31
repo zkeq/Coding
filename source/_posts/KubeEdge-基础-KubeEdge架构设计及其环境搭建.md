@@ -7,7 +7,7 @@ categories:
   - KubeEdge
 cover: https://img.onmicrosoft.cn/ke/202305180000661.png
 date: 2023-05-20 01:19:42
-description: 
+description: 该文档介绍了如何检查和更新 Kubernetes 证书以及如何在云端和边缘端安装 KubeEdge。其中包括了证书有效期检查、证书续签、KubeEdge 云端环境安装、KubeEdge 边缘端环境安装等内容。
 ---
 
 > KubeEdge 架构设计及其环境搭建(KubeEdge基础篇)
