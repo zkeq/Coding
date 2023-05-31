@@ -786,6 +786,6 @@ $ systemctl restart edgecore
 - https://github.com/1692565761/kubeedge-script/blob/master/edge.sh
 ```
 
-- 若无法正常加载, 请点击查看 PDF 网页版本: [证书有效期修改.pdf](https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/ke/%E3%80%90%E6%8B%93%E5%B1%95%E3%80%91%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BBKubeEdge%E6%A1%86%E6%9E%B6%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9F.pdf)
+- 若无法正常加载, 请点击查看 PDF 网页版本: [如何阅读KubeEdge框架源代码？框架源代码.pdf](https://service.ezviz.com/mobile/download/viewer?file=https://media.onmicrosoft.cn/ke/%E3%80%90%E6%8B%93%E5%B1%95%E3%80%91%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BBKubeEdge%E6%A1%86%E6%9E%B6%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9F.pdf)
 
 <embed src="https://media.onmicrosoft.cn/ke/%E3%80%90%E6%8B%93%E5%B1%95%E3%80%91%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BBKubeEdge%E6%A1%86%E6%9E%B6%E6%BA%90%E4%BB%A3%E7%A0%81%EF%BC%9F.pdf" type="application/pdf" width="100%" height="500" />
