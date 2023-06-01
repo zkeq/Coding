@@ -881,6 +881,12 @@ lazyload:
   placeholder:
   blur: false
 
+CDN:
+  # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
+  # option: local/jsdelivr/unpkg/cdnjs/custom
+  # when set it to local, you need to install hexo-butterfly-extjs
+  third_party_provider: unpkg
+
 # PWA
 # See https://github.com/JLHwung/hexo-offline
 # ---------------
