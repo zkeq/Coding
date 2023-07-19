@@ -20,7 +20,7 @@
     "hexo-blog-encrypt": "^3.1.6",
     "hexo-browsersync": "^0.3.0",
     "hexo-butterfly-artitalk": "^1.0.4",
-    "hexo-butterfly-douban-zkeq": "^1.2.5",
+    "hexo-butterfly-douban-zkeq": "^1.2.6",
     "hexo-butterfly-hpptalk": "^1.0.4",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
