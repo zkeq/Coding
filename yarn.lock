@@ -1702,9 +1702,10 @@ hexo-butterfly-artitalk@^1.0.4:
   dependencies:
     pug "^3.0.2"
 
-hexo-butterfly-douban@^1.2.5:
+hexo-butterfly-douban-zkeq@^1.2.5:
   version "1.2.5"
-  resolved "https://registry.npmjs.org/hexo-butterfly-douban/-/hexo-butterfly-douban-1.2.5.tgz"
+  resolved "https://registry.yarnpkg.com/hexo-butterfly-douban-zkeq/-/hexo-butterfly-douban-zkeq-1.2.5.tgz#88dc3e5f6b771b33befab607952b34467a9d8c31"
+  integrity sha512-dsv8l12GE3mKXOTexoOPeCXGTY02QSXuW/gBAHI1gl50xDoo0klmE36KQrQ3Q3ZUPzA2QL+j6y5s/Tf8twI64A==
   dependencies:
     "@xmldom/xmldom" "^0.8.0"
     ejs "^3.1.6"
@@ -3986,7 +3987,7 @@ url-parse@^1.5.3:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
 
-urllib-sync@jerryc127/urllib-sync:
+"urllib-sync@github:jerryc127/urllib-sync":
   version "1.1.4"
   resolved "https://codeload.github.com/jerryc127/urllib-sync/tar.gz/da6ff601d35dcc681fc2177902edcd5de1d62196"
   dependencies:
