@@ -158,7 +158,7 @@ error_img:
 
 # A simple 404 page
 error_404:
-  enable: false
+  enable: true
   subtitle: 'Page Not Found'
   background: https://img.onmicrosoft.cn/404.png
 
