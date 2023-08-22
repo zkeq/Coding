@@ -186,6 +186,11 @@
       descr:  LGUer 大佬...
       avatar: https://imwcr.cn/favicon.ico
 
+    - name: 珂泽小站
+      link: https://www.kezez.com/
+      descr: 某全沾工程师的技术笔记和划水日常
+      avatar: https://jsd.onmicrosoft.cn/avatar/cb4d449db723ac9112d9734cc46ff68f?s=300&r=X&d=
+
 - class_name: 网站
   class_desc: 一些很有用处的网站.
   link_list:
