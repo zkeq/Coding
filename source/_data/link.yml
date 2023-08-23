@@ -59,7 +59,7 @@
     - name: 小然然的博客
       link: https://likenomnom.vercel.app
       descr: 正在建设中...
-      avatar: https://likenomnom.vercel.app/images/avatar.jpg
+      avatar: https://img.onmicrosoft.cn/friends/wqr.jpeg
 
     - name: Xlenco
       link: https://blog.xlenco.top/
@@ -106,10 +106,10 @@
 #      descr: 掘金前端竞赛遇到的大佬
 #      avatar: https://swhcyx.com/avatar.png
       
-    - name: 邵佳成
-      link: https://blog.sjcblog.top/
-      descr: 掘金前端竞赛遇到的又 1 个大佬
-      avatar: https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/63e7c5a03f6e4fda9738328bccd4f6ba~tplv-k3u1fbpfcp-watermark.image
+    # - name: 邵佳成
+    #   link: https://blog.sjcblog.top/
+    #   descr: 掘金前端竞赛遇到的又 1 个大佬
+    #   avatar: https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/63e7c5a03f6e4fda9738328bccd4f6ba~tplv-k3u1fbpfcp-watermark.image
       
     - name: 心流
       link: https://blog.panghai.top/
