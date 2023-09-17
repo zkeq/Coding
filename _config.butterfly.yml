@@ -939,7 +939,7 @@ inject:
       - <link href="/css/nprogress.css" rel="stylesheet">
       - <script src="/js/index_music.js"></script>
       - <script>let tianliGPT_postSelector = '\#post \#article-container';</script>
-      - <script data-pjax src="https://jsd.onmicrosoft.cn/gh/zkeq/Cat-Abstract-AI@dbc0f1d/tianli_gpt.js"></script>
+      - <script data-pjax src="https://jsd.onmicrosoft.cn/gh/zkeq/Cat-Abstract-AI@b115d8d/tianli_gpt.js"></script>
     # - <script src="xxxx"></script>
 
 # # CDN
