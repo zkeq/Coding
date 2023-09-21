@@ -186,3 +186,56 @@ Promise.any('').then(data => console.log(data), reason => console.error(reason))
 
 Promise.any([Promise.resolve(2), 3, Promise.reject(4)]).then(data => console.log(data))
 ```
+
+### 手写并发控制
+
+```js
+function asyncPool(fn, arr, limit = 2) {
+  let args = [...arr] //  [...arr] 为了不改变原数组
+  let currentCount = 0 // 当前请求数
+  let results = [] // 存放结果
+  let settledCount = 0 // 已经完成的请求数
+  let order = 0 // 请求顺序
+
+  return new Promise((resolve, reject) => {
+
+    function run() { // 递归函数
+      while (currentCount < limit && args.length > 0) {// 当前请求数小于限制数 并且 还有请求未发出
+        currentCount++ // 当前请求数+1
+
+        (function (i) { // 闭包
+          console.log('当前请求数' + currentCount) // 打印当前请求数
+          let val = args.shift() // 取出第一个请求
+          fn(val).then(v => { // 执行请求
+            results[i] = v // 将结果放入对应的位置
+          }).finally(() => { // 不管成功还是失败
+            settledCount++ // 已经完成的请求数+1
+            currentCount-- // 当前请求数-1
+            if (settledCount === arr.length) { // 当已经完成的请求数等于请求数组的长度时
+              resolve(results) // 返回结果
+            } else {
+              run() // 继续执行
+            }
+          })
+        })(order++) // 传入请求顺序
+
+      }
+    }
+
+    run()
+
+  })
+}
+
+
+function getWeather(city) {
+  console.log(`开始获取${city}的天气`)
+  return fetch(`https://api2.jirengu.com/getWeather.php?city=${city}`).then(res => res.json())
+}
+
+let citys = ['北京', '上海', '杭州', '成都', '武汉', '天津', '深圳', '广州', '合肥', '郑州']
+asyncPool(getWeather, citys, 5).then(results => console.log(results))
+
+```
+
+![](https://bu.dusays.com/2023/09/21/650be9665f465.png)
