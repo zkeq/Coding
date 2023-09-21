@@ -61,6 +61,8 @@ Promise.all = function(iterable) {
 
 - 代码: http://js.jirengu.com/todeq/edit?js
 
+> Promise.race(iterable)方法返回一个promise, 一旦迭代器中的某个 promise resolve 或者 reject, 返回的 promise 就会 resolve 或reject.
+>
 > Promise.race() 静态方法接受一个 promise 可迭代对象作为输入，并返回一个 Promise。这个返回的 promise 会随着第一个 promise 的敲定而敲定。
 
 ![手写Promise.race](https://img.onmicrosoft.cn/ke/202309210855326.png)
@@ -71,7 +73,7 @@ Promise.race = function(iterable) { // 接收一个可迭代对象作为参数
 
   return new Promise((resolve, reject) => { // 返回一个新的Promise实例
     for(let i=0; i<arr.length; i++) { // 遍历数组
-      arr[i].then(resolve, reject) // 使用then方法来监听其状态改变
+      arr[i].then(resolve, reject) // 使用then方法来监听其状态改变, 当其中任何一个Promise对象被resolved或rejected时，直接将其值传递给最终的Promise对象
     }
   })        
 }
