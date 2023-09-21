@@ -230,7 +230,7 @@ function asyncPool(fn, arr, limit = 2) {
 
 function getWeather(city) {
   console.log(`开始获取${city}的天气`)
-  return fetch(`https://api2.jirengu.com/getWeather.php?city=${city}`).then(res => res.json())
+  return fetch(`http://api2.jirengu.com/getWeather.php?city=${city}`).then(res => res.json())
 }
 
 let citys = ['北京', '上海', '杭州', '成都', '武汉', '天津', '深圳', '广州', '合肥', '郑州']
