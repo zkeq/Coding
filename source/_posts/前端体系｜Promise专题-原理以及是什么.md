@@ -59,8 +59,6 @@ Promise.all = function(iterable) {
 
 - https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/race
 
-- 代码: http://js.jirengu.com/todeq/edit?js
-
 > Promise.race(iterable)方法返回一个promise, 一旦迭代器中的某个 promise resolve 或者 reject, 返回的 promise 就会 resolve 或reject.
 >
 > Promise.race() 静态方法接受一个 promise 可迭代对象作为输入，并返回一个 Promise。这个返回的 promise 会随着第一个 promise 的敲定而敲定。
@@ -94,3 +92,57 @@ console.log(Promise.race(''))
 
 Promise.race([Promise.resolve(2), 3]).then(data => console.log(data))
 ```
+
+### 手写 Promise.allSettled 原理
+
+- https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled
+
+> Promise.allSettled() 方法返回一个在所有给定的promise都已 fuldilled 或 rejected 后的 promise, 并带有一个对象数组, 每个对象表示对应的 promise 结果.
+
+> Promise.allSettled() 静态方法将一个 Promise 可迭代对象作为输入，并返回一个单独的 Promise。当所有输入的 Promise 都已敲定时（包括传入空的可迭代对象时），返回的 Promise 将被兑现，并带有描述每个 Promise 结果的对象数组。
+
+![Promise.allSettled](https://img.onmicrosoft.cn/ke/202309210927957.png)
+
+```js
+Promise.allSettled = function(iterable) {
+  let arr = [...iterable].map(item => item instanceof Promise ? item : Promise.resolve(item)) // 将可迭代对象转化为数组，并将其中每个非Promise值转化为Promise对象
+  if(arr.length === 0) return Promise.resolve([]) // 如果转化后的数组长度为0，则直接返回一个resolved状态的Promise对象，并传递一个空数组作为值
+
+  return new Promise((resolve, reject) => {
+    let results = [] // 定义一个results数组用于存储每个Promise对象的状态和值
+    let count = 0 // 定义一个count变量用于记录已完成的Promise数量
+    for(let i in arr) {
+      arr[i].then(value => { // 通过for循环遍历每个Promise对象，使用then方法来监听其状态改变
+        results[i] = { status: 'fulfilled', value } // 当一个Promise对象被resolved时，将其状态和值存入results数组中
+      }, reason => {
+        results[i] = { status: 'rejected', reason } // 当一个Promise对象被rejected时，将其状态和值存入results数组中
+      }).finally(() => {
+        count++ // 将count变量加1
+        if(count === arr.length) {
+          resolve(results) // 当已完成的Promise数量等于总数时，即所有Promise对象都已resolved或rejected，返回一个resolved状态的Promise对象，并传递results数组作为值
+        }
+      })
+    }
+  })
+}
+
+let p1 = new Promise(r => setTimeout(r, 3000, 1))
+let p2 = new Promise((r,j) => setTimeout(j, 1000, 2))
+let p3 = new Promise(r => setTimeout(r, 500, 3))
+
+Promise.allSettled([p1, p2, p3])
+  .then(data => console.log(data))
+  .catch(e => console.error(e))
+
+// 输出结果
+// {status: 'fulfilled', value: 1},
+// {status: 'rejected', reason: 2},
+// {status: 'fulfilled', value: 3}
+
+Promise.allSettled('hello').then(data => console.log(data))
+
+Promise.allSettled('').then(data => console.log(data))
+
+Promise.allSettled([Promise.resolve(2), 3, Promise.reject(4)]).then(data => console.log(data))
+```
+
