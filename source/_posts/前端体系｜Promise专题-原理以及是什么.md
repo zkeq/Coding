@@ -25,9 +25,11 @@ description: 该文章介绍了编写一个手写Promise.all的原理。首先�
 - Promise 微任务输出、async/await 微任务输出
 - 理解Promise A+规范，手写Promise
 
-### 手写Promise.all 原理
+### 手写 Promise.all 原理
 
 - https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all
+
+> Promise.all() 静态方法接受一个 Promise 可迭代对象作为输入，并返回一个 Promise。当所有输入的 Promise 都被兑现时，返回的 Promise 也将被兑现（即使传入的是一个空的可迭代对象），并返回一个包含所有兑现值的数组。如果输入的任何 Promise 被拒绝，则返回的 Promise 将被拒绝，并带有第一个被拒绝的原因。
 
 ![image-20230920104826227](https://img.onmicrosoft.cn/ke/202309201048263.png)
 
@@ -36,20 +38,57 @@ description: 该文章介绍了编写一个手写Promise.all的原理。首先�
 ```js
 Promise.all = function(iterable) {
   return new Promise((resolve, reject) => {
-    let promises = [...iterable].map(p => (p instanceof Promise) ? p : Promise.resolve(p))
-    if(promises.length === 0) return resolve([])
-    let values = []
-    let count = 0
+    let promises = [...iterable].map(p => (p instanceof Promise) ? p : Promise.resolve(p)) // 将可迭代对象转化为数组，并将其中每个非Promise值转化为Promise对象
+    if(promises.length === 0) return resolve([]) // 如果转化后的数组长度为0，则直接返回一个resolved状态的Promise对象，并传递一个空数组作为值
+    let values = [] // 定义一个values数组用于存储每个Promise对象的值
+    let count = 0 // 定义一个count变量用于记录已完成的Promise数量
     for(let i=0; i < promises.length; i++) {
-      promises[i].then(v => {
-        values[i] = v
-        count++
+      promises[i].then(v => { // 通过for循环遍历每个Promise对象，使用then方法来监听其状态改变
+        values[i] = v // 当一个Promise对象被resolved时，将其值存入values数组中
+        count++ // 将count变量加1
         if(count === promises.length) {
-          resolve(values)
+          resolve(values) // 当已完成的Promise数量等于总数时，即所有Promise对象都已resolved，返回一个resolved状态的Promise对象，并传递values数组作为值
         }
-      }, reject)
+      }, reject) // 如果其中任何一个Promise对象被rejected，直接将错误传递给最终的Promise对象
     } 
   })
 }
 ```
 
+### 手写 Promise.race 原理
+
+- https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/race
+
+- 代码: http://js.jirengu.com/todeq/edit?js
+
+> Promise.race() 静态方法接受一个 promise 可迭代对象作为输入，并返回一个 Promise。这个返回的 promise 会随着第一个 promise 的敲定而敲定。
+
+![手写Promise.race](https://img.onmicrosoft.cn/ke/202309210855326.png)
+
+```js
+Promise.race = function(iterable) { // 接收一个可迭代对象作为参数
+  let arr = [...iterable].map(item => item instanceof Promise? item : Promise.resolve(item)) // 将可迭代对象转化为数组，并将其中每个非Promise值转化为Promise对象
+
+  return new Promise((resolve, reject) => { // 返回一个新的Promise实例
+    for(let i=0; i<arr.length; i++) { // 遍历数组
+      arr[i].then(resolve, reject) // 使用then方法来监听其状态改变
+    }
+  })        
+}
+
+
+//test
+let p1 = new Promise(r => setTimeout(r, 3000, 1))
+let p2 = new Promise((r,j) => setTimeout(j, 1000, 2))
+let p3 = new Promise(r => setTimeout(r, 500, 3))
+
+Promise.race([p1, p2, p3])
+  .then(data => console.log(data))
+  .catch(e => console.error(e))
+
+Promise.race('hello').then(data => console.log(data))
+
+console.log(Promise.race(''))
+
+Promise.race([Promise.resolve(2), 3]).then(data => console.log(data))
+```
