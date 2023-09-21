@@ -146,3 +146,43 @@ Promise.allSettled('').then(data => console.log(data))
 Promise.allSettled([Promise.resolve(2), 3, Promise.reject(4)]).then(data => console.log(data))
 ```
 
+### 手写 Promise.any 原理
+
+> **`Promise.any()`** 静态方法将一个 Promise 可迭代对象作为输入，并返回一个 [`Promise`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。当输入的任何一个 Promise 兑现时，这个返回的 Promise 将会兑现，并返回第一个兑现的值。当所有输入 Promise 都被拒绝（包括传递了空的可迭代对象）时，它会以一个包含拒绝原因数组的 [`AggregateError`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AggregateError) 拒绝。
+
+- https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/any
+
+![手写Promise.any](https://img.onmicrosoft.cn/ke/202309210944336.png)
+
+```js
+Promise.any = function(iterable) {
+  let arr = [...iterable].map(item => item instanceof Promise ? item : Promise.resolve(item)) // 将可迭代对象转化为数组，并将其中每个非Promise值转化为Promise对象
+  if(arr.length === 0) return Promise.reject('All promise rejected') // 如果转化后的数组长度为0，则直接返回一个rejected状态的Promise对象，并传递一个错误信息作为值
+  return new Promise((resolve, reject) => {
+    let rejectCount = 0 // 定义一个rejectCount变量用于记录已完成的Promise数量
+    for(let i=0; i<arr.length; i++) { 
+      arr[i].then(resolve, reason => { // 通过for循环遍历每个Promise对象，使用then方法来监听其状态改变, 当其中任何一个Promise对象被resolved时，直接将其值传递给最终的Promise对象
+        rejectCount++ // 将rejectCount变量加1
+        if(rejectCount === arr.length) {
+          reject('All promises rejected') // 当已完成的Promise数量等于总数时，即所有Promise对象都已rejected，返回一个rejected状态的Promise对象，并传递一个错误信息作为值
+        }
+      })
+    }
+  })
+}
+
+//test
+let p1 = new Promise(r => setTimeout(r, 3000, 1))
+let p2 = new Promise((r,j) => setTimeout(j, 1000, 2))
+let p3 = new Promise(r => setTimeout(() => r(3), 500)
+
+Promise.any([p1, p2, p3])
+  .then(data => console.log(data))
+  .catch(e => console.error(e))
+
+Promise.any('hello').then(data => console.log(data))
+
+Promise.any('').then(data => console.log(data), reason => console.error(reason))
+
+Promise.any([Promise.resolve(2), 3, Promise.reject(4)]).then(data => console.log(data))
+```
