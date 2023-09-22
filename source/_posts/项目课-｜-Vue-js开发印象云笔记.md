@@ -307,8 +307,6 @@ str.endsWith("world") // true
 
 数组
 
-扩展
-
 1. 扩展运算符
 
 ```js
@@ -357,4 +355,355 @@ Array.from(ps).forEach(function(p){
 [...ps].forEach(function(p){
     console.log(p.innerText)
 })
+```
+
+函数
+
+1. 默认值
+
+```js
+function sayHi(name='jirengu'){
+    console.log(`hi, ${name}`)
+}
+sayHi() // hi, jirengu
+sayHi("Zkeq") // hi, Zkeq
+```
+
+```js
+function fetch (url, {body="", method="GET", headers={}}){
+    console.log(method)
+}
+fetch("http://www.baidu.com", {}) // GET
+```
+
+以下两种写法的区别?
+
+```js
+// ex1
+function m1({x=0, y=0} = {}) {
+  return [x, y];
+}
+// ex2
+function m2({x, y} = { x: 0, y: 0 }) {
+  return [x, y];
+}
+
+// 函数没有参数的情况
+m1() // [0, 0]
+m2() // [0, 0]
+
+// x 和 y 都有值的情况
+m1({x: 3, y: 8}) // [3, 8]
+m2({x: 3, y: 8}) // [3, 8]
+
+// x 有值，y 无值的情况
+m1({x: 3}) // [3, 0]
+m2({x: 3}) // [3, undefined]
+
+// x 和 y 都无值的情况
+m1({}) // [0, 0];
+m2({}) // [undefined, undefined]
+
+m1({z: 3}) // [0, 0]
+m2({z: 3}) // [undefined, undefined]
+
+ex1: 调用函数需要传入一个对象, 如果不传, 就用默认值 `{}`, 默认值对象里面都是 undefined, 所以属性使用初始值
+ex2: 调用函数需要传入一个对象, 如果不传, 就用默认值 `{x: 0, y: 0}`, 如果传了对象, 就用传入的对象
+```
+
+2. 箭头函数
+
+```js
+let f = v => v + 1
+f(2) // 3
+// 等价于
+var f = function(v){
+    return v + 1
+}
+f(2) // 3
+```
+
+```js
+var f = () => 5
+f() // 5
+// 等价于
+var f = function(){
+    return 5
+}
+f() // 5
+```
+
+```js
+var sum = (num1, num2) => num1 + num2
+sum(1,2) // 3
+// 等价于
+var sum = function(num1, num2){
+    return num1 + num2
+}
+sum(1,2) // 3
+```
+
+```js
+var arr = [1,2,3]
+var arr2 = arr.map(v=>v*v)
+arr2 // [1,4,9]
+// 等价于
+var arr = [1,2,3]
+var arr2 = arr.map(function(v){
+    return v*v
+})
+arr2 // [1,4,9]
+```
+
+箭头函数里的 this
+
+```js
+// ES6
+function foo() {
+  setTimeout(() => {
+    console.log('id:', this.id);
+  }, 100);
+}
+// ES5
+function foo() {
+  var _this = this;
+  setTimeout(function () {
+    console.log('id:', _this.id);
+  }, 100);
+}
+// 解释: ES6 的箭头函数没有自己的 this，内部的 this 就是外层代码块的 this。
+```
+
+对象
+
+```js
+var name = 'jirengu'
+var age = 3
+var people = {name, age} // {name: "jirengu", age: 3}
+```
+
+```js
+let app = {
+    init(){
+        console.log("init")
+    },
+    start(){
+        console.log("start")
+    }
+}
+app.init() // init
+
+// 等价于
+let app = {
+    init: function(){
+        console.log("init")
+    },
+    start: function(){
+        console.log("start")
+    }
+}
+```
+
+模块化
+
+1. export 
+
+写法1
+
+```js
+// a.js
+export var a = 1
+export function add(x,y){
+    return x + y
+}
+export class Person{
+    constructor(name){
+        this.name = name
+    }
+}
+```
+
+```js
+// b.js
+import {a, add, Person} from "./a.js"
+console.log(a) // 1
+console.log(add(1,2)) // 3
+console.log(new Person("hunger")) // Person {name: "hunger"}
+```
+
+```js
+// b.js
+import * as a from "./a.js"
+console.log(a.a) // 1
+console.log(a.add(1,2)) // 3
+console.log(new a.Person("hunger")) // Person {name: "hunger"}
+```
+
+```js
+// b.js
+import {a as b} from "./a.js"
+console.log(b) // 1
+```
+
+写法2
+
+```js
+// a.js
+var a = 1
+function add(x,y){
+    return x + y
+}
+class Person{
+    constructor(name){
+        this.name = name
+    }
+}
+export {a, add, Person}
+```
+
+使用
+
+```js
+// b.js
+import {a, add, Person} from "./a.js"
+console.log(a) // 1
+console.log(add(1,2)) // 3
+console.log(new Person("hunger")) // Person {name: "hunger"}
+```
+
+```js
+// b.js
+import * as a from "./a.js"
+console.log(a.a) // 1
+console.log(a.add(1,2)) // 3
+console.log(new a.Person("hunger")) // Person {name: "hunger"}
+```
+
+```js
+// b.js
+import {a as b} from "./a.js"
+console.log(b) // 1
+```
+
+写法3
+
+```js
+// a.js
+export function getName(){}
+export function getAge(){}
+// 注意的是, 导出函数的时候不可以赋值给变量
+```
+
+```js
+// b.js
+import {getName, getAge} from "./a.js"
+getName()
+```
+
+写法4
+
+```js
+// a.js
+function getName(){}
+function getAge(){}
+export {getName, getAge}
+```
+
+```js
+// b.js
+import {getName, getAge} from "./a.js"
+getName()
+```
+
+写法5
+
+```js
+export default function(){
+    console.log("hello")
+}
+```
+
+```js
+// b.js
+import foo from "./a.js" // 注意的是, 导入的时候可以赋值给变量, 重新命名
+foo()
+```
+
+#### 类和继承
+
+1. 构造函数
+
+```js
+class Person{
+    constructor(name){
+        this.name = name
+    }
+    sayHi(){
+        console.log(`hi, ${this.name}`)
+    }
+}
+
+let p = new Person("hunger")
+p.sayHi() // hi, hunger
+```
+
+等价于
+
+```js
+function Person(name){
+    this.name = name
+}
+Person.prototype.sayHi = function(){
+    console.log(`hi, ${this.name}`)
+}
+
+let p = new Person("hunger")
+```
+
+2. 静态方法
+
+```js
+class EventCenter {
+    static fire() {
+        return "fire";
+    }
+    static on() {
+        return "on";
+    }
+}
+```
+
+等价于
+
+```js
+function EventCenter(){};
+EventCenter.fire = function(){
+    return "fire";
+}
+EventCenter.on = function(){
+    return "on";
+}
+```
+
+3. 继承
+
+```js
+class Person{
+    constructor(name){
+        this.name = name;
+    }
+    sayHi(){
+        console.log(`hi, ${this.name}`);
+    }
+}
+
+class Student extends Person{
+    constructor(name, number){
+        super(name);
+        this.number = number;
+    }
+    sayHi(){
+        console.log(`姓名 ${this.name} 学号 ${this.number}`);
+    }
+}
 ```
