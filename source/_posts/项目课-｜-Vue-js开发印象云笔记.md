@@ -274,5 +274,87 @@ console.log(x, y); // 2 1
 function ajax({url, type="GET"}){
 
 }
-ajax({url: "xxx"})
+ajax({url: "xxx"}) // 设置了默认值: type="GET"
+```
+
+#### 字符串-函数-数组-对象
+
+字符串
+
+1. 多行字符串
+
+```js
+let str = `hello
+world`
+```
+
+2. 字符串模板
+
+```js
+let name = "hunger"
+let age = 3
+let str = `hello, ${name}, age is ${age}`
+```
+
+3. 字符串查找
+
+```js
+let str = "hello world"
+str.includes("hello") // true
+str.startsWith("hello") // true
+str.endsWith("world") // true
+```
+
+数组
+
+扩展
+
+1. 扩展运算符
+
+```js
+let arr = [1,2,3]
+console.log(...arr) // 1 2 3
+```
+
+2. 合并数组
+
+```js
+let arr1 = [1,2,3]
+let arr2 = [4,5,6]
+let arr3 = [...arr1, ...arr2]
+console.log(arr3) // [1,2,3,4,5,6]
+```
+
+3. 数组克隆
+
+```js
+let arr1 = [1,2,3]
+let arr2 = [...arr1]
+console.log(arr2) // [1,2,3]
+```
+
+4. 函数参数的扩展
+
+```js
+function sort(...arr){ // ...arr 是扩展运算符 js会把传进来的参数转成数组
+    console.log(arr.sort())
+}
+sort(3,2,1) // [1,2,3]
+
+function max(arr){
+    return Math.max(...arr)
+}
+max([3,4,1]) // 4
+```
+
+5. 类数组对象转数组
+
+```js
+let ps = document.querySelectorAll("p")
+Array.from(ps).forEach(function(p){
+    console.log(p.innerText)
+})
+[...ps].forEach(function(p){
+    console.log(p.innerText)
+})
 ```
