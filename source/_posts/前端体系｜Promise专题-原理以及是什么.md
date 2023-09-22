@@ -191,8 +191,8 @@ Promise.any([Promise.resolve(2), 3, Promise.reject(4)]).then(data => console.log
 
 ```js
 function asyncPool(fn, arr, limit = 2) {
-  let args = [...arr] //  [...arr] 为了不改变原数组
-  let currentCount = 0 // 当前请求数
+  let args = [...arr] //  [...arr] 为了不改变原数组 也可以用 arr.slice()
+  let currentCount = 0 // 当前请求数(在运行的数量)
   let results = [] // 存放结果
   let settledCount = 0 // 已经完成的请求数
   let order = 0 // 请求顺序
