@@ -241,3 +241,66 @@ asyncPool(getWeather, citys, 5).then(results => console.log(results))
 ```
 
 ![](https://bu.dusays.com/2023/09/21/650be9665f465.png)
+
+# 宏任务、微任务原理
+
+### 运行顺序
+
+- 先运行**同步代码**
+- 再扫描**微队列**依次运行并清空**全部任务**
+- 扫描**宏队列**拿出**一个任务**运行
+- 再扫描微队列依次运行并清空全部任务
+- 扫描宏队列拿出一个任务运行.....
+- 直到两个队列都为空
+
+### 同步与放入宏队列
+
+- `setTimeout(fn, t)` 本身是**同步代码**，作用是创建一个定时器
+- `t`毫秒后把`fn`**放入宏队列**
+- `new Promise(function fn(resolve, reject) { ...})` 会立即运行`fn`，其中**`fn`里也是同步代码**
+
+### 放入微队列
+
+- 对于处于`pending`状态的`Promise`对象`p`，内部状态的`resolve`，才会触发`p.then(fn)`中的`fn`加入微队列
+- 对于处于`fulfilled`状态的`Promise`对象`p`, 执行`p.then(fn)`会立即让`fn`加入微队列
+
+![思路](https://img.onmicrosoft.cn/ke/202309220917219.png)
+
+# 宏任务、微任务案例1
+
+原始代码，输出什么？
+
+```javascript
+setTimeout(() => console.log(1), 0);
+new Promise(resolve => {
+ resolve();
+ console.log(2);
+}).then(() => {
+  console.log(3);
+});
+console.log(4);
+```
+
+改造后，所有的函数都加个名字，便于分析
+
+```javascript
+setTimeout(function f1( {  // 1. setTimeout本身是同步代码，作用是创建一个定时器
+  console.log(1) 
+}, 0);
+new Promise(function f2(resolve) { // 2. new Promise会立即运行fn，其中fn里也是同步代码 
+ resolve();
+ console.log(2);
+}).then(function f3() { // 3. 对于处于pending状态的Promise对象p，内部状态的resolve，才会触发p.then(fn)中的fn加入微队列
+  console.log(3);
+});
+console.log(4); // 4. 同步代码 
+```
+
+执行过程：
+
+1. 执行同步代码创建计时器，并立即加入到宏队列。 此时宏队列【f1】，微队列【】；
+2. 创建Promise，运行同步代码f2()。运行resolve()会触发f3加入微队列。此时宏队列【f1】，微队列【f3】。再输出2；
+3. 运行同步代码输出4。同步代码执行完毕，扫描微队列，执行全部任务，执行f3()，输出3；
+4. 拿出一个宏队列任务，执行f1()，输出1。此时队列都为空。
+
+![案例1](https://img.onmicrosoft.cn/ke/202309220923401.png)
