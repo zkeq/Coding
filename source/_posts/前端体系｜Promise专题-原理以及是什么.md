@@ -304,6 +304,8 @@ console.log(4); // 4. 同步代码
 3. 运行同步代码输出4。同步代码执行完毕，扫描微队列，执行全部任务，执行f3()，输出3；
 4. 拿出一个宏队列任务，执行f1()，输出1。此时队列都为空。
 
+![image-20230922095000652](https://img.onmicrosoft.cn/ke/202309220950737.png)
+
 ![案例1](https://img.onmicrosoft.cn/ke/202309220923401.png)
 
 # 宏任务、微任务案例2
@@ -312,20 +314,20 @@ console.log(4); // 4. 同步代码
 
 ```javascript
 new Promise(function f1(resolve){
-  console.log(1);
+  console.log(1); // 同步代码
   setTimeout(function f2() {
-    console.log(2);
+    console.log(2); // 宏任务
   });
-  resolve(1);
+  resolve(1); // 同步代码
 }).then(function f3(res) {
-  console.log(3);
+  console.log(3); // 微任务
 })
 
 setTimeout(function f4() {
-  console.log(4);
+  console.log(4); // 宏任务
 })
 
-console.log(5);
+console.log(5); // 同步代码
 ```
 
 - 执行同步代码创建Promise对象，运行同步代码f1()。输出1，创建定时器，立即把f2加入宏队列。运行resolve(1)，触发f3加入微队列。此时宏队列【f2】，微队列【f3】；
@@ -333,6 +335,8 @@ console.log(5);
 - 运行同步代码输出5。同步代码执行完毕;
 - 扫描微队列，拿出并执行全部任务，执行f3()，输出3；
 - 拿出一个宏队列任务，执行f2()，输出2。扫描微队列为空，再扫描宏队列拿出f4执行，输出4。此时队列都为空。
+
+![image-20230922094932033](https://img.onmicrosoft.cn/ke/202309220949117.png)
 
 ![案例2](https://img.onmicrosoft.cn/ke/202309220941138.png)
 
@@ -342,24 +346,24 @@ console.log(5);
 
 ```javascript
 setTimeout(function f1() { 
-  console.log(1) 
+  console.log(1)  // 宏任务
 })
 
 new Promise(function f2(resolve) {
   resolve()
-  console.log(2)
+  console.log(2) // 同步代码
 }).then(function f3() {
-  console.log(3)
+  console.log(3) // 微任务 
   Promise.resolve().then(function f4() {
-    console.log(4)
+    console.log(4) // 微任务
   }).then(function f5() {
     Promise.resolve().then(function f6() {
-      console.log(5)
+      console.log(5) // 微任务
     })
   })
 })
 
-console.log(6)
+console.log(6) // 同步代码
 ```
 
 1. 创建定时器，立即把f1加入宏队列。此时宏队列【f1】，微队列【】；
@@ -368,24 +372,26 @@ console.log(6)
 4. 扫描微队列，拿出并执行全部任务。先执行f3()，输出3；Promise.resolve().then(f4） 立即把f4加入微队列。此时宏队列【f1】，微队列【f4】。微队列不为空，拿出f4执行，输出4。f4执行完导致当前状态fulfilled，触发f5加入微队列。拿出f5继续执行，触发f6立即加入微队列。拿出并执行f6,输出5。此时宏队列为【f1】，微队列为空
 5. 扫码宏队列，拿出运行f1，输出1。
 
+![image-20230922094902186](https://img.onmicrosoft.cn/ke/202309220949272.png)
+
 ![案例3](https://img.onmicrosoft.cn/ke/202309220941168.png)
 
 # 宏任务、微任务案例4
 
 ```javascript
-console.log(1)
+console.log(1) // 同步代码
 setTimeout(function f1(){
-  console.log(2)
+  console.log(2) // 宏任务
   Promise.resolve().then(function f2() {
-      console.log(3)
+      console.log(3) // 微任务
       setTimeout(function f3() {
-        console.log(4)
+        console.log(4) // 宏任务
       })
   }).then(function f4() {
-      console.log(5)
+      console.log(5) // 微任务
   })
 }, 0)
-console.log(6)
+console.log(6) // 同步代码
 ```
 
 1. 输出1；
@@ -394,6 +400,8 @@ console.log(6)
 4. 扫描微队列，为空。扫描宏队列，取出f1运行。输出2；f2立即加入微队列。此时宏队列【】，微队列【f2】。
 5. 扫描微队列，拿出并执行全部任务。执行f2()，输出3；创建计时器，立即把f3加入宏队列。f2执行完毕时导致当前promise fulfilled，触发f4加入微队列。此时宏队列【f3】，微队列【f4】。微队列不为空，继续拿出f4执行，输出5。此时宏队列【f3】，微队列【】
 6. 扫码宏队列，运行f3，输出4。结束。
+
+![image-20230922094813849](https://img.onmicrosoft.cn/ke/202309220948886.png)
 
 ![案例4](https://img.onmicrosoft.cn/ke/202309220942278.png)
 
