@@ -271,20 +271,21 @@ asyncPool(getWeather, citys, 5).then(results => console.log(results))
 原始代码，输出什么？
 
 ```javascript
-setTimeout(() => console.log(1), 0);
-new Promise(resolve => {
- resolve();
- console.log(2);
-}).then(() => {
-  console.log(3);
+setTimeout(() => console.log(1), 0); // 宏任务
+new Promise(resolve => { 
+ resolve(); 
+ console.log(2); // 同步代码
+}).then(() => { 
+  console.log(3); // 微任务
 });
-console.log(4);
+console.log(4); // 同步代码
+// 输出结果: 2 4 3 1
 ```
 
 改造后，所有的函数都加个名字，便于分析
 
 ```javascript
-setTimeout(function f1( {  // 1. setTimeout本身是同步代码，作用是创建一个定时器
+setTimeout(function f1( {  // 1. setTimeout本身是同步代码，作用是创建一个定时器(宏任务)
   console.log(1) 
 }, 0);
 new Promise(function f2(resolve) { // 2. new Promise会立即运行fn，其中fn里也是同步代码 
