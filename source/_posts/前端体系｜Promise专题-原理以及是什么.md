@@ -205,7 +205,7 @@ function asyncPool(fn, arr, limit = 2) {
       while (currentCount < limit && args.length > 0) {// 当前请求数小于限制数 并且 还有请求未发出
         currentCount++ // 当前请求数+1
 
-        (function (i) { // 闭包
+        (function (i) { // 闭包, 保存请求顺序
           console.log('当前请求数' + currentCount) // 打印当前请求数
           let val = args.shift() // 取出第一个请求
           fn(val).then(v => { // 执行请求
