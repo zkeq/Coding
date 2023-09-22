@@ -189,6 +189,8 @@ Promise.any([Promise.resolve(2), 3, Promise.reject(4)]).then(data => console.log
 
 ### 手写并发控制
 
+- 使用闭包优化并发请求结果顺序
+
 ```js
 function asyncPool(fn, arr, limit = 2) {
   let args = [...arr] //  [...arr] 为了不改变原数组 也可以用 arr.slice()
