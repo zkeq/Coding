@@ -707,3 +707,17 @@ class Student extends Person{
     }
 }
 ```
+
+### Vue基础知识
+
+阅读以下 vue 教程，跟随教程手写并运行代码。
+
+1.  [介绍](https://v2.cn.vuejs.org/v2/guide/index.html)
+2.  [Vue 实例](https://v2.cn.vuejs.org/v2/guide/instance.html)
+3.  [模板语法](https://v2.cn.vuejs.org/v2/guide/syntax.html)
+4.  [计算属性和观察者](https://v2.cn.vuejs.org/v2/guide/computed.html)
+5.  [class 和 style 绑定](https://v2.cn.vuejs.org/v2/guide/class-and-style.html)
+6.  [条件渲染](https://v2.cn.vuejs.org/v2/guide/conditional.html)
+7.  [列表渲染](https://v2.cn.vuejs.org/v2/guide/list.html)
+8.  [表单输入绑定](https://v2.cn.vuejs.org/v2/guide/forms.html)
+9.  [组件](https://v2.cn.vuejs.org/v2/guide/components.html)
