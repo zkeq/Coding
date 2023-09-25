@@ -721,3 +721,6 @@ class Student extends Person{
 7.  [列表渲染](https://v2.cn.vuejs.org/v2/guide/list.html)
 8.  [表单输入绑定](https://v2.cn.vuejs.org/v2/guide/forms.html)
 9.  [组件](https://v2.cn.vuejs.org/v2/guide/components.html)
+
+- 视频课: https://learning.dcloud.io/#/
+
