@@ -845,4 +845,74 @@ new Vue({
 
 >  不要在选项 property 或回调上使用[箭头函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)，比如 `created: () => console.log(this.a)` 或 `vm.$watch('a', newValue => this.myMethod())`。因为箭头函数并没有 `this`，`this` 会作为变量一直向上级词法作用域查找，直至找到为止，经常导致 `Uncaught TypeError: Cannot read property of undefined` 或 `Uncaught TypeError: this.myMethod is not a function` 之类的错误。
 
+#### vm.$nextTick
+
 - https://v2.cn.vuejs.org/v2/api/#vm-nextTick
+
+vm.$nextTick 是 Vue 提供的实例方法之一，它的作用是在下次 DOM 更新循环结束之后执行延迟回调。
+
+Vue 在更新 DOM 时是异步执行的，当你修改了 Vue 实例的数据后，Vue 不会立即更新 DOM，而是将这个更新放入一个队列中，等到下一个事件循环时进行批量更新。
+
+而 vm.$nextTick 方法就是用来在 DOM 更新完毕后执行一些回调函数的。这经常用于以下情况：
+
+1. 当需要操作 DOM 元素的时候，因为通过 vm.$nextTick 方法可以确保我们操作的是最新的 DOM。
+
+2. 当需要等待 DOM 更新的时候执行一些其他逻辑，例如获取元素宽高、计算元素位置等。
+
+下面是一个示例，展示了使用 vm.$nextTick 的常见用法：
+
+```javascript
+// 在数据改变后立即获取更新后的 DOM
+Vue.component('example-component', {
+  template: '<div>{{ message }}</div>',
+  data() {
+    return {
+      message: 'Hello Vue.js'
+    };
+  },
+  mounted() {
+    this.message = 'Hello World';
+    this.$nextTick(function() {
+      console.log(this.$el.textContent); // 'Hello World'
+    });
+  }
+});
+```
+
+在上面的示例中，当数据 message 被更新为 'Hello World' 后，我们使用了 vm.$nextTick 方法来确保获取更新后的 DOM 内容。
+
+总结一下，vm.$nextTick 方法允许我们在 DOM 更新之后执行一些回调，以确保我们操作最新的 DOM 或执行一些其他逻辑。
+
+#### 聊一聊Vue 的生命周期？beforeCreate、created、beforeMount、mounted 分别有什么区别？
+
+Vue的生命周期钩子函数指的是在Vue实例从创建、运行到销毁的过程中，会触发的一系列函数。这些函数可以让开发者在不同的阶段添加自己的逻辑代码，以实现更灵活的控制。
+
+在Vue的生命周期中，包括了以下四个阶段：
+
+1. beforeCreate（创建前）：在实例初始化之前被调用。此时，Vue实例的数据观测、事件和生命周期钩子都尚未初始化。
+2. created（创建后）：在实例创建完成之后被调用。此时，Vue实例已完成数据观测、属性和方法的设置，但是$el属性尚未被创建，因此无法访问到DOM元素。
+3. beforeMount（挂载前）：在挂载元素之前被调用，此时，模板编译已完成，但是还没有将编译后的模板替换到页面上的DOM中。
+4. mounted（挂载后）：在挂载元素之后被调用，此时，Vue实例已经完成了DOM的挂载，可以访问到通过$el属性获取到的DOM元素。
+
+这四个生命周期钩子函数的区别如下：
+
+- beforeCreate：在实例初始化之前被调用，此时Vue实例还没有初始化完成，无法访问到实例的数据和方法。
+- created：在实例创建之后被调用，此时Vue实例已经完成了数据观测和属性、方法的设置，但是DOM还没有挂载，无法访问到$el。
+- beforeMount：在挂载元素之前被调用，此时编译已完成，但还没有将模板替换到DOM中，可以在此阶段进行一些DOM操作。
+- mounted：在挂载元素之后被调用，Vue实例已经完成了DOM的挂载，可以访问到通过$el属性获取到的DOM元素，常用于初始化插件、获取服务器数据等操作。
+
+总的来说，beforeCreate和created主要用于初始化Vue实例的数据和方法，beforeMount和mounted主要用于DOM操作和其他Vue实例的初始化操作。
+
+#### 如何进行不同组件间事件传递？
+
+在 Vue 中，组件之间的事件传递可以通过以下几种方式来实现：
+
+1. 父子组件通信：父组件可以通过 props 向子组件传递数据，并在子组件中使用 `$emit` 触发自定义事件来通知父组件。父组件可以在子组件上监听这些自定义事件，并通过回调函数获取传递的数据。
+
+2. 子组件向父组件通信：子组件可以通过 `$emit` 触发自定义事件并传递数据到父组件。父组件可以在子组件上使用 `v-on` 监听这些自定义事件，并通过回调函数获取传递的数据。
+
+3. 兄弟组件通信：可以使用一个共享的 Vue 实例或者其他的中央事件总线（例如 Vue 的事件系统或者一个全局的事件总线库，比如 EventBus）来实现兄弟组件之间的通信。兄弟组件通过共享的实例或事件总线来触发和监听事件，从而传递信息。
+
+4. 跨级组件通信：如果组件处于不同的层级，可以使用 provide 和 inject 来进行跨级组件通信。父级组件通过 provide 来提供数据，而子孙级组件通过 inject 来注入数据。
+
+这些是 Vue 中常用的几种组件间事件传递方式。具体使用哪种方式取决于你的应用场景和组件的关系。
