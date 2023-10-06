@@ -1,5 +1,5 @@
 ---
-title: 前端体系｜Promise专题 - 原理以及是什么(持续更新)
+title: 前端体系｜Promise专题 - 原理以及是什么
 tags:
   - 前端
   - Promise
