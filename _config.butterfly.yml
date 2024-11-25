@@ -72,7 +72,7 @@ social:
 
 # Algolia search
 algolia_search:
-  enable: true
+  enable: false
   hits:
     per_page: 12
 
