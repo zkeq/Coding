@@ -773,5 +773,5 @@ let AiBtnLive = true;
 
 ### 3.0 特别鸣谢
 
-- 感谢 [@xcsoft]([soxft (xcsoft)](https://github.com/soxft)) 大佬为本项目构建 Docker 镜像, 使其可以一键部署.
+- 感谢 [soxft (xcsoft)](https://github.com/soxft) 大佬为本项目构建 Docker 镜像, 使其可以一键部署.
 - 项目具体文档请移步: https://github.com/zkeq/ai-markdown-text-toolkit
