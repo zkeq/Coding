@@ -3,7 +3,7 @@ title: 日常｜IMYAI文本处理工具箱开源随记
 date: 2024-11-24 12:26:49
 tags: 日常
 categories: 日常
-description: OpenSource for tool.imyaigc.com , 分享技术细节随想.
+description: IMYAI文本处理工具箱是一个在线工具，旨在提供全面的文本处理功能，包括文本格式化、标点和拼音转换等，并集成了AI文本优化能力。项目基于FastAPI和前端JS开发，支持Docker部署，使文本处理更加高效简便。本文作者分享了项目布局的设计思路，特别是如何通过多行flex布局和grid布局来优化几十个按钮的摆放，以达到美观的效果。此外，项目还实现了拖拽效果、使用Intro.js的开屏引导功能，以及POST Stream流的AI功能。成品已开源，供公众使用。
 cover: https://img.onmicrosoft.cn/ke/202411241238765.png
 ---
 
