@@ -930,12 +930,12 @@ inject:
       - <link rel="stylesheet" href="https://plyr.onmicrosoft.cn/3.6.12/plyr.css" />
       - <script src="https://static.iirose.cn/zkeq/spacing.js" defer></script>
       - <script async type="text/javascript" src="https://player.dogecloud.com/js/loader"></script>
-      - <script async src="https://npm.onmicrosoft.cn/mini-sandbox@0.3.11"></script>
+      - <script async src="https://npm-private.onmicrosoft.cn/mini-sandbox@0.3.11"></script>
       - <link rel="stylesheet" href="https://jsd.onmicrosoft.cn/gh/zkeq/Cat-Abstract-AI@3ed91fc/tianli_gpt.css">
       # - <link rel="stylesheet" href="/css/black-white.css">
   bottom:
       - <div class=" aplayer no-destroy " data-id="1050282" data-server="netease" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="true" data-autoplay="false" muted></div>
-      - <script src="https://npm.onmicrosoft.cn/nprogress@0.2.0/nprogress.js"></script>
+      - <script src="https://npm-private.onmicrosoft.cn/nprogress@0.2.0/nprogress.js"></script>
       - <link href="/css/nprogress.css" rel="stylesheet">
       - <script src="/js/index_music.js"></script>
       - <script>let tianliGPT_postSelector = '\#post \#article-container';</script>
