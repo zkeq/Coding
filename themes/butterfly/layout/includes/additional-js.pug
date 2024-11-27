@@ -60,6 +60,6 @@ div
     != partial("includes/third-party/pjax", {}, { cache: true })
 
   if theme.busuanzi.site_uv || theme.busuanzi.site_pv || theme.busuanzi.page_pv
-    script(async data-pjax data-prefix="busuanzi_value" src='https://bsz.iirose.cn/js')
+    script(async data-pjax pjax data-prefix="busuanzi_value" src='https://bsz.iirose.cn/js')
 
   !=partial('includes/third-party/search/index', {}, {cache: true})
