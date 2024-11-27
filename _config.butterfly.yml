@@ -920,7 +920,7 @@ inject:
       - <script defer src="https://static.iirose.cn/zkeq/notiflix-notify-aio-3.2.5.min.js"></script>
       - <link rel="stylesheet" href="https://static.iirose.cn/zkeq/notiflix-3.2.5.min.css">
       # - <script defer src="https://dev.busuanzi.icodeq.com/busuanzi.min.js"></script>
-      - <script defer data-domain="icodeq.com" src="https://vercel.site.icodeq.com/js/script.js"></script>
+      # - <script defer data-domain="icodeq.com" src="https://vercel.site.icodeq.com/js/script.js"></script>
       - <link rel="stylesheet" href="/css/font.css">
       - <link rel="stylesheet" href="/css/code.css">
       - <link rel="stylesheet" href="https://static.iirose.cn/zkeq/docsearch.css"/></pre></li>
