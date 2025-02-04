@@ -174,7 +174,7 @@ githubcalendar:
   plus_style: ""
 
 aplayer:
-  meting: true
+  meting: false
   asset_inject: false
 
 # 非必要請不要修改
