@@ -1,6 +1,6 @@
 algolia_search:
   name: algoliasearch
-  file: dist/algoliasearch-lite.umd.js
+  file: dist/algoliasearch.umd.js
   version: 4.17.0
 instantsearch:
   name: instantsearch.js
