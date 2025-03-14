@@ -68,7 +68,7 @@ hexo.extend.filter.register('before_generate', () => {
       const cdnSource = {
         local: cond === 'internal' ? `${cdnjs_file + verType}` : `/pluginsSrc/${name}/${file + verType}`,
         jsdelivr: `https://jsd.onmicrosoft.cn/npm/${name}${verType}/${min_file}`,
-        unpkg: `https://npm-private.onmicrosoft.cn/${name}@${version}/${file}`,
+        unpkg: `https://jsd.onmicrosoft.cn/npm/${name}${verType}/${min_file}`,
         cdnjs: `https://cdnjs.onmicrosoft.cn/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}`,
         custom: (CDN.custom_format || '').replace(/\$\{(.+?)\}/g, (match, $1) => value[$1])
       }
