@@ -266,3 +266,20 @@ cover: https://media.onmicrosoft.cn/coding-for-music-and-movie.png
 ![image-20250817163347443](https://img.onmicrosoft.cn/zkeq/20250817163347542.png)
 
 至此，音乐站全部开发完成，线上预览地址：[Self-Music - 音乐流媒体平台](https://music.icodeq.com/play)
+
+
+![屏幕截图(616)](https://img.onmicrosoft.cn/zkeq/20250817125324565.png)
+
+![屏幕截图(617)](https://img.onmicrosoft.cn/zkeq/20250817125724096.png)
+
+![屏幕截图(618)](https://img.onmicrosoft.cn/zkeq/20250817125723943.png)
+
+![屏幕截图(619)](https://img.onmicrosoft.cn/zkeq/20250817125723887.png)
+
+![屏幕截图(621)](https://img.onmicrosoft.cn/zkeq/20250817125729741.png)
+
+![屏幕截图(620)](https://img.onmicrosoft.cn/zkeq/20250817125727225.png)
+
+![屏幕截图(624)](https://img.onmicrosoft.cn/zkeq/20250817125723840.png)
+
+![屏幕截图(623)](https://img.onmicrosoft.cn/zkeq/20250817125723806.png)
