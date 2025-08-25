@@ -172,12 +172,12 @@ fmt.Println(C1, C2, C3, C4)
 
 ##### iota 总结
 
-iota 即希腊字母 ι
-- iota 是其英文发音
-- GoLang 中 iota 默认为 0，每行加 1
-- 使用 iota 可以减少 hard code（写死的代码）
-- 只能用在 const () 中
-- 每个 const 都会重置
+`iota` 即希腊字母 `ι`
+- `iota` 是其英文发音
+- `GoLang` 中 `iota` 默认为 `0`，每行加 `1`
+- 使用 `iota` 可以减少 `hard code`（写死的代码）
+- 只能用在 `const ()` 中
+- 每个 `const` 都会重置
 
 #### for 循环
 
@@ -206,11 +206,11 @@ for {
 
 ##### for 循环特点
 
-跟 JS 不一样的地方
-- 不加 ( )，加了会被删
-- for 接 0 个表达式等价于 JS 的 while(true)
-- for 接 1 个表达式等价于 JS 的 while(condition)
-- for 接 3 个表达式等价于 JS 的 for(初始化, 判断, 后续)
+跟 `JS` 不一样的地方
+- 不加 `( )`，加了会被删
+- `for` 接 `0` 个表达式等价于 `JS` 的 w`hile(true)`
+- `for` 接 `1` 个表达式等价于 `JS` 的 `while(condition)`
+- `for` 接 `3` 个表达式等价于 `JS` 的 `for`(初始化, 判断, 后续)
 
 #### if else
 
@@ -226,10 +226,10 @@ if num := 9; num < 0 {
 
 ##### if else 特点
 
-跟 JS 不一样的地方
+跟 `JS` 不一样的地方
 - 推荐不加 ( )
-- if 接一个表达式等价于 JS 的 if(condition)
-- if 接两个表达式没有等价的 JS 常见写法
+- `if` 接一个表达式等价于 `JS` 的 `if(condition)`
+- `if` 接两个表达式没有等价的 `JS` 常见写法
 
 #### switch case
 
@@ -258,10 +258,10 @@ default:
 
 ##### switch case 特点
 
-与 JS 不一样的地方
+与 `JS` 不一样的地方
 - 不推荐加 ( )
-- 不要加 break
-- 一个 case 可以有多个值，用逗号隔开
+- 不要加 `break`
+- 一个 `case` 可以有多个值，用逗号隔开
 
 #### 函数
 
@@ -362,29 +362,29 @@ func(c int) {
 
 ##### 函数特点
 
-与 JS/TS 不一样的地方
-- 返回值可以提前定义名字，return 可缩写
-- numbers ...int 表示多个 int 参数组成的数组
-- 立即执行函数不需要 Hack
+与 `JS/TS` 不一样的地方
+- 返回值可以提前定义名字，`return` 可缩写
+-` numbers ...int` 表示多个 `int` 参数组成的数组
+- 立即执行函数不需要 `Hack`
 
 #### 数据类型
 
 简单值类型
-- 数字（14种）：int32、float64
+- 数字（14种）：`int32`、`float64`
 - 字符串
 - 布尔
 
 复杂值类型
-- 结构体（struct）
-- 数组（定长）：[3]int
+- 结构体（`struct`）
+- 数组（定长）：`[3]int`
 
 引用类型
-- 指针：*int
-- 切片：[]int
-- 哈希表：map[string]int
+- 指针：`*int`
+- 切片：`[]int`
+- 哈希表：`map[string]int`
 - 函数
-- 通道：chan int
-- 接口：interface {}
+- 通道：`chan int`
+- 接口：`interface {}`
 
 ```go
 package main
@@ -523,10 +523,10 @@ func main() {
 
 #### 结构体的特点
 
-与 JS 的不同之处
-- 结构体是值类型，不是引用类型，不能与 JS 的对象进行类比
-- Go 只支持传值，不过可以把地址当做值 modify(&p1)
-- 结构体支持 label，用于各种功能；JS 没有 label
+与 `JS` 的不同之处
+- 结构体是值类型，不是引用类型，不能与 `JS` 的对象进行类比
+- `Go` 只支持传值，不过可以把地址当做值 `modify(&p1)`
+- 结构体支持 `label`，用于各种功能；`JS` 没有 `label`
 
 ```js
 function x(o){
