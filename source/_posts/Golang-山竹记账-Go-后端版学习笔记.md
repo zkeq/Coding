@@ -18,16 +18,16 @@ cover: https://media.onmicrosoft.cn/%E6%88%AA%E5%B1%8F2025-08-25%2018.35.14.png
 ### Hello GoLang
 #### 执行 Go 命令
 
-- 运行 go version 得到 go version go1.xx.x linunx/amd64
+- 运行 `go version` 得到 `go version go1.xx.x linunx/amd64`
 
 #### 创建 Hello 项目
 
-- pwd 得到 /workspaces/oh-my-env
-- mkdir hello; code hello 得到新窗口，关闭旧窗口
-- go mod init github.com/frankfang/hello 用于初始化目录
-如果没有看到 go.mod，点击 Refresh Explorer
-- 创建 main.go
-- go build . && ./hello 你也可以用 go run . 代替这两句话
+- `pwd` 得到 `/workspaces/oh-my-env`
+- `mkdir hello; code hello` 得到新窗口，关闭旧窗口
+- `go mod init github.com/frankfang/hello` 用于初始化目录
+如果没有看到 `go.mod`，点击 `Refresh Explorer`
+- 创建 `main.go`
+- `go build . && ./hello` 你也可以用 `go run .` 代替这两句话
 
 ```bash
 /w/hello # ❯❯❯ go version
