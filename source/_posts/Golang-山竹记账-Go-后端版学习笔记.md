@@ -2,9 +2,17 @@
 title: Golang | 山竹记账 Go 后端版学习笔记
 date: 2025-08-25 15:02:04
 tags:
+  - Golang
+  - Go
+  - 后端开发
+  - 记账应用
+  - Web开发
+  - API开发
 categories:
-description:
-cover:
+  - 编程学习
+  - Golang
+description: 山竹记账应用的 Go 后端版本开发学习笔记，包含项目架构设计、API 接口开发、数据库操作、中间件使用等核心技术要点的详细记录和总结。
+cover: https://media.onmicrosoft.cn/%E6%88%AA%E5%B1%8F2025-08-25%2018.35.14.png
 ---
 
 ### Hello GoLang
