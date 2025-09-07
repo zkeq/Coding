@@ -59,9 +59,9 @@ cover: https://source.imyaigc.com/image/s8mjd0sh.png
     ```bash
     npm install -g hexo-cli
     ```
-    *   `npm` 是 Node.js 自带的包管理器，用来安装各种工具。
-    *   `-g` 代表“全局安装”，这样你在任何地方都可以使用 `hexo` 命令。
-    *   **关于 `$` 符号**: 你在很多教程里看到的 `$`，其实是 Linux/macOS 命令行里的提示符，**你复制命令时不需要复制它**。
+    - `npm` 是 Node.js 自带的包管理器，用来安装各种工具。
+    - `-g` 代表“全局安装”，这样你在任何地方都可以使用 `hexo` 命令。
+    -  **关于 `$` 符号**: 你在很多教程里看到的 `$`，其实是 Linux/macOS 命令行里的提示符，**你复制命令时不需要复制它**。
 
 2.  **验证安装**
     安装成功后，输入 `hexo -version` 来检查一下。如果能看到类似下面的版本信息，就说明 Hexo 已经成功安装在你的电脑上了。
@@ -78,8 +78,8 @@ cover: https://source.imyaigc.com/image/s8mjd0sh.png
 现在，我们来创建博客项目。
 
 1.  **创建项目文件夹**
-    *   在你喜欢的位置（例如 `D:\Blogs`），创建一个新的**空文件夹**，比如 `my-blog`。
-    *   进入这个 `my-blog` 文件夹，在空白处右键，选择 “Git Bash Here” 打开命令行。
+    - 在你喜欢的位置（例如 `D:\Blogs`），创建一个新的**空文件夹**，比如 `my-blog`。
+    - 进入这个 `my-blog` 文件夹，在空白处右键，选择 “Git Bash Here” 打开命令行。
 
 2.  **执行初始化**
     依次输入以下命令：
@@ -87,75 +87,75 @@ cover: https://source.imyaigc.com/image/s8mjd0sh.png
     hexo init .
     npm install
     ```
-    *   `hexo init .` 会将 Hexo 的所有必要文件下载到**当前文件夹**（`.` 代表当前目录）。
-    *   `npm install` 会根据项目定义，安装所有依赖的模块。
+    - `hexo init .` 会将 Hexo 的所有必要文件下载到**当前文件夹**（`.` 代表当前目录）。
+    - `npm install` 会根据项目定义，安装所有依赖的模块。
 
 3.  **项目文件结构解析**
-    *   `_config.yml`: **站点配置文件**，博客的“总开关”，大部分全局配置都在这里。
-    *   `themes/`: **主题文件夹**，决定了你的博客长什么样。
-    *   `source/`: **资源文件夹**，你写的文章 (`_posts` 目录)、创建的独立页面、存放的图片等都在这里。
-    *   `scaffolds/`: **模板文件夹**，当你用 `hexo new` 创建新文章时，会以这里的 `post.md` 为模板。
-    *   `package.json`: 应用程序信息，记录了项目依赖。
+    - `_config.yml`: **站点配置文件**，博客的“总开关”，大部分全局配置都在这里。
+    - `themes/`: **主题文件夹**，决定了你的博客长什么样。
+    - `source/`: **资源文件夹**，你写的文章 (`_posts` 目录)、创建的独立页面、存放的图片等都在这里。
+    - `scaffolds/`: **模板文件夹**，当你用 `hexo new` 创建新文章时，会以这里的 `post.md` 为模板。
+    - `package.json`: 应用程序信息，记录了项目依赖。
 
 4.  **核心配置 (`_config.yml`)**
     这是最重要的地方，我们来详细看看。用文本编辑器打开它。
-    *   **网站信息 (Site)**
-        ```yaml
-        title: 网站标题
-        subtitle: 网站副标题
-        description: 网站描述 (用于SEO，告诉搜索引擎你的网站是关于什么的)
-        keywords: 网站关键词,用逗号隔开
-        author: 你的名字
-        language: zh-CN # 简体中文，根据主题要求可能为 zh-Hans
-        timezone: Asia/Shanghai # 时区
-        ```
-    *   **网址 (URL)**
-        ```yaml
-        url: https://your-domain.com # 你的最终域名
-        root: / # 网站根目录。如果你的网站在子目录，如 example.com/blog，则 url 为 http://example.com/blog，root 为 /blog/
-        permalink: :year/:month/:day/:title/ # 文章的永久链接格式
-        ```
-        **关于永久链接 `permalink` 的重要建议**：
+    - **网站信息 (Site)**
+```yaml
+title: 网站标题
+subtitle: 网站副标题
+description: 网站描述 (用于SEO，告诉搜索引擎你的网站是关于什么的)
+keywords: 网站关键词,用逗号隔开
+author: 你的名字
+language: zh-CN # 简体中文，根据主题要求可能为 zh-Hans
+timezone: Asia/Shanghai # 时区
+```
+    -  **网址 (URL)**
+```yaml
+url: https://your-domain.com # 你的最终域名
+root: / # 网站根目录。如果你的网站在子目录，如 example.com/blog，则 url 为 http://example.com/blog，root 为 /blog/
+permalink: :year/:month/:day/:title/ # 文章的永久链接格式
+```
+    -  **关于永久链接 `permalink` 的重要建议**：
         默认格式太长，不利于SEO且不美观。强烈建议在建站之初就确定好格式，避免日后修改导致链接失效、访问统计丢失。
         一个更简洁且独一无二的推荐格式是 **年份 + 文件名哈希值**:
-        ```yaml
-        permalink: :year/:hash/
-        ```
+```yaml
+permalink: :year/:hash/
+```
         更多格式请参考 [Hexo 官方文档](https://hexo.io/docs/permalinks)。
 
 5.  **最佳实践：独立的主题配置文件**
     为了方便日后平滑升级主题，强烈建议不要直接修改 `themes/[主题名]/_config.yml`。正确的做法是：
-    *   在**站点根目录**（和 `_config.yml` 同级）下，创建一个名为 `_config.[主题名].yml` 的文件。例如，如果你使用 `butterfly` 主题，就创建 `_config.butterfly.yml`。 （在后文）
-    *   将 `themes/butterfly/_config.yml` 的所有内容复制过来。
-    *   之后，所有关于主题的配置，都在这个新的 `_config.butterfly.yml` 文件里修改。Hexo 会智能地合并这两个配置，并优先使用你的配置。
+- 在**站点根目录**（和 `_config.yml` 同级）下，创建一个名为 `_config.[主题名].yml` 的文件。例如，如果你使用 `butterfly` 主题，就创建 `_config.butterfly.yml`。 （在后文）
+-  将 `themes/butterfly/_config.yml` 的所有内容复制过来。
+-   之后，所有关于主题的配置，都在这个新的 `_config.butterfly.yml` 文件里修改。Hexo 会智能地合~并这两个配置，并优先使用你的配置。
 
 ### 小节4: 解锁预览功能 (常用命令)
 
 现在，我们已经可以预览网站的初始模样了。以下是 Hexo 最常用的几个命令：
 
-*   `hexo clean` (简写 `hexo cl`): 清除缓存文件 (`db.json`) 和已生成的静态文件 (`public` 目录)。**建议每次生成或部署前都执行一次，可以避免很多不必要的麻烦。**
-*   `hexo generate` (简写 `hexo g`): 生成静态文件。当有插件的简写命令冲突时，建议使用全拼。
-*   `hexo server` (简写 `hexo s`): 启动本地预览服务器。默认地址是 `http://localhost:4000/`。
-*   `hexo deploy` (简写 `hexo d`): 部署网站。
+-   `hexo clean` (简写 `hexo cl`): 清除缓存文件 (`db.json`) 和已生成的静态文件 (`public` 目录)。**建议每次生成或部署前都执行一次，可以避免很多不必要的麻烦。**
+-   `hexo generate` (简写 `hexo g`): 生成静态文件。当有插件的简写命令冲突时，建议使用全拼。
+-   `hexo server` (简写 `hexo s`): 启动本地预览服务器。默认地址是 `http://localhost:4000/`。
+-   `hexo deploy` (简写 `hexo d`): 部署网站。
 
 **组合使用:**
 为了方便，可以把命令用 `&&` 连接起来一次性执行。
 
-*   **本地预览**:
-    ```bash
-    hexo clean && hexo generate && hexo server
-    # 或者简写
-    hexo cl && hexo g && hexo s
-    ```
+-  **本地预览**:
+```bash
+hexo clean && hexo generate && hexo server
+# 或者简写
+hexo cl && hexo g && hexo s
+```
     执行后，打开浏览器访问 `http://localhost:4000`，就能看到你的网站了。
 
-*   **生成待部署文件**:
-    ```bash
-    hexo clean && hexo generate && hexo deploy
-    # 或者简写
-    hexo cl && hexo g && hexo d
-    ```
-    **注意**: `hexo d` 这个简写在安装了某些插件后（例如豆瓣插件）可能会因为命令重名而失效。届时需要改用 `hexo dep` 或者全称 `hexo deploy`。所以更稳妥的写法是 `hexo cl && hexo g && hexo dep`。
+-  **生成待部署文件**:
+```bash
+hexo clean && hexo generate && hexo deploy
+# 或者简写
+hexo cl && hexo g && hexo d
+```
+**注意**: `hexo d` 这个简写在安装了某些插件后（例如豆瓣插件）可能会因为命令重名而失效。届时需要改用 `hexo dep` 或者全称 `hexo deploy`。所以更稳妥的写法是 `hexo cl && hexo g && hexo dep`。
 
 ### 如何编写文章呢?
 
@@ -166,13 +166,13 @@ cover: https://source.imyaigc.com/image/s8mjd0sh.png
     这条命令会在 `source/_posts` 目录下创建一个名为 `你的文章标题.md` 的文件。
 2.  **编辑文章**:
     请使用 Markdown 编辑器进行编辑。推荐：
-    *   **Typora**: 一个非常优秀的 Markdown 编辑器，我就在用，可以搭配图床插件 Pic Go 上传图片到自己的图床中，并自动生成图片链接。
-    *   **VS Code**: 配合插件也是极佳的选择。
-    *   **在线编辑器**: [Markdown Editor](https://markdowneditor.cn/)
+    - **Typora**: 一个非常优秀的 Markdown 编辑器，我就在用，可以搭配图床插件 Pic Go 上传图片到自己的图床中，并自动生成图片链接。
+    - **VS Code**: 配合插件也是极佳的选择。
+    - **在线编辑器**: [Markdown Editor](https://markdowneditor.cn/)
 3.  **注意事项**:
-    *   文章顶部的 Front-matter (被 `---` 包围的部分) 非常重要，用于配置文章信息。
-    *   `tags` (标签) 请注意大小写统一，例如，不要在一篇文章里用 `Java`，另一篇用 `JAVA`，这会被识别为两个不同的标签。
-    *   **文章加密**: 如果需要，可以使用插件 [hexo-blog-encrypt](https://github.com/D0n9X1n/hexo-blog-encrypt) 对特定文章加密。
+    - 文章顶部的 Front-matter (被 `---` 包围的部分) 非常重要，用于配置文章信息。
+    - `tags` (标签) 请注意大小写统一，例如，不要在一篇文章里用 `Java`，另一篇用 `JAVA`，这会被识别为两个不同的标签。
+    - **文章加密**: 如果需要，可以使用插件 [hexo-blog-encrypt](https://github.com/D0n9X1n/hexo-blog-encrypt) 对特定文章加密。
 
 ### 小节5: 选择并部署主题 (个性化你的博客)
 
@@ -181,24 +181,24 @@ cover: https://source.imyaigc.com/image/s8mjd0sh.png
 2.  **安装与配置 (以 Butterfly 主题为例)**:
     每个主题都有自己的安装和配置文档，请务必仔细阅读。这里以热门的 **Butterfly** 主题为例，分享一些具体的配置经验。
 
-    *   **官方文档**: [Butterfly 安装文档](https://butterfly.js.org/posts/21cfbf15/)
-    *   **安装**: 在你的博客根目录执行 Git 命令来下载主题。
+    -  **官方文档**: [Butterfly 安装文档](https://butterfly.js.org/posts/21cfbf15/)
+    -  **安装**: 在你的博客根目录执行 Git 命令来下载主题。
         ```bash
         git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
         ```
-    *   **启用**: 修改**站点配置文件** `_config.yml`，将 `theme` 字段改为：
+    -  **启用**: 修改**站点配置文件** `_config.yml`，将 `theme` 字段改为：
         ```yaml
         theme: butterfly
         ```
-    *   **配置**: 强烈建议使用上文提到的 **“独立的主题配置文件”** 方法，在根目录创建 `_config.butterfly.yml` 并在这里进行所有主题相关的修改。
+    - **配置**: 强烈建议使用上文提到的 **“独立的主题配置文件”** 方法，在根目录创建 `_config.butterfly.yml` 并在这里进行所有主题相关的修改。
 
 ### 小节6: 安装外部插件
 
 Hexo 强大的生态系统体现在丰富的插件上。以 `hexo-github-calendar` 为例：
 
-*   **插件地址**: [Zfour/hexo-github-calendar](https://github.com/Zfour/hexo-github-calendar)
-*   **作用**: 在页面上生成一个 GitHub/Gitee 的贡献日历图。
-*   **安装**: 通常插件的安装和使用方法都会在它的 `README.md` 文件或文档中详细说明。一般遵循 `npm install [插件名] --save` 然后在站点或主题配置文件中添加相应配置即可。
+-   **插件地址**: [Zfour/hexo-github-calendar](https://github.com/Zfour/hexo-github-calendar)
+-   **作用**: 在页面上生成一个 GitHub/Gitee 的贡献日历图。
+-   **安装**: 通常插件的安装和使用方法都会在它的 `README.md` 文件或文档中详细说明。一般遵循 `npm install [插件名] --save` 然后在站点或主题配置文件中添加相应配置即可。
 
 > **再次强调**: 操作时，请一定分清 **站点配置文件 (`_config.yml`)** 和 **主题配置文件 (`_config.butterfly.yml`)**！
 
@@ -227,26 +227,26 @@ Hexo 强大的生态系统体现在丰富的插件上。以 `hexo-github-calenda
 
 **小节1: 在 GitHub 托管项目**
 
-*   **目的**: 我们使用 GitHub 来存放你的整个 Hexo 项目**源代码**，而不是生成的 `public` 文件。这相当于云端备份和版本控制。
-*   **操作**:
+-  **目的**: 我们使用 GitHub 来存放你的整个 Hexo 项目**源代码**，而不是生成的 `public` 文件。这相当于云端备份和版本控制。
+-  **操作**:
     1.  注册并登录 [GitHub](https://github.com/)。
     2.  创建一个新的**公开 (Public)** 仓库，例如 `my-hexo-blog`。
     3.  将本地项目与远程仓库关联并推送。推荐使用 [GitHub Desktop](https://desktop.github.com/) 图形化工具，对新手非常友好。如果使用命令行：
-        ```bash
-        # (仅在项目首次推送时执行)
-        git init
-        git remote add origin https://github.com/你的用户名/你的仓库名.git
-        
-        # (每次更新后执行)
-        git add .
-        git commit -m "更新说明，例如：新增文章'Hello World'"
-        git push -u origin master
-        ```
+```bash
+# (仅在项目首次推送时执行)
+git init
+git remote add origin https://github.com/你的用户名/你的仓库名.git
+
+# (每次更新后执行)
+git add .
+git commit -m "更新说明，例如：新增文章'Hello World'"
+git push -u origin master
+```
 
 **小节2: 使用 Vercel 自动部署**
 
-*   **目的**: Vercel 会关联你的 GitHub 仓库，每当你推送新的代码时，它会自动帮你执行 `hexo g` 并将网站部署到全球 CDN 网络。
-*   **操作**:
+-   **目的**: Vercel 会关联你的 GitHub 仓库，每当你推送新的代码时，它会自动帮你执行 `hexo g` 并将网站部署到全球 CDN 网络。
+-   **操作**:
     1.  访问 [Vercel 官网](https://vercel.com/)，使用你的 GitHub 账号注册登录。
     2.  选择 “Import Project”，找到并选择你刚刚创建的 `my-hexo-blog` 仓库。
     3.  Vercel 会自动识别出是 Hexo 项目，你无需任何额外配置，直接点击 “Deploy”。
@@ -266,11 +266,11 @@ Hexo 强大的生态系统体现在丰富的插件上。以 `hexo-github-calenda
 1.  `hexo new "文章标题"` -> 写作。
 2.  `hexo clean && hexo g && hexo s` -> 本地预览，检查效果。
 3.  确认无误后，将代码推送到 GitHub:
-    ```bash
-    git add .
-    git commit -m "更新日志"
-    git push
-    ```
+```bash
+git add .
+git commit -m "更新日志"
+git push
+```
 4.  Vercel 会自动完成线上部署。
 
 ### Front-matter 详解
@@ -312,28 +312,29 @@ summary: 这是你自定义的文章摘要内容...
 
 ## 可能会用到的功能代码片段
 
-*   **内嵌Bilibili视频 (自适应)**
-    ```html
-    <div style="position: relative; padding: 30% 45%;">
-    <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="//player.bilibili.com/player.html?aid=64141610&bvid=BV134411f7xX&cid=111338369&page=1&as_wide=1&high_quality=1&danmaku=0" frameborder="no" scrolling="no"></iframe>
-    </div>
-    ```
-    只需将 `src` 中的链接替换为B站分享的嵌入代码中的链接即可。
+- **内嵌Bilibili视频 (自适应)**
+```html
+<div style="position: relative; padding: 30% 45%;">
+<iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="//player.bilibili.com/player.html?aid=64141610&bvid=BV134411f7xX&cid=111338369&page=1&as_wide=1&high_quality=1&danmaku=0" frameborder="no" scrolling="no"></iframe>
+</div>
+```
+只需将 `src` 中的链接替换为B站分享的嵌入代码中的链接即可。
 
-*   **内嵌视频**
-    ```html
-    <video width="100%" height="100%" controls>
-     <source src="你的视频url.mp4" type="video/mp4" />
-    </video>
-    ```
+- **内嵌视频**
+```html
+<video width="100%" height="100%" controls>
+    <source src="你的视频url.mp4" type="video/mp4" />
+</video>
+```
 
-*   **内嵌网易云音乐**
+-  **内嵌网易云音乐**
     *   **直链格式**: `http://music.163.com/song/media/outer/url?id=歌曲ID.mp3` (付费歌曲不可用)
     *   **HTML 代码**:
-        ```html
-        <audio src="http://music.163.com/song/media/outer/url?id=歌曲ID.mp3" controls loop preload="auto">
-        </audio>
-        ```
+
+```html
+<audio src="http://music.163.com/song/media/outer/url?id=歌曲ID.mp3" controls loop preload="auto">
+</audio>
+```
 
 ---
 
