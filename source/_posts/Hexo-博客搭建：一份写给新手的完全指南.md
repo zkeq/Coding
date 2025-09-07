@@ -56,22 +56,22 @@ cover: https://source.imyaigc.com/image/s8mjd0sh.png
 
 1.  **安装 Hexo 脚手架 (`hexo-cli`)**
     打开你的命令行工具 (推荐在任意位置右键 -> Git Bash Here)，输入以下命令：
-    ```bash
-    npm install -g hexo-cli
-    ```
-    - `npm` 是 Node.js 自带的包管理器，用来安装各种工具。
-    - `-g` 代表“全局安装”，这样你在任何地方都可以使用 `hexo` 命令。
-    -  **关于 `$` 符号**: 你在很多教程里看到的 `$`，其实是 Linux/macOS 命令行里的提示符，**你复制命令时不需要复制它**。
+```bash
+npm install -g hexo-cli
+```
+- `npm` 是 Node.js 自带的包管理器，用来安装各种工具。
+- `-g` 代表“全局安装”，这样你在任何地方都可以使用 `hexo` 命令。
+-  **关于 `$` 符号**: 你在很多教程里看到的 `$`，其实是 Linux/macOS 命令行里的提示符，**你复制命令时不需要复制它**。
 
 2.  **验证安装**
     安装成功后，输入 `hexo -version` 来检查一下。如果能看到类似下面的版本信息，就说明 Hexo 已经成功安装在你的电脑上了。
-    ```bash
-    $ hexo -version
-    hexo-cli: 4.3.0
-    os: win32 10.0.22000
-    node: 14.17.3
-    ...
-    ```
+```bash
+$ hexo -version
+hexo-cli: 4.3.0
+os: win32 10.0.22000
+node: 14.17.3
+...
+```
 
 ### 小节3: 建站
 
@@ -109,19 +109,19 @@ author: 你的名字
 language: zh-CN # 简体中文，根据主题要求可能为 zh-Hans
 timezone: Asia/Shanghai # 时区
 ```
-    -  **网址 (URL)**
+-  **网址 (URL)**
 ```yaml
 url: https://your-domain.com # 你的最终域名
 root: / # 网站根目录。如果你的网站在子目录，如 example.com/blog，则 url 为 http://example.com/blog，root 为 /blog/
 permalink: :year/:month/:day/:title/ # 文章的永久链接格式
 ```
-    -  **关于永久链接 `permalink` 的重要建议**：
-        默认格式太长，不利于SEO且不美观。强烈建议在建站之初就确定好格式，避免日后修改导致链接失效、访问统计丢失。
-        一个更简洁且独一无二的推荐格式是 **年份 + 文件名哈希值**:
+-  **关于永久链接 `permalink` 的重要建议**：
+    默认格式太长，不利于SEO且不美观。强烈建议在建站之初就确定好格式，避免日后修改导致链接失效、访问统计丢失。
+    一个更简洁且独一无二的推荐格式是 **年份 + 文件名哈希值**:
 ```yaml
 permalink: :year/:hash/
 ```
-        更多格式请参考 [Hexo 官方文档](https://hexo.io/docs/permalinks)。
+更多格式请参考 [Hexo 官方文档](https://hexo.io/docs/permalinks)。
 
 5.  **最佳实践：独立的主题配置文件**
     为了方便日后平滑升级主题，强烈建议不要直接修改 `themes/[主题名]/_config.yml`。正确的做法是：
@@ -147,7 +147,7 @@ hexo clean && hexo generate && hexo server
 # 或者简写
 hexo cl && hexo g && hexo s
 ```
-    执行后，打开浏览器访问 `http://localhost:4000`，就能看到你的网站了。
+执行后，打开浏览器访问 `http://localhost:4000`，就能看到你的网站了。
 
 -  **生成待部署文件**:
 ```bash
@@ -163,7 +163,7 @@ hexo cl && hexo g && hexo d
     ```bash
     hexo new "你的文章标题"
     ```
-    这条命令会在 `source/_posts` 目录下创建一个名为 `你的文章标题.md` 的文件。
+这条命令会在 `source/_posts` 目录下创建一个名为 `你的文章标题.md` 的文件。
 2.  **编辑文章**:
     请使用 Markdown 编辑器进行编辑。推荐：
     - **Typora**: 一个非常优秀的 Markdown 编辑器，我就在用，可以搭配图床插件 Pic Go 上传图片到自己的图床中，并自动生成图片链接。
@@ -181,15 +181,15 @@ hexo cl && hexo g && hexo d
 2.  **安装与配置 (以 Butterfly 主题为例)**:
     每个主题都有自己的安装和配置文档，请务必仔细阅读。这里以热门的 **Butterfly** 主题为例，分享一些具体的配置经验。
 
-    -  **官方文档**: [Butterfly 安装文档](https://butterfly.js.org/posts/21cfbf15/)
-    -  **安装**: 在你的博客根目录执行 Git 命令来下载主题。
-        ```bash
-        git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
-        ```
-    -  **启用**: 修改**站点配置文件** `_config.yml`，将 `theme` 字段改为：
-        ```yaml
-        theme: butterfly
-        ```
+-  **官方文档**: [Butterfly 安装文档](https://butterfly.js.org/posts/21cfbf15/)
+-  **安装**: 在你的博客根目录执行 Git 命令来下载主题。
+```bash
+git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
+```
+-  **启用**: 修改**站点配置文件** `_config.yml`，将 `theme` 字段改为：
+```yaml
+theme: butterfly
+```
     - **配置**: 强烈建议使用上文提到的 **“独立的主题配置文件”** 方法，在根目录创建 `_config.butterfly.yml` 并在这里进行所有主题相关的修改。
 
 ### 小节6: 安装外部插件
