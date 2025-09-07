@@ -166,10 +166,13 @@ hexo cl && hexo g && hexo d
 这条命令会在 `source/_posts` 目录下创建一个名为 `你的文章标题.md` 的文件。
 2.  **编辑文章**:
     请使用 Markdown 编辑器进行编辑。推荐：
+
 - **Typora**: 一个非常优秀的 Markdown 编辑器，我就在用，可以搭配图床插件 Pic Go 上传图片到自己的图床中，并自动生成图片链接。
 - **VS Code**: 配合插件也是极佳的选择。
 - **在线编辑器**: [Markdown Editor](https://markdowneditor.cn/)
+
 3.  **注意事项**:
+
 - 文章顶部的 Front-matter (被 `---` 包围的部分) 非常重要，用于配置文章信息。
 - `tags` (标签) 请注意大小写统一，例如，不要在一篇文章里用 `Java`，另一篇用 `JAVA`，这会被识别为两个不同的标签。
 - **文章加密**: 如果需要，可以使用插件 [hexo-blog-encrypt](https://github.com/D0n9X1n/hexo-blog-encrypt) 对特定文章加密。
