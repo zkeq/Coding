@@ -87,8 +87,8 @@ node: 14.17.3
     hexo init .
     npm install
     ```
-    - `hexo init .` 会将 Hexo 的所有必要文件下载到**当前文件夹**（`.` 代表当前目录）。
-    - `npm install` 会根据项目定义，安装所有依赖的模块。
+- `hexo init .` 会将 Hexo 的所有必要文件下载到**当前文件夹**（`.` 代表当前目录）。
+- `npm install` 会根据项目定义，安装所有依赖的模块。
 
 3.  **项目文件结构解析**
     - `_config.yml`: **站点配置文件**，博客的“总开关”，大部分全局配置都在这里。
@@ -190,7 +190,7 @@ git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes
 ```yaml
 theme: butterfly
 ```
-    - **配置**: 强烈建议使用上文提到的 **“独立的主题配置文件”** 方法，在根目录创建 `_config.butterfly.yml` 并在这里进行所有主题相关的修改。
+- **配置**: 强烈建议使用上文提到的 **“独立的主题配置文件”** 方法，在根目录创建 `_config.butterfly.yml` 并在这里进行所有主题相关的修改。
 
 ### 小节6: 安装外部插件
 
