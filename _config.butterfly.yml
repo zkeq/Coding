@@ -919,6 +919,7 @@ inject:
       # - <script defer data-domain="icodeq.com" src="https://vercel.site.icodeq.com/js/script.js"></script>
       - <link rel="stylesheet" href="/css/font.css">
       - <link rel="stylesheet" href="/css/code.css">
+      - <link rel="stylesheet" href="/css/gist.css">
       - <link rel="stylesheet" href="https://static.iirose.cn/zkeq/docsearch.css"/></pre></li>
       - <link rel="preconnect" href="https://KI6VRR8JEE-dsn.algolia.net" crossorigin />
       - <script src="https://static.iirose.cn/zkeq/docsearch.js"></script>

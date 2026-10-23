@@ -1,193 +1,107 @@
-var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-const crypto = require('crypto');
-const { exit } = require('process');
-const log = require('hexo-log')({
-    debug: false,
-    silent: false
-  })
-// 从环境变量里面拿到github token
-const github_token = process.env.GITHUB_TOKEN;
+// 本地 Gist 风格代码块渲染（2026-10-23 改造）
+//
+// 旧版逻辑：构建时把每个代码块按 MD5 同步到 GitHub Gist，再替换为
+// <iframe srcdoc> 嵌入 gist.onmicrosoft.cn 镜像渲染。镜像失效后全站代码块白屏。
+//
+// 新版逻辑：不再调用 GitHub API、不再创建/删除 Gist、不再生成 iframe。
+// 构建时直接用 highlight.js 把代码块渲染成仿 GitHub Gist 外观的静态 HTML
+// （行号栏 + GitHub 配色 + 底部 meta 条），样式见 source/css/gist.css。
+// 代码内容本来就完整保存在各篇文章的 markdown 里，无需从 Gist 回捞。
 
-// 找出来所有的描述
-var pages = 1;
-var is_end = false;
-var page_list = [];
-var id_list = [];
-var used_hash = [];
-var Is_Load_Github = false;
+let hljs = null;
+try {
+    hljs = require('highlight.js');
+} catch (e) {
+    hljs = null; // 没有 highlight.js 时退化为无高亮的等宽代码块
+}
 
-function Load_Github(){
-    // for 循环找出所有gist
-    while (!is_end) {                
-        // 首先获取到全部的gist
-        var request = new XMLHttpRequest();
-        log.info(`GIST: 正在查找第${pages}页`)
-        request.open("GET", "https://api.github.com/gists?per_page=100" + `&page=${pages}`, false);
-        request.setRequestHeader("Content-Type", "application/json");
-        request.setRequestHeader("Authorization", "token " + github_token);
-        request.send(null);
-        data_json = JSON.parse(request.responseText);
-        // 如果没有gist就结束
-        if (data_json.length == 0) {
-            is_end = true;
-            break;
+// 与 Hexo 核心相同的代码块匹配正则（含引用块内的代码块）
+const rBacktick = /^((?:[^\S\r\n]*>){0,3}[^\S\r\n]*)(`{3,}|~{3,})[^\S\r\n]*((?:.*?[^`\s])?)[^\S\r\n]*\n((?:[\s\S]*?\n)?)(?:(?:[^\S\r\n]*>){0,3}[^\S\r\n]*)\2[^\S\r\n]?(\n+|$)/gm;
+
+// 需要改名/兜底的语言（hljs 原生 alias 如 js/py/sh/cmd/html 等可直接识别，不必列）
+const LANG_MAP = {
+    'c++': 'cpp',
+    'vue': 'xml',
+    'text': 'plaintext',
+    'txt': 'plaintext',
+    'sqlite': 'sql',
+    'shell': 'bash'
+};
+
+function normalizeLang(raw) {
+    // 旧版行为：未标注语言时默认按 javascript 高亮（旧版 gist 文件后缀为 .js）
+    if (!raw) return 'javascript';
+    const lower = String(raw).toLowerCase();
+    if (LANG_MAP[lower]) return LANG_MAP[lower];
+    if (hljs && hljs.getLanguage(lower)) return lower;
+    return 'plaintext';
+}
+
+function escapeHtml(str) {
+    return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+}
+
+// 把 highlight.js 的整段输出按行切开，跨行 span 在行尾闭合、下一行重开
+function splitHighlighted(html) {
+    const lines = [''];
+    const stack = [];
+    const re = /<span[^>]*>|<\/span>|\n|[^<\n]+/g;
+    let m;
+    while ((m = re.exec(html)) !== null) {
+        const tok = m[0];
+        if (tok === '\n') {
+            lines[lines.length - 1] += '</span>'.repeat(stack.length);
+            lines.push(stack.join(''));
+        } else if (tok.charAt(0) === '<' && tok.charAt(1) === 's') {
+            stack.push(tok);
+            lines[lines.length - 1] += tok;
+        } else if (tok === '</span>') {
+            stack.pop();
+            lines[lines.length - 1] += tok;
         } else {
-            // 如果有gist就把gist加入到page_list
-            data_json.forEach(element => {
-                page_list.push(element["description"]);
-                id_list.push(element["id"]);
-            });
-            pages = pages + 1;
+            lines[lines.length - 1] += tok;
         }
     }
+    return lines;
 }
-// scripts/plantuml.js
-const rBacktick = /^((?:[^\S\r\n]*>){0,3}[^\S\r\n]*)(`{3,}|~{3,})[^\S\r\n]*((?:.*?[^`\s])?)[^\S\r\n]*\n((?:[\s\S]*?\n)?)(?:(?:[^\S\r\n]*>){0,3}[^\S\r\n]*)\2[^\S\r\n]?(\n+|$)/gm;
-// 另一种正则：```(\w+?\n)([\s\S]+?)```
+
+function renderGistBlock(code, rawLang) {
+    const lang = normalizeLang(rawLang);
+    let lines;
+    if (hljs && lang !== 'plaintext' && hljs.getLanguage(lang)) {
+        lines = splitHighlighted(hljs.highlight(code, { language: lang }).value);
+    } else {
+        lines = code.split('\n').map(escapeHtml);
+    }
+    const rows = lines.map((lineHtml, idx) =>
+        '<tr><td class="blob-num" data-line-number="' + (idx + 1) + '"></td>' +
+        '<td class="blob-code">' + (lineHtml === '' ? ' ' : lineHtml) + '</td></tr>'
+    ).join('');
+    const label = rawLang ? escapeHtml(String(rawLang)) : 'javascript';
+    // 整段 HTML 不留空行，避免被 marked 拆成多个 HTML 块
+    const html = '<div class="gist-clone"><div class="gist-file">' +
+        '<div class="gist-data"><table class="highlight"><tbody>' + rows + '</tbody></table></div>' +
+        '<div class="gist-meta"><span class="gist-meta-lang">' + label + '</span></div>' +
+        '</div></div>';
+    // Hexo 在 markdown 渲染后还会用 Nunjucks 处理全文（tag.render），代码里的
+    // {{ }} / {% %} 会被当成模板语法解析甚至报错（旧版代码在 Gist 里、页面上
+    // 没有代码原文，所以从未触发）。把花括号转成实体，Nunjucks 便无从下口，
+    // 浏览器显示不受影响。自产的标签本身不含花括号，可安全整体替换。
+    return html.replace(/\{/g, '&#123;').replace(/\}/g, '&#125;');
+}
 
 hexo.extend.filter.register('before_post_render', function (data) {
-    if (!Is_Load_Github){
-        Load_Github();
-        Is_Load_Github = true;
-    }
-
     const dataContent = data.content;
     if ((!dataContent.includes('```') && !dataContent.includes('~~~'))) return;
 
     data.content = dataContent.replace(rBacktick, (match, start, $2, _args, _content, end) => {
-        let gh_content = _content
+        const code = _content
             .replace(/\n$/, '')
             .replace(/^>\s/mg, '');
-        // 如果有 _args 就用 _args 如果没有就默认为js
-        let lang = _args ? _args : 'js';
-        lang_list = {
-            "javascript": "js",
-            "python": "py",
-            "SQL": "sql",
-            "Python": "py",
-            "JavaScript": "js",
-            "Javascript": "js",
-            "html": "html",
-            "HTML": "html",
-            "JS": "js",
-            "Js": "js"
-        }
-        lang = lang_list[lang] ? lang_list[lang] : lang;
-        const hash = crypto.createHash('md5');
-        hash.update(lang, 'utf8');
-        hash.update(gh_content, 'utf8');
-        const md5 = hash.digest('hex');
-        process.stdout.write("INFO  |--MD5--|" + md5 + "|----|");
-        if (page_list.includes(md5)) {
-            // 推送到used_hash
-            used_hash.push(md5);
-            // 找到是第几个元素
-            let index = page_list.indexOf(md5);
-            // 找到对应的id
-            var id = id_list[index];
-        }else{
-            // 如果没有找到就新建一个gist
-            console.log("该gist不存在，新建一个gist");
-            console.log(gh_content);
-            console.log('-------------')
-            var id = createGist(md5, gh_content, lang);
-            console.log("新建gist，id：" + id);
-        }
-        console.log('\x1B[32m', "|--ID--|" + id + "|----|")
-        // // 查看这个gist的嵌入代码
-        // var request = new XMLHttpRequest();
-        // let gist_url = "https://gist.github.com/zkeq/" + id + ".js"
-        // console.log(gist_url);
-        // request.open("GET", gist_url, false);
-        // request.send();
-        // let gist_code = request.responseText;
-        // str = "<script>" + gist_code + "</script>";
-            // iframe_ele = document.createElement('iframe');
-            // iframe_ele.style = "border:none;width:100%;max-height:50vh";
-            // iframe_ele.setAttribute("onload", "javascript:this.style.height=`${this.contentWindow.document.body.offsetHeight}px`;this.contentWindow.document.getElementsByClassName('gist-data')[0].style.height=`${this.clientHeight-65}px`;")
-            // iframe_ele.setAttribute("srcdoc", `<head><base target='_blank'/></head><body><script src='https://gist.onmicrosoft.cn/zkeq/${id}.js'></script></body>`)
-        // 输出该代码片段一共有几行
-        let line_num = gh_content.split('\n').length;
-        return `
-
-<iframe 
-style="border:none;width:100%;max-height:66vh;"
-onload="javascript:this.style.height=\`\${this.contentWindow.document.body.offsetHeight===0||this.contentWindow.document.body.offsetHeight===98||this.contentWindow.document.body.offsetHeight===143?${line_num * 22 + 52}+5:this.contentWindow.document.body.offsetHeight+5}px\`;this.contentWindow.document.getElementsByClassName('gist-data')[0].style.height==\`\${this.clientHeight-40}px\`;setTimeout(() => {this.contentWindow.document.body.offsetHeight===0||this.contentWindow.document.body.offsetHeight===98||this.contentWindow.document.body.offsetHeight===143?this.style.height=\`\${${line_num * 22 + 52}+5}px\`:true}, 1000);"
-srcdoc='<meta name="description" content="Instantly share code, notes, and snippets. You can&#39;t perform that action at this time. You signed in with another tab or window. You signed out in another tab or window. Reload to refresh your session. Reload to refresh your session."><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="twitter:widgets:csp" content="on"><meta name="robots" content="noindex"><base target="_blank"><style>body {text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif; font-weight: 400; color: #333332; font-size: 18px; line-height: 1.4; margin: 0; background-color: white; overflow: hidden;}iframe {max-width: 100%;}</style></head><body><style>.gist .gist-file { margin-bottom: 0 !important; }.gist { text-rendering: auto; }.gist-meta a:nth-child(2) {display: none;} html {overflow: hidden;text-overflow: ellipsis;display: inline-block;} * {margin: 0}</style><script src="https://gist.onmicrosoft.cn/zkeq/${id}.js" charset="utf-8"></script><script>var height = -1; var delayMs = 200; if (document) {document.domain = document.domain;}function notifyResize(height) {height = height ? height : document.documentElement.offsetHeight; var resized = false; if (window.donkey && donkey.resize) {donkey.resize(height);var elements = document.getElementsByClassName("gist-data"); for (var i = 0; i < elements.length; i++) {elements[i].style.overflow = "visible"}resized = true;}if (parent && parent._resizeIframe) {var obj = {iframe: window.frameElement, height: height}; parent._resizeIframe(obj); resized = true;}if (window.location && window.location.hash === "#amp=1" && window.parent && window.parent.postMessage) {window.parent.postMessage({sentinel: "amp", type: "embed-size", height: height}, "*");}if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.resize) {window.webkit.messageHandlers.resize.postMessage(height); resized = true;} setTimeout(function () { document.getElementsByClassName("gist-data")[0].setAttribute("style", "max-height: 90vh");(document.documentElement.offsetHeight===0||document.documentElement.offsetHeight===98)?document.styleSheets[0].insertRule(".gist .blob-code {white-space: pre  !important;}"):true;}, 200);return resized;}function maybeResize() {try {if (document.documentElement.offsetHeight != height && notifyResize()) {height = document.documentElement.offsetHeight;}delayMs = Math.min(delayMs * 2, 1000000); setTimeout(maybeResize, delayMs);} catch(error) {console.log("maybeResize error: ", error)}}maybeResize();</script>'
->
-</iframe>
-
-`;
+        return '\n\n' + renderGistBlock(code, _args) + '\n\n';
     });
 }, 9);
-// 2023-05-16 03:38:59 Delete the following code
-// 2023-04-23 11:13:30 Remove Safari BUG
-// https://github.com/zkeq/Coding/commit/259de5270066d4ea2799c59b3481f5415138ff9f
-
-function createGist (md5, gh_content, lang){
-    let response = ''
-    let requestData = {
-        "description": md5,
-        "public": false,
-        "files": {
-            [md5 + "." + lang]: {
-                "content": gh_content
-            }
-        }
-    };
-    var request = new XMLHttpRequest();
-    // POST
-    request.open("POST", "https://api.github.com/gists", false);
-    request.setRequestHeader("Content-Type", "application/json");
-    request.setRequestHeader("Authorization", "token " + github_token);
-    request.send(JSON.stringify(requestData));
-    response = request.responseText;
-    // 如果状态码不是200就报错
-    if (request.status != 201) {
-        console.log(response);
-        console.log('\x1B[31m', "|--ERR POST--|" + md5 + "|--ERR POST--|", '\x1B[0m');
-        // 当前上传量达到 Github API 限制，请隔一段时间再来上传
-        return createGist(md5, gh_content, lang);
-    }
-    return JSON.parse(response)["id"];
-}
-
-function isMd5(str) {
-    return /^[a-f0-9]{32}$/i.test(str);
-}
-
-function deleteGist(hash) {
-    var request = new XMLHttpRequest();
-    // DELETE
-    request.open("DELETE", `https://api.github.com/gists/${hash}`, false);
-    // Accept: application/vnd.github+json
-    request.setRequestHeader("Accept", "application/vnd.github+json");
-    // X-GitHub-Api-Version: 2022-11-28
-    request.setRequestHeader("X-GitHub-Api-Version", "2022-11-28");
-    request.setRequestHeader("Authorization", "token " + github_token);
-    request.send();
-    // 如果状态码不是204就报错
-    if (request.status !== 204 && request.status !== 404) {
-        console.log('\x1B[31m', "|--ERR DEL--|" + hash + "|----|")
-        console.log(request.responseText);
-        return deleteGist(hash);
-    }else{
-        console.log('\x1B[34m', "|--DEL--|" + hash + "|----|")
-    }
-}
-
-
-hexo.extend.filter.register('before_exit', function(){
-    // for循环遍历所有的gist
-    for (let i = 0; i < page_list.length; i++) {
-        // 如果 当前项在列表中有重复的，就删除该gist
-        if (isMd5(page_list[i]) && page_list.indexOf(page_list[i]) !== i) {
-            deleteGist(id_list[i]);
-        }
-        // 如果在 used_hash 中没有找到该gist的hash，并且该hash是个hash
-        if (!used_hash.includes(page_list[i]) && isMd5(page_list[i])) {
-            // 删除该gist
-            deleteGist(id_list[i]);
-        }
-    }
-  });

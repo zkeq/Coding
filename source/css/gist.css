@@ -1,0 +1,188 @@
+/* 仿 GitHub Gist 嵌入样式（配合 scripts/tools.js 生成的 .gist-clone 结构）
+   替代原 gist.onmicrosoft.cn iframe 嵌入，纯本地渲染。 */
+
+.gist-clone {
+  margin: 0 0 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #24292e;
+  text-align: left;
+}
+
+.gist-clone .gist-file {
+  border: 1px solid #ddd;
+  border-bottom: 1px solid #ccc;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.gist-clone .gist-data {
+  max-height: 66vh;
+  overflow: auto;
+  border-bottom: 1px solid #ddd;
+  border-radius: 2px 2px 0 0;
+  background-color: #fff;
+}
+
+.gist-clone table.highlight {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: transparent;
+  display: table;
+}
+
+.gist-clone table.highlight td {
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.gist-clone .highlight tr:first-child td {
+  padding-top: 8px;
+}
+
+.gist-clone .highlight tr:last-child td {
+  padding-bottom: 8px;
+}
+
+.gist-clone .blob-num {
+  width: 1%;
+  min-width: 50px;
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(27, 31, 35, .3);
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  border-right: 1px solid #eee !important;
+}
+
+.gist-clone .blob-num::before {
+  content: attr(data-line-number);
+}
+
+.gist-clone .blob-code {
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  line-height: 20px;
+  white-space: pre;
+  vertical-align: top;
+  overflow: visible;
+}
+
+.gist-clone .highlight tr:hover td {
+  background-color: #f6f8fa;
+}
+
+.gist-clone .gist-meta {
+  padding: 8px 10px;
+  overflow: hidden;
+  font-size: 12px;
+  color: #586069;
+  background-color: #f7f7f7;
+  border-radius: 0 0 2px 2px;
+}
+
+/* GitHub 语法配色（highlight.js github 主题，限定在 .gist-clone 内） */
+.gist-clone .hljs-comment,
+.gist-clone .hljs-punctuation {
+  color: #6a737d;
+}
+
+.gist-clone .hljs-doctag,
+.gist-clone .hljs-keyword,
+.gist-clone .hljs-meta .hljs-keyword,
+.gist-clone .hljs-template-tag,
+.gist-clone .hljs-template-variable,
+.gist-clone .hljs-type,
+.gist-clone .hljs-variable.language_ {
+  color: #d73a49;
+}
+
+.gist-clone .hljs-title,
+.gist-clone .hljs-title.class_,
+.gist-clone .hljs-title.class_.inherited__,
+.gist-clone .hljs-title.function_ {
+  color: #6f42c1;
+}
+
+.gist-clone .hljs-attr,
+.gist-clone .hljs-attribute,
+.gist-clone .hljs-literal,
+.gist-clone .hljs-meta,
+.gist-clone .hljs-number,
+.gist-clone .hljs-operator,
+.gist-clone .hljs-selector-attr,
+.gist-clone .hljs-selector-class,
+.gist-clone .hljs-selector-id,
+.gist-clone .hljs-variable {
+  color: #005cc5;
+}
+
+.gist-clone .hljs-meta .hljs-string,
+.gist-clone .hljs-regexp,
+.gist-clone .hljs-string {
+  color: #032f62;
+}
+
+.gist-clone .hljs-built_in,
+.gist-clone .hljs-symbol {
+  color: #e36209;
+}
+
+.gist-clone .hljs-code,
+.gist-clone .hljs-formula {
+  color: #6a737d;
+}
+
+.gist-clone .hljs-name,
+.gist-clone .hljs-quote,
+.gist-clone .hljs-selector-pseudo,
+.gist-clone .hljs-selector-tag {
+  color: #22863a;
+}
+
+.gist-clone .hljs-subst {
+  color: #24292e;
+}
+
+.gist-clone .hljs-section {
+  color: #005cc5;
+  font-weight: bold;
+}
+
+.gist-clone .hljs-bullet {
+  color: #735c0f;
+}
+
+.gist-clone .hljs-emphasis {
+  color: #24292e;
+  font-style: italic;
+}
+
+.gist-clone .hljs-strong {
+  color: #24292e;
+  font-weight: bold;
+}
+
+.gist-clone .hljs-addition {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+.gist-clone .hljs-deletion {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
