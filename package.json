@@ -17,7 +17,7 @@
     "crypto": "^1.0.1",
     "hexo": "^6.3.0",
     "hexo-algolia": "^1.3.2",
-    "hexo-blog-encrypt": "^3.1.6",
+    "hexo-blog-encrypt": "^3.1.9",
     "hexo-browsersync": "^0.3.0",
     "hexo-butterfly-artitalk": "^1.0.4",
     "hexo-butterfly-douban-zkeq": "^1.2.6",
