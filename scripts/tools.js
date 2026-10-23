@@ -4,9 +4,9 @@
 // <iframe srcdoc> 嵌入 gist.onmicrosoft.cn 镜像渲染。镜像失效后全站代码块白屏。
 //
 // 新版逻辑：不再调用 GitHub API、不再创建/删除 Gist、不再生成 iframe。
-// 构建时直接用 highlight.js 把代码块渲染成仿 GitHub Gist 外观的静态 HTML
-// （行号栏 + GitHub 配色 + 底部 meta 条），样式见 source/css/gist.css。
-// 代码内容本来就完整保存在各篇文章的 markdown 里，无需从 Gist 回捞。
+// 构建时直接用 highlight.js 把代码块渲染成与 GitHub 官方 Gist 嵌入
+// 逐层一致的静态 HTML，样式为官方嵌入 CSS 原版（source/css/gist.css），
+// 实现 1:1 还原。代码内容本来就完整保存在各篇文章的 markdown 里，无需回捞。
 
 let hljs = null;
 try {
@@ -69,6 +69,15 @@ function splitHighlighted(html) {
     return lines;
 }
 
+// blob-wrapper 上的 type-* 类名（与 GitHub 官方命名保持一致）
+const TYPE_SLUG = {
+    'bash': 'shell',
+    'plaintext': 'text',
+    'xml': 'html'
+};
+
+let gistSeq = 0;
+
 function renderGistBlock(code, rawLang) {
     const lang = normalizeLang(rawLang);
     let lines;
@@ -77,15 +86,34 @@ function renderGistBlock(code, rawLang) {
     } else {
         lines = code.split('\n').map(escapeHtml);
     }
-    const rows = lines.map((lineHtml, idx) =>
-        '<tr><td class="blob-num" data-line-number="' + (idx + 1) + '"></td>' +
-        '<td class="blob-code">' + (lineHtml === '' ? ' ' : lineHtml) + '</td></tr>'
-    ).join('');
     const label = rawLang ? escapeHtml(String(rawLang)) : 'javascript';
-    // 整段 HTML 不留空行，避免被 marked 拆成多个 HTML 块
-    const html = '<div class="gist-clone"><div class="gist-file">' +
-        '<div class="gist-data"><table class="highlight"><tbody>' + rows + '</tbody></table></div>' +
-        '<div class="gist-meta"><span class="gist-meta-lang">' + label + '</span></div>' +
+    const typeSlug = TYPE_SLUG[lang] || lang;
+    const slug = 'file-local-' + (++gistSeq);
+    const rows = lines.map((lineHtml, idx) =>
+        '<tr>' +
+        '<td id="' + slug + '-L' + (idx + 1) + '" class="blob-num js-line-number js-blob-rnum" data-line-number="' + (idx + 1) + '"></td>' +
+        '<td id="' + slug + '-LC' + (idx + 1) + '" class="blob-code blob-code-inner js-file-line">' + (lineHtml === '' ? ' ' : lineHtml) + '</td>' +
+        '</tr>'
+    ).join('');
+    // 结构与 GitHub 官方 Gist 嵌入（gist.github.com 返回的 HTML）逐层一致，
+    // 配合 source/css/gist.css 中的官方嵌入样式实现 1:1 还原。
+    // 差异仅两处（无 Gist 本体可链）：view raw 与文件名链接不带 href（不可点，视觉不变，
+    // 且文件名链接本来就被用户自己的 CSS 隐藏）；其余含 "hosted with ❤ by GitHub" 均按官方原样。
+    // 整段 HTML 不留空行，避免被 marked 拆成多个 HTML 块。
+    const html = '<div class="gist">' +
+        '<div class="gist-file" translate="no" data-color-mode="light" data-light-theme="light">' +
+        '<div class="gist-data">' +
+        '<div class="js-gist-file-update-container js-task-list-container">' +
+        '<div id="' + slug + '" class="file my-2">' +
+        '<div itemprop="text" class="Box-body p-0 blob-wrapper data type-' + typeSlug + '" style="overflow: auto" tabindex="0" role="region" aria-label="' + label + '">' +
+        '<div class="js-check-hidden-unicode js-blob-code-container blob-code-content">' +
+        '<table data-hpc class="highlight tab-size js-file-line-container" data-tab-size="4">' + rows + '</table>' +
+        '</div></div></div></div></div>' +
+        '<div class="gist-meta">' +
+        '<a style="float:right" class="Link--inTextBlock">view raw</a>' +
+        '<a class="Link--inTextBlock">' + label + '</a>' +
+        ' hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>' +
+        '</div>' +
         '</div></div>';
     // Hexo 在 markdown 渲染后还会用 Nunjucks 处理全文（tag.render），代码里的
     // {{ }} / {% %} 会被当成模板语法解析甚至报错（旧版代码在 Gist 里、页面上
