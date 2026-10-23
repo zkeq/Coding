@@ -4,9 +4,10 @@
 // <iframe srcdoc> 嵌入 gist.onmicrosoft.cn 镜像渲染。镜像失效后全站代码块白屏。
 //
 // 新版逻辑：不再调用 GitHub API、不再创建/删除 Gist、不再生成 iframe。
-// 构建时直接用 highlight.js 把代码块渲染成与 GitHub 官方 Gist 嵌入
-// 逐层一致的静态 HTML，样式为官方嵌入 CSS 原版（source/css/gist.css），
-// 实现 1:1 还原。代码内容本来就完整保存在各篇文章的 markdown 里，无需回捞。
+// 构建时直接用 highlight.js 把代码块渲染成与用户原镜像 2023-05 存档的
+// 官方 Gist 嵌入逐层一致的静态 HTML，样式为同版官方 CSS 原版
+// （gist-embed-cdd2b47f37c5，见 source/css/gist.css），实现 1:1 还原。
+// 代码内容本来就完整保存在各篇文章的 markdown 里，无需回捞。
 
 let hljs = null;
 try {
@@ -76,6 +77,36 @@ const TYPE_SLUG = {
     'xml': 'html'
 };
 
+// data-tagsearch-lang 用的 GitHub 语言显示名
+const LANG_NAME = {
+    'bash': 'Shell',
+    'python': 'Python',
+    'javascript': 'JavaScript',
+    'sql': 'SQL',
+    'xml': 'HTML',
+    'css': 'CSS',
+    'go': 'Go',
+    'java': 'Java',
+    'json': 'JSON',
+    'yaml': 'YAML',
+    'cpp': 'C++',
+    'typescript': 'TypeScript',
+    'dockerfile': 'Dockerfile',
+    'dos': 'Batchfile',
+    'plaintext': 'Text'
+};
+
+// 伪文件名后缀（沿用旧版 Gist 文件的命名习惯）
+const LANG_EXT = {
+    'javascript': 'js',
+    'python': 'py',
+    'bash': 'sh',
+    'typescript': 'ts',
+    'plaintext': 'txt',
+    'dos': 'cmd',
+    'xml': 'html'
+};
+
 let gistSeq = 0;
 
 function renderGistBlock(code, rawLang) {
@@ -86,33 +117,32 @@ function renderGistBlock(code, rawLang) {
     } else {
         lines = code.split('\n').map(escapeHtml);
     }
-    const label = rawLang ? escapeHtml(String(rawLang)) : 'javascript';
     const typeSlug = TYPE_SLUG[lang] || lang;
-    const slug = 'file-local-' + (++gistSeq);
+    const ext = LANG_EXT[lang] || lang;
+    const n = ++gistSeq;
+    const slug = 'file-local-' + n + '-' + ext;
     const rows = lines.map((lineHtml, idx) =>
         '<tr>' +
         '<td id="' + slug + '-L' + (idx + 1) + '" class="blob-num js-line-number js-blob-rnum" data-line-number="' + (idx + 1) + '"></td>' +
         '<td id="' + slug + '-LC' + (idx + 1) + '" class="blob-code blob-code-inner js-file-line">' + (lineHtml === '' ? ' ' : lineHtml) + '</td>' +
         '</tr>'
     ).join('');
-    // 结构与 GitHub 官方 Gist 嵌入（gist.github.com 返回的 HTML）逐层一致，
-    // 配合 source/css/gist.css 中的官方嵌入样式实现 1:1 还原。
-    // 差异仅两处（无 Gist 本体可链）：view raw 与文件名链接不带 href（不可点，视觉不变，
-    // 且文件名链接本来就被用户自己的 CSS 隐藏）；其余含 "hosted with ❤ by GitHub" 均按官方原样。
+    // 结构与用户原镜像（gist.onmicrosoft.cn，2023-05 存档）返回的官方 Gist 嵌入
+    // 逐层一致，配合 source/css/gist.css 中同版官方 CSS（cdd2b47f37c5）1:1 还原。
+    // 按用户要求，meta 条删去 view raw；文件名链接原本就被其 CSS 隐藏，一并省略，
+    // 只保留 "hosted with ❤ by GitHub"。双向文本警告 template 是 JS 运行时组件，略去。
     // 整段 HTML 不留空行，避免被 marked 拆成多个 HTML 块。
     const html = '<div class="gist">' +
-        '<div class="gist-file" translate="no" data-color-mode="light" data-light-theme="light">' +
+        '<div class="gist-file" translate="no">' +
         '<div class="gist-data">' +
-        '<div class="js-gist-file-update-container js-task-list-container">' +
+        '<div class="js-gist-file-update-container js-task-list-container file-box">' +
         '<div id="' + slug + '" class="file my-2">' +
-        '<div itemprop="text" class="Box-body p-0 blob-wrapper data type-' + typeSlug + '" style="overflow: auto" tabindex="0" role="region" aria-label="' + label + '">' +
-        '<div class="js-check-hidden-unicode js-blob-code-container blob-code-content">' +
-        '<table data-hpc class="highlight tab-size js-file-line-container" data-tab-size="4">' + rows + '</table>' +
+        '<div itemprop="text" class="Box-body p-0 blob-wrapper data type-' + typeSlug + '">' +
+        '<div class="js-check-bidi js-blob-code-container blob-code-content">' +
+        '<table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="' + (LANG_NAME[lang] || lang) + '" data-tagsearch-path="local-' + n + '.' + ext + '">' + rows + '</table>' +
         '</div></div></div></div></div>' +
         '<div class="gist-meta">' +
-        '<a style="float:right" class="Link--inTextBlock">view raw</a>' +
-        '<a class="Link--inTextBlock">' + label + '</a>' +
-        ' hosted with &#10084; by <a class="Link--inTextBlock" href="https://github.com">GitHub</a>' +
+        'hosted with &#10084; by <a href="https://github.com">GitHub</a>' +
         '</div>' +
         '</div></div>';
     // Hexo 在 markdown 渲染后还会用 Nunjucks 处理全文（tag.render），代码里的
