@@ -34,13 +34,17 @@ playback timings (ms):
 
 /* ================= 本地化附加（官方 CSS 到此结束） =================
    - 上下间距：.gist 外边距 16px（.gist-file 自带的 1em 下边距归零，间距统一由外层给）
-   - 边框：.gist-file 边框明确为 1px solid #ccc（官方为 #ddd/#ccc，此处统一加深以明确边框存在）
+   - 边框：用官方原版（上/左/右 #ddd、底部 #ccc），不另行覆盖
    - 高度上限沿用旧 iframe 的 66vh，超出滚动（.gist-data 官方已有 overflow:auto）
+   - Butterfly 的 JS 会给文章里每个表格套一层 .table-wrap（自带 20px 下边距），
+     在代码块里这层下边距被 .blob-wrapper 的 overflow 关在盒子内部，
+     变成代码下方一条空白带，故在 .gist 内将其下边距归零
    - highlight.js 的 GitHub 配色，色值与官方 .pl-* 逐一对齐，限定在 .gist 内
    注：meta 条已按用户要求删去 view raw 与文件名链接，旧的
    .gist-meta a:nth-child(2) 隐藏规则随之移除（否则会误伤 GitHub 链接）。 */
 .gist { margin: 16px 0; }
-.gist .gist-file { margin-bottom: 0; border: 1px solid #ccc; }
+.gist .gist-file { margin-bottom: 0; }
+.gist .table-wrap { margin-bottom: 0 !important; }
 .gist .gist-data { max-height: 66vh; }
 .gist .hljs-comment, .gist .hljs-punctuation { color: #6a737d; }
 .gist .hljs-doctag, .gist .hljs-keyword, .gist .hljs-meta .hljs-keyword, .gist .hljs-template-tag, .gist .hljs-template-variable, .gist .hljs-type, .gist .hljs-variable.language_ { color: #d73a49; }
