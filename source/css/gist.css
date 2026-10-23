@@ -44,6 +44,7 @@ playback timings (ms):
    .gist-meta a:nth-child(2) 隐藏规则随之移除（否则会误伤 GitHub 链接）。 */
 .gist { margin: 16px 0; }
 .gist .gist-file { margin-bottom: 0; }
+.gist ::selection, .gist .blob-code-inner::selection, .gist .blob-code-inner *::selection { background-color: rgb(73, 177, 245); }
 .gist .table-wrap { margin-bottom: 0 !important; }
 .gist .gist-data { max-height: 66vh; }
 .gist .hljs-comment, .gist .hljs-punctuation { color: #6a737d; }
